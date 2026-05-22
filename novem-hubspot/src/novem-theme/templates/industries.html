@@ -1,0 +1,516 @@
+<!--
+  templateType: page
+  label: "Industries"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Industries | Novem Digital — Digital Risk Platform for Institutional Real Estate #}
+{# meta description: Novem Digital makes building failure predictable across commercial real estate, seniors living, data centers, and public venues. See how institutional portfolio operators reduce Total Cost of Risk Ownership. #}
+
+{% block extra_head %}
+<style>
+/* ═══════════════════════════════════════════
+   BRAND TOKENS
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   RESET + BASE
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════ */
+
+50%{opacity:.3}}
+
+.sec--dark{background:var(--gun-dark);}
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   NAV — Desktop
+   ═══════════════════════════════════════════ */
+
+.dd-link{display:block;padding:.625rem .75rem;border-radius:.375rem;text-decoration:none;transition:background var(--ease);}
+.dd-link:hover{background:color-mix(in srgb,var(--green) 8%,transparent);}
+.dd-link-title{font-family:var(--font-h);font-weight:700;font-size:.875rem;color:var(--text);margin-bottom:.15rem;}
+.dd-link-desc{font-size:.78rem;color:var(--muted);line-height:1.45;}
+
+/* ═══════════════════════════════════════════
+   NAV — Mobile
+   ═══════════════════════════════════════════ */
+
+[data-theme="light"] 
+
+a
+
+.mob-caret{width:16px;height:16px;color:var(--faint);transition:transform var(--ease);}
+
+@media(max-width:1023px){}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+.hero{position:relative;overflow:hidden;min-height:92svh;display:flex;align-items:center;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg 
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(17,26,31,.97) 0%,rgba(17,26,31,.82) 40%,rgba(17,26,31,.42) 100%);}
+[data-theme="light"] .hero-bg 
+[data-theme="light"] .hero-overlay{background:linear-gradient(105deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.9) 40%,rgba(244,246,244,.6) 100%);}
+.hero-w{position:relative;z-index:1;padding-block:clamp(7.5rem,14vw,10.5rem);}
+.hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(3rem,6vw,6rem);align-items:center;}
+.hero-acts{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:2.25rem;}
+
+/* Hero portfolio tiles */
+.hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;}
+.hero-tile{background:rgba(17,26,31,.8);border:1px solid rgba(123,250,181,.18);border-radius:var(--rlg);padding:1.35rem 1.25rem;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);text-decoration:none;display:flex;flex-direction:column;gap:.6rem;transition:border-color var(--ease),background var(--ease),transform var(--ease);}
+.hero-tile:hover{border-color:rgba(123,250,181,.5);background:rgba(17,26,31,.92);transform:translateY(-2px);}
+[data-theme="light"] .hero-tile{background:rgba(255,255,255,.85);border-color:rgba(30,52,63,.15);box-shadow:var(--sh-md);}
+.hero-tile-icon{color:var(--green);}
+.hero-tile-name{font-family:var(--font-h);font-weight:700;font-size:.95rem;color:var(--text);line-height:1.25;}
+.hero-tile-proof{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-top:auto;}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-tiles-wrap{display:none;}}
+
+/* ═══════════════════════════════════════════
+   PORTFOLIO SECTIONS
+   ═══════════════════════════════════════════ */
+.port-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:stretch;}
+.port-grid--flip{direction:rtl;}
+.port-grid--flip>*{direction:ltr;}
+.port-
+.port-img 
+.port-img-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(17,26,31,.05) 0%,rgba(17,26,31,.5) 100%);pointer-events:none;}
+.port-
+.port-challenges{display:flex;flex-direction:column;gap:.55rem;padding:1.25rem;background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:var(--rlg);}
+.port-ch-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--faint);margin-bottom:.5rem;}
+.port-ch{display:flex;align-items:flex-start;gap:.7rem;font-size:clamp(.9rem,.875rem + .1vw,1rem);color:var(--muted);line-height:1.6;}
+.port-ch::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.48rem;opacity:.7;}
+.port-proof{background:color-mix(in srgb,var(--green) 6%,transparent);border:1px solid color-mix(in srgb,var(--green) 22%,transparent);border-radius:var(--rlg);padding:1.25rem 1.5rem;display:flex;align-items:baseline;gap:.85rem;}
+.port-proof-val{font-family:var(--font-h);font-weight:700;font-size:clamp(1.5rem,1.3rem + .8vw,2rem);color:var(--green);line-height:1;white-space:nowrap;}
+.port-proof-
+.port-proof-lbl{font-size:clamp(.875rem,.85rem + .1vw,.95rem);color:var(--muted);line-height:1.5;}
+.port-proof-cat{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.2rem;}
+.port-link{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;color:var(--green);text-decoration:none;margin-top:.5rem;}
+.port-link svg{transition:transform var(--ease);}
+.port-link:hover svg{transform:translateX(3px);}
+@media(max-width:860px){
+  .port-grid,.port-grid--flip{grid-template-columns:1fr;direction:ltr;}
+  .port-
+  .port-img 
+}
+
+/* ═══════════════════════════════════════════
+   TCRO EDUCATION
+   ═══════════════════════════════════════════ */
+.cor-wrap{display:grid;grid-template-columns:1fr 48px 1fr;gap:1.5rem;align-items:start;}
+.cor-col{border-radius:var(--rxl);overflow:hidden;}
+.cor-col--old{border:1px solid var(--border);background:var(--bg);}
+.cor-col--new{border:1px solid rgba(123,250,181,.32);background:color-mix(in srgb,var(--green) 5%,var(--surf));}
+.cor-head{padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.cor-col--new .cor-head{border-bottom-color:rgba(123,250,181,.2);}
+.cor-head-label{font-family:var(--font-h);font-weight:700;font-size:.95rem;color:var(--muted);margin-bottom:.2rem;}
+.cor-col--new .cor-head-label{color:var(--green);}
+.cor-head-sub{font-size:.8rem;color:var(--faint);}
+.cor-items{padding:1.25rem 1.5rem;display:flex;flex-direction:column;gap:.7rem;}
+.cor-item-old{display:flex;flex-direction:column;gap:.3rem;}
+.cor-item-name{font-size:.9rem;color:var(--muted);}
+.cor-bar{width:100%;height:4px;background:var(--border);border-radius:var(--r);overflow:hidden;}
+.cor-fill{height:100%;background:var(--faint);border-radius:var(--r);opacity:.5;}
+.cor-missing{margin-top:.5rem;padding:.875rem 1rem;background:rgba(139,188,202,.07);border:1px dashed rgba(139,188,202,.35);border-radius:var(--rlg);}
+.cor-missing-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#8BBCCA;margin-bottom:.6rem;}
+.cor-missing-chips{display:flex;flex-wrap:wrap;gap:.35rem;}
+.cor-missing-chips span{font-size:.78rem;color:#8BBCCA;background:rgba(139,188,202,.12);border:1px solid rgba(139,188,202,.3);border-radius:var(--r);padding:.22rem .7rem;text-decoration:line-through;}
+.cor-item-new{display:flex;align-items:flex-start;gap:.7rem;}
+.cor-dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.38rem;}
+.cor-item-
+.cor-item-title{font-size:.95rem;color:var(--text);font-weight:600;line-height:1.4;}
+.cor-item-desc{font-size:.82rem;color:var(--muted);margin-top:.1rem;line-height:1.4;}
+.cor-source{font-size:.8rem;color:var(--muted);padding:.875rem 1.5rem;border-top:1px solid rgba(123,250,181,.15);line-height:1.6;}
+.cor-arrow{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;padding-top:5rem;}
+.cor-arrow svg{width:36px;height:36px;}
+.cor-arrow-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);text-align:center;line-height:1.3;}
+@media(max-width:840px){
+  .cor-wrap{grid-template-columns:1fr;}
+  .cor-arrow{flex-direction:row;padding-top:0;justify-content:flex-start;gap:.75rem;}
+  .cor-arrow svg{transform:rotate(90deg);width:28px;height:28px;}
+}
+
+/* ═══════════════════════════════════════════
+   RIGHT FIT
+   ═══════════════════════════════════════════ */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;}
+.fit-card{border-radius:var(--rxl);padding:2rem;}
+.fit-card--yes{background:color-mix(in srgb,var(--green) 6%,transparent);border:1.5px solid color-mix(in srgb,var(--green) 25%,transparent);}
+.fit-card--no{background:#0D1519;border:1.5px solid #2C4250;}
+.fit-card-head{font-family:var(--font-h);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1.5rem;padding-bottom:.875rem;border-bottom:1px solid color-mix(in srgb,var(--border) 60%,transparent);}
+.fit-card--yes .fit-card-head{color:var(--green);border-color:rgba(123,250,181,.2);}
+.fit-card--no .fit-card-head{color:var(--text);border-color:#2C4250;}
+.fit-list{display:flex;flex-direction:column;gap:.875rem;}
+.fit-item{display:flex;align-items:flex-start;gap:.875rem;}
+.fit-icon{width:1.5rem;height:1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.1rem;}
+.fit-icon--yes{background:rgba(123,250,181,.15);}
+.fit-icon--no{background:rgba(139,188,202,.1);}
+.fit-text{font-size:clamp(.9rem,.875rem + .1vw,1rem);line-height:1.65;}
+.fit-card--yes .fit-text{color:var(--muted);}
+.fit-card--no .fit-text{color:#C5DEE8;}
+.fit-note{margin-top:1.5rem;padding-top:1.25rem;border-top:1px solid #2C4250;font-size:.875rem;color:#8BBCCA;line-height:1.7;font-style:italic;}
+@media(max-width:680px){.fit-grid{grid-template-columns:1fr;}}
+
+/* ═══════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════ */
+.faq-item{background:var(--bg);border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:var(--font-h);font-weight:700;font-size:clamp(1.05rem,1rem + .25vw,1.2rem);color:var(--text);padding:1.5rem 1.75rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color var(--ease),background var(--ease);}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--green);flex-shrink:0;transition:transform var(--ease);}
+details[open] .faq-q::after{transform:rotate(45deg);}
+details[open] .faq-q{color:var(--green);}
+.faq-q:hover{background:color-mix(in srgb,var(--green) 4%,transparent);}
+.faq-
+
+/* ═══════════════════════════════════════════
+   CLOSING CTA
+   ═══════════════════════════════════════════ */
+.ct
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%);pointer-events:none;}
+.cta-inner{text-align:center;max-width:50ch;margin-inline:auto;position:relative;}
+.cta-h{font-family:var(--font-h);font-size:clamp(1.9rem,1.2rem + 2.8vw,3.5rem);font-weight:700;color:#E8F4F0;line-height:1.1;margin-bottom:1.25rem;}
+.cta-h em{font-style:normal;color:#7BFAB5;}
+.cta-b{font-size:clamp(1rem,.95rem + .2vw,1.1rem);color:#8BBCCA;margin-bottom:2.5rem;line-height:1.7;}
+.cta-acts{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;}
+.cta-trust{margin-top:1.5rem;font-size:.75rem;color:var(--faint);font-family:var(--font-h);font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+
+@media(max-width:900px){}
+@media(max-width:600px){}
+@media(max-width:480px){}
+
+/* ═══════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═══════════════════════════════════════════ */
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- ════════ HERO ════════ -->
+<section class="hero" style="background:linear-gradient(135deg,#0F1C24 0%,#1C3040 50%,#0F1C24 100%);">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?w=1800&q=85&auto=format&fit=crop&bri=15" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="w hero-w">
+    <div class="hero-inner">
+      <div>
+        <div class="eye"><span class="eye-dot"></span>Who We Serve</div>
+        <h1 class="h1" style="margin-bottom:1.5rem;">Risk you can't see<br><span class="accent">is risk you<br>can't manage.</span></h1>
+        <p class="lg" style="max-width:46ch;">Four portfolio types. One platform. Failure becomes predictable across all of them.</p>
+        <div class="hero-acts">
+          <a href="/get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/how-it-works/" class="btn btn-ghost">See Platform</a>
+        </div>
+      </div>
+      <div class="hero-tiles-wrap">
+        <div class="hero-tiles">
+          <a href="#commercial" class="hero-tile">
+            <div class="hero-tile-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+            <div class="hero-tile-name">Commercial &amp;<br>Mixed-Use</div>
+            <div class="hero-tile-proof">30% better capital IRR</div>
+          </a>
+          <a href="#seniors" class="hero-tile">
+            <div class="hero-tile-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+            <div class="hero-tile-name">Seniors &amp;<br>Wellness</div>
+            <div class="hero-tile-proof">65% fewer outbreaks</div>
+          </a>
+          <a href="#data-centers" class="hero-tile">
+            <div class="hero-tile-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg></div>
+            <div class="hero-tile-name">Data<br>Centers</div>
+            <div class="hero-tile-proof">Audit-ready uptime</div>
+          </a>
+          <a href="#venues" class="hero-tile">
+            <div class="hero-tile-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="hero-tile-name">Recreational<br>&amp; Venues</div>
+            <div class="hero-tile-proof">$5M loss mitigation</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ COMMERCIAL ════════ -->
+<section class="sec" id="commercial">
+  <div class="w">
+    <div class="port-grid">
+      <div class="port-img" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80&auto=format&fit=crop" alt="Commercial real estate portfolio" loading="lazy"/>
+        <div class="port-img-overlay"></div>
+      </div>
+      <div class="port-body">
+        <div class="rev">
+          <p class="eye"><span class="eye-dot"></span>Commercial &amp; Mixed-Use Real Estate</p>
+          <h2 class="h2" style="margin-bottom:1rem;">Capital decisions<br><span class="accent">on evidence,<br>not instinct.</span></h2>
+          <p class="sm">Critical systems fail. Emergency repairs arrive before the invoice. Insurance renewals turn into hard conversations. Novem gives commercial owners a complete live view of asset risk — so capital flows to the right place, at the right time, with evidence behind every decision.</p>
+        </div>
+        <div class="port-proof rev d1">
+          <div class="port-proof-val">30%</div>
+          <div class="port-proof-body">
+            <div class="port-proof-cat">Commercial Real Estate Portfolio &mdash; North America</div>
+            <div class="port-proof-lbl">better capital IRR</div>
+          </div>
+        </div>
+        <p class="sm rev d2" style="margin-top:1rem;font-style:italic;color:var(--muted);">Behind every avoided emergency repair is a tenant who kept their services, and a budget that stayed intact.</p>
+        <a href="/get-a-demo/" class="port-link rev d3">Talk to us about your portfolio <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SENIORS ════════ -->
+<section class="sec sec--alt" id="seniors">
+  <div class="w">
+    <div class="port-grid port-grid--flip">
+      <div class="port-img" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80&auto=format&fit=crop" alt="Seniors living and wellness community" loading="lazy"/>
+        <div class="port-img-overlay"></div>
+      </div>
+      <div class="port-body">
+        <div class="rev">
+          <p class="eye"><span class="eye-dot"></span>Seniors Living &amp; Wellness</p>
+          <h2 class="h2" style="margin-bottom:1rem;">When systems fail,<br><span class="accent">residents pay the price.</span></h2>
+          <p class="sm">In a seniors living community, HVAC, air quality, and water are health infrastructure. When they degrade, outbreaks follow — and the financial cost arrives within days. Novem surfaces environmental risk signals before conditions deteriorate, moving operators from reactive outbreak response to predictive prevention.</p>
+        </div>
+        <div class="port-proof rev d1">
+          <div class="port-proof-val">65%</div>
+          <div class="port-proof-body">
+            <div class="port-proof-cat">Seniors Living Operator &mdash; North America</div>
+            <div class="port-proof-lbl">fewer outbreak weeks &mdash; 65% lower wage premiums, 34% less PPE spend, $18,771 in cumulative PPE savings, and zero respiratory outbreaks for the first time in seven years</div>
+          </div>
+        </div>
+        <p class="sm rev d2" style="margin-top:1rem;font-style:italic;color:var(--muted);">Behind every one of those weeks was a family that kept its visit, and a care team that didn't work a crisis shift.</p>
+        <a href="/get-a-demo/" class="port-link rev d3">Talk to us about your communities <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ DATA CENTERS ════════ -->
+<section class="sec" id="data-centers">
+  <div class="w">
+    <div class="port-grid">
+      <div class="port-img" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80&auto=format&fit=crop" alt="Data center critical infrastructure" loading="lazy"/>
+        <div class="port-img-overlay"></div>
+      </div>
+      <div class="port-body">
+        <div class="rev">
+          <p class="eye"><span class="eye-dot"></span>Data Centers</p>
+          <h2 class="h2" style="margin-bottom:1rem;">Every minute down<br><span class="accent">has a defined price.</span></h2>
+          <p class="sm">In a data center, downtime is contractual, immediate, and cascading. Novem gives operators continuous visibility into early failure signals across cooling, power, and critical infrastructure — with audit-ready monitoring records that prove diligence to clients, boards, and insurers.</p>
+        </div>
+        <div class="port-proof rev d1">
+          <div class="port-proof-val">Day&nbsp;1</div>
+          <div class="port-proof-body">
+            <div class="port-proof-cat">Data Center Operator &mdash; Global</div>
+            <div class="port-proof-lbl">continuous audit-ready monitoring across all critical systems &mdash; capital decisions driven by condition and risk score, not age and instinct</div>
+          </div>
+        </div>
+        <p class="sm rev d2" style="margin-top:1rem;font-style:italic;color:var(--muted);">Behind every avoided outage is a client relationship that held, and a team that didn't scramble through the night.</p>
+        <a href="/get-a-demo/" class="port-link rev d3">Talk to us about your infrastructure <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ VENUES ════════ -->
+<section class="sec sec--alt" id="venues">
+  <div class="w">
+    <div class="port-grid port-grid--flip">
+      <div class="port-img" style="position:relative;">
+        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=900&q=80&auto=format&fit=crop" alt="Public venue and recreation facility" loading="lazy"/>
+        <div class="port-img-overlay"></div>
+      </div>
+      <div class="port-body">
+        <div class="rev">
+          <p class="eye"><span class="eye-dot"></span>Recreational &amp; Venues</p>
+          <h2 class="h2" style="margin-bottom:1rem;">When a venue fails,<br><span class="accent">the public<br>finds out first.</span></h2>
+          <p class="sm">Arenas, recreation centres, and fairgrounds carry risk at scale — large asset bases, compressed seasonal cycles, and public visibility that turns a mechanical failure into a headline. Novem consolidates fragmented risk data across an entire site into one connected system, so operators see what's at risk before the public does.</p>
+        </div>
+        <div class="port-proof rev d1">
+          <div class="port-proof-val">$5M</div>
+          <div class="port-proof-body">
+            <div class="port-proof-cat">Public Venue &amp; Infrastructure Operator &mdash; North America</div>
+            <div class="port-proof-lbl">in loss mitigation &mdash; 184 acres of fragmented risk data consolidated into one connected platform</div>
+          </div>
+        </div>
+        <p class="sm rev d2" style="margin-top:1rem;font-style:italic;color:var(--muted);">Behind every avoided failure is a visitor who arrived safely, and a community whose trust held.</p>
+        <a href="/get-a-demo/" class="port-link rev d3">Talk to us about your venues <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ TCRO EDUCATION ════════ -->
+<section class="sec sec--dark" id="tcro">
+  <div class="w">
+    <div class="rev" style="max-width:52ch;margin-bottom:3rem;">
+      <p class="eye"><span class="eye-dot"></span>Total Cost of Risk Ownership</p>
+      <h2 class="h2" style="margin-bottom:.875rem;">You have been measuring<br><span class="accent">the wrong number.</span></h2>
+      <p class="sm">Traditional Cost of Risk only counts what already happened — claims, deductibles, reactive repairs. Total Cost of Risk Ownership is the framework Novem introduced to capture the full financial burden: everything that shows up on your P&amp;L but never makes it into your risk register. Most organizations have never seen this number, because no platform has been built to calculate it. Until now.</p>
+    </div>
+
+    <div class="cor-wrap rev d1">
+      <!-- COR: old approach -->
+      <div class="cor-col cor-col--old">
+        <div class="cor-head">
+          <div class="cor-head-label">Traditional Cost of Risk (COR)</div>
+          <div class="cor-head-sub">What most organizations measure today</div>
+        </div>
+        <div class="cor-items">
+          <div class="cor-item-old"><div class="cor-item-name">Claims &amp; deductibles</div><div class="cor-bar"><div class="cor-fill" style="width:85%"></div></div></div>
+          <div class="cor-item-old"><div class="cor-item-name">Legal &amp; medical expenses</div><div class="cor-bar"><div class="cor-fill" style="width:60%"></div></div></div>
+          <div class="cor-item-old"><div class="cor-item-name">Reactive maintenance</div><div class="cor-bar"><div class="cor-fill" style="width:50%"></div></div></div>
+          <div class="cor-item-old"><div class="cor-item-name">Basic insurance premiums</div><div class="cor-bar"><div class="cor-fill" style="width:70%"></div></div></div>
+          <div class="cor-missing">
+            <div class="cor-missing-label">Not captured — invisible to COR</div>
+            <div class="cor-missing-chips">
+              <span>Downtime &amp; interruption</span>
+              <span>Emergency premium surcharges</span>
+              <span>Compliance &amp; audit overhead</span>
+              <span>Reputational &amp; governance cost</span>
+              <span>Capital timing losses</span>
+              <span>Outbreak wage &amp; PPE premiums</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="cor-arrow">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M8 24h32M28 14l12 10-12 10" stroke="var(--green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="cor-arrow-label">Novem<br>adds</div>
+      </div>
+
+      <!-- TCRO: full picture -->
+      <div class="cor-col cor-col--new">
+        <div class="cor-head">
+          <div class="cor-head-label">Total Cost of Risk Ownership (TCRO)</div>
+          <div class="cor-head-sub">The complete picture — introduced by Novem Digital</div>
+        </div>
+        <div class="cor-items">
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Losses, claims &amp; deductibles</div><div class="cor-item-desc">Direct incident costs and uninsured losses</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Downtime &amp; business interruption</div><div class="cor-item-desc">Revenue, occupancy, and service continuity impacts</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Premiums, retentions &amp; transfer costs</div><div class="cor-item-desc">Insurance cost driven by insufficient monitoring data</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Maintenance inefficiency</div><div class="cor-item-desc">Emergency work orders, reactive labor, crisis rates</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Compliance &amp; regulatory overhead</div><div class="cor-item-desc">Governance costs from fragmented, manual data</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Reputational &amp; governance risk</div><div class="cor-item-desc">Board, lender, and tenant confidence consequences</div></div></div>
+          <div class="cor-item-new"><div class="cor-dot"></div><div class="cor-item-body"><div class="cor-item-title">Capital timing &amp; lifecycle losses</div><div class="cor-item-desc">Decisions made without live condition or failure data</div></div></div>
+        </div>
+        <div class="cor-source">TCRO framework — Novem Digital, in collaboration with global leaders in building infrastructure and commercial insurance &mdash; <a href="#contact" style="color:var(--green);text-decoration:none;">Download the whitepaper &rarr;</a></div>
+      </div>
+    </div>
+
+    <div class="rev d2" style="margin-top:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;padding:1.5rem 2rem;background:color-mix(in srgb,var(--green) 7%,transparent);border:1px solid color-mix(in srgb,var(--green) 22%,transparent);border-radius:var(--rlg);">
+      <div>
+        <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);margin-bottom:.25rem;">Calculate your TCRO — in under 5 minutes.</p>
+        <p class="sm" style="margin:0;">Most organizations discover material hidden costs in their first session that never appeared in a risk report.</p>
+      </div>
+      <div style="display:flex;gap:.75rem;flex-shrink:0;flex-wrap:wrap;">
+        <a href="/get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/get-a-demo/" class="btn btn-g">Download Whitepaper</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ RIGHT FIT ════════ -->
+<section class="sec sec--alt" id="fit">
+  <div class="w">
+    <div class="rev" style="max-width:48ch;margin-bottom:2.75rem;">
+      <p class="eye"><span class="eye-dot"></span>The Right Fit</p>
+      <h2 class="h2" style="margin-bottom:.875rem;">We are not for everyone.<br><span class="accent">We are built for you</span> if failure has a material consequence.</h2>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card fit-card--yes rev d1">
+        <div class="fit-card-head">Strong fit</div>
+        <div class="fit-list">
+          <div class="fit-item"><div class="fit-icon fit-icon--yes"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fit-text">Multi-site portfolios with critical systems that are not fully inventoried or continuously monitored</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--yes"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fit-text">High cost of failure — measured in emergency spend, occupancy, uptime, or public trust</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--yes"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fit-text">Rising insurance costs without monitoring data to support a stronger underwriting narrative</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--yes"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fit-text">Teams working from fragmented systems with no shared view of risk across the portfolio</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--yes"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div class="fit-text">Board, lender, or insurer scrutiny demanding audit-ready reporting and defensible data</div></div>
+        </div>
+      </div>
+      <div class="fit-card fit-card--no rev d2" style="background:#0D1519;border:1.5px solid var(--green);">
+        <div class="fit-card-head">Not the right fit — yet</div>
+        <div class="fit-list">
+          <div class="fit-item"><div class="fit-icon fit-icon--no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8BBCCA" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="fit-text">Standalone hospitals or acute care facilities with dedicated clinical building management teams</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8BBCCA" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="fit-text">General hospitality chains without significant critical infrastructure exposure</div></div>
+          <div class="fit-item"><div class="fit-icon fit-icon--no"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#8BBCCA" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="fit-text">Small single-site operators with minimal critical systems and low consequence of failure</div></div>
+        </div>
+        <div class="fit-note">Novem is purpose-built for institutional portfolios where risk is consequential, multi-site, and under-monitored. If that is not where you are today, it may be where you are heading — and we are happy to talk.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FAQ ════════ -->
+<section class="sec" id="faq">
+  <div class="w">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:3rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>Common Questions</p>
+      <h2 class="h2">Questions worth <span class="accent">answering directly.</span></h2>
+    </div>
+    <div style="max-width:820px;margin-inline:auto;display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      <details class="faq-item rev">
+        <summary class="faq-q">Which portfolio types does Novem Digital serve?</summary>
+        <div class="faq-a"><p>Novem Digital serves institutional real estate owners and operators across four portfolio types: commercial and mixed-use real estate, seniors living and wellness communities, data centers, and recreational venues and public facilities. The common thread is multi-site portfolios where building failure carries a material financial, operational, or human consequence.</p></div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">What is Total Cost of Risk Ownership (TCRO)?</summary>
+        <div class="faq-a"><p>Total Cost of Risk Ownership is a framework introduced by Novem Digital that captures the full financial burden of building risk — beyond direct insurance claims. TCRO includes emergency repair premiums, capital timing losses, insurance volatility, compliance overhead, reputational exposure, and business interruption. Most organizations only measure direct claims, leaving the majority of their true risk burden invisible on the P&amp;L.</p></div>
+      </details>
+      <details class="faq-item rev d2">
+        <summary class="faq-q">How does Novem help seniors living operators?</summary>
+        <div class="faq-a"><p>Novem surfaces environmental risk signals — HVAC performance, air quality, water system conditions — before they deteriorate into health events. Operators move from reactive outbreak response to predictive prevention, with audit-ready evidence for families, regulators, and insurers. One operator achieved zero respiratory outbreak weeks after seven years of recurring outbreaks, with a 65% reduction in outbreak weeks and 65% lower wage premiums.</p></div>
+      </details>
+      <details class="faq-item rev">
+        <summary class="faq-q">How does Novem support data center uptime and renewals?</summary>
+        <div class="faq-a"><p>Novem gives data center operators continuous visibility into early failure signals across cooling, power, and critical infrastructure — before those signals become downtime events. The platform produces audit-ready monitoring records that support compliance, strengthen insurance renewal submissions, and connect live condition data to capital planning. Operators go to renewal with documented evidence of proactive risk management, not just historical claims.</p></div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">Does Novem work with existing building systems?</summary>
+        <div class="faq-a"><p>Yes. Novem connects to what you already own, then adds targeted monitoring coverage where financial exposure is highest. No rip-and-replace required. The platform creates one credible digital risk record across every building type and every site in your portfolio — from day one.</p></div>
+      </details>
+      <details class="faq-item rev d2">
+        <summary class="faq-q">Is the platform the same across all portfolio types?</summary>
+        <div class="faq-a"><p>The core platform is consistent. What changes is how risk signals are prioritized and which financial outcomes matter most. In seniors living, the emphasis is environmental health and outbreak prevention. In data centers, it is continuous audit-ready uptime reporting. In commercial portfolios, the focus is capital planning accuracy and insurance positioning. The platform adapts to your risk profile. The methodology does not change.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CLOSING CTA ════════ -->
+<section class="cta" id="contact">
+  <div class="wm">
+    <div class="cta-inner rev">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>Get Started</p>
+      <h2 class="cta-h">See what failure looks like<br>in <em>your portfolio</em><br>before it happens.</h2>
+      <p class="cta-b">Most organizations find material risk exposure in their first session — systems with no monitoring, assets at elevated failure probability that never appeared in a risk report. Book a demo and see what surfaces in your portfolio on day one.</p>
+      <div class="cta-acts">
+        <a href="/get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/how-it-works/" class="btn btn-ghost">Explore Platform</a>
+      </div>
+      <p class="cta-trust">Novem Digital &mdash; Failure is Predictable.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

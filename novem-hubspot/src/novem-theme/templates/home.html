@@ -1,0 +1,599 @@
+<!--
+  templateType: page
+  label: "Home"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Novem Digital — Digital Risk Platform for Institutional Real Estate #}
+{# meta description: Novem Digital is an AI powered digital risk platform that makes building failure predictable for institutional real estate portfolios. Reduce Total Cost of Risk Ownership, plan capital accurately, and defend every insurance and governance decision with audit ready data. #}
+
+{% block extra_head %}
+<style>
+/* ═══════════════════════════════════════════
+   BRAND TOKENS
+   Gunmetal #1E343F · Cultured #F4F6F4
+   Spring Green #7BFAB5 · Maximum Blue #60BCD6
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   RESET
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════ */
+
+ 50%{opacity:.3} }
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
+
+[data-theme="light"] 
+[data-theme="light"] 
+
+/* ═══════════════════════════════════════════
+   NAVIGATION — Desktop
+   ═══════════════════════════════════════════ */
+
+[data-theme="light"] 
+
+/* Desktop nav links row */
+
+[data-theme="light"] 
+
+/* Dropdown panels */
+
+.dd-link {
+  display: block; padding: .625rem .75rem; border-radius: .375rem;
+  text-decoration: none; transition: background var(--ease);
+}
+.dd-link:hover { background: color-mix(in srgb, var(--green) 8%, transparent); }
+.dd-link-title {
+  font-family: var(--font-h); font-weight: 700; font-size: .875rem;
+  color: var(--text); margin-bottom: .15rem;
+}
+.dd-link-desc {
+  font-size: .78rem; color: var(--muted); line-height: 1.45;
+}
+
+/* Right-side items */
+
+/* Hamburger */
+
+/* ═══════════════════════════════════════════
+   NAVIGATION — Mobile overlay
+   ═══════════════════════════════════════════ */
+
+[data-theme="light"] 
+
+a
+
+[data-theme="light"] 
+
+/* Hide desktop nav on mobile; show hamburger */
+@media (max-width: 1023px) {
+
+}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+.hero { position: relative; overflow: hidden; min-height: 100svh; display: flex; align-items: center; background: linear-gradient(135deg, #0F1C24 0%, #1C3040 50%, #0F1C24 100%); }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg 
+[data-theme="light"] .hero-bg 
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg,rgba(15,24,30,.75) 0%,rgba(15,24,30,.55) 40%,rgba(15,24,30,.20) 100%); }
+[data-theme="light"] .hero-overlay { background: linear-gradient(105deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.9) 40%,rgba(244,246,244,.6) 100%); }
+.hero-w { position: relative; z-index: 1; padding-block: clamp(7.5rem,14vw,10.5rem); }
+.hero-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem,6vw,6rem); align-items: center; }
+.hero-platform-tag { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--green); margin-bottom: 1.75rem; }
+.hero-head { margin-bottom: 1.5rem; }
+.hero-sub { max-width: 48ch; margin-bottom: 2.25rem; }
+.hero-acts { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.hero-stats { display: flex; flex-direction: column; gap: 1.25rem; }
+.hero-stat { background: rgba(17,26,31,.65); border: 1px solid rgba(123,250,181,.18); border-radius: var(--rlg); padding: 1.25rem 1.75rem; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); display: flex; align-items: baseline; gap: 1rem; }
+[data-theme="light"] .hero-stat { background: rgba(255,255,255,.82); border-color: rgba(30,52,63,.12); box-shadow: var(--sh-md); }
+.hero-stat-num { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.6rem,1.3rem + 1.5vw,2.4rem); color: var(--green); line-height: 1; white-space: nowrap; }
+.hero-stat-lbl { font-size: clamp(1.05rem,1rem + .2vw,1.2rem); color: var(--muted); line-height: 1.4; font-weight: 500; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-right { display: none; } }
+@media (max-width: 480px) { .hero-w { padding-block: 5.5rem 3rem; } }
+
+/* ═══════════════════════════════════════════
+   STATS STRIP
+   ═══════════════════════════════════════════ */
+.stats-strip { padding-block: 2.75rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surf); }
+.stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; text-align: center; }
+.stat-b { padding: .75rem .5rem; }
+.stat-b-num { font-family: var(--font-h); font-weight: 700; font-size: clamp(2.2rem,4.5vw,3.75rem); color: var(--green); line-height: 1; }
+.stat-b-lbl { font-size: .75rem; color: var(--muted); margin-top: .4rem; line-height: 1.45; }
+@media (max-width: 900px) { .stats-row { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 500px) { .stats-row { grid-template-columns: 1fr 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PROBLEM
+   ═══════════════════════════════════════════ */
+.prob-g { display: flex; flex-direction: column; gap: clamp(2rem,4vw,3rem); }
+.prob-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.prob-card { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 1.5rem 1.75rem; position: relative; overflow: hidden; }
+.prob-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--green); opacity: .45; }
+.prob-
+.prob-img 
+.prob-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg,rgba(17,26,31,.15) 0%,rgba(17,26,31,.5) 100%); pointer-events: none; }
+[data-theme="light"] .prob-img::after { background: linear-gradient(160deg,rgba(244,246,244,.1) 0%,rgba(30,52,63,.2) 100%); }
+@media (max-width: 768px) { .prob-cards { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   STEPS (How It Works)
+   ═══════════════════════════════════════════ */
+.steps-g { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3.5rem; position: relative; }
+.steps-g::before { content: ''; position: absolute; top: 2rem; left: 12%; right: 12%; height: 1px; background: linear-gradient(90deg,transparent,var(--border),var(--border),transparent); }
+.step { text-align: center; }
+.step-n { width: 4rem; height: 4rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--border2); display: flex; align-items: center; justify-content: center; margin-inline: auto; margin-bottom: 1.25rem; font-family: var(--font-h); font-weight: 700; font-size: 1.25rem; color: var(--green); position: relative; z-index: 1; }
+.step-t { font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: .5rem; }
+@media (max-width: 768px) { .steps-g { grid-template-columns: 1fr 1fr; } .steps-g::before { display: none; } }
+@media (max-width: 480px) { .steps-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PILLARS / PRODUCT
+   ═══════════════════════════════════════════ */
+.pil-hdr { text-align: center; max-width: 50ch; margin-inline: auto; margin-bottom: 3rem; }
+.pil-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.pil { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2.25rem 2rem; transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease); }
+.pil:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); border-color: var(--border2); }
+.pil-n { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--faint); margin-bottom: 1rem; }
+.pil-title { font-family: var(--font-h); font-weight: 700; font-size: clamp(1rem,.85rem + .8vw,1.45rem); color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
+@media (max-width: 768px) { .pil-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PROOF
+   ═══════════════════════════════════════════ */
+.proof-v { font-family: var(--font-h); font-size: clamp(1.6rem,2.5vw,2.2rem); font-weight: 700; color: var(--green); line-height: 1; }
+.proof-l { font-size: .82rem; color: var(--muted); margin-top: .4rem; line-height: 1.5; }
+.proof-cust-card:hover { box-shadow: var(--sh-lg); border-color: color-mix(in srgb, var(--green) 35%, var(--border)); transform: translateY(-3px); }
+@media (max-width: 860px) { #proof .w > div:nth-child(2) { grid-template-columns: 1fr !important; } }
+
+/* ═══════════════════════════════════════════
+   TCRO
+   ═══════════════════════════════════════════ */
+.tcro-g { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+.tcro-table { width: 100%; border-collapse: collapse; margin-top: 1.75rem; }
+.tcro-table th { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--border); }
+.tcro-table td { padding: .75rem; font-size: .875rem; vertical-align: top; border-bottom: 1px solid var(--border); }
+.tcro-table tr:last-child td { border-bottom: none; }
+.tcro-table tr:hover td { background: color-mix(in srgb, var(--green) 4%, transparent); }
+.tcro-cat { font-weight: 600; color: var(--text); }
+.tcro-desc { color: var(--muted); font-size: .82rem; line-height: 1.5; }
+.tcro-cost { font-family: var(--font-h); font-weight: 700; color: var(--green); white-space: nowrap; }
+.tcro-visual { position: sticky; top: 6rem; }
+.tcro-diagram-wrap { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 1.5rem; box-shadow: var(--sh-lg); }
+.tcro-diagram-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); text-align: center; margin-bottom: 1rem; }
+.lead-bar { margin-top: 1.5rem; background: color-mix(in srgb, var(--green) 10%, transparent); border: 1px solid color-mix(in srgb, var(--green) 30%, transparent); border-radius: var(--rlg); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lead-bar-copy { font-size: .875rem; color: var(--text); max-width: 38ch; }
+.lead-bar-copy strong { display: block; font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--green); margin-bottom: .2rem; }
+@media (max-width: 900px) { .tcro-g { grid-template-columns: 1fr; } .tcro-visual { position: static; } }
+
+/* ═══════════════════════════════════════════
+   SEGMENTS
+   ═══════════════════════════════════════════ */
+.seg-hdr { text-align: center; max-width: 44ch; margin-inline: auto; margin-bottom: 3rem; }
+.seg-g { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+.seg { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); overflow: hidden; transition: border-color var(--ease), box-shadow var(--ease); display: flex; flex-direction: column; }
+.seg:hover { border-color: var(--green); box-shadow: var(--sh-md); }
+.seg-icon { margin-bottom: 1.25rem; color: var(--green); }
+.seg-t { font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: .5rem; }
+.seg-
+.seg-img 
+.seg:hover .seg-img 
+.seg-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom,transparent 50%,rgba(17,26,31,.6)); pointer-events: none; }
+[data-theme="light"] .seg-img::after { background: linear-gradient(to bottom,transparent 50%,rgba(30,52,63,.25)); }
+.seg-
+@media (max-width: 900px) { .seg-g { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .seg-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   RESOURCES
+   ═══════════════════════════════════════════ */
+.leads-g { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.lead-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; transition: box-shadow var(--ease), border-color var(--ease); }
+.lead-card:hover { box-shadow: var(--sh-lg); border-color: var(--border2); }
+.lead-chip { font-size: clamp(.85rem,.8rem + .15vw,.95rem); font-weight: 700; text-transform: uppercase; letter-spacing: .11em; background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green); border-radius: var(--r); padding: .25rem .85rem; display: inline-block; width: fit-content; }
+.lead-card-title { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.1rem,1rem + .4vw,1.35rem); color: var(--text); line-height: 1.25; }
+.lead-card-
+@media (max-width: 600px) { .leads-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PARTNERS
+   ═══════════════════════════════════════════ */
+.part-hdr { text-align: center; max-width: 46ch; margin-inline: auto; margin-bottom: 3rem; }
+.part-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.part { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2.25rem 2rem; }
+.part-role { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--green); margin-bottom: .75rem; }
+.part-name { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.15rem,1.05rem + .5vw,1.45rem); color: var(--text); margin-bottom: 1rem; }
+@media (max-width: 768px) { .part-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════ */
+.ct
+.cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%); pointer-events: none; }
+.cta-inner { text-align: center; max-width: 50ch; margin-inline: auto; position: relative; }
+.cta-h { font-family: var(--font-h); font-size: clamp(1.9rem,1.2rem + 2.8vw,3.5rem); font-weight: 700; color: #E8F4F0; line-height: 1.1; margin-bottom: 1.25rem; }
+.cta-h em { font-style: normal; color: #7BFAB5; }
+.cta-b { font-size: clamp(1rem,.95rem + .2vw,1.1rem); color: #8BBCCA; margin-bottom: 2.5rem; line-height: 1.7; }
+.cta-acts { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+/* ═══════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════ */
+.faq-item { background: var(--bg); border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-family: var(--font-h); font-weight: 700; font-size: clamp(.95rem,.9rem + .3vw,1.15rem); color: var(--text); padding: 1.5rem 1.75rem; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: color var(--ease), background var(--ease); }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after { content: '+'; font-size: 1.4rem; font-weight: 300; color: var(--green); flex-shrink: 0; transition: transform var(--ease); }
+details[open] .faq-q::after { transform: rotate(45deg); }
+details[open] .faq-q { color: var(--green); }
+.faq-q:hover { background: color-mix(in srgb, var(--green) 4%, transparent); }
+.faq-
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 900px) {  }
+@media (max-width: 600px) {  }
+@media (max-width: 480px) {  }
+
+/* ═══════════════════════════════════════════
+   PRODUCT dashboard visual
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) { #product .w > div:last-child { grid-template-columns: 1fr !important; } }
+
+/* Section imagery helpers */
+.proof-
+.proof-img 
+
+/* ═══════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═══════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {  }
+
+/* Body scroll lock */
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=85&auto=format&fit=crop&bri=15" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="w hero-w">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-platform-tag"><span class="eye-dot"></span>Digital Risk Platform</div>
+        <h1 class="sr-only">Novem Digital — Digital Risk Platform for Institutional Real Estate</h1>
+        <p class="h1 hero-head" aria-hidden="true">Failure is<br><span class="accent">Predictable.</span></p>
+        <p class="lg hero-sub">We tell you what's about to fail — and what it will cost — before it does.</p>
+        <div class="hero-acts">
+          <a href="#contact" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#tcro-intro" class="btn btn-ghost">What is TCRO?</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-stats">
+          <div class="hero-stat"><span class="hero-stat-num">7.2M</span><span class="hero-stat-lbl">Buildings analyzed</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">30%</span><span class="hero-stat-lbl">Better capital IRR</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">1–3yr</span><span class="hero-stat-lbl">Payback period</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROBLEM -->
+<section class="sec sec--alt" id="platform">
+  <div class="w"><div class="prob-g">
+    <div class="rev" style="text-align:center;max-width:52ch;margin-inline:auto;">
+      <p class="eye" style="justify-content:center;">The Problem</p>
+      <h2 class="h2" style="margin-bottom:1.25rem;">You are paying for failures <span class="accent">you could have prevented.</span></h2>
+      <p class="lg">Most real estate owners do not know what critical systems they have, how old they are, or which are at risk. Risk stays invisible until it becomes a loss event.</p>
+    </div>
+    <div class="prob-cards rev d1">
+      <div class="prob-card"><div class="h3">Expensive surprises</div><p class="sm">Emergency repairs, volatile insurance, and unplanned capital spend absorb margin you should never have lost.</p></div>
+      <div class="prob-card"><div class="h3">Running blind</div><p class="sm">Boards and insurers ask for audit-ready evidence that does not exist.</p></div>
+      <div class="prob-card"><div class="h3">Hidden financial burden</div><p class="sm">Traditional Cost of Risk misses the gaps that hit your P&amp;L first.</p></div>
+    </div>
+  </div></div>
+</section>
+
+<!-- THREE PILLARS / PRODUCT -->
+<section class="sec" id="product">
+  <div class="w">
+    <div class="rev" style="text-align:center;max-width:860px;margin-inline:auto;margin-bottom:2.5rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>Product</p>
+      <h2 class="h2">The platform built to make building failure <span class="accent">predictable.</span></h2>
+      <p class="lg" style="margin-top:1rem;">One platform. Lower costs, controlled insurance, defensible capital. Risk stops being invisible.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:1.75rem;align-items:stretch;">
+      <div class="rev" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;box-shadow:var(--sh-lg);display:flex;flex-direction:column;min-height:0;">
+        <div style="display:flex;gap:8px;align-items:center;padding:0.875rem 1rem;background:var(--gun-dark);border-bottom:1px solid var(--border);">
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--faint);opacity:.5;"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--faint);opacity:.5;"></span>
+          <span style="width:10px;height:10px;border-radius:50%;background:var(--faint);opacity:.5;"></span>
+          <span style="margin-left:0.75rem;font-size:0.68rem;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-h);">Novem Digital Risk Platform</span>
+        </div>
+        <img src="https://pplx-res.cloudinary.com/image/upload/pplx_search_images/4f29a3a5c066b0ddf15ec4c357f02ce8ca75cfcb.jpg" alt="Connected building analytics dashboard representing the Novem Digital Risk Platform" width="4804" height="3602" loading="lazy" style="width:100%;flex:1;min-height:0;object-fit:cover;display:block;filter:saturate(.82) brightness(.95) hue-rotate(170deg);"/>
+      </div>
+      <div style="display:grid;gap:1rem;">
+        <div class="pil rev" style="padding:1.5rem 1.75rem;">
+          <p class="pil-n">See everything you own</p>
+          <h3 class="h3">Complete asset inventory, live across every building.</h3>
+          <p class="sm">A complete picture of every critical system — condition, age, and financial exposure — before any loss event.</p>
+        </div>
+        <div class="pil rev d1" style="padding:1.5rem 1.75rem;">
+          <p class="pil-n">Predict before it costs you</p>
+          <h3 class="h3">Early warnings grounded in 20 years of real claims data.</h3>
+          <p class="sm">Early warnings ranked by financial consequence — not a wall of alarms.</p>
+        </div>
+        <div class="pil rev d2" style="padding:1.5rem 1.75rem;border-color:color-mix(in srgb,var(--green) 28%,var(--border));">
+          <p class="pil-n">Prove and improve</p>
+          <h3 class="h3">Audit ready data from source to board report.</h3>
+          <p class="sm" style="margin-bottom:1.25rem;">Every capital and insurance decision backed by audit-ready data — not estimates.</p>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-p">Get a Demo</a>
+            <a href="#proof" class="btn btn-g">See results</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THREE OUTCOMES -->
+<section class="sec sec--alt" id="outcomes">
+  <div class="wm">
+    <div class="rev" style="text-align:center;max-width:44ch;margin-inline:auto;margin-bottom:3rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>What You Get</p>
+      <h2 class="h2">Three outcomes. <span class="accent">Every customer.</span></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      <div class="rev" style="padding:2rem 2.5rem;background:var(--bg);display:flex;align-items:center;gap:2rem;">
+        <span style="font-family:var(--font-h);font-weight:700;font-size:clamp(2rem,3vw,2.8rem);color:var(--green);line-height:1;flex-shrink:0;min-width:3ch;">01</span>
+        <div><div style="font-family:var(--font-h);font-weight:700;font-size:clamp(1.1rem,1rem+.6vw,1.4rem);color:var(--text);margin-bottom:.35rem;">Lower operating and repair costs.</div><p class="sm" style="margin:0;">Planned work at standard rates. Emergency callouts stop. Mechanical costs drop.</p></div>
+      </div>
+      <div class="rev d1" style="padding:2rem 2.5rem;background:var(--surf);display:flex;align-items:center;gap:2rem;">
+        <span style="font-family:var(--font-h);font-weight:700;font-size:clamp(2rem,3vw,2.8rem);color:var(--green);line-height:1;flex-shrink:0;min-width:3ch;">02</span>
+        <div><div style="font-family:var(--font-h);font-weight:700;font-size:clamp(1.1rem,1rem+.6vw,1.4rem);color:var(--text);margin-bottom:.35rem;">Control your insurance costs.</div><p class="sm" style="margin:0;">Insurance is no longer a fixed line. Continuous risk data gives you leverage at renewal — and mid-term.</p></div>
+      </div>
+      <div class="rev d2" style="padding:2rem 2.5rem;background:var(--bg);display:flex;align-items:center;gap:2rem;">
+        <span style="font-family:var(--font-h);font-weight:700;font-size:clamp(2rem,3vw,2.8rem);color:var(--green);line-height:1;flex-shrink:0;min-width:3ch;">03</span>
+        <div><div style="font-family:var(--font-h);font-weight:700;font-size:clamp(1.1rem,1rem+.6vw,1.4rem);color:var(--text);margin-bottom:.35rem;">Make capital planning defensible.</div><p class="sm" style="margin:0;">Every allocation backed by condition data and loss history. Boards and lenders get evidence, not estimates.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec" id="proof">
+  <div class="w">
+    <div class="rev" style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+      <div>
+        <p class="eye"><span class="eye-dot"></span>In Practice</p>
+        <h2 class="h2" style="margin-bottom:0;">Real buildings.<br><span class="accent">Measurable outcomes.</span></h2>
+      </div>
+      <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:700;font-family:var(--font-h);color:var(--green);text-decoration:none;margin-bottom:.2rem;">All case studies <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem;">
+
+      <!-- Seniors Living -->
+      <div class="rev proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Seniors Living Operator &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">Seven years of recurring outbreaks. One environmental signal changed everything.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"Zero respiratory outbreak weeks in 2025. The first time in seven years."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">65%</span>
+          <span class="proof-l">Fewer outbreak weeks</span>
+        </div>
+        <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- Public Venue -->
+      <div class="rev d1 proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Public Venue &amp; Infrastructure Operator &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">Fragmented risk across an entire site. Consolidated before the next event.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"One connected system replaced fragmented processes across the entire site."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">$5M</span>
+          <span class="proof-l">Loss mitigation</span>
+        </div>
+        <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- Commercial Office Tower — Telus Gardens -->
+      <div class="rev d2 proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Commercial Office Tower &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">900 building issues. 4 months to resolve them. $10.1M in forecast savings.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"Commissioning compressed from 36 months to 4. Energy intensity one third below peer towers."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">$10.1M</span>
+          <span class="proof-l">10-year forecast savings</span>
+        </div>
+        <a href="/resources#telus-garden" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+
+    <!-- Proof bottom CTA bar -->
+    <div class="rev" style="background:color-mix(in srgb,var(--green) 8%,transparent);border:1px solid color-mix(in srgb,var(--green) 25%,transparent);border-radius:var(--rlg);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-family:var(--font-h);font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:.25rem;">See what Novem Digital finds in your portfolio.</p>
+        <p class="sm" style="margin:0;">Book a demo and see what surfaces in your portfolio — day one.</p>
+      </div>
+      <a href="#contact" class="btn btn-p" style="flex-shrink:0;">Get a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- TCRO INTRO -->
+<section class="sec sec--alt" id="tcro-intro">
+  <div class="wm">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center;" class="rev">
+      <div>
+        <p class="eye"><span class="eye-dot"></span>Framework</p>
+        <h2 class="h2" style="margin-bottom:1rem;">We find the failure <span class="accent">before it hits your financials.</span></h2>
+        <p class="lg" style="max-width:44ch;margin-bottom:1.75rem;">Most risk frameworks only count what already happened. Total Cost of Risk Ownership captures the full financial burden — everything that hits your P&amp;L before it makes your risk register.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="/tcro" class="btn btn-p">Explore TCRO <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/tcro#calculator" class="btn btn-g">TCRO Calculator</a>
+        </div>
+      </div>
+      <div class="rev d1">
+        <div class="tcro-diagram-wrap">
+          <div class="tcro-diagram-label">TCRO — The Full Cost of Invisible Risk</div>
+          <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" aria-label="TCRO diagram showing 7 cost categories">
+            <circle cx="210" cy="210" r="185" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 6" opacity=".4"/>
+            <circle cx="210" cy="210" r="145" stroke="var(--border)" stroke-width="1" opacity=".6"/>
+            <circle cx="210" cy="210" r="58" fill="var(--surf2)" stroke="var(--green)" stroke-width="2.5"/>
+            <text x="210" y="204" text-anchor="middle" fill="var(--green)" font-family="Titillium Web,sans-serif" font-size="13" font-weight="700">TCRO</text>
+            <text x="210" y="220" text-anchor="middle" fill="var(--muted)" font-family="DM Sans,sans-serif" font-size="11">Total Cost of</text>
+            <text x="210" y="232" text-anchor="middle" fill="var(--muted)" font-family="DM Sans,sans-serif" font-size="11">Risk Ownership</text>
+            <line x1="210" y1="152" x2="210" y2="68" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="320" y2="118" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="348" y2="248" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="272" y2="348" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="148" y2="348" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="72" y2="248" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="100" y2="118" stroke="var(--border)" stroke-width="1"/>
+            <circle cx="210" cy="68" r="5" fill="var(--green)"/>
+            <circle cx="320" cy="118" r="5" fill="var(--blue)"/>
+            <circle cx="348" cy="248" r="5" fill="var(--green)"/>
+            <circle cx="272" cy="348" r="5" fill="var(--blue)"/>
+            <circle cx="148" cy="348" r="5" fill="var(--green)"/>
+            <circle cx="72" cy="248" r="5" fill="var(--blue)"/>
+            <circle cx="100" cy="118" r="5" fill="var(--green)"/>
+            <text x="210" y="48" text-anchor="middle" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Losses &amp; Claims</text>
+            <text x="334" y="108" text-anchor="start" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Downtime</text>
+            <text x="362" y="252" text-anchor="start" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Premiums</text>
+            <text x="210" y="378" text-anchor="middle" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Maintenance</text>
+            <text x="134" y="378" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Compliance</text>
+            <text x="56" y="252" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Overhead</text>
+            <text x="86" y="108" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Governance</text>
+          </svg>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);">
+            <span style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--faint);">Source: Novem Digital TCRO Framework, developed with strategic infrastructure partner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="sec" id="resources">
+  <div class="wm">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:.25rem;">
+      <p class="eye" style="justify-content:center;">Free Resources</p>
+      <h2 class="h2" style="margin-bottom:1rem;">The intelligence layer your portfolio is missing.</h2>
+      <p class="lg">Two tools that help operations, finance, and risk leaders quantify invisible building risk and build the case for predictive operations.</p>
+    </div>
+    <div class="leads-g">
+      <div class="lead-card rev">
+        <div class="lead-chip">Whitepaper</div>
+        <div class="lead-card-title">The TCRO Framework: A Holistic Guide to Total Cost of Risk Ownership</div>
+        <div class="lead-card-body">Most organizations measure Cost of Risk too narrowly. This whitepaper defines every component of Total Cost of Risk Ownership and gives finance and operations leaders a shared language for defending capital and insurance decisions.</div>
+        <a href="#contact" class="btn btn-p" style="margin-top:.25rem;">Download the Whitepaper <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+      </div>
+      <div class="lead-card rev d1">
+        <div class="lead-chip">Interactive Tool</div>
+        <div class="lead-card-title">TCRO Calculator: What Is Invisible Building Risk Costing You?</div>
+        <div class="lead-card-body">Input your portfolio's key operating data and the calculator estimates your full Total Cost of Risk Ownership and the potential financial impact of moving from reactive to predictive operations.</div>
+        <a href="#contact" class="btn btn-g" style="margin-top:.25rem;">Use the Calculator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="sec sec--alt" id="partners">
+  <div class="wm">
+    <div class="part-hdr rev">
+      <p class="eye" style="justify-content:center;">Trusted Partners</p>
+      <h2 class="h2" style="margin-bottom:1rem;">Risk reduction grounded in real loss experience, not assumptions.</h2>
+      <p class="lg">Built with global leaders in infrastructure, insurance, and risk — a foundation that cannot be replicated.</p>
+    </div>
+    <div class="part-g">
+      <div class="part rev"><div class="part-role">Strategic Infrastructure Partner</div><div class="part-name">Global Digital Energy &amp; Building Services Company</div><p class="sm">A global leader in building infrastructure and energy management operating in over 100 countries — embedding predictive intelligence directly into building systems and services for institutional real estate portfolios.</p></div>
+      <div class="part rev d1"><div class="part-role">Strategic Insurance Data Partner</div><div class="part-name">Global Commercial Insurance Company</div><p class="sm">One of the world’s largest commercial insurers — contributing 20 years of normalized institutional claims data that transforms building signals into financially defensible risk scores.</p></div>
+      <div class="part rev d2"><div class="part-role">Strategic Broker Partner</div><div class="part-name">National Insurance Brokerage</div><p class="sm">A leading Canadian brokerage using Novem data to engineer risk, strengthen submissions, and improve outcomes for institutional real estate clients at renewal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="w">
+    <div class="cta-inner">
+      <h2 class="cta-h">See what Novem Digital finds in your portfolio <em>on day one.</em></h2>
+      <p class="cta-b">Lower costs. Control insurance. Defend every capital decision with data.</p>
+      <div class="cta-acts">
+        <a href="/get-a-demo/" class="btn-s btn-gs">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/how-it-works/" class="btn-s btn-ol">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="w">
+    <div class="rev" style="max-width:720px;margin-inline:auto;margin-bottom:3rem;text-align:center;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>FAQ</p>
+      <h2 class="h2">Common questions about <span class="accent">Novem Digital.</span></h2>
+    </div>
+    <div style="max-width:800px;margin-inline:auto;display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      <details class="faq-item rev">
+        <summary class="faq-q">What is a Digital Risk Platform for real estate?</summary>
+        <div class="faq-a">
+          <p>A Digital Risk Platform connects operational building data, risk intelligence, and financial exposure in one system so real estate owners can predict and prevent equipment failures before they become loss events. Unlike a building management system, which monitors and controls in real time, a Digital Risk Platform translates those signals into financial outcomes, capital decisions, and audit ready evidence. Novem Digital is the only platform that combines real time monitoring with normalized insurance claims data from 7.2 million buildings.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">What is Total Cost of Risk Ownership?</summary>
+        <div class="faq-a">
+          <p>Total Cost of Risk Ownership (TCRO) is the full financial burden of invisible building risk. It includes direct claims, emergency repair premiums, insurance volatility, business interruption, compliance overhead, fragmented reporting costs, and reputational exposure. Most organizations only measure direct claims, leaving the majority of their true risk burden invisible on the P&amp;L. Novem Digital frames all value delivery through TCRO so customers can see and manage the complete picture.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d2">
+        <summary class="faq-q">How does Novem Digital predict building failure?</summary>
+        <div class="faq-a">
+          <p>Novem Digital combines real time monitoring of critical building systems with normalized insurance claims data from 7.2 million buildings across 20 years of loss history. By comparing live operational signals against historical failure patterns at the equipment and building type level, the platform identifies elevated risk before a failure event occurs. Early warnings give operations teams time to intervene at standard rates during planned downtime rather than at crisis rates after an event.</p>
+        </div>
+      </details>
+      <details class="faq-item rev">
+        <summary class="faq-q">How is Novem Digital different from a building management system?</summary>
+        <div class="faq-a">
+          <p>A building management system (BMS) monitors and controls building systems in real time. Novem Digital layers predictive risk intelligence and normalized insurance claims data on top of existing systems to make failure predictable, translate operational signals into financial exposure, and produce audit ready data for boards, lenders, and insurers. Novem does not replace a BMS — it makes its data financially useful and defensible at the executive level.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">Which types of real estate does Novem Digital serve?</summary>
+        <div class="faq-a">
+          <p>Novem Digital is built for institutional real estate owners with multi-site portfolios including commercial and mixed-use properties, seniors living and wellness facilities, data centers, and recreational and public venues. Best fit organizations have a high cost of failure, board level scrutiny on risk related costs, rising insurance pressure, fragmented asset and risk data, and a need to move from reactive to predictive operations.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,103 @@
+<!--
+  templateType: page
+  label: "Resource — dynamic HubDB detail"
+  isAvailableForNewContent: true
+-->
+{# Dynamic page template — bind to the `resources` HubDB table in Page Settings → Advanced Options → Dynamic Pages. #}
+{% extends "../layouts/base.html" %}
+
+{% block extra_head %}
+<style>
+.rd-hero{position:relative;overflow:hidden;padding-block:clamp(8rem,14vw,11rem) clamp(3rem,6vw,5rem);}
+.rd-hero-bg{position:absolute;inset:0;}
+.rd-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(.78) brightness(1.18);}
+.rd-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,24,30,.94) 0%,rgba(15,24,30,.7) 45%,rgba(15,24,30,.32) 100%);}
+.rd-hero-content{position:relative;z-index:1;max-width:48ch;}
+.rd-badge{display:inline-block;font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;padding:.3rem .9rem;border-radius:var(--r);margin-bottom:1.25rem;}
+.rd-badge--cs{color:var(--cs);background:color-mix(in srgb, var(--cs) 12%,transparent);border:1px solid color-mix(in srgb,var(--cs) 35%,transparent);}
+.rd-badge--wp{color:var(--wp);background:color-mix(in srgb, var(--wp) 12%,transparent);border:1px solid color-mix(in srgb,var(--wp) 35%,transparent);}
+.rd-badge--bl{color:var(--bl);background:color-mix(in srgb, var(--bl) 12%,transparent);border:1px solid color-mix(in srgb,var(--bl) 35%,transparent);}
+.rd-badge--pr{color:var(--pr);background:color-mix(in srgb, var(--pr) 12%,transparent);border:1px solid color-mix(in srgb,var(--pr) 35%,transparent);}
+.rd-meta{color:var(--muted);font-size:.85rem;margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap;}
+.rd-meta span{display:inline-flex;gap:.4rem;align-items:center;}
+.rd-body{max-width:70ch;margin-inline:auto;font-size:clamp(1.05rem,1rem + .3vw,1.2rem);line-height:1.8;color:var(--text);}
+.rd-body h2{font-family:var(--font-h);font-weight:700;font-size:clamp(1.4rem,1.2rem + .8vw,2rem);color:var(--text);margin:2.5rem 0 1rem;line-height:1.2;}
+.rd-body h3{font-family:var(--font-h);font-weight:700;font-size:1.15rem;color:var(--text);margin:2rem 0 .75rem;}
+.rd-body p{margin-bottom:1.25rem;color:var(--muted);}
+.rd-body ul, .rd-body ol{margin:0 0 1.5rem 1.5rem;color:var(--muted);}
+.rd-body li{margin-bottom:.5rem;}
+.rd-body blockquote{border-left:3px solid var(--green);padding:.5rem 0 .5rem 1.5rem;margin:2rem 0;font-style:italic;color:var(--text);}
+.rd-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2.5rem 0;}
+@media(max-width:640px){.rd-stats{grid-template-columns:1fr;}}
+.rd-stat{background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:1.5rem;}
+.rd-stat-num{font-family:var(--font-h);font-weight:700;font-size:clamp(1.6rem,1.3rem + 1.2vw,2.4rem);color:var(--green);line-height:1;}
+.rd-stat-lbl{font-size:.85rem;color:var(--muted);margin-top:.5rem;text-transform:uppercase;letter-spacing:.06em;}
+</style>
+{% endblock %}
+
+{% block body %}
+{% set row = dynamic_page_hubdb_row %}
+{% if row %}
+  {% set type = row.type %}
+  {% set type_label = "Resource" %}
+  {% set type_short = "cs" %}
+  {% if type == "case-study" %}{% set type_label = "Case Study" %}{% set type_short = "cs" %}{% endif %}
+  {% if type == "white-paper" %}{% set type_label = "White Paper" %}{% set type_short = "wp" %}{% endif %}
+  {% if type == "blog" %}{% set type_label = "Blog" %}{% set type_short = "bl" %}{% endif %}
+  {% if type == "press-release" %}{% set type_label = "Press Release" %}{% set type_short = "pr" %}{% endif %}
+
+  <section class="rd-hero">
+    <div class="rd-hero-bg">
+      {% if row.hero_image %}<img src="{{ row.hero_image.url }}" alt="" aria-hidden="true">{% endif %}
+      <div class="rd-hero-overlay"></div>
+    </div>
+    <div class="w">
+      <div class="rd-hero-content">
+        <span class="rd-badge rd-badge--{{ type_short }}">{{ type_label }}</span>
+        <h1 class="h1" style="font-size:clamp(2.4rem,1.5rem + 3.5vw,4.5rem);">{{ row.title }}</h1>
+        <div class="rd-meta">
+          {% if row.client %}<span>{{ row.client }}</span>{% endif %}
+          {% if row.industry %}<span>· {{ row.industry }}</span>{% endif %}
+          {% if row.publish_date %}<span>· {{ row.publish_date|datetimeformat('%B %Y') }}</span>{% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wm rd-body">
+      {% if row.summary %}<p class="lg" style="margin-bottom:2rem;">{{ row.summary }}</p>{% endif %}
+
+      {% if row.stat1_num or row.stat2_num or row.stat3_num %}
+      <div class="rd-stats">
+        {% if row.stat1_num %}<div class="rd-stat"><div class="rd-stat-num">{{ row.stat1_num }}</div><div class="rd-stat-lbl">{{ row.stat1_label }}</div></div>{% endif %}
+        {% if row.stat2_num %}<div class="rd-stat"><div class="rd-stat-num">{{ row.stat2_num }}</div><div class="rd-stat-lbl">{{ row.stat2_label }}</div></div>{% endif %}
+        {% if row.stat3_num %}<div class="rd-stat"><div class="rd-stat-num">{{ row.stat3_num }}</div><div class="rd-stat-lbl">{{ row.stat3_label }}</div></div>{% endif %}
+      </div>
+      {% endif %}
+
+      {{ row.body }}
+
+      {% if row.results %}
+        <h2>Results</h2>
+        {{ row.results }}
+      {% endif %}
+    </div>
+  </section>
+
+  {% module "final_cta" path="../modules/cta-band",
+    anchor_id="cta",
+    headline="<h2 class='cta-h'>See what failure looks like in <em>your portfolio</em>.</h2>",
+    body="Most institutional operators find material risk exposure in their first session. Book a demo and see what surfaces on day one.",
+    primary_cta={ label: "Get a Demo", url: { href: "/get-a-demo/" } },
+    secondary_cta={ label: "Browse resources", url: { href: "/resources/" } }
+  %}
+{% else %}
+  <section class="sec">
+    <div class="w">
+      <h1 class="h2">Resource not found.</h1>
+      <p class="lg" style="margin-top:1rem;"><a href="/resources/" class="btn btn-p">Back to resources</a></p>
+    </div>
+  </section>
+{% endif %}
+{% endblock %}

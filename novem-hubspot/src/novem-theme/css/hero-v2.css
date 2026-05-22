@@ -1,0 +1,200 @@
+/* ═══════════════════════════════════════════════════════════════════
+   NOVEM DIGITAL — Hero v2 (scroll-driven video)
+   Self-contained styles. Bypasses main.css conflicts entirely.
+   ═══════════════════════════════════════════════════════════════════ */
+
+.hero-v2 {
+  position: relative;
+  background: #07101A;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tall scroll runway — 240vh gives a smooth scrub window */
+.hero-v2-track {
+  position: relative;
+  height: 240vh;
+  width: 100%;
+}
+
+/* Sticky 100vh pin — locks the video + content to the viewport */
+.hero-v2-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Video — fills the sticky viewport */
+.hero-v2-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+  z-index: 0;
+  pointer-events: none;
+  background: #07101A;
+}
+
+/* Gradient overlay for text legibility */
+.hero-v2-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(105deg, rgba(7,16,26,.78) 0%, rgba(7,16,26,.42) 50%, rgba(7,16,26,.08) 100%),
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(7,16,26,.55), transparent 70%);
+}
+
+/* Content layer */
+.hero-v2-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 0 clamp(1.25rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #F4FAFA;
+}
+
+.hero-v2-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem 1rem;
+  background: rgba(123,250,181,.12);
+  border: 1px solid rgba(123,250,181,.22);
+  border-radius: 9999px;
+  color: #7BFAB5;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.hero-v2-tag-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #7BFAB5; box-shadow: 0 0 8px #7BFAB5;
+  animation: heroV2Blink 1.6s ease-in-out infinite;
+}
+@keyframes heroV2Blink { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+
+.hero-v2-head {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 4vw + 2.5rem, 7.5rem);
+  line-height: .94;
+  letter-spacing: -.04em;
+  color: #F4FAFA;
+  margin: 0;
+  max-width: 16ch;
+}
+.hero-v2-accent {
+  background: linear-gradient(120deg, #7BFAB5 0%, #B6FFD3 35%, #60BCD6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: heroV2Sweep 6s ease-in-out infinite;
+  display: inline;
+}
+@keyframes heroV2Sweep {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-v2-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(1.1rem, .3vw + 1.05rem, 1.4rem);
+  line-height: 1.55;
+  color: #C7D8DC;
+  max-width: 52ch;
+  margin: 0;
+}
+
+.hero-v2-acts {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: .75rem;
+}
+
+/* Progress dots — right edge */
+.hero-v2-progress {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  z-index: 3;
+}
+.hero-v2-progress-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background .35s cubic-bezier(.16,1,.3,1),
+              transform .35s cubic-bezier(.16,1,.3,1),
+              box-shadow .35s cubic-bezier(.16,1,.3,1);
+}
+.hero-v2-progress-dot.active {
+  background: #7BFAB5;
+  transform: scale(1.7);
+  box-shadow: 0 0 10px #7BFAB5;
+}
+@media (max-width: 768px) { .hero-v2-progress { display: none; } }
+
+/* Scroll cue */
+.hero-v2-scrollcue {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Titillium Web', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .6rem;
+  animation: heroV2CueFloat 2.4s ease-in-out infinite;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+.hero-v2-scrollcue::after {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(180deg, #7BFAB5, transparent);
+}
+@keyframes heroV2CueFloat {
+  0%, 100% { opacity: .55; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+}
+@media (max-width: 768px) { .hero-v2-scrollcue { display: none; } }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-v2-track { height: 100vh; }
+  .hero-v2-sticky { position: relative; }
+  .hero-v2-accent, .hero-v2-scrollcue, .hero-v2-tag-dot { animation: none; }
+}

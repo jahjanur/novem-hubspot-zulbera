@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Novem Digital</title>
+  <meta name="description" content="Talk to the Novem Digital team. Book a demo, partner with us, or reach out about institutional real estate digital risk."/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:title" content="Contact | Novem Digital"/>
+  <meta property="og:description" content="Get in touch with Novem Digital — predictive intelligence for institutional real estate."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://novemdigital.com/contact/"/>
+  <link rel="canonical" href="/contact/"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/modern.css"/>
+  <link rel="stylesheet" href="/redesign.css"/>
+  <link rel="stylesheet" href="/footer-v2.css"/>
+  <style>
+    /* ─── Brand tokens (shared with every other page) ─── */
+    :root {
+      --green: #7BFAB5;
+      --blue: #60BCD6;
+      --gun: #1E343F;
+      --gun-mid: #243C48;
+      --gun-dark: #111A1F;
+      --text: #E8F4F0;
+      --muted: #8BBCCA;
+      --faint: #4A7080;
+      --border: #2C4250;
+      --border2: #324E5C;
+      --surf: #1E343F;
+      --surf2: #243C48;
+      --bg: #111A1F;
+      --font-h: 'Titillium Web', 'Arial Narrow', sans-serif;
+      --font-b: 'DM Sans', 'Helvetica Neue', sans-serif;
+      --f-display: 'Titillium Web', 'Arial Narrow', sans-serif;
+      --f-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+      --r: 9999px;
+      --rxl: 1rem;
+      --rlg: .75rem;
+      --rmd: .5rem;
+      --ez: cubic-bezier(.16,1,.3,1);
+      --ease: 200ms cubic-bezier(.16,1,.3,1);
+    }
+    [data-theme="light"] {
+      --text: #1E343F;
+      --muted: #4A7080;
+      --faint: #7AA0B0;
+      --bg: #F4F7F8;
+      --surf: #FFFFFF;
+      --surf2: #F0F4F6;
+      --border: #D8E1E5;
+      --border2: #BFCCD1;
+      --green: #60BCD6;  /* swap to blue accent in light mode */
+    }
+
+    /* ─── Page base ─── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: var(--font-b);
+      color: var(--text); background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.no-scroll { overflow: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .w {
+      max-width: 1200px; margin-inline: auto;
+      padding-inline: clamp(1.25rem, 5vw, 3rem);
+    }
+
+    /* ─── Mobile drawer/overlay base (so they stay hidden until JS opens them) ─── */
+    .mobile-overlay {
+      position: fixed; inset: 0; z-index: 300;
+      background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
+      opacity: 0; visibility: hidden;
+      transition: opacity .3s ease;
+    }
+    .mobile-overlay.open { opacity: 1; visibility: visible; }
+    .mobile-menu {
+      position: fixed; top: 0; right: 0; bottom: 0;
+      z-index: 301; width: min(88vw, 380px);
+      background: var(--gun);
+      transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.16,1,.3,1);
+      display: flex; flex-direction: column;
+      overflow-y: auto;
+    }
+    [data-theme="light"] .mobile-menu { background: #fff; }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-menu-header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-close {
+      width: 36px; height: 36px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text); background: none; border: none;
+      border-radius: .375rem; cursor: pointer;
+    }
+    .mobile-bottom {
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex; flex-direction: column; gap: .75rem;
+    }
+    .mobile-login {
+      text-align: center; padding: .75rem;
+      color: var(--faint); border-radius: .375rem;
+    }
+    .mobile-demo {
+      text-align: center; padding: .875rem;
+      font-family: var(--font-h); font-weight: 700;
+      background: var(--green); color: var(--gun);
+      border-radius: var(--r);
+    }
+
+    /* ─── Reveal helper (used by other shared CSS) ─── */
+    .rev { opacity: 1; transform: none; }
+
+    /* ─── Contact page layout ─── */
+    .contact-hero {
+      padding: clamp(8rem, 12vw, 11rem) 0 clamp(2rem, 4vw, 4rem);
+      text-align: center;
+    }
+    .contact-hero-tag {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .45rem 1rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      font: 600 .75rem/1 var(--f-display); letter-spacing: .12em;
+      text-transform: uppercase; color: var(--green);
+      margin-bottom: 1.25rem;
+    }
+    .contact-hero-tag::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+    }
+    .contact-hero h1 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(2.4rem, 1.5rem + 3.6vw, 4.4rem);
+      letter-spacing: -.025em; line-height: 1.05;
+      margin: 0 0 1rem;
+    }
+    .contact-hero h1 .accent {
+      background: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .contact-hero p {
+      max-width: 60ch; margin: 0 auto;
+      font-size: clamp(1rem, .8rem + .4vw, 1.15rem);
+      color: var(--muted); line-height: 1.6;
+    }
+
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr;
+      gap: clamp(2rem, 4vw, 4rem);
+      max-width: 1200px; margin: 0 auto;
+      padding: clamp(2rem, 4vw, 4rem) clamp(1rem, 4vw, 2rem) clamp(4rem, 8vw, 7rem);
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    /* Left: contact methods */
+    .contact-methods { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-card {
+      padding: 1.4rem 1.5rem;
+      background: var(--g-bg-1, rgba(255,255,255,.03));
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--br-mid, rgba(255,255,255,.08));
+      border-radius: var(--rd-md, 16px);
+      transition: border-color .25s var(--ez), transform .25s var(--ez), box-shadow .25s var(--ez);
+    }
+    .contact-card:hover {
+      border-color: color-mix(in srgb, var(--green) 35%, transparent);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px -12px color-mix(in srgb, var(--green) 25%, transparent);
+    }
+    .contact-card-head {
+      display: flex; align-items: center; gap: .8rem; margin-bottom: .5rem;
+    }
+    .contact-card-icon {
+      width: 38px; height: 38px; border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      background: color-mix(in srgb, var(--green) 14%, transparent);
+      color: var(--green);
+      border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
+    }
+    .contact-card-label {
+      font-family: var(--f-display); font-weight: 700; font-size: .72rem;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .contact-card-value {
+      font-family: var(--f-body); font-size: 1.05rem; font-weight: 500;
+      color: var(--text); text-decoration: none;
+      display: block; line-height: 1.4;
+    }
+    .contact-card-value:hover { color: var(--green); }
+    .contact-card-sub {
+      font-family: var(--f-body); font-size: .85rem; color: var(--muted);
+      margin-top: .25rem; line-height: 1.5;
+    }
+
+    /* Right: form */
+    .contact-form-card {
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      background: var(--g-bg-1, rgba(255,255,255,.03));
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--br-mid, rgba(255,255,255,.08));
+      border-radius: var(--rd-md, 16px);
+    }
+    .contact-form-card h2 {
+      font-family: var(--f-display); font-weight: 700; font-size: 1.6rem;
+      letter-spacing: -.015em; margin: 0 0 .35rem;
+    }
+    .contact-form-card p.lede {
+      color: var(--muted); margin: 0 0 1.75rem; font-size: .95rem;
+    }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 600px) { .cf-row { grid-template-columns: 1fr; } }
+    .cf-field { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
+    .cf-field label {
+      font-family: var(--f-display); font-weight: 600;
+      font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cf-field label .req { color: var(--green); }
+    .cf-field input,
+    .cf-field select,
+    .cf-field textarea {
+      width: 100%; padding: .85rem 1rem;
+      background: color-mix(in srgb, var(--text) 4%, transparent);
+      border: 1px solid var(--br-mid, rgba(255,255,255,.10));
+      border-radius: 10px;
+      color: var(--text);
+      font: 400 .95rem/1.4 var(--f-body);
+      transition: border-color .2s var(--ez), background .2s var(--ez), box-shadow .2s var(--ez);
+    }
+    .cf-field textarea { min-height: 120px; resize: vertical; }
+    .cf-field input:focus,
+    .cf-field select:focus,
+    .cf-field textarea:focus {
+      outline: none;
+      border-color: color-mix(in srgb, var(--green) 50%, transparent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--green) 18%, transparent);
+      background: color-mix(in srgb, var(--text) 6%, transparent);
+    }
+    .cf-submit {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .9rem 1.6rem; border-radius: 9999px;
+      background: var(--green); color: var(--gun);
+      -webkit-text-fill-color: var(--gun);
+      font-family: var(--f-display); font-weight: 700; font-size: .95rem;
+      border: none; cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.5) inset,
+        0 4px 14px -2px rgba(123,250,181,.35),
+        0 1px 2px rgba(0,0,0,.2);
+      transition: transform .2s var(--ez), box-shadow .25s var(--ez), filter .2s var(--ez);
+    }
+    .cf-submit:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .cf-note {
+      font-size: .8rem; color: var(--muted); margin-top: .85rem;
+      line-height: 1.5;
+    }
+    .cf-note a { color: var(--green); text-decoration: none; }
+    .cf-note a:hover { text-decoration: underline; }
+
+    .cf-success {
+      display: none;
+      padding: 2rem; text-align: center;
+      background: color-mix(in srgb, var(--green) 8%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 25%, transparent);
+      border-radius: 12px;
+    }
+    .cf-success.show { display: block; }
+    .cf-success-icon {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: color-mix(in srgb, var(--green) 18%, transparent);
+      color: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .cf-success h3 { font-family: var(--f-display); margin: 0 0 .5rem; }
+    .cf-success p { color: var(--muted); margin: 0; }
+
+    /* ─── Hero stats strip ─── */
+    .contact-hero-stats {
+      display: flex; flex-wrap: wrap; gap: 1.25rem 2.5rem;
+      justify-content: center; align-items: center;
+      margin-top: 2.25rem; padding-top: 2rem;
+      border-top: 1px solid color-mix(in srgb, var(--green) 16%, transparent);
+      max-width: 700px; margin-left: auto; margin-right: auto;
+    }
+    .chs-cell { display: flex; flex-direction: column; align-items: center; gap: .25rem; }
+    .chs-val {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.5rem, 1.1rem + 1.3vw, 2rem);
+      letter-spacing: -.025em;
+      background: linear-gradient(180deg, var(--green) 0%, color-mix(in srgb, var(--green) 50%, var(--text)) 90%);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 12px color-mix(in srgb, var(--green) 35%, transparent));
+      line-height: 1;
+    }
+    .chs-unit {
+      font-size: .55em; opacity: .7; margin-left: .2em; font-weight: 600;
+      letter-spacing: 0;
+    }
+    .chs-lbl {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─── Triage section ─── */
+    .contact-triage {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background:
+        radial-gradient(ellipse 80% 40% at 50% 0%, color-mix(in srgb, var(--green) 6%, transparent) 0%, transparent 65%),
+        transparent;
+    }
+    .ct-head { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; }
+    .ct-eye {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .42rem .9rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 1rem;
+    }
+    .ct-eye::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+    }
+    .ct-head h2 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.9rem, 1.3rem + 2.4vw, 2.8rem);
+      letter-spacing: -.02em; line-height: 1.1;
+      margin: 0 0 .75rem;
+    }
+    .ct-head p { color: var(--muted); margin: 0; line-height: 1.5; }
+    .ct-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+      max-width: 1200px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem);
+    }
+    @media (max-width: 900px) { .ct-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .ct-grid { grid-template-columns: 1fr; } }
+    .ct-card {
+      display: flex; flex-direction: column; gap: .5rem;
+      padding: 1.5rem 1.4rem 1.6rem;
+      background:
+        radial-gradient(ellipse 100% 60% at 50% 0%, color-mix(in srgb, var(--green) 8%, transparent) 0%, transparent 70%),
+        linear-gradient(180deg, color-mix(in srgb, var(--surf) 70%, transparent) 0%, color-mix(in srgb, var(--gun-dark, var(--bg)) 92%, transparent) 100%);
+      border: 1px solid color-mix(in srgb, var(--green) 14%, var(--border));
+      border-radius: 18px;
+      text-decoration: none; color: inherit;
+      transition: transform .3s var(--ez), border-color .3s var(--ez), box-shadow .3s var(--ez);
+      isolation: isolate;
+    }
+    .ct-card:hover {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--green) 35%, var(--border));
+      box-shadow:
+        0 18px 40px -18px rgba(0,0,0,.55),
+        0 0 30px -10px color-mix(in srgb, var(--green) 22%, transparent);
+    }
+    .ct-card-icon {
+      width: 42px; height: 42px; margin-bottom: .35rem;
+      background: color-mix(in srgb, var(--green) 14%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--green);
+    }
+    .ct-card-icon svg { width: 20px; height: 20px; }
+    .ct-card h3 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: 1.1rem; letter-spacing: -.005em; margin: 0;
+    }
+    .ct-card p {
+      font-size: .9rem; line-height: 1.5; color: var(--muted); margin: 0 0 .5rem;
+    }
+    .ct-card-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .82rem; color: var(--green);
+      margin-top: auto;
+    }
+    .ct-card-link svg { transition: transform .25s var(--ez); }
+    .ct-card:hover .ct-card-link svg { transform: translateX(4px); }
+
+    /* ─── HQ + Promise ─── */
+    .contact-hq {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 100% 0%, color-mix(in srgb, var(--blue) 8%, transparent) 0%, transparent 60%),
+        transparent;
+    }
+    .ch-grid {
+      display: grid; grid-template-columns: 1.2fr 1fr;
+      gap: clamp(2rem, 4vw, 3.5rem);
+      max-width: 1200px; margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      align-items: stretch;
+    }
+    @media (max-width: 900px) { .ch-grid { grid-template-columns: 1fr; } }
+
+    .ch-office {
+      padding: 2rem; border-radius: 22px;
+      background:
+        radial-gradient(ellipse 100% 50% at 0% 0%, color-mix(in srgb, var(--green) 10%, transparent) 0%, transparent 60%),
+        linear-gradient(180deg, color-mix(in srgb, var(--surf) 65%, transparent) 0%, color-mix(in srgb, var(--gun-dark, var(--bg)) 92%, transparent) 100%);
+      border: 1px solid color-mix(in srgb, var(--green) 14%, var(--border));
+    }
+    .ch-eye {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .35rem .8rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .65rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 1rem;
+    }
+    .ch-eye::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+    }
+    .ch-office h2 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.8rem, 1.3rem + 2vw, 2.4rem);
+      letter-spacing: -.02em; line-height: 1.1;
+      margin: 0 0 1rem;
+    }
+    .ch-office h2 .accent {
+      background: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; -webkit-text-fill-color: transparent;
+    }
+    .ch-lede { color: var(--muted); line-height: 1.6; margin: 0 0 1.5rem; }
+    .ch-meta {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .ch-meta li {
+      display: grid; grid-template-columns: 36px 1fr; gap: .9rem;
+      align-items: start;
+      padding-top: 1rem;
+      border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+    }
+    .ch-meta li:first-child { border-top: none; padding-top: 0; }
+    .ch-meta li > svg {
+      width: 24px; height: 24px; color: var(--green);
+      padding: 6px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 24%, transparent);
+      border-radius: 9px;
+      box-sizing: content-box;
+    }
+    .ch-meta li > div { display: flex; flex-direction: column; gap: .15rem; }
+    .ch-meta strong {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .85rem; color: var(--text); letter-spacing: -.005em;
+    }
+    .ch-meta span { color: var(--muted); font-size: .9rem; line-height: 1.45; }
+
+    .ch-promise {
+      padding: 2rem; border-radius: 22px;
+      background:
+        radial-gradient(ellipse 100% 50% at 100% 0%, color-mix(in srgb, var(--blue) 12%, transparent) 0%, transparent 60%),
+        linear-gradient(180deg, color-mix(in srgb, var(--surf) 70%, transparent) 0%, color-mix(in srgb, var(--gun-dark, var(--bg)) 92%, transparent) 100%);
+      border: 1px solid color-mix(in srgb, var(--blue) 16%, var(--border));
+    }
+    .ch-promise-tag {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .35rem .8rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--blue) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--blue) 28%, transparent);
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .65rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--blue); margin-bottom: 1rem;
+    }
+    .ch-promise-tag::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--blue); box-shadow: 0 0 8px var(--blue);
+    }
+    .ch-promise h3 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.4rem, 1rem + 1.4vw, 1.75rem);
+      letter-spacing: -.012em; line-height: 1.15;
+      margin: 0 0 1.5rem;
+    }
+    .ch-promise-list {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 1.2rem;
+    }
+    .ch-promise-list li {
+      display: grid; grid-template-columns: 60px 1fr; gap: 1rem;
+      align-items: start;
+    }
+    .cpl-num {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: 1.4rem; letter-spacing: -.025em;
+      color: var(--blue);
+      filter: drop-shadow(0 0 10px color-mix(in srgb, var(--blue) 35%, transparent));
+      text-align: center;
+      line-height: 1;
+      padding-top: .15rem;
+    }
+    .ch-promise-list strong {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .95rem; display: block; margin-bottom: .2rem;
+    }
+    .ch-promise-list span { color: var(--muted); font-size: .88rem; line-height: 1.5; }
+
+    /* ─── FAQ ─── */
+    .contact-faq {
+      padding: clamp(3rem, 6vw, 5rem) 0;
+    }
+    .cf-head { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; padding: 0 1rem; }
+    .cf-eye {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .42rem .9rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--green); margin-bottom: 1rem;
+    }
+    .cf-eye::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 8px var(--green);
+    }
+    .cf-head h2 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.9rem, 1.3rem + 2.4vw, 2.8rem);
+      letter-spacing: -.02em; line-height: 1.1; margin: 0 0 .75rem;
+    }
+    .cf-head p { color: var(--muted); margin: 0; line-height: 1.5; }
+    .cf-list {
+      max-width: 760px; margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 2rem);
+      display: flex; flex-direction: column; gap: .6rem;
+    }
+    .cf-item {
+      background: color-mix(in srgb, var(--surf) 55%, transparent);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color .25s var(--ez), background .25s var(--ez);
+    }
+    .cf-item[open] {
+      border-color: color-mix(in srgb, var(--green) 30%, var(--border));
+      background: color-mix(in srgb, var(--surf) 65%, transparent);
+    }
+    .cf-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.1rem 1.3rem;
+      font-family: var(--f-display); font-weight: 700;
+      font-size: 1rem; color: var(--text);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem;
+      position: relative;
+    }
+    .cf-item summary::-webkit-details-marker { display: none; }
+    .cf-item summary::after {
+      content: "+"; font-family: var(--f-display); font-weight: 700;
+      font-size: 1.5rem; color: var(--green);
+      transition: transform .25s var(--ez);
+      line-height: 1;
+    }
+    .cf-item[open] summary::after { content: "−"; transform: rotate(0); }
+    .cf-item p {
+      padding: 0 1.3rem 1.2rem;
+      color: var(--muted); line-height: 1.65;
+      font-size: .94rem; margin: 0;
+    }
+
+    /* ─── Final CTA ─── */
+    .contact-final-cta {
+      padding: clamp(3rem, 6vw, 5rem) 0 clamp(4rem, 8vw, 6rem);
+    }
+    .cfc-card {
+      max-width: 1100px; margin: 0 auto;
+      padding: clamp(2rem, 5vw, 3.5rem);
+      border-radius: 28px;
+      background:
+        radial-gradient(ellipse 80% 100% at 0% 50%, color-mix(in srgb, var(--green) 14%, transparent) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 100% at 100% 50%, color-mix(in srgb, var(--blue) 14%, transparent) 0%, transparent 60%),
+        linear-gradient(180deg, color-mix(in srgb, var(--surf) 75%, transparent) 0%, color-mix(in srgb, var(--gun-dark, var(--bg)) 92%, transparent) 100%);
+      border: 1px solid color-mix(in srgb, var(--green) 22%, var(--border));
+      display: grid; grid-template-columns: 1.4fr auto;
+      gap: 2rem; align-items: center;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        0 24px 60px -20px rgba(0,0,0,.5);
+    }
+    @media (max-width: 760px) { .cfc-card { grid-template-columns: 1fr; text-align: center; } }
+    .cfc-eye {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .35rem .8rem; border-radius: 9999px;
+      background: color-mix(in srgb, var(--green) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--green) 28%, transparent);
+      font-family: var(--f-display); font-weight: 700;
+      font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--green); margin-bottom: .9rem;
+    }
+    .cfc-eye::before {
+      content: ""; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--green); box-shadow: 0 0 6px var(--green);
+    }
+    .cfc-text h2 {
+      font-family: var(--f-display); font-weight: 700;
+      font-size: clamp(1.7rem, 1.2rem + 2vw, 2.4rem);
+      letter-spacing: -.02em; line-height: 1.1;
+      margin: 0 0 .7rem;
+    }
+    .cfc-text h2 .accent {
+      background: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent; -webkit-text-fill-color: transparent;
+    }
+    .cfc-text p { color: var(--muted); margin: 0; line-height: 1.5; }
+    .cfc-acts {
+      display: flex; gap: .75rem; flex-wrap: wrap;
+    }
+    @media (max-width: 760px) { .cfc-acts { justify-content: center; } }
+    .cfc-btn-p {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .85rem 1.6rem; border-radius: 9999px;
+      background: var(--green); color: var(--gun);
+      -webkit-text-fill-color: var(--gun);
+      font-family: var(--f-display); font-weight: 700; font-size: .92rem;
+      text-decoration: none;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,.5) inset,
+        0 4px 14px -2px rgba(123,250,181,.35);
+      transition: transform .2s var(--ez), filter .2s var(--ez);
+    }
+    .cfc-btn-p:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .cfc-btn-g {
+      display: inline-flex; align-items: center; gap: .55rem;
+      padding: .85rem 1.6rem; border-radius: 9999px;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-family: var(--f-display); font-weight: 700; font-size: .92rem;
+      text-decoration: none;
+      transition: border-color .2s var(--ez), background .2s var(--ez);
+    }
+    .cfc-btn-g:hover { border-color: var(--green); background: color-mix(in srgb, var(--green) 8%, transparent); }
+
+    /* Mobile tightening */
+    @media (max-width: 700px) {
+      .contact-hero-stats { gap: 1rem 1.75rem; padding-top: 1.5rem; }
+      .chs-val { font-size: 1.5rem; }
+      .ct-card { padding: 1.25rem 1.15rem 1.35rem; }
+      .ch-office, .ch-promise { padding: 1.5rem; }
+      .cfc-card { padding: 1.75rem; gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Novem Digital home">
+        <img src="/logo.png" style="height:26px;width:auto;" alt=""/><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+      </a>
+      <!-- Desktop links (synced by sync_nav.py) -->
+      <div class="nav-links" id="desktopNav">
+        <div class="nav-item"><a href="/">Home</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item has-dropdown" data-dropdown="platform">
+          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform">
+            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">How It Works</span>
+              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
+            </a>
+            <a href="/tcro/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">TCRO Framework</span>
+              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
+            </a>
+            <a href="/industries/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Industries</span>
+              <span class="nav-dd-desc">Sectors we serve</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown" data-dropdown="resources">
+          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources">
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Case Studies</span>
+              <span class="nav-dd-desc">Real portfolio outcomes</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Insights &amp; Blog</span>
+              <span class="nav-dd-desc">Research &amp; industry analysis</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Press &amp; Whitepapers</span>
+              <span class="nav-dd-desc">Announcements and research</span>
+            </a>
+            <a href="/partners/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Partners</span>
+              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
+            </a>
+            <a href="/careers/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Careers</span>
+              <span class="nav-dd-desc">Join the team</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="/contact/">Contact</a></div>
+      </div>
+      <!-- Right side -->
+      <div class="nav-right">
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#" class="nav-login">Login</a>
+        <a href="/contact/" class="nav-demo">Get a Demo</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo" aria-label="Novem Digital home"><img src="/logo.png" style="height:24px;width:auto;flex-shrink:0;" alt=""/><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-list">
+    <div class="mobile-nav-item">
+      <a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="platform">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Platform <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/how-it-works/" class="mobile-sub-item" data-mobile-link>How It Works</a>
+        <a href="/tcro/" class="mobile-sub-item" data-mobile-link>TCRO Framework</a>
+        <a href="/industries/" class="mobile-sub-item" data-mobile-link>Industries</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="resources">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
+        <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/contact/" class="mobile-nav-trigger" data-mobile-link>Contact</a>
+    </div>
+  </div>
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="/contact/" class="mobile-demo" data-mobile-link>Get a Demo</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="w">
+      <div class="contact-hero-tag">Let&apos;s Talk</div>
+      <h1>Get in <span class="accent">touch.</span></h1>
+      <p>Demo our platform, partner with us, or just ask a question. Our team typically replies within one business day &mdash; faster for urgent demos.</p>
+      <div class="contact-hero-stats">
+        <div class="chs-cell">
+          <span class="chs-val">&lt; 1<span class="chs-unit">day</span></span>
+          <span class="chs-lbl">Avg. reply time</span>
+        </div>
+        <div class="chs-cell">
+          <span class="chs-val">3</span>
+          <span class="chs-lbl">Markets served</span>
+        </div>
+        <div class="chs-cell">
+          <span class="chs-val">100%</span>
+          <span class="chs-lbl">Human reply, no bots</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIAGE: who should you reach? -->
+  <section class="contact-triage">
+    <div class="w">
+      <div class="ct-head">
+        <div class="ct-eye">Reach the Right Person</div>
+        <h2>Who should you talk to?</h2>
+        <p>Skip the form &mdash; route straight to the team that owns your question.</p>
+      </div>
+      <div class="ct-grid">
+        <a href="#contactForm" class="ct-card">
+          <div class="ct-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Book a Demo</h3>
+          <p>See predictive risk across your portfolio with a 30-minute walkthrough tailored to your asset class.</p>
+          <span class="ct-card-link">Send a request <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="#contactForm" class="ct-card">
+          <div class="ct-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+          </div>
+          <h3>Partnerships</h3>
+          <p>Insurers, energy & building tech, data providers &mdash; tell us where you see overlap.</p>
+          <span class="ct-card-link">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="mailto:press@novemdigital.com" class="ct-card">
+          <div class="ct-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg>
+          </div>
+          <h3>Press &amp; Media</h3>
+          <p>Briefings, executive interviews, product news, and licensed brand assets.</p>
+          <span class="ct-card-link">press@novemdigital.com <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/careers/" class="ct-card">
+          <div class="ct-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <h3>Careers</h3>
+          <p>Remote-first, values-driven, and growing across Canada, the US, and Europe.</p>
+          <span class="ct-card-link">View open roles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section>
+    <div class="contact-grid">
+
+      <!-- Left: contact methods -->
+      <div class="contact-methods">
+        <a href="mailto:connect@novemdigital.com" class="contact-card">
+          <div class="contact-card-head">
+            <div class="contact-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            </div>
+            <span class="contact-card-label">Email</span>
+          </div>
+          <span class="contact-card-value">connect@novemdigital.com</span>
+          <div class="contact-card-sub">For general inquiries, demos, and partnerships.</div>
+        </a>
+
+        <a href="tel:+18336683647" class="contact-card">
+          <div class="contact-card-head">
+            <div class="contact-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="contact-card-label">Phone</span>
+          </div>
+          <span class="contact-card-value">+1 (833) 668-3647</span>
+          <div class="contact-card-sub">Monday – Friday, 9am – 6pm Pacific.</div>
+        </a>
+
+        <div class="contact-card" style="cursor:default;">
+          <div class="contact-card-head">
+            <div class="contact-card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span class="contact-card-label">Office</span>
+          </div>
+          <span class="contact-card-value">Vancouver, Canada</span>
+          <div class="contact-card-sub">Serving institutional real estate portfolios across Canada, the United States, and Europe.</div>
+        </div>
+
+        <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-head">
+            <div class="contact-card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <span class="contact-card-label">Social</span>
+          </div>
+          <span class="contact-card-value">Follow us on LinkedIn</span>
+          <div class="contact-card-sub">Product updates, research, and case studies.</div>
+        </a>
+      </div>
+
+      <!-- Right: form -->
+      <div class="contact-form-card">
+        <h2>Send us a message</h2>
+        <p class="lede">Tell us a bit about your portfolio and what you&apos;d like to explore.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="firstName">First Name <span class="req">*</span></label>
+              <input id="firstName" name="firstName" type="text" required autocomplete="given-name"/>
+            </div>
+            <div class="cf-field">
+              <label for="lastName">Last Name <span class="req">*</span></label>
+              <input id="lastName" name="lastName" type="text" required autocomplete="family-name"/>
+            </div>
+          </div>
+
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="email">Work Email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@company.com"/>
+            </div>
+            <div class="cf-field">
+              <label for="company">Company <span class="req">*</span></label>
+              <input id="company" name="company" type="text" required autocomplete="organization"/>
+            </div>
+          </div>
+
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="role">Role / Title</label>
+              <input id="role" name="role" type="text" autocomplete="organization-title"/>
+            </div>
+            <div class="cf-field">
+              <label for="topic">Topic <span class="req">*</span></label>
+              <select id="topic" name="topic" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="demo">Book a demo</option>
+                <option value="partner">Partner with us</option>
+                <option value="press">Press / media</option>
+                <option value="careers">Careers</option>
+                <option value="general">General question</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cf-field">
+            <label for="message">Message <span class="req">*</span></label>
+            <textarea id="message" name="message" required placeholder="What are you trying to solve, and what does success look like for your portfolio?"></textarea>
+          </div>
+
+          <button type="submit" class="cf-submit">
+            Send Message
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="cf-note">By submitting, you agree to Novem Digital&apos;s <a href="#">Privacy Policy</a>. We will never share your information.</p>
+        </form>
+
+        <div class="cf-success" id="cfSuccess" role="status" aria-live="polite">
+          <div class="cf-success-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Thanks — we got it.</h3>
+          <p>We&apos;ll reply to you within one business day.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HQ + RESPONSE PROMISE -->
+  <section class="contact-hq">
+    <div class="w">
+      <div class="ch-grid">
+        <div class="ch-office">
+          <div class="ch-eye">Headquarters</div>
+          <h2>Vancouver, <span class="accent">British Columbia.</span></h2>
+          <p class="ch-lede">A global digital risk platform built for institutional real estate &mdash; headquartered on Canada&apos;s Pacific coast, serving portfolios in Canada, the United States, and Europe.</p>
+          <ul class="ch-meta">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <strong>Office</strong>
+                <span>Downtown Vancouver, BC, Canada</span>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <strong>Hours</strong>
+                <span>Mon &ndash; Fri, 9am &ndash; 6pm Pacific Time</span>
+              </div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              <div>
+                <strong>Coverage</strong>
+                <span>Canada &middot; United States &middot; Europe</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ch-promise">
+          <div class="ch-promise-tag">Our Promise</div>
+          <h3>We reply fast. With a human.</h3>
+          <ul class="ch-promise-list">
+            <li>
+              <span class="cpl-num">&lt;1d</span>
+              <div><strong>Standard reply</strong><span>One business day for general inquiries.</span></div>
+            </li>
+            <li>
+              <span class="cpl-num">&lt;2h</span>
+              <div><strong>Demo requests</strong><span>Routed straight to the team during business hours.</span></div>
+            </li>
+            <li>
+              <span class="cpl-num">0</span>
+              <div><strong>Sales sequences</strong><span>No drip campaigns. No auto-bots. One conversation.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="contact-faq">
+    <div class="w">
+      <div class="cf-head">
+        <div class="cf-eye">Common Questions</div>
+        <h2>Before you message us.</h2>
+        <p>The most-asked questions before a demo &mdash; answered up front.</p>
+      </div>
+      <div class="cf-list">
+        <details class="cf-item">
+          <summary>How long does a demo take?</summary>
+          <p>Thirty minutes. We walk through the platform on your asset class, show how TCRO surfaces, and answer your questions live. No slide-only deck.</p>
+        </details>
+        <details class="cf-item">
+          <summary>Do you need our data to demo?</summary>
+          <p>No. We start with our sample portfolio. If you want to see your data, we can layer it in during a second session under a one-page NDA.</p>
+        </details>
+        <details class="cf-item">
+          <summary>What asset classes do you cover?</summary>
+          <p>Commercial &amp; mixed-use, seniors &amp; wellness, data centers, and recreational &amp; venues today. Custom asset classes on request.</p>
+        </details>
+        <details class="cf-item">
+          <summary>Do you integrate with our existing tools?</summary>
+          <p>Yes &mdash; BMS, IoT, CMMS, insurance, and ERP systems. We handle ingestion; you don&apos;t need to rebuild your stack.</p>
+        </details>
+        <details class="cf-item">
+          <summary>How does pricing work?</summary>
+          <p>Annual subscription, scaled by portfolio size and modules deployed. We&apos;ll share a tailored quote after the first demo.</p>
+        </details>
+        <details class="cf-item">
+          <summary>Where is my data stored?</summary>
+          <p>SOC 2-aligned cloud infrastructure in the region of your choice (North America or EU). Data is encrypted at rest and in transit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="contact-final-cta">
+    <div class="w">
+      <div class="cfc-card">
+        <div class="cfc-text">
+          <div class="cfc-eye">Ready When You Are</div>
+          <h2>See what surfaces in <span class="accent">your portfolio.</span></h2>
+          <p>Thirty minutes. Your asset class. Predictive risk across the whole book.</p>
+        </div>
+        <div class="cfc-acts">
+          <a href="#contactForm" class="cfc-btn-p">Get a Demo
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/tcro/" class="cfc-btn-g">Explore TCRO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER (v2 brand band) -->
+<footer class="foot foot-v2">
+  <div class="w">
+
+    <!-- BRAND BAND: tagline + CTA -->
+    <div class="foot-v2-brand">
+      <div class="foot-v2-brand-left">
+        <p class="foot-v2-tagline">Ready to see what surfaces in <span class="accent">your portfolio?</span></p>
+      </div>
+      <a href="/get-a-demo/" class="foot-v2-cta">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- MAIN 5-COL GRID -->
+    <div class="foot-v2-g">
+
+      <div>
+        <a href="/" class="logo" aria-label="Novem Digital home">
+          <img src="/logo.png" style="height:26px;width:auto;" alt=""/>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        </a>
+        <p class="foot-v2-desc">A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.</p>
+        <div class="foot-v2-contacts">
+          <a href="tel:+18336683647" aria-label="Call Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (833) 668-3647
+          </a>
+          <a href="mailto:connect@novemdigital.com" aria-label="Email Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            connect@novemdigital.com
+          </a>
+          <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" aria-label="Novem Digital on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Industries</div>
+        <ul class="foot-v2-links">
+          <li><a href="/industries/#commercial-mixed-use">Commercial &amp; Mixed Use</a></li>
+          <li><a href="/industries/#seniors-wellness">Seniors &amp; Wellness</a></li>
+          <li><a href="/industries/#data-centers">Data Centers</a></li>
+          <li><a href="/industries/#recreational-venues">Recreational &amp; Venues</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Platform</div>
+        <ul class="foot-v2-links">
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/tcro/">TCRO Framework</a></li>
+          <li><a href="/partners/">Partners</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Resources</div>
+        <ul class="foot-v2-links">
+          <li><a href="/resources/">Case Studies</a></li>
+          <li><a href="/resources/">Insights &amp; Blog</a></li>
+          <li><a href="/resources/">Press &amp; Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Company</div>
+        <ul class="foot-v2-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM strip: copyright + zulbera attribution -->
+    <div class="foot-v2-bot">
+      <div class="foot-v2-legal">
+        <span>&copy; 2026 Novem Digital. All rights reserved.</span>
+        <span>Failure is Predictable.</span>
+      </div>
+      <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
+        Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  // Theme toggle
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      const cur = html.getAttribute('data-theme') || 'dark';
+      html.setAttribute('data-theme', cur === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  // Mobile drawer
+  const ham = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('mobileOverlay');
+  const closeBtn = document.getElementById('mobileCloseBtn');
+  function open()  { menu.classList.add('open'); overlay.classList.add('open'); document.body.style.overflow='hidden'; ham.setAttribute('aria-expanded','true'); }
+  function close() { menu.classList.remove('open'); overlay.classList.remove('open'); document.body.style.overflow=''; ham.setAttribute('aria-expanded','false'); }
+  if (ham) ham.addEventListener('click', open);
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (overlay) overlay.addEventListener('click', close);
+  document.querySelectorAll('[data-mobile-link]').forEach(a => a.addEventListener('click', close));
+
+  // Nav scroll
+  const navEl = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    if (navEl) navEl.classList.toggle('nav--scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Form submission (placeholder — wire to HubSpot Forms API in production)
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('cfSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      // Hide form, show success
+      form.style.display = 'none';
+      success.classList.add('show');
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+</script>
+
+<script src="/modern.js" defer></script>
+<script src="/redesign.js" defer></script>
+<script src="/home-nav.js" defer></script>
+
+</body>
+</html>

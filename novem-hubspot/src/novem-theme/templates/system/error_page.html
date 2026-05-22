@@ -1,0 +1,131 @@
+<!--
+  templateType: page
+  label: "404 Error"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Page Not Found | Novem Digital #}
+{# meta description: This page doesn't exist — but failure in your portfolio might. Let's find it. #}
+
+{% block extra_head %}
+<style>
+/* ── NAV ── */
+
+    @media(max-width:1023px){}
+
+    /* ── MOBILE DRAWER ── */
+
+    /* ── 404 HERO ── */
+    .page-404{flex:1;display:flex;align-items:center;justify-content:center;padding-top:80px;padding-bottom:4rem;position:relative;overflow:hidden;}
+
+    /* Animated grid background */
+    .grid-bg{position:absolute;inset:0;z-index:0;opacity:.07;background-image:linear-gradient(var(--green) 1px,transparent 1px),linear-gradient(90deg,var(--green) 1px,transparent 1px);background-size:60px 60px;animation:gridScroll 20s linear infinite;}
+    @keyframes gridScroll{0%{background-position:0 0;}100%{background-position:60px 60px;}}
+
+    /* Glow orb */
+    .glow-orb{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--green) 8%,transparent) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);z-index:0;pointer-events:none;}
+
+    .four-o-four-inner{position:relative;z-index:1;text-align:center;max-width:700px;padding-inline:clamp(1.25rem,5vw,3rem);}
+
+    /* Big 404 number */
+    .err-code{font-family:var(--font-h);font-size:clamp(7rem,15vw,13rem);font-weight:700;line-height:1;color:transparent;background:linear-gradient(135deg,var(--green) 0%,var(--blue) 100%);-webkit-background-clip:text;background-clip:text;margin-bottom:.25rem;letter-spacing:-.02em;}
+
+    .err-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--green);margin-bottom:1.5rem;}
+    .err-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;}
+    50%{opacity:.3}}
+
+    .err-h1{font-family:var(--font-h);font-size:clamp(1.6rem,1rem + 2.5vw,2.75rem);font-weight:700;line-height:1.15;color:var(--text);margin-bottom:1.25rem;}
+    .err-h1 em{font-style:italic;color:var(--green);}
+
+    .err-
+
+    /* Signal card */
+    .signal-card{display:inline-flex;align-items:center;gap:.875rem;background:color-mix(in srgb,var(--green) 6%,transparent);border:1px solid color-mix(in srgb,var(--green) 20%,transparent);border-radius:var(--rxl);padding:1rem 1.5rem;margin-bottom:2.5rem;text-align:left;}
+    .signal-icon{width:36px;height:36px;border-radius:.5rem;background:color-mix(in srgb,var(--green) 14%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .signal-text{font-size:.9rem;color:var(--muted);line-height:1.5;}
+    .signal-text strong{color:var(--text);display:block;font-weight:600;margin-bottom:.1rem;}
+
+    /* CTAs */
+    .err-ctas{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;padding:.8rem 1.75rem;border-radius:var(--r);background:var(--green);color:#1E343F;text-decoration:none;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);}
+    .btn-primary:hover{transform:translateY(-2px);opacity:.9;box-shadow:0 6px 24px rgba(123,250,181,.3);}
+
+    /* Quick nav tiles */
+    .quick-nav{margin-top:4rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;}
+    @media(max-width:700px){.quick-nav{grid-template-columns:repeat(2,1fr);}}
+    .qn-tile{background:var(--surf);border:1px solid var(--border);border-radius:var(--rlg);padding:1.25rem 1rem;text-decoration:none;display:flex;flex-direction:column;gap:.4rem;transition:border-color var(--ease),transform var(--ease);}
+    .qn-tile:hover{border-color:color-mix(in srgb,var(--green) 35%,var(--border));transform:translateY(-2px);}
+    .qn-tile-icon{width:32px;height:32px;border-radius:.5rem;background:color-mix(in srgb,var(--green) 10%,transparent);display:flex;align-items:center;justify-content:center;margin-bottom:.25rem;}
+    .qn-tile-icon svg{color:var(--green);}
+    .qn-tile-label{font-family:var(--font-h);font-size:.875rem;font-weight:700;color:var(--text);}
+    .qn-tile-sub{font-size:.78rem;color:var(--faint);}
+
+    /* ── FOOTER ── */
+
+    @media(max-width:900px){}
+    @media(max-width:600px){}
+    @media(max-width:480px){}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="page-404">
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="glow-orb" aria-hidden="true"></div>
+
+    <div class="four-o-four-inner">
+      <div class="err-eyebrow"><span class="err-dot"></span>Signal Lost</div>
+      <div class="err-code" aria-label="Error 404">404</div>
+
+      <h1 class="err-h1">This page doesn't exist.<br>But failure in your portfolio <em>might.</em></h1>
+
+      <p class="err-body">The page you're looking for has moved, been removed, or never existed in the first place. Unlike building failures — which are entirely predictable.</p>
+
+      <div class="signal-card" role="note">
+        <div class="signal-icon">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="signal-text">
+          <strong>Failure is Predictable.</strong>
+          Most organizations find material risk in their portfolio within the first session.
+        </div>
+      </div>
+
+      <div class="err-ctas">
+        <a href="/" class="btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Back to Home
+        </a>
+        <a href="/get-a-demo/" class="btn-ghost">
+          Get a Demo
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Quick nav -->
+      <div class="quick-nav" aria-label="Site navigation shortcuts">
+        <a href="/how-it-works/" class="qn-tile">
+          <div class="qn-tile-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="qn-tile-label">The Platform</div>
+          <div class="qn-tile-sub">How Novem works</div>
+        </a>
+        <a href="/industries/" class="qn-tile">
+          <div class="qn-tile-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <div class="qn-tile-label">Industries</div>
+          <div class="qn-tile-sub">Who we serve</div>
+        </a>
+        <a href="/tcro/" class="qn-tile">
+          <div class="qn-tile-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="qn-tile-label">TCRO</div>
+          <div class="qn-tile-sub">Total Cost of Risk</div>
+        </a>
+        <a href="/about/" class="qn-tile">
+          <div class="qn-tile-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+          <div class="qn-tile-label">About</div>
+          <div class="qn-tile-sub">Our team & mission</div>
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

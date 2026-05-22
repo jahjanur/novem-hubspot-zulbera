@@ -1,0 +1,162 @@
+<!--
+  templateType: page
+  label: "Careers Apply (form)"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Express Interest | Careers at Novem Digital #}
+{# meta description: Join the Novem Digital team. Express your interest in shaping the future of building intelligence. #}
+
+{% block extra_head %}
+<style>
+/* ── NAV ── */
+
+    @media(max-width:1023px){}
+
+    /* ── MOBILE DRAWER ── */
+
+    /* ── PAGE LAYOUT ── */
+    .page-wrap{min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px;}
+    @media(max-width:900px){.page-wrap{grid-template-columns:1fr;}.right-panel{padding:2rem 1.5rem;}}
+
+    /* ── LEFT PANEL ── */
+    .left-panel{position:relative;background:var(--gun);display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,4vw,3.5rem);min-height:calc(100dvh - 64px);overflow:hidden;}
+    .left-panel-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80&auto=format&fit=crop');background-size:cover;background-position:center;z-index:0;filter:brightness(.5) saturate(.75);}
+    .left-content{position:relative;z-index:1;}
+    .left-content{}
+    .left-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;}
+    .left-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+    50%{opacity:.3}}
+    .left-h1{font-family:var(--font-h);font-size:clamp(1.7rem,1rem + 2.5vw,2.75rem);font-weight:700;line-height:1.1;color:var(--text);margin-bottom:1rem;}
+    .left-h1 span{color:var(--green);}
+    .left-desc{font-size:clamp(.95rem,.9rem + .25vw,1.1rem);color:#E0EEF3;line-height:1.7;max-width:42ch;margin-bottom:2.5rem;}
+    .proof-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2.5rem;}
+    .proof-item{display:flex;align-items:flex-start;gap:.75rem;font-size:clamp(.875rem,.85rem + .15vw,1rem);color:#D8ECF2;}
+    .proof-check{width:18px;height:18px;border-radius:50%;background:color-mix(in srgb,var(--green) 18%,transparent);border:1px solid color-mix(in srgb,var(--green) 40%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem;}
+    .proof-check svg{color:var(--green);}
+    .social-proof{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid color-mix(in srgb,var(--border) 60%,transparent);}
+    .social-proof-text{font-size:.85rem;color:var(--faint);line-height:1.5;}
+    .social-proof-text strong{color:var(--muted);font-weight:600;}
+
+    /* ── VALUES STRIP ── */
+    .values-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;}
+    .value-item{display:flex;align-items:flex-start;gap:.75rem;}
+    .value-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.6rem;}
+    .value-text{font-size:.95rem;color:#D8ECF2;line-height:1.6;}
+    .value-text strong{color:var(--text);font-weight:600;}
+
+    /* ── RIGHT PANEL (FORM) ── */
+    .right-panel{background:var(--bg);padding:clamp(2.5rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;}
+    .form-header{margin-bottom:2rem;}
+    .form-title{font-family:var(--font-h);font-size:clamp(1.4rem,1.1rem + 1.2vw,2rem);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:.6rem;}
+    .form-subtitle{font-size:clamp(.9rem,.875rem + .15vw,1rem);color:var(--muted);}
+
+    /* ── FORM FIELDS ── */
+    .careers-form{display:flex;flex-direction:column;gap:1.25rem;max-width:520px;}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+    @media(max-width:560px){.field-row{grid-template-columns:1fr;}}
+    .field{display:flex;flex-direction:column;gap:.4rem;}
+    .field label{font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+    .req{color:var(--green);}
+    .field input,.field select,.field textare
+    .field input::placeholder,.field textarea::placeholder{color:var(--faint);}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 15%,transparent);}
+    .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238BBCCA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='1 1 6 7 11 1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;}
+    .field select option{background:var(--gun);}
+    .field textare
+    .field-error{font-size:.78rem;color:#F87171;display:none;}
+    .field.has-error input,.field.has-error select,.field.has-error textare
+    .field.has-error .field-error{display:block;}
+    .field-hint{font-size:.78rem;color:var(--faint);margin-top:.25rem;}
+
+    /* ── STATUS BANNER ── */
+    .careers-status{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:600;color:var(--muted);background:color-mix(in srgb,var(--blue) 10%,transparent);border:1px solid color-mix(in srgb,var(--blue) 25%,transparent);border-radius:var(--r);padding:.35rem .85rem;margin-bottom:.75rem;}
+    .careers-status-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;}
+    .btn-submit{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;font-family:var(--font-h);font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:var(--r);background:var(--green);color:var(--gun);border:none;cursor:pointer;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);}
+    .btn-submit:hover{transform:translateY(-2px);opacity:.9;box-shadow:0 6px 24px rgba(123,250,181,.25);}
+    .btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+    .btn-spinner{width:18px;height:18px;border:2.5px solid rgba(30,52,63,.3);border-top-color:var(--gun);border-radius:50%;animation:spin .7s linear infinite;display:none;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ── SUCCESS STATE ── */
+    .form-success{display:none;flex-direction:column;align-items:center;text-align:center;padding:3rem 2rem;gap:1.25rem;max-width:520px;}
+    .form-success.show{display:flex;}
+    .success-icon{width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--green) 15%,transparent);border:1px solid color-mix(in srgb,var(--green) 35%,transparent);display:flex;align-items:center;justify-content:center;}
+    .success-title{font-family:var(--font-h);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.2rem);font-weight:700;color:var(--text);}
+    .success-
+    .success-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--green);text-decoration:none;margin-top:.5rem;}
+
+    /* ── FOOTER ── */
+
+    @media(max-width:900px){}
+    @media(max-width:600px){}
+    @media(max-width:480px){}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="page-wrap">
+
+    <!-- LEFT: VALUE PANEL -->
+    <div class="left-panel">
+      <div class="left-panel-bg" aria-hidden="true"></div>
+      <div class="left-content">
+        <div class="left-eyebrow"><span class="left-eyebrow-dot"></span>Careers</div>
+        <h1 class="left-h1">Shape the Future of<br>Building <span>Intelligence.</span></h1>
+        <p class="left-desc">We're a small, ambitious team building something the industry has never seen. If you believe operational failure is predictable — and want to prove it — we want to hear from you.</p>
+
+        <div class="values-list">
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Mission-driven work</strong> — every line of code and every conversation protects real people in real buildings.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Global from day one</strong> — portfolios across Canada, the United States, and Europe.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Small team, high ownership</strong> — your work ships and you see the impact.</div>
+          </div>
+
+        </div>
+
+        <div class="social-proof">
+          <div class="social-proof-text">
+            <strong>Headquartered in Vancouver, Canada</strong><br>
+            Remote-friendly · Global portfolio
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM PANEL -->
+    <div class="right-panel">
+      <div class="form-header">
+        <div class="form-title">Express Interest</div>
+        <div class="careers-status">
+          <span class="careers-status-dot"></span>
+          <span>No open roles at this time — check back soon.</span>
+        </div>
+        <div class="form-subtitle">We keep exceptional candidates on file. When the right role opens, you'll hear from us first.</div>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success" id="formSuccess" role="status">
+        <div class="success-icon">
+          <svg width="28" height="28" fill="none" stroke="#7BFAB5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="4 13 10 19 22 7"/></svg>
+        </div>
+        <div class="success-title">We'll be in touch.</div>
+        <p class="success-body">Thanks for expressing your interest. When the right role opens, we'll reach out.</p>
+        <a href="../../careers/" class="success-back">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to About
+        </a>
+      </div>
+
+      <!-- FORM -->
+      {% module "form" path="../modules/hubspot-form", form_choice="careers" %}
+    </div>
+  </div>
+{% endblock %}

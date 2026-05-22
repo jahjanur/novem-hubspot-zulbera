@@ -1,0 +1,33 @@
+[
+  { "name": "eyebrow",       "label": "Eyebrow",         "type": "text",     "default": "Digital Risk Platform" },
+  { "name": "headline_top",  "label": "Headline line 1", "type": "text",     "default": "Failure is" },
+  { "name": "headline_accent","label": "Headline line 2 (accent)", "type": "text", "default": "Predictable." },
+  { "name": "sub",           "label": "Sub-headline",    "type": "richtext", "default": "<p>We tell you what's about to fail — and what it will cost — before it does.</p>" },
+  { "name": "sr_only_h1",    "label": "SR-only H1 (for SEO)", "type": "text", "default": "Novem Digital — Digital Risk Platform for Institutional Real Estate" },
+  { "name": "background",    "label": "Background image", "type": "image",
+    "default": { "src": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=85&auto=format&fit=crop&bri=15", "alt": "" } },
+  { "name": "primary_cta",   "label": "Primary CTA",      "type": "group",
+    "children": [
+      { "name": "label", "label": "Label", "type": "text", "default": "Get a Demo" },
+      { "name": "url",   "label": "URL",   "type": "url",  "default": { "type": "EXTERNAL", "href": "/get-a-demo/" } }
+    ]
+  },
+  { "name": "secondary_cta", "label": "Secondary CTA",    "type": "group",
+    "children": [
+      { "name": "label", "label": "Label", "type": "text", "default": "What is TCRO?" },
+      { "name": "url",   "label": "URL",   "type": "url",  "default": { "type": "EXTERNAL", "href": "/tcro/" } }
+    ]
+  },
+  { "name": "show_stats",    "label": "Show stat block?", "type": "boolean", "default": true },
+  { "name": "stats",         "label": "Stats",            "type": "group",   "occurrence": { "min": 0, "max": 4, "default": 3 },
+    "children": [
+      { "name": "num",   "label": "Number", "type": "text", "default": "" },
+      { "name": "label", "label": "Label",  "type": "text", "default": "" }
+    ],
+    "default": [
+      { "num": "7.2M",  "label": "Buildings analyzed" },
+      { "num": "30%",   "label": "Better capital IRR" },
+      { "num": "1–3yr", "label": "Payback period" }
+    ]
+  }
+]

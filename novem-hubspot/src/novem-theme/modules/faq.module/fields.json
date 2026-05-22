@@ -1,0 +1,11 @@
+[
+  { "name": "anchor_id", "label": "Anchor ID", "type": "text", "default": "faq" },
+  { "name": "eyebrow",   "label": "Eyebrow",   "type": "text", "default": "FAQ" },
+  { "name": "headline",  "label": "Headline",  "type": "text", "default": "Common questions about Novem Digital." },
+  { "name": "items", "label": "FAQ items", "type": "group", "occurrence": { "min": 1, "default": 5 },
+    "children": [
+      { "name": "question", "label": "Question", "type": "text", "default": "" },
+      { "name": "answer",   "label": "Answer",   "type": "richtext", "default": "" }
+    ]
+  }
+]

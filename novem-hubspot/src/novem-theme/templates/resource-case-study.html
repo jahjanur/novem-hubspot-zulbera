@@ -1,0 +1,176 @@
+<!--
+  templateType: page
+  label: "Resource: Case Study (HubDB)"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Case Study: Predictive Operations Across a Mixed-Use Portfolio | Novem Digital #}
+{# meta description: How a North American institutional portfolio reduced emergency spend by 34% and improved insurance outcomes by deploying Novem Digital's predictive intelligence platform across 18 buildings. #}
+
+{% block extra_head %}
+<style>
+50%{opacity:.3}}
+
+/* NAV */
+
+[data-theme="light"] 
+
+@media(max-width:1023px){}
+/* HERO */
+.hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg 
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,18,24,.78) 0%,rgba(15,28,36,.58) 45%,rgba(19,30,38,.72) 100%);}
+.hero-content{position:relative;z-index:1;}
+/* CONTENT BADGE */
+.badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;padding:.3rem .85rem;border-radius:var(--r);}
+.badge--cs{background:color-mix(in srgb,var(--blue) 14%,transparent);color:var(--blue);border:1px solid color-mix(in srgb,var(--blue) 30%,transparent);}
+/* META BAR */
+.art-met
+.art-date,.art-location,.art-read{font-size:.9rem;color:var(--faint);}
+/* STATS STRIP */
+.stats-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;margin:2.5rem 0;}
+.stat-cell{background:var(--surf2);padding:2rem 1.75rem;text-align:center;}
+.stat-num{font-family:var(--font-h);font-weight:700;font-size:clamp(2.2rem,1.5rem + 2.5vw,3.5rem);color:var(--green);line-height:1;}
+.stat-lbl{font-size:clamp(.875rem,.85rem + .1vw,1rem);color:var(--muted);margin-top:.5rem;line-height:1.4;}
+/* BODY */
+.art-
+.art-body p{margin-bottom:1.5rem;color:#C8DDE6;line-height:1.75;}
+.art-body h2{font-family:var(--font-h);font-size:clamp(1.3rem,1.1rem + 1vw,1.9rem);font-weight:700;color:var(--text);margin-bottom:1rem;margin-top:2.5rem;line-height:1.2;}
+.art-body h2:first-child{margin-top:0;}
+.art-body blockquote{border-left:3px solid var(--green);padding-left:1.5rem;margin:2.5rem 0;color:#D4E8EE;font-size:clamp(1.1rem,1rem + .4vw,1.3rem);line-height:1.7;font-style:italic;}
+.art-body blockquote cite{display:block;margin-top:.75rem;font-size:.875rem;font-style:normal;color:var(--faint);}
+.art-body 
+.art-body ul li{color:#C8DDE6;}
+/* HIGHLIGHT BOX */
+.highlight-box{background:color-mix(in srgb,var(--green) 5%,transparent);border:1px solid color-mix(in srgb,var(--green) 20%,transparent);border-radius:var(--rxl);padding:2rem 2rem;margin:2.5rem 0;}
+.highlight-box h3{font-family:var(--font-h);font-weight:700;font-size:clamp(1.05rem,1rem + .3vw,1.25rem);color:var(--green);margin-bottom:1rem;}
+.highlight-box 
+.highlight-box ul li{display:flex;align-items:flex-start;gap:.75rem;color:#C8DDE6;}
+.highlight-box ul li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.5rem;}
+/* CTA BOX */
+.cta-box{margin-top:4rem;padding:2.5rem;background:var(--surf);border:1px solid var(--border2);border-radius:var(--rxl);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;}
+.cta-box 
+/* FOOTER */
+
+@media(max-width:900px){}
+@media(max-width:600px){.stats-strip{grid-template-columns:1fr;}}
+
+/* SHARE / DOWNLOAD BAR */
+.action-bar{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;}
+.action-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;padding:.55rem 1.1rem;border-radius:var(--r);border:1px solid var(--border2);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:color var(--ease),border-color var(--ease),background var(--ease);}
+.action-btn:hover{color:var(--text);border-color:var(--muted);background:color-mix(in srgb,var(--text) 5%,transparent);}
+.action-btn--share.copied{color:var(--green);border-color:var(--green);}
+.action-btn svg{flex-shrink:0;}
+@media print{
+
+  .hero{min-height:28vh!important;}
+  .hero-bg::after{background:rgba(0,0,0,.45)!important;}
+  .h1,.h2,.h3,
+  .art-body p,.pr-body p,.art-body li,.pr-body li{color:#333!important;}
+  .art-body blockquote,.pr-body blockquote{color:#444!important;border-left-color:#333!important;}
+  blockquote cite{color:#666!important;}
+  .exec-card,.pull-stat,.finding-card,.findings-grid .finding-card{background:#f5f5f5!important;border-color:#ccc!important;}
+  .finding-num,.pull-stat-num{color:#1a5c3a!important;}
+  .exec-title{color:#1a5c3a!important;}
+  
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<section style="padding-block:clamp(4rem,8vw,7rem);">
+  <div class="wm">
+    <div class="art-meta">
+      <span class="badge badge--cs">Case Study</span>
+      <span class="art-date">North America</span>
+      <span class="art-location">Mixed-Use Institutional Portfolio</span>
+      <span class="art-read">5 min read</span>
+    </div>
+
+    <!-- SHARE / DOWNLOAD BAR -->
+    <div class="action-bar">
+      <button class="action-btn action-btn--share" id="shareBtn" title="Copy link to clipboard">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        <span id="shareBtnLabel">Share</span>
+      </button>
+      <button class="action-btn action-btn--download" id="downloadBtn" title="Download as PDF">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </button>
+    </div>
+
+    <div class="art-body">
+      <h2>From Reactive to Predictive: 18 Buildings, One Platform</h2>
+      <p class="lg" style="color:#D4E8EE;margin-bottom:2rem;"><em>How a North American institutional portfolio reduced emergency spend, improved insurance outcomes, and protected EBITDA — without replacing a single BMS.</em></p>
+
+      <p>A mid-size institutional owner operating 18 mixed-use properties across North America came to Novem Digital with a familiar problem: their buildings were generating data, but that data wasn't translating into decisions. Emergency callouts were running 40% over budget. Insurance renewals were increasingly painful. And when equipment failed, the first sign was usually an angry tenant call — not a dashboard alert.</p>
+
+      <p>Within 90 days of deploying the Novem Digital platform, the picture changed.</p>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="stats-strip">
+      <div class="stat-cell">
+        <div class="stat-num">34%</div>
+        <div class="stat-lbl">Reduction in unplanned emergency spend in Year 1</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">18%</div>
+        <div class="stat-lbl">Improvement in insurance renewal outcome</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">100%</div>
+        <div class="stat-lbl">Audit-ready capital decision data across the portfolio</div>
+      </div>
+    </div>
+
+    <div class="art-body">
+      <h2>The Challenge</h2>
+      <p>The portfolio's operators were experienced and capable — but they were flying blind. Building management systems captured data in silos. Maintenance logs lived in spreadsheets. Insurance claims were reviewed annually, not in real time. There was no single source of truth for what was at risk, what it would cost, and when.</p>
+      <p>The business consequence: reactive operations. Every emergency repair carried a 2–3× cost premium over planned maintenance. Capital planning was based on age of equipment, not condition or failure probability. And when renewals came around, the team couldn't produce the audit trail that underwriters increasingly demanded.</p>
+
+      <blockquote>
+        "We had data everywhere and insight nowhere. Novem gave us a way to turn that around without ripping out the systems we already had."
+        <cite>— VP Operations, North American Institutional Portfolio</cite>
+      </blockquote>
+
+      <h2>The Approach</h2>
+      <p>Novem Digital connected to the portfolio's existing BMS, maintenance management, and insurance data — without requiring infrastructure replacement. The platform's risk intelligence layer normalized signals across 18 buildings, cross-referenced them against 20+ years of insurance and equipment loss data, and surfaced early warning flags ranked by financial exposure.</p>
+
+      <div class="highlight-box">
+        <h3>What the Platform Delivered</h3>
+        <ul>
+          <li>Complete asset inventory across all 18 properties — standardized and audit-ready</li>
+          <li>Predictive failure alerts ranked by TCRO impact, not just equipment age</li>
+          <li>Real-time risk dashboards aligned to capital planning and insurance renewal cycles</li>
+          <li>Evidence packages for underwriters — reducing renewal friction and improving terms</li>
+          <li>Operator-facing summaries that made risk visible without requiring data expertise</li>
+        </ul>
+      </div>
+
+      <h2>The Outcome</h2>
+      <p>In the first 12 months, the portfolio saw a 34% reduction in unplanned emergency spend — not by adding headcount, but by acting earlier. Planned interventions replaced reactive callouts. Insurance renewal negotiations were supported by documented loss prevention activity for the first time, contributing to an 18% improvement in renewal outcomes.</p>
+
+      <p>Capital planning shifted from assumption-based to evidence-based. The team could show the board which assets were at risk, what the financial exposure was, and what the cost of intervention versus inaction looked like — all from a single platform.</p>
+
+      <blockquote>
+        "The ROI was clear by month four. But the more important shift was cultural — our operators started thinking in terms of prevention, not response."
+        <cite>— Asset Manager, North American Institutional Portfolio</cite>
+      </blockquote>
+
+      <h2>About Novem Digital</h2>
+      <p>Novem Digital delivers predictive intelligence for institutional real estate portfolios. The platform surfaces risk signals before they become operational failures or insurance claims — protecting asset value across commercial real estate, seniors living, data centers, and public venues. Headquartered in Vancouver, Canada. Serving portfolios across North America and Europe.</p>
+    </div>
+
+    <div class="cta-box">
+      <div>
+        <div class="h3" style="font-family:var(--font-h);font-size:clamp(1.15rem,1rem + .7vw,1.6rem);font-weight:700;margin-bottom:.4rem;">See what predictive looks like for your portfolio.</div>
+        <p style="color:var(--muted);font-size:clamp(1rem,.95rem + .25vw,1.125rem);">Get a live walkthrough of the Novem Digital platform with your use case.</p>
+      </div>
+      <a href="../../#contact" class="btn btn-p">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+{% endblock %}

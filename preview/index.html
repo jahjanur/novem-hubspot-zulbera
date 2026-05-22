@@ -1,0 +1,1863 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <title>Novem Digital — Digital Risk Platform for Institutional Real Estate</title>
+  <meta name="description" content="Novem Digital is an AI powered digital risk platform that makes building failure predictable for institutional real estate portfolios. Reduce Total Cost of Risk Ownership, plan capital accurately, and defend every insurance and governance decision with audit ready data."/>
+  <link rel="canonical" href="https://novemdigital.com"/>
+  <meta property="og:title" content="Novem Digital — Digital Risk Platform for Institutional Real Estate"/>
+  <meta property="og:description" content="Novem Digital makes building failure predictable for institutional real estate portfolios. Reduce Total Cost of Risk Ownership and defend every capital decision with data."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://novemdigital.com"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&auto=format&fit=crop"/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&auto=format&fit=crop"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Novem Digital — Digital Risk Platform for Institutional Real Estate"/>
+  <meta name="twitter:description" content="Novem Digital makes building failure predictable for institutional real estate portfolios."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+/* ═══════════════════════════════════════════
+   BRAND TOKENS
+   Gunmetal #1E343F · Cultured #F4F6F4
+   Spring Green #7BFAB5 · Maximum Blue #60BCD6
+   ═══════════════════════════════════════════ */
+:root {
+  --green: #7BFAB5;
+  --blue: #60BCD6;
+  --gun: #1E343F;
+  --gun-mid: #243C48;
+  --gun-dark: #111A1F;
+  --text: #E8F4F0;
+  --muted: #8BBCCA;
+  --faint: #4A7080;
+  --border: #2C4250;
+  --border2: #324E5C;
+  --surf: #1E343F;
+  --surf2: #243C48;
+  --bg: #111A1F;
+  --font-h: 'Titillium Web', 'Arial Narrow', sans-serif;
+  --font-b: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --r: 9999px;
+  --rxl: 1rem;
+  --rlg: .75rem;
+  --rmd: .5rem;
+  --sh-md: 0 4px 20px rgba(0,0,0,.4);
+  --sh-lg: 0 12px 48px rgba(0,0,0,.55);
+  --ease: 200ms cubic-bezier(.16,1,.3,1);
+}
+[data-theme="light"] {
+  --green: #60BCD6;
+  --blue: #2A7FA0;
+  --text: #1E343F;
+  --muted: #4A6070;
+  --faint: #8AA4B0;
+  --border: #C8D5D0;
+  --border2: #D4DDD9;
+  --surf: #FFFFFF;
+  --surf2: #F0F4F2;
+  --bg: #F4F6F4;
+  --sh-md: 0 4px 20px rgba(30,52,63,.1);
+  --sh-lg: 0 12px 48px rgba(30,52,63,.15);
+}
+
+/* ═══════════════════════════════════════════
+   RESET
+   ═══════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; -webkit-font-smoothing: antialiased; }
+body { min-height: 100dvh; font-family: var(--font-b); font-size: clamp(1.05rem,1rem + .3vw,1.2rem); color: var(--text); background: var(--bg); line-height: 1.6; transition: background .3s, color .3s; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+button { cursor: pointer; background: none; border: none; font: inherit; }
+a { transition: color var(--ease), opacity var(--ease); }
+:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+
+/* ═══════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════ */
+.w { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1.25rem,5vw,3rem); }
+.wm { max-width: 960px; margin-inline: auto; padding-inline: clamp(1.25rem,5vw,3rem); }
+.eye { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; color: var(--green); display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; }
+.eye-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); animation: blink 2s ease-in-out infinite; flex-shrink: 0; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.h1 { font-family: var(--font-h); font-size: clamp(3.2rem,1.5rem + 6.5vw,7rem); font-weight: 700; line-height: 1.02; color: var(--text); }
+.h2 { font-family: var(--font-h); font-size: clamp(2rem,1.3rem + 3vw,3.6rem); font-weight: 700; line-height: 1.1; color: var(--text); }
+.h3 { font-family: var(--font-h); font-size: clamp(1.1rem,1rem + .6vw,1.5rem); font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: .6rem; }
+.accent { color: var(--green); }
+.lg { font-size: clamp(1.1rem,1rem + .4vw,1.3rem); color: #D4E8EE; line-height: 1.75; }
+.sm{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:#C8DDE6;line-height:1.75;}
+.sec { padding-block: clamp(4rem,8vw,7rem); }
+.sec--alt { background: var(--surf); }
+sup { font-size: .6rem; vertical-align: super; color: var(--faint); margin-left: .1rem; }
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
+.btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-h); font-weight: 700; font-size: clamp(.875rem,.85rem + .1vw,1rem); padding: .875rem 2rem; border-radius: var(--r); text-decoration: none; transition: transform var(--ease), opacity var(--ease), box-shadow var(--ease); cursor: pointer; border: none; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px); }
+.btn-p { background: var(--green); color: var(--gun); }
+.btn-p:hover { opacity: .88; box-shadow: 0 6px 24px rgba(123,250,181,.25); }
+.btn-g { color: var(--muted); border: 1px solid var(--border2); background: transparent; }
+.btn-g:hover { color: var(--text); border-color: var(--muted); }
+.btn-ghost { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-h); font-weight: 700; font-size: clamp(.875rem,.85rem + .1vw,1rem); padding: .875rem 2rem; border-radius: var(--r); text-decoration: none; color: rgba(232,244,240,.8); border: 1px solid rgba(232,244,240,.22); transition: color var(--ease), border-color var(--ease), transform var(--ease); white-space: nowrap; }
+.btn-ghost:hover { color: #E8F4F0; border-color: rgba(232,244,240,.5); transform: translateY(-2px); }
+[data-theme="light"] .btn-ghost { color: var(--muted); border-color: var(--border2); }
+[data-theme="light"] .btn-ghost:hover { color: var(--text); border-color: var(--muted); }
+
+/* ═══════════════════════════════════════════
+   NAVIGATION — Desktop
+   ═══════════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  padding-block: .75rem;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
+  transition: background .3s, box-shadow .3s;
+}
+.nav--scrolled {
+  box-shadow: 0 4px 24px rgba(0,0,0,.35);
+}
+[data-theme="light"] .nav--scrolled {
+  box-shadow: 0 4px 24px rgba(30,52,63,.12);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; flex-shrink: 0; }
+
+/* Desktop nav links row */
+.nav-links {
+  display: flex; align-items: center; gap: .25rem; margin-left: 1.5rem;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item > a,
+.nav-item > button {
+  font-family: var(--font-b);
+  font-size: .875rem; font-weight: 500; color: var(--muted);
+  text-decoration: none; padding: .5rem .75rem; border-radius: .375rem;
+  display: inline-flex; align-items: center; gap: .3rem;
+  transition: color var(--ease), background var(--ease);
+  white-space: nowrap;
+}
+.nav-item > a:hover,
+.nav-item > button:hover {
+  color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent);
+}
+.nav-item--tcro > a {
+  color: #7BFAB5; font-weight: 600;
+}
+.nav-item--tcro > a:hover {
+  color: #7BFAB5; background: color-mix(in srgb, #7BFAB5 8%, transparent);
+}
+[data-theme="light"] .nav-item--tcro > a {
+  color: #60BCD6;
+}
+[data-theme="light"] .nav-item--tcro > a:hover {
+  color: #60BCD6; background: color-mix(in srgb, #60BCD6 8%, transparent);
+}
+.nav-caret {
+  width: 10px; height: 10px; flex-shrink: 0;
+  transition: transform var(--ease);
+}
+.nav-item.open .nav-caret { transform: rotate(180deg); }
+
+/* Dropdown panels — see /redesign.css for new hover-driven dropdown styles */
+
+/* Right-side items */
+.nav-right {
+  display: flex; align-items: center; gap: .5rem; flex-shrink: 0;
+}
+.nav-login {
+  font-size: .875rem; font-weight: 500; color: var(--faint);
+  text-decoration: none; padding: .5rem .75rem;
+  transition: color var(--ease);
+}
+.nav-login:hover { color: var(--text); }
+.nav-demo {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--font-h); font-weight: 700; font-size: .875rem;
+  padding: .55rem 1.35rem; border-radius: var(--r);
+  background: #7BFAB5; color: #1E343F; text-decoration: none;
+  transition: transform var(--ease), opacity var(--ease), box-shadow var(--ease);
+  white-space: nowrap;
+}
+.nav-demo:hover { transform: translateY(-1px); opacity: .9; box-shadow: 0 4px 16px rgba(123,250,181,.25); }
+.tbtn { color: var(--muted); padding: .4rem; border-radius: .5rem; display: flex; align-items: center; }
+.tbtn:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+
+/* Hamburger */
+.nav-hamburger {
+  display: none; width: 40px; height: 40px;
+  align-items: center; justify-content: center;
+  color: var(--text); border-radius: .5rem;
+  transition: background var(--ease);
+}
+.nav-hamburger:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.nav-hamburger svg { pointer-events: none; }
+
+/* ═══════════════════════════════════════════
+   NAVIGATION — Mobile overlay
+   ═══════════════════════════════════════════ */
+.mobile-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,.6); backdrop-filter: blur(4px);
+  opacity: 0; visibility: hidden;
+  transition: opacity .3s ease;
+}
+.mobile-overlay.open { opacity: 1; visibility: visible; }
+
+.mobile-menu {
+  position: fixed; top: 0; right: 0; bottom: 0; z-index: 301;
+  width: min(88vw, 380px);
+  background: var(--gun);
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.16,1,.3,1);
+  display: flex; flex-direction: column;
+  overflow-y: auto; -webkit-overflow-scrolling: touch;
+}
+[data-theme="light"] .mobile-menu { background: #fff; }
+.mobile-menu.open { transform: translateX(0); }
+
+.mobile-menu-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.mobile-close {
+  width: 36px; height: 36px; display: flex; align-items: center; justify-content: center;
+  color: var(--text); border-radius: .375rem;
+  transition: background var(--ease);
+}
+.mobile-close:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+
+.mobile-nav-list {
+  flex: 1; padding: .75rem 0; overflow-y: auto;
+}
+.mobile-nav-item { border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent); }
+.mobile-nav-item:last-child { border-bottom: none; }
+.mobile-nav-trigger {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-h); font-weight: 700; font-size: 1rem;
+  color: var(--text); text-decoration: none;
+  transition: background var(--ease);
+}
+.mobile-nav-trigger:hover { background: color-mix(in srgb, var(--text) 5%, transparent); }
+a.mobile-nav-trigger { cursor: pointer; }
+.mobile-nav-trigger .mob-caret {
+  width: 16px; height: 16px; color: var(--faint);
+  transition: transform var(--ease);
+}
+.mobile-nav-item.open .mob-caret { transform: rotate(180deg); }
+.mobile-nav-trigger--tcro { color: #7BFAB5; }
+[data-theme="light"] .mobile-nav-trigger--tcro { color: #60BCD6; }
+
+.mobile-subnav {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s cubic-bezier(.16,1,.3,1);
+}
+.mobile-nav-item.open .mobile-subnav { max-height: 400px; }
+.mobile-subnav a {
+  display: block; padding: .75rem 1.5rem .75rem 2.5rem;
+  font-size: .9rem; color: var(--muted); text-decoration: none;
+  transition: color var(--ease), background var(--ease);
+}
+.mobile-subnav a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 4%, transparent); }
+
+.mobile-bottom {
+  padding: 1.25rem 1.5rem; border-top: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: .75rem; flex-shrink: 0;
+}
+.mobile-login {
+  display: block; text-align: center; padding: .75rem;
+  font-size: .9rem; font-weight: 500; color: var(--faint);
+  text-decoration: none; border-radius: .375rem;
+  transition: color var(--ease), background var(--ease);
+}
+.mobile-login:hover { color: var(--text); background: color-mix(in srgb, var(--text) 5%, transparent); }
+.mobile-demo {
+  display: block; text-align: center; padding: .875rem;
+  font-family: var(--font-h); font-weight: 700; font-size: .95rem;
+  background: #7BFAB5; color: #1E343F; border-radius: var(--r);
+  text-decoration: none;
+  transition: opacity var(--ease);
+}
+.mobile-demo:hover { opacity: .9; }
+
+/* Hide desktop nav on mobile; show hamburger */
+@media (max-width: 1023px) {
+  .nav-links, .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+}
+
+/* ═══════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════ */
+.hero { position: relative; overflow: hidden; min-height: 100svh; display: flex; align-items: center; background: linear-gradient(135deg, #0F1C24 0%, #1C3040 50%, #0F1C24 100%); }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 50%; opacity: .98; filter: saturate(.82) brightness(1.22); }
+[data-theme="light"] .hero-bg img { opacity: .28; filter: saturate(.4) brightness(.75); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg,rgba(15,24,30,.75) 0%,rgba(15,24,30,.55) 40%,rgba(15,24,30,.20) 100%); }
+[data-theme="light"] .hero-overlay { background: linear-gradient(105deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.9) 40%,rgba(244,246,244,.6) 100%); }
+.hero-w { position: relative; z-index: 1; padding-block: clamp(7.5rem,14vw,10.5rem); }
+.hero-inner { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem,6vw,6rem); align-items: center; }
+.hero-platform-tag { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--green); margin-bottom: 1.75rem; }
+.hero-head { margin-bottom: 1.5rem; }
+.hero-sub { max-width: 48ch; margin-bottom: 2.25rem; }
+.hero-acts { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.hero-stats { display: flex; flex-direction: column; gap: 1.25rem; }
+.hero-stat { background: rgba(17,26,31,.65); border: 1px solid rgba(123,250,181,.18); border-radius: var(--rlg); padding: 1.25rem 1.75rem; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); display: flex; align-items: baseline; gap: 1rem; }
+[data-theme="light"] .hero-stat { background: rgba(255,255,255,.82); border-color: rgba(30,52,63,.12); box-shadow: var(--sh-md); }
+.hero-stat-num { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.6rem,1.3rem + 1.5vw,2.4rem); color: var(--green); line-height: 1; white-space: nowrap; }
+.hero-stat-lbl { font-size: clamp(1.05rem,1rem + .2vw,1.2rem); color: var(--muted); line-height: 1.4; font-weight: 500; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-right { display: none; } }
+@media (max-width: 480px) { .hero-w { padding-block: 5.5rem 3rem; } }
+
+/* ═══════════════════════════════════════════
+   STATS STRIP
+   ═══════════════════════════════════════════ */
+.stats-strip { padding-block: 2.75rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surf); }
+.stats-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; text-align: center; }
+.stat-b { padding: .75rem .5rem; }
+.stat-b-num { font-family: var(--font-h); font-weight: 700; font-size: clamp(2.2rem,4.5vw,3.75rem); color: var(--green); line-height: 1; }
+.stat-b-lbl { font-size: .75rem; color: var(--muted); margin-top: .4rem; line-height: 1.45; }
+@media (max-width: 900px) { .stats-row { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 500px) { .stats-row { grid-template-columns: 1fr 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PROBLEM
+   ═══════════════════════════════════════════ */
+.prob-g { display: flex; flex-direction: column; gap: clamp(2rem,4vw,3rem); }
+.prob-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.25rem; }
+.prob-card { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 1.5rem 1.75rem; position: relative; overflow: hidden; }
+.prob-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--green); opacity: .45; }
+.prob-img { border-radius: var(--rxl); overflow: hidden; box-shadow: var(--sh-lg); position: relative; height: 420px; flex-shrink: 0; }
+.prob-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.prob-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(160deg,rgba(17,26,31,.15) 0%,rgba(17,26,31,.5) 100%); pointer-events: none; }
+[data-theme="light"] .prob-img::after { background: linear-gradient(160deg,rgba(244,246,244,.1) 0%,rgba(30,52,63,.2) 100%); }
+@media (max-width: 768px) { .prob-cards { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   STEPS (How It Works)
+   ═══════════════════════════════════════════ */
+.steps-g { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; margin-top: 3.5rem; position: relative; }
+.steps-g::before { content: ''; position: absolute; top: 2rem; left: 12%; right: 12%; height: 1px; background: linear-gradient(90deg,transparent,var(--border),var(--border),transparent); }
+.step { text-align: center; }
+.step-n { width: 4rem; height: 4rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--border2); display: flex; align-items: center; justify-content: center; margin-inline: auto; margin-bottom: 1.25rem; font-family: var(--font-h); font-weight: 700; font-size: 1.25rem; color: var(--green); position: relative; z-index: 1; }
+.step-t { font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: .5rem; }
+@media (max-width: 768px) { .steps-g { grid-template-columns: 1fr 1fr; } .steps-g::before { display: none; } }
+@media (max-width: 480px) { .steps-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PILLARS / PRODUCT
+   ═══════════════════════════════════════════ */
+.pil-hdr { text-align: center; max-width: 50ch; margin-inline: auto; margin-bottom: 3rem; }
+.pil-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.pil { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2.25rem 2rem; transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease); }
+.pil:hover { box-shadow: var(--sh-lg); transform: translateY(-3px); border-color: var(--border2); }
+.pil-n { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--faint); margin-bottom: 1rem; }
+.pil-title { font-family: var(--font-h); font-weight: 700; font-size: clamp(1rem,.85rem + .8vw,1.45rem); color: var(--text); margin-bottom: 1rem; line-height: 1.2; }
+@media (max-width: 768px) { .pil-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PROOF
+   ═══════════════════════════════════════════ */
+.proof-v { font-family: var(--font-h); font-size: clamp(1.6rem,2.5vw,2.2rem); font-weight: 700; color: var(--green); line-height: 1; }
+.proof-l { font-size: .82rem; color: var(--muted); margin-top: .4rem; line-height: 1.5; }
+.proof-cust-card:hover { box-shadow: var(--sh-lg); border-color: color-mix(in srgb, var(--green) 35%, var(--border)); transform: translateY(-3px); }
+@media (max-width: 860px) { #proof .w > div:nth-child(2) { grid-template-columns: 1fr !important; } }
+
+/* ═══════════════════════════════════════════
+   TCRO
+   ═══════════════════════════════════════════ */
+.tcro-g { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+.tcro-table { width: 100%; border-collapse: collapse; margin-top: 1.75rem; }
+.tcro-table th { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); text-align: left; padding: .5rem .75rem; border-bottom: 1px solid var(--border); }
+.tcro-table td { padding: .75rem; font-size: .875rem; vertical-align: top; border-bottom: 1px solid var(--border); }
+.tcro-table tr:last-child td { border-bottom: none; }
+.tcro-table tr:hover td { background: color-mix(in srgb, var(--green) 4%, transparent); }
+.tcro-cat { font-weight: 600; color: var(--text); }
+.tcro-desc { color: var(--muted); font-size: .82rem; line-height: 1.5; }
+.tcro-cost { font-family: var(--font-h); font-weight: 700; color: var(--green); white-space: nowrap; }
+.tcro-visual { position: sticky; top: 6rem; }
+.tcro-diagram-wrap { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 1.5rem; box-shadow: var(--sh-lg); }
+.tcro-diagram-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--faint); text-align: center; margin-bottom: 1rem; }
+.lead-bar { margin-top: 1.5rem; background: color-mix(in srgb, var(--green) 10%, transparent); border: 1px solid color-mix(in srgb, var(--green) 30%, transparent); border-radius: var(--rlg); padding: 1.25rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lead-bar-copy { font-size: .875rem; color: var(--text); max-width: 38ch; }
+.lead-bar-copy strong { display: block; font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--green); margin-bottom: .2rem; }
+@media (max-width: 900px) { .tcro-g { grid-template-columns: 1fr; } .tcro-visual { position: static; } }
+
+/* ═══════════════════════════════════════════
+   SEGMENTS
+   ═══════════════════════════════════════════ */
+.seg-hdr { text-align: center; max-width: 44ch; margin-inline: auto; margin-bottom: 3rem; }
+.seg-g { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem; }
+.seg { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); overflow: hidden; transition: border-color var(--ease), box-shadow var(--ease); display: flex; flex-direction: column; }
+.seg:hover { border-color: var(--green); box-shadow: var(--sh-md); }
+.seg-icon { margin-bottom: 1.25rem; color: var(--green); }
+.seg-t { font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--text); margin-bottom: .5rem; }
+.seg-img { height: 180px; overflow: hidden; position: relative; flex-shrink: 0; }
+.seg-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.seg:hover .seg-img img { transform: scale(1.05); }
+.seg-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom,transparent 50%,rgba(17,26,31,.6)); pointer-events: none; }
+[data-theme="light"] .seg-img::after { background: linear-gradient(to bottom,transparent 50%,rgba(30,52,63,.25)); }
+.seg-body { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+@media (max-width: 900px) { .seg-g { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .seg-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   RESOURCES
+   ═══════════════════════════════════════════ */
+.leads-g { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.lead-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; transition: box-shadow var(--ease), border-color var(--ease); }
+.lead-card:hover { box-shadow: var(--sh-lg); border-color: var(--border2); }
+.lead-chip { font-size: clamp(.85rem,.8rem + .15vw,.95rem); font-weight: 700; text-transform: uppercase; letter-spacing: .11em; background: color-mix(in srgb, var(--green) 12%, transparent); color: var(--green); border-radius: var(--r); padding: .25rem .85rem; display: inline-block; width: fit-content; }
+.lead-card-title { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.1rem,1rem + .4vw,1.35rem); color: var(--text); line-height: 1.25; }
+.lead-card-body { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); line-height: 1.65; flex: 1; }
+@media (max-width: 600px) { .leads-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PARTNERS
+   ═══════════════════════════════════════════ */
+.part-hdr { text-align: center; max-width: 46ch; margin-inline: auto; margin-bottom: 3rem; }
+.part-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.part { background: var(--surf); border: 1px solid var(--border); border-radius: var(--rxl); padding: 2.25rem 2rem; }
+.part-role { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--green); margin-bottom: .75rem; }
+.part-name { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.15rem,1.05rem + .5vw,1.45rem); color: var(--text); margin-bottom: 1rem; }
+@media (max-width: 768px) { .part-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   CTA
+   ═══════════════════════════════════════════ */
+.cta { background: var(--gun); padding-block: clamp(4rem,8vw,6.5rem); position: relative; overflow: hidden; }
+.cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%); pointer-events: none; }
+.cta-inner { text-align: center; max-width: 50ch; margin-inline: auto; position: relative; }
+.cta-h { font-family: var(--font-h); font-size: clamp(1.9rem,1.2rem + 2.8vw,3.5rem); font-weight: 700; color: #E8F4F0; line-height: 1.1; margin-bottom: 1.25rem; }
+.cta-h em { font-style: normal; color: #7BFAB5; }
+.cta-b { font-size: clamp(1rem,.95rem + .2vw,1.1rem); color: #8BBCCA; margin-bottom: 2.5rem; line-height: 1.7; }
+.cta-acts { display: flex; align-items: center; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.btn-s { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-h); font-weight: 700; font-size: .95rem; padding: .875rem 2rem; border-radius: var(--r); text-decoration: none; transition: transform var(--ease), opacity var(--ease); border: none; cursor: pointer; }
+.btn-s:hover { transform: translateY(-2px); }
+.btn-gs { background: #7BFAB5; color: #1E343F; }
+.btn-gs:hover { opacity: .88; }
+.btn-ol { color: #8BBCCA; border: 1px solid rgba(139,188,202,.3); background: transparent; }
+.btn-ol:hover { color: #E8F4F0; border-color: rgba(139,188,202,.6); }
+
+/* ═══════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════ */
+.faq-item { background: var(--bg); border-bottom: 1px solid var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-family: var(--font-h); font-weight: 700; font-size: clamp(.95rem,.9rem + .3vw,1.15rem); color: var(--text); padding: 1.5rem 1.75rem; cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: color var(--ease), background var(--ease); }
+.faq-q::-webkit-details-marker { display: none; }
+.faq-q::after { content: '+'; font-size: 1.4rem; font-weight: 300; color: var(--green); flex-shrink: 0; transition: transform var(--ease); }
+details[open] .faq-q::after { transform: rotate(45deg); }
+details[open] .faq-q { color: var(--green); }
+.faq-q:hover { background: color-mix(in srgb, var(--green) 4%, transparent); }
+.faq-a { padding: 0 1.75rem 1.5rem; font-size: clamp(.875rem,.85rem + .15vw,1rem); color: var(--muted); line-height: 1.75; max-width: 70ch; }
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+.foot { padding-block: 3.5rem; border-top: 1px solid var(--border); }
+.foot-g { display: grid; grid-template-columns: 2fr repeat(6,1fr); gap: 2rem; }
+.foot-desc { font-size: .875rem; color: var(--muted); margin-top: 1rem; max-width: 30ch; line-height: 1.7; }
+.foot-ct { font-family: var(--font-h); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--text); margin-bottom: 1rem; }
+.foot-links { display: flex; flex-direction: column; gap: .7rem; }
+.foot-links a { font-size: .875rem; color: var(--muted); text-decoration: none; }
+.foot-links a:hover { color: var(--green); }
+.foot-sources li { font-size: .72rem; color: var(--faint); line-height: 1.6; }
+.foot-sources li * { font-size: .72rem; }
+.foot-sources a { color: var(--faint); text-decoration: underline; text-underline-offset: 2px; }
+.foot-sources a:hover { color: var(--green); }
+.foot-bot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.foot-legal { font-size: .75rem; color: var(--faint); }
+@media (max-width: 900px) { .foot-g { grid-template-columns: 2fr 1fr 1fr; } }
+@media (max-width: 600px) { .foot-g { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .foot-g { grid-template-columns: 1fr; } }
+
+/* ═══════════════════════════════════════════
+   PRODUCT dashboard visual
+   ═══════════════════════════════════════════ */
+@media (max-width: 900px) { #product .w > div:last-child { grid-template-columns: 1fr !important; } }
+
+/* Section imagery helpers */
+.proof-img { border-radius: var(--rxl); overflow: hidden; box-shadow: var(--sh-lg); height: 260px; margin-bottom: 2rem; }
+.proof-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ═══════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═══════════════════════════════════════════ */
+.rev { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
+.rev.in { opacity: 1; transform: none; }
+.d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
+@media (prefers-reduced-motion: reduce) { .rev { opacity: 1; transform: none; transition: none; } }
+
+/* Body scroll lock */
+body.no-scroll { overflow: hidden; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://novemdigital.com/#organization",
+        "name": "Novem Digital",
+        "url": "https://novemdigital.com",
+        "description": "Novem Digital is an AI powered digital risk platform that makes building failure predictable for institutional real estate portfolios.",
+        "foundingLocation": { "@type": "Place", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
+        "knowsAbout": ["Digital Risk Platform", "Total Cost of Risk Ownership", "Predictive building maintenance", "Institutional real estate risk management", "Building failure prediction"],
+        "sameAs": ["https://www.linkedin.com/company/novem-digital/"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://novemdigital.com/#platform",
+        "name": "Novem Digital Risk Platform",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "An AI powered digital risk platform that combines real time monitoring of critical building systems with normalized insurance claims data from millions of buildings to make building failure predictable for institutional real estate portfolios.",
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" },
+        "provider": { "@id": "https://novemdigital.com/#organization" }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How Novem Digital makes building failure predictable",
+        "description": "The four-step Novem Plan for moving from invisible building risk to measurable financial control.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "See Everything You Own", "text": "Build a complete inventory of critical systems and equipment across each building, including age, condition, replacement cost, and business importance." },
+          { "@type": "HowToStep", "position": 2, "name": "Early Warnings", "text": "Receive real time alerts when equipment or environmental conditions show signs of elevated risk so teams can act before service, safety, or financial performance is affected." },
+          { "@type": "HowToStep", "position": 3, "name": "Fix on Your Schedule", "text": "Prioritize repairs and interventions during planned downtime at standard rates, within budget, with reduced emergency premiums and extended equipment life." },
+          { "@type": "HowToStep", "position": 4, "name": "Prove and Improve", "text": "Track risk reduction, operational follow-through, and financial outcomes with audit ready reporting for executives, boards, lenders, brokers, and insurers." }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a Digital Risk Platform for real estate?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A Digital Risk Platform connects operational building data, risk intelligence, and financial exposure in one system so real estate owners can predict and prevent equipment failures before they become loss events. Novem Digital is the only platform that combines real time monitoring with normalized insurance claims data from millions of buildings." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Total Cost of Risk Ownership (TCRO)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Total Cost of Risk Ownership (TCRO) is the full financial burden of invisible building risk, including direct claims, emergency repair premiums, insurance volatility, downtime, compliance overhead, and reputational exposure. Most organizations only measure direct claims costs, leaving the majority of their true risk burden unmanaged." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Novem Digital predict building failure?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital combines real time monitoring of critical building systems with normalized insurance claims data from 7.2 million buildings across 20 years. By comparing live operational signals against historical failure patterns, the platform identifies elevated risk before a failure event occurs." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which types of real estate does Novem Digital serve?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital is built for institutional real estate owners with multi-site portfolios including commercial and mixed-use properties, seniors living and wellness facilities, data centers, and recreational and public venues. Best fit organizations have high cost of failure, board level scrutiny on risk related costs, and a need for audit ready reporting." }
+          },
+          {
+            "@type": "Question",
+            "name": "How is Novem Digital different from a building management system?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A building management system (BMS) monitors and controls building systems in real time. Novem Digital layers predictive risk intelligence and normalized insurance claims data on top of existing systems to make failure predictable, translate operational signals into financial exposure, and produce audit ready data for boards, lenders, and insurers. Novem does not replace a BMS — it makes its data financially useful." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebPage","@id":"https://novemdigital.com/#webpage","url":"https://novemdigital.com","name":"Novem Digital — Digital Risk Platform for Institutional Real Estate","publisher":{"@id":"https://novemdigital.com/#organization"},"inLanguage":"en-CA"},
+    {"@type":"WebSite","@id":"https://novemdigital.com/#website","url":"https://novemdigital.com","name":"Novem Digital","publisher":{"@id":"https://novemdigital.com/#organization"}},
+    {"@type":"Organization","@id":"https://schneiderelectric.com/#organization","name":"Global Digital Energy & Building Services Company","url":"https://www.se.com","description":"Strategic infrastructure partner of Novem Digital."},
+    {"@type":"Organization","@id":"https://axaxl.com/#organization","name":"Global Commercial Insurance Company","url":"https://axaxl.com","description":"Strategic insurance data partner of Novem Digital."},
+    {"@type":"Organization","@id":"https://acerainsurance.com/#organization","name":"National Insurance Brokerage","url":"https://acerainsurance.com","description":"Strategic broker partner of Novem Digital."}
+  ]}
+  </script>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1800&q=85&auto=format&fit=crop&bri=15" fetchpriority="high"/>
+<link rel="stylesheet" href="/modern.css">
+<link rel="stylesheet" href="/redesign.css">
+<link rel="stylesheet" href="/hero-v2.css">
+<link rel="stylesheet" href="/home-icons.css">
+<link rel="stylesheet" href="/home-product.css">
+<link rel="stylesheet" href="/home-problem.css">
+<link rel="stylesheet" href="/home-outcomes.css">
+<link rel="stylesheet" href="/home-tcro.css">
+<link rel="stylesheet" href="/footer-v2.css">
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-9999px;top:auto;" onfocus="this.style.left='0'">Skip to main content</a>
+
+<!-- ════════════════════════════════════════
+     NAVIGATION
+     ════════════════════════════════════════ -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="Novem Digital home">
+        <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="nav-links" id="desktopNav">
+        <div class="nav-item"><a href="/">Home</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item has-dropdown" data-dropdown="platform">
+          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform">
+            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">How It Works</span>
+              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
+            </a>
+            <a href="/tcro/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">TCRO Framework</span>
+              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
+            </a>
+            <a href="/industries/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Industries</span>
+              <span class="nav-dd-desc">Sectors we serve</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown" data-dropdown="resources">
+          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources">
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Case Studies</span>
+              <span class="nav-dd-desc">Real portfolio outcomes</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Insights &amp; Blog</span>
+              <span class="nav-dd-desc">Research &amp; industry analysis</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Press &amp; Whitepapers</span>
+              <span class="nav-dd-desc">Announcements and research</span>
+            </a>
+            <a href="/partners/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Partners</span>
+              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
+            </a>
+            <a href="/careers/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Careers</span>
+              <span class="nav-dd-desc">Join the team</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="/contact/">Contact</a></div>
+      </div>
+
+      <!-- Right side -->
+      <div class="nav-right">
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#" class="nav-login">Login</a>
+        <a href="#contact" class="nav-demo">Get a Demo</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay + drawer -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo" aria-label="Novem Digital home"><img src="logo.png" style="height:24px;width:auto;flex-shrink:0;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <div class="mobile-nav-list">
+    <div class="mobile-nav-item">
+      <a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="platform">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Platform <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/how-it-works/" class="mobile-sub-item" data-mobile-link>How It Works</a>
+        <a href="/tcro/" class="mobile-sub-item" data-mobile-link>TCRO Framework</a>
+        <a href="/industries/" class="mobile-sub-item" data-mobile-link>Industries</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="resources">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
+        <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/contact/" class="mobile-nav-trigger" data-mobile-link>Contact</a>
+    </div>
+  </div>
+  <!-- /mobile-nav-list -->
+
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="#contact" class="mobile-demo" data-mobile-link>Get a Demo</a>
+  </div>
+</div>
+
+
+<main id="main">
+
+<!-- HERO — scroll-driven video (clean structure, no JS wrapping needed) -->
+<section class="hero-v2" id="heroV2">
+  <div class="hero-v2-track">
+    <div class="hero-v2-sticky">
+      <video class="hero-v2-video" id="heroV2Video"
+             muted playsinline autoplay loop
+             preload="auto" disablepictureinpicture
+             poster="/images/hero-poster.jpg" aria-hidden="true">
+        <source src="/images/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-v2-overlay"></div>
+      <div class="blur-overlay blur-overlay-top" aria-hidden="true"></div>
+      <div class="blur-overlay blur-overlay-bottom" aria-hidden="true"></div>
+      <div class="hero-v2-content">
+        <div class="hero-v2-tag"><span class="hero-v2-tag-dot"></span>Digital Risk Platform</div>
+        <h1 class="sr-only">Novem Digital — Digital Risk Platform for Institutional Real Estate</h1>
+        <p class="hero-v2-head" aria-hidden="true">Failure is<br><span class="hero-v2-accent">Predictable.</span></p>
+        <p class="hero-v2-sub">We tell you what's about to fail — and what it will cost — before it does.</p>
+        <div class="hero-v2-acts">
+          <a href="#contact" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#tcro-intro" class="btn btn-ghost">What is TCRO?</a>
+        </div>
+      </div>
+      <div class="hero-v2-progress" id="heroV2Progress"></div>
+      <div class="hero-v2-scrollcue" id="heroV2Cue">Scroll to explore</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROBLEM v4 — 3-card grid w/ premium SVG visualizations + stylized numbers -->
+<section class="sec sec--problem-v4" id="platform">
+  <div class="prob-bg-orb prob-bg-orb--1" aria-hidden="true"></div>
+  <div class="prob-bg-orb prob-bg-orb--2" aria-hidden="true"></div>
+  <div class="w">
+
+    <!-- Section header -->
+    <div class="prob-v4-hdr rev">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>The Problem</p>
+      <h2 class="h2">You are paying for failures <span class="accent">you could have prevented.</span></h2>
+      <p class="lg">Most real estate owners do not know what critical systems they have, how old they are, or which are at risk. <strong>Risk stays invisible until it becomes a loss event.</strong></p>
+    </div>
+
+    <!-- 3-card grid -->
+    <div class="prob-v4-grid">
+
+      <!-- 01 · EXPENSIVE SURPRISES -->
+      <article class="prob-v4-card rev">
+        <div class="prob-v4-vis">
+          <div class="prob-v4-glow"></div>
+          <div class="prob-v4-vis-inner">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet" class="prob-v4-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="pv4SpikeFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F5C842" stop-opacity=".35"/>
+                  <stop offset="100%" stop-color="#F5C842" stop-opacity="0"/>
+                </linearGradient>
+                <pattern id="pv4Grid1" width="40" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M40 0 L0 0 0 28" fill="none" stroke="rgba(245,200,66,.08)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="400" height="220" fill="url(#pv4Grid1)"/>
+              <text x="18" y="26" font-family="'Titillium Web',sans-serif" font-size="10" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.5)">EMERGENCY SPEND</text>
+              <text x="382" y="26" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="#F5C842"><tspan class="pv4-total-num">+$2.8M</tspan></text>
+              <line x1="20" y1="180" x2="380" y2="180" stroke="rgba(255,255,255,.12)" stroke-width="1" stroke-dasharray="3 3"/>
+              <path class="pv4-spike-area" d="M20,180 L60,175 L100,168 L130,80 L160,150 L200,155 L230,48 L270,140 L300,145 L335,25 L370,135 L380,138 L380,210 L20,210 Z" fill="url(#pv4SpikeFill)"/>
+              <path class="pv4-spike-line" d="M20,180 L60,175 L100,168 L130,80 L160,150 L200,155 L230,48 L270,140 L300,145 L335,25 L370,135 L380,138"
+                    fill="none" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                    filter="drop-shadow(0 0 6px rgba(245,200,66,.5))"/>
+              <circle class="pv4-spike-dot" cx="130" cy="80" r="4.5" fill="#F5C842"><animate attributeName="r" values="3.5;5.5;3.5" dur="2s" repeatCount="indefinite"/></circle>
+              <circle class="pv4-spike-dot" cx="230" cy="48" r="4.5" fill="#F5C842"><animate attributeName="r" values="3.5;5.5;3.5" dur="2s" begin=".5s" repeatCount="indefinite"/></circle>
+              <circle class="pv4-spike-dot" cx="335" cy="25" r="4.5" fill="#F5C842"><animate attributeName="r" values="3.5;5.5;3.5" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
+            </svg>
+            </div>
+        </div>
+        <div class="prob-v4-body">
+          <div class="prob-v4-step">
+            <span class="prob-v4-num">01</span>
+            <span class="prob-v4-name">Expensive</span>
+          </div>
+          <h3 class="prob-v4-h">Emergency repairs <span class="accent">absorb your margin.</span></h3>
+          <p class="prob-v4-p">Sudden, unplanned costs — emergency callouts, premium replacement parts, insurance retentions — quietly bleed the budget you set last quarter.</p>
+          <ul class="prob-v4-list">
+            <li>Emergency repair premiums</li>
+            <li>Insurance retention volatility</li>
+            <li>Unplanned capital draws</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 02 · RUNNING BLIND -->
+      <article class="prob-v4-card rev d1">
+        <div class="prob-v4-vis">
+          <div class="prob-v4-glow"></div>
+          <div class="prob-v4-vis-inner">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet" class="prob-v4-svg" aria-hidden="true">
+              <defs>
+                <pattern id="pv4Grid2" width="40" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M40 0 L0 0 0 28" fill="none" stroke="rgba(245,200,66,.08)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="400" height="220" fill="url(#pv4Grid2)"/>
+              <text x="18" y="26" font-family="'Titillium Web',sans-serif" font-size="10" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.5)">PORTFOLIO EVIDENCE</text>
+              <text x="382" y="26" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="#F5C842">NOT FOUND</text>
+              <g>
+                <rect class="pv4-cell" x="20" y="42" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="77.5" y="74" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="77.5" y="90" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">CONDITION</text>
+              </g>
+              <g>
+                <rect class="pv4-cell" x="143" y="42" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="200.5" y="74" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="200.5" y="90" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">RISK SCORE</text>
+              </g>
+              <g>
+                <rect class="pv4-cell" x="266" y="42" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="323.5" y="74" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="323.5" y="90" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">EXPOSURE</text>
+              </g>
+              <g>
+                <rect class="pv4-cell" x="20" y="110" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="77.5" y="142" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="77.5" y="158" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">AGE</text>
+              </g>
+              <g>
+                <rect class="pv4-cell" x="143" y="110" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="200.5" y="142" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="200.5" y="158" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">HISTORY</text>
+              </g>
+              <g>
+                <rect class="pv4-cell" x="266" y="110" width="115" height="55" rx="6" fill="none" stroke="rgba(245,200,66,.22)" stroke-width="1" stroke-dasharray="4 3"/>
+                <text x="323.5" y="142" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="20" font-weight="700" fill="rgba(245,200,66,.6)">?</text>
+                <text x="323.5" y="158" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.35)">AUDIT TRAIL</text>
+              </g>
+              <rect x="20" y="178" width="360" height="28" rx="6" fill="rgba(245,200,66,.06)" stroke="rgba(245,200,66,.25)" stroke-width="1"/>
+              <text x="200" y="196" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="10" letter-spacing="2" font-weight="700" fill="#F5C842">NO AUDIT-READY EVIDENCE</text>
+            </svg>
+            </div>
+        </div>
+        <div class="prob-v4-body">
+          <div class="prob-v4-step">
+            <span class="prob-v4-num">02</span>
+            <span class="prob-v4-name">Blind</span>
+          </div>
+          <h3 class="prob-v4-h">Boards and insurers ask for <span class="accent">evidence that does not exist.</span></h3>
+          <p class="prob-v4-p">Critical decisions get made on instinct and memory. When a renewal lands or a board asks for proof, there is no defensible record to point to.</p>
+          <ul class="prob-v4-list">
+            <li>No live condition data</li>
+            <li>No defensible audit trail</li>
+            <li>No risk-ranked inventory</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- 03 · HIDDEN FINANCIAL BURDEN -->
+      <article class="prob-v4-card rev d2">
+        <div class="prob-v4-vis">
+          <div class="prob-v4-glow"></div>
+          <div class="prob-v4-vis-inner">
+            <svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid meet" class="prob-v4-svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="pv4IceTop" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(255,255,255,.14)"/>
+                  <stop offset="100%" stop-color="rgba(245,200,66,.20)"/>
+                </linearGradient>
+                <linearGradient id="pv4IceBottom" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="rgba(245,200,66,.18)"/>
+                  <stop offset="100%" stop-color="rgba(245,200,66,.02)"/>
+                </linearGradient>
+                <pattern id="pv4Grid3" width="40" height="28" patternUnits="userSpaceOnUse">
+                  <path d="M40 0 L0 0 0 28" fill="none" stroke="rgba(245,200,66,.08)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="400" height="220" fill="url(#pv4Grid3)"/>
+              <text x="18" y="26" font-family="'Titillium Web',sans-serif" font-size="10" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.5)">TOTAL COST OF RISK</text>
+              <text x="382" y="26" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="#F5C842">90% HIDDEN</text>
+              <!-- Tip -->
+              <rect class="pv4-ice-top" x="135" y="46" width="130" height="36" rx="6" fill="url(#pv4IceTop)" stroke="rgba(255,255,255,.45)" stroke-width="1.5"/>
+              <text x="200" y="61" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="2" fill="rgba(255,255,255,.6)">REPORTED</text>
+              <text x="200" y="76" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="rgba(255,255,255,.95)">$1.2M</text>
+              <!-- Water line -->
+              <line class="pv4-pl-line" x1="15" y1="100" x2="385" y2="100" stroke="rgba(245,200,66,.5)" stroke-width="1.5" stroke-dasharray="6 4"/>
+              <text x="18" y="96" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="1" font-weight="700" fill="#F5C842">P&amp;L LINE</text>
+              <!-- Hidden mass -->
+              <path class="pv4-ice-bottom" d="M70 115 L330 115 L308 205 L92 205 Z" fill="url(#pv4IceBottom)" stroke="rgba(245,200,66,.5)" stroke-width="1.5"/>
+              <text x="200" y="138" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="2" fill="rgba(245,200,66,.9)">HIDDEN BURDEN</text>
+              <text x="200" y="170" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="22" font-weight="700" fill="#F5C842"><tspan class="pv4-burden-num">$10.8M</tspan></text>
+              <text x="200" y="192" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="1" fill="rgba(255,255,255,.55)">Premium creep · Capital timing · Downtime</text>
+            </svg>
+            </div>
+        </div>
+        <div class="prob-v4-body">
+          <div class="prob-v4-step">
+            <span class="prob-v4-num">03</span>
+            <span class="prob-v4-name">Hidden</span>
+          </div>
+          <h3 class="prob-v4-h">Traditional Cost of Risk misses <span class="accent">the gaps that hit first.</span></h3>
+          <p class="prob-v4-p">Direct claims are only the tip. Most of the burden — premium creep, capital timing, downtime, reputation — sits below the line and never gets attributed to risk.</p>
+          <ul class="prob-v4-list">
+            <li>Premium creep at renewal</li>
+            <li>Capital timing losses</li>
+            <li>Reputation &amp; downtime drag</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT — Three Pillars (v2: alternating feature rows w/ 3D renders) -->
+<section class="sec sec--product-v2" id="product">
+  <div class="prod-bg-orb prod-bg-orb--1" aria-hidden="true"></div>
+  <div class="prod-bg-orb prod-bg-orb--2" aria-hidden="true"></div>
+  <div class="w">
+
+    <!-- Section header -->
+    <div class="prod-v2-hdr rev">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>The Platform</p>
+      <h2 class="h2">The platform built to make building failure <span class="accent">predictable.</span></h2>
+      <p class="lg">Three layers, one system. Every building, every signal, every dollar of risk — connected.</p>
+    </div>
+
+    <!-- 01 · SEE — image LEFT -->
+    <div class="prod-row rev">
+      <div class="prod-visual">
+        <div class="prod-glow"></div>
+        <img src="/images/platform/pillar-see.jpg" alt="" loading="lazy" decoding="async"/>
+        <div class="prod-grid-overlay"></div>
+        <span class="prod-live-tag"><span class="prod-live-dot"></span>Live monitoring</span>
+        <span class="prod-corner-chip">SYS / 01</span>
+      </div>
+      <div class="prod-content">
+        <div class="prod-step">
+          <span class="prod-step-num">01</span>
+          <span class="prod-step-name">See</span>
+        </div>
+        <h3 class="prod-h">Complete asset inventory, <span class="accent">live across every building.</span></h3>
+        <p class="prod-body">A complete picture of every critical system — condition, age, and financial exposure — before any loss event.</p>
+        <ul class="prod-bullets">
+          <li>Live system condition across every asset</li>
+          <li>Per-asset financial exposure</li>
+          <li>Audit-ready inventory at any moment</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 02 · PREDICT — image RIGHT -->
+    <div class="prod-row prod-row--reverse rev">
+      <div class="prod-visual">
+        <div class="prod-glow"></div>
+        <img src="/images/platform/pillar-predict.jpg" alt="" loading="lazy" decoding="async"/>
+        <div class="prod-grid-overlay"></div>
+        <span class="prod-live-tag"><span class="prod-live-dot"></span>Prediction engine</span>
+        <span class="prod-corner-chip">SYS / 02</span>
+      </div>
+      <div class="prod-content">
+        <div class="prod-step">
+          <span class="prod-step-num">02</span>
+          <span class="prod-step-name">Predict</span>
+        </div>
+        <h3 class="prod-h">Early warnings grounded in <span class="accent">20 years of real claims data.</span></h3>
+        <p class="prod-body">Early warnings ranked by financial consequence — not a wall of alarms. The signal you need, before it becomes a loss.</p>
+        <ul class="prod-bullets">
+          <li>Failure probability per asset</li>
+          <li>Time-to-failure window</li>
+          <li>Loss exposure quantified in dollars</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 03 · PROVE — image LEFT, with CTAs -->
+    <div class="prod-row rev">
+      <div class="prod-visual">
+        <div class="prod-glow"></div>
+        <img src="/images/platform/pillar-prove.jpg" alt="" loading="lazy" decoding="async"/>
+        <div class="prod-grid-overlay"></div>
+        <span class="prod-live-tag"><span class="prod-live-dot"></span>Audit-ready</span>
+        <span class="prod-corner-chip">SYS / 03</span>
+      </div>
+      <div class="prod-content">
+        <div class="prod-step">
+          <span class="prod-step-num">03</span>
+          <span class="prod-step-name">Prove</span>
+        </div>
+        <h3 class="prod-h">Audit-ready data from <span class="accent">source to board report.</span></h3>
+        <p class="prod-body">Every capital and insurance decision backed by audit-ready data — not estimates. Defend every number with evidence.</p>
+        <ul class="prod-bullets">
+          <li>Source-of-truth chain of custody</li>
+          <li>Renewal-grade documentation</li>
+          <li>Board- and lender-ready exports</li>
+        </ul>
+        <div class="prod-acts">
+          <a href="#contact" class="btn btn-p">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#proof" class="btn btn-g">See results</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- THREE OUTCOMES v2 — sticky scroll storytelling -->
+<section class="sec--outcomes-v2" id="outcomes">
+  <div class="oc-bg-orb oc-bg-orb--1" aria-hidden="true"></div>
+  <div class="oc-bg-orb oc-bg-orb--2" aria-hidden="true"></div>
+
+  <div class="oc-track">
+    <div class="oc-pin">
+      <div class="w">
+
+        <!-- Section header (always visible) -->
+        <div class="oc-hdr">
+          <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>What You Get</p>
+          <h2 class="h2">Three outcomes. <span class="accent">Every customer.</span></h2>
+        </div>
+
+        <div class="oc-grid">
+
+          <!-- LEFT: outcome states (only one active at a time) -->
+          <div class="oc-content">
+
+            <div class="oc-state oc-state--active" data-state="0">
+              <div class="oc-step">
+                <span class="oc-num">01</span>
+                <span class="oc-name">Operating</span>
+              </div>
+              <h3 class="oc-h">Lower operating <span class="accent">and repair costs.</span></h3>
+              <p class="oc-body">Planned work at standard rates. Emergency callouts stop. Mechanical costs drop. The savings show up where the P&amp;L can actually feel them.</p>
+              <ul class="oc-bullets">
+                <li>Planned maintenance at standard rates</li>
+                <li>Emergency callouts eliminated</li>
+                <li>Mechanical operating costs reduced</li>
+              </ul>
+            </div>
+
+            <div class="oc-state" data-state="1">
+              <div class="oc-step">
+                <span class="oc-num">02</span>
+                <span class="oc-name">Insurance</span>
+              </div>
+              <h3 class="oc-h">Control your <span class="accent">insurance costs.</span></h3>
+              <p class="oc-body">Insurance is no longer a fixed line. Continuous risk data gives you leverage at renewal — and mid-term. The premium curve bends in your favor.</p>
+              <ul class="oc-bullets">
+                <li>Renewal-grade documentation</li>
+                <li>Mid-term coverage adjustments</li>
+                <li>Premium volatility reduced</li>
+              </ul>
+            </div>
+
+            <div class="oc-state" data-state="2">
+              <div class="oc-step">
+                <span class="oc-num">03</span>
+                <span class="oc-name">Capital</span>
+              </div>
+              <h3 class="oc-h">Make capital planning <span class="accent">defensible.</span></h3>
+              <p class="oc-body">Every allocation backed by condition data and loss history. Boards and lenders get evidence, not estimates. Capital flows where it is actually needed.</p>
+              <ul class="oc-bullets">
+                <li>Evidence-backed allocations</li>
+                <li>Audit-ready chain of custody</li>
+                <li>Defensible to boards and lenders</li>
+              </ul>
+            </div>
+
+            <!-- Progress dots -->
+            <div class="oc-progress">
+              <button class="oc-dot oc-dot--active" data-go="0" aria-label="Outcome 1"></button>
+              <button class="oc-dot" data-go="1" aria-label="Outcome 2"></button>
+              <button class="oc-dot" data-go="2" aria-label="Outcome 3"></button>
+            </div>
+          </div>
+
+          <!-- RIGHT: animated SVG visualizations (only one active at a time) -->
+          <div class="oc-visual">
+            <div class="oc-vis-glow"></div>
+            <div class="oc-vis-inner">
+
+              <!-- VIS 1 · Declining operating cost -->
+              <div class="oc-vis-state oc-vis-state--active" data-state="0">
+                <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" class="oc-svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="ocCostFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7BFAB5" stop-opacity=".35"/>
+                      <stop offset="100%" stop-color="#7BFAB5" stop-opacity="0"/>
+                    </linearGradient>
+                    <pattern id="ocGrid1" width="48" height="36" patternUnits="userSpaceOnUse">
+                      <path d="M48 0 L0 0 0 36" fill="none" stroke="rgba(123,250,181,.06)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="480" height="360" fill="url(#ocGrid1)"/>
+                  <text x="24" y="34" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.55)">OPERATING SPEND · 18-MO</text>
+                  <text x="456" y="34" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5" class="oc-num-1">−34%</text>
+
+                  <!-- divider line at month 9 -->
+                  <line x1="240" y1="58" x2="240" y2="320" stroke="rgba(255,255,255,.18)" stroke-width="1" stroke-dasharray="3 3"/>
+                  <text x="120" y="58" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="2" fill="rgba(255,255,255,.45)">BEFORE NOVEM</text>
+                  <text x="360" y="58" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="9" letter-spacing="2" fill="#7BFAB5">WITH NOVEM</text>
+
+                  <!-- Filled area -->
+                  <path class="oc-cost-area" d="M30,200 L60,180 L90,250 L120,140 L150,260 L180,180 L210,230 L240,210 L270,200 L300,170 L330,165 L360,160 L390,158 L420,156 L450,155 L450,320 L30,320 Z" fill="url(#ocCostFill)"/>
+                  <!-- Chaotic before line -->
+                  <path class="oc-cost-line-1" d="M30,200 L60,180 L90,250 L120,140 L150,260 L180,180 L210,230 L240,210"
+                        fill="none" stroke="#7BFAB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".65"
+                        filter="drop-shadow(0 0 6px rgba(123,250,181,.45))"/>
+                  <!-- Smooth after line -->
+                  <path class="oc-cost-line-2" d="M240,210 L270,200 L300,170 L330,165 L360,160 L390,158 L420,156 L450,155"
+                        fill="none" stroke="#7BFAB5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                        filter="drop-shadow(0 0 8px rgba(123,250,181,.65))"/>
+                  <!-- End dot (pulses forever) -->
+                  <circle class="oc-cost-dot" cx="450" cy="155" r="5" fill="#7BFAB5"><animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/></circle>
+
+                  <!-- Looping traveling pulse along the smooth line -->
+                  <circle r="6" fill="#7BFAB5" opacity="0" filter="drop-shadow(0 0 10px #7BFAB5)">
+                    <animateMotion dur="3.5s" repeatCount="indefinite" rotate="0"
+                                   path="M240,210 L270,200 L300,170 L330,165 L360,160 L390,158 L420,156 L450,155"/>
+                    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.15;0.85;1" dur="3.5s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- Vertical scanner sweep -->
+                  <rect class="oc-scanner-1" x="30" y="60" width="2" height="260" fill="#7BFAB5" opacity=".6">
+                    <animate attributeName="x" values="30;450;30" dur="6s" repeatCount="indefinite" keyTimes="0;0.5;1"/>
+                    <animate attributeName="opacity" values="0;.45;.6;.45;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.1;0.5;0.9;1"/>
+                  </rect>
+
+                  <!-- Big callout number -->
+                  <text x="240" y="290" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,.55)">EMERGENCY CALLOUTS</text>
+                  <text x="240" y="318" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="26" font-weight="700" fill="#7BFAB5" class="oc-stat-1">−71%</text>
+                </svg>
+              </div>
+
+              <!-- VIS 2 · Insurance premium leverage -->
+              <div class="oc-vis-state" data-state="1">
+                <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" class="oc-svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="ocSaveFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7BFAB5" stop-opacity=".25"/>
+                      <stop offset="100%" stop-color="#7BFAB5" stop-opacity="0"/>
+                    </linearGradient>
+                    <pattern id="ocGrid2" width="48" height="36" patternUnits="userSpaceOnUse">
+                      <path d="M48 0 L0 0 0 36" fill="none" stroke="rgba(123,250,181,.06)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="480" height="360" fill="url(#ocGrid2)"/>
+                  <text x="24" y="34" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.55)">INSURANCE PREMIUM · 5-YR</text>
+                  <text x="456" y="34" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5" class="oc-num-2">−18%</text>
+
+                  <!-- Market line (up) -->
+                  <path d="M30,250 L120,210 L210,180 L300,140 L390,110 L450,95"
+                        fill="none" stroke="rgba(245,200,66,.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-dasharray="4 3"/>
+                  <text x="455" y="92" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="10" font-weight="700" fill="rgba(245,200,66,.85)">MARKET +28%</text>
+
+                  <!-- Your portfolio line (flat / down) -->
+                  <path class="oc-ins-area" d="M30,250 L120,245 L210,235 L300,230 L390,225 L450,220 L450,330 L30,330 Z" fill="url(#ocSaveFill)"/>
+                  <path class="oc-ins-line" d="M30,250 L120,245 L210,235 L300,230 L390,225 L450,220"
+                        fill="none" stroke="#7BFAB5" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"
+                        filter="drop-shadow(0 0 8px rgba(123,250,181,.65))"/>
+                  <text x="455" y="217" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="10" font-weight="700" fill="#7BFAB5">YOUR PORTFOLIO −18%</text>
+
+                  <!-- Renewal markers -->
+                  <g>
+                    <circle cx="120" cy="245" r="4" fill="#7BFAB5"/>
+                    <text x="120" y="265" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.5)">Y1</text>
+                  </g>
+                  <g>
+                    <circle cx="210" cy="235" r="4" fill="#7BFAB5"/>
+                    <text x="210" y="255" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.5)">Y2</text>
+                  </g>
+                  <g>
+                    <circle cx="300" cy="230" r="4" fill="#7BFAB5"/>
+                    <text x="300" y="250" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.5)">Y3</text>
+                  </g>
+                  <g>
+                    <circle cx="390" cy="225" r="4" fill="#7BFAB5"/>
+                    <text x="390" y="245" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="8" letter-spacing="1" fill="rgba(255,255,255,.5)">Y4</text>
+                  </g>
+
+                  <!-- Traveling pulse along YOUR PORTFOLIO line -->
+                  <circle r="6" fill="#7BFAB5" opacity="0" filter="drop-shadow(0 0 10px #7BFAB5)">
+                    <animateMotion dur="4s" repeatCount="indefinite" rotate="0"
+                                   path="M30,250 L120,245 L210,235 L300,230 L390,225 L450,220"/>
+                    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4s" repeatCount="indefinite"/>
+                  </circle>
+
+                  <!-- Traveling marker along MARKET line (amber) -->
+                  <circle r="5" fill="#F5C842" opacity="0" filter="drop-shadow(0 0 8px #F5C842)">
+                    <animateMotion dur="4s" repeatCount="indefinite" rotate="0" begin="0.5s"
+                                   path="M30,250 L120,210 L210,180 L300,140 L390,110 L450,95"/>
+                    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+                  </circle>
+
+                  <text x="240" y="310" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,.55)">SPREAD VS MARKET</text>
+                  <text x="240" y="338" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="26" font-weight="700" fill="#7BFAB5" class="oc-stat-2">46pts</text>
+                </svg>
+              </div>
+
+              <!-- VIS 3 · Capital allocation defensible -->
+              <div class="oc-vis-state" data-state="2">
+                <svg viewBox="0 0 480 360" preserveAspectRatio="xMidYMid meet" class="oc-svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="ocBarGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#A8FFD0" stop-opacity="1"/>
+                      <stop offset="100%" stop-color="#7BFAB5" stop-opacity="1"/>
+                    </linearGradient>
+                    <pattern id="ocGrid3" width="48" height="36" patternUnits="userSpaceOnUse">
+                      <path d="M48 0 L0 0 0 36" fill="none" stroke="rgba(123,250,181,.06)" stroke-width="1"/>
+                    </pattern>
+                  </defs>
+                  <rect width="480" height="360" fill="url(#ocGrid3)"/>
+                  <text x="24" y="34" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" font-weight="700" fill="rgba(255,255,255,.55)">CAPITAL ALLOCATION</text>
+                  <text x="456" y="34" text-anchor="end" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" font-weight="700" fill="#7BFAB5">EVIDENCE-BACKED</text>
+
+                  <!-- 4 allocation bars w/ "verified" checkmarks -->
+                  <g class="oc-bar" style="--i:0">
+                    <rect x="40" y="80" width="380" height="40" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(123,250,181,.18)" stroke-width="1"/>
+                    <rect class="oc-bar-fill" x="42" y="82" height="36" rx="6" fill="url(#ocBarGrad)" data-width="265"/>
+                    <circle r="2.5" cy="100" fill="rgba(255,255,255,.95)" opacity=".85" filter="drop-shadow(0 0 4px rgba(255,255,255,.85))"><animate attributeName="cx" values="60;287;60" dur="3.4s" repeatCount="indefinite"/></circle>
+                    <text x="56" y="106" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.98)" style="paint-order:stroke;stroke:rgba(7,16,26,.85);stroke-width:1.2px;letter-spacing:.5px">HVAC RENEWAL · $2.1M</text>
+                    <g transform="translate(380, 90)">
+                      <circle cx="10" cy="10" r="10" fill="rgba(123,250,181,.18)" stroke="#7BFAB5" stroke-width="1"/>
+                      <path d="M5 10 L9 14 L15 7" fill="none" stroke="#7BFAB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+
+                  <g class="oc-bar" style="--i:1">
+                    <rect x="40" y="135" width="380" height="40" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(123,250,181,.18)" stroke-width="1"/>
+                    <rect class="oc-bar-fill" x="42" y="137" height="36" rx="6" fill="url(#ocBarGrad)" data-width="200"/>
+                    <circle r="2.5" cy="155" fill="rgba(255,255,255,.95)" opacity=".85" filter="drop-shadow(0 0 4px rgba(255,255,255,.85))"><animate attributeName="cx" values="60;222;60" dur="3.6s" repeatCount="indefinite"/></circle>
+                    <text x="56" y="161" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.98)" style="paint-order:stroke;stroke:rgba(7,16,26,.85);stroke-width:1.2px;letter-spacing:.5px">ELECTRICAL · $1.6M</text>
+                    <g transform="translate(380, 145)">
+                      <circle cx="10" cy="10" r="10" fill="rgba(123,250,181,.18)" stroke="#7BFAB5" stroke-width="1"/>
+                      <path d="M5 10 L9 14 L15 7" fill="none" stroke="#7BFAB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+
+                  <g class="oc-bar" style="--i:2">
+                    <rect x="40" y="190" width="380" height="40" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(123,250,181,.18)" stroke-width="1"/>
+                    <rect class="oc-bar-fill" x="42" y="192" height="36" rx="6" fill="url(#ocBarGrad)" data-width="148"/>
+                    <circle r="2.5" cy="210" fill="rgba(255,255,255,.95)" opacity=".85" filter="drop-shadow(0 0 4px rgba(255,255,255,.85))"><animate attributeName="cx" values="60;170;60" dur="3.8s" repeatCount="indefinite"/></circle>
+                    <text x="56" y="216" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.98)" style="paint-order:stroke;stroke:rgba(7,16,26,.85);stroke-width:1.2px;letter-spacing:.5px">ROOF/ENVELOPE · $1.1M</text>
+                    <g transform="translate(380, 200)">
+                      <circle cx="10" cy="10" r="10" fill="rgba(123,250,181,.18)" stroke="#7BFAB5" stroke-width="1"/>
+                      <path d="M5 10 L9 14 L15 7" fill="none" stroke="#7BFAB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+
+                  <g class="oc-bar" style="--i:3">
+                    <rect x="40" y="245" width="380" height="40" rx="8" fill="rgba(255,255,255,.05)" stroke="rgba(123,250,181,.18)" stroke-width="1"/>
+                    <rect class="oc-bar-fill" x="42" y="247" height="36" rx="6" fill="url(#ocBarGrad)" data-width="105"/>
+                    <circle r="2.5" cy="265" fill="rgba(255,255,255,.95)" opacity=".85" filter="drop-shadow(0 0 4px rgba(255,255,255,.85))"><animate attributeName="cx" values="60;127;60" dur="4.0s" repeatCount="indefinite"/></circle>
+                    <text x="56" y="271" font-family="'Titillium Web',sans-serif" font-size="11" font-weight="700" fill="rgba(255,255,255,.98)" style="paint-order:stroke;stroke:rgba(7,16,26,.85);stroke-width:1.2px;letter-spacing:.5px">PLUMBING · $680K</text>
+                    <g transform="translate(380, 255)">
+                      <circle cx="10" cy="10" r="10" fill="rgba(123,250,181,.18)" stroke="#7BFAB5" stroke-width="1"/>
+                      <path d="M5 10 L9 14 L15 7" fill="none" stroke="#7BFAB5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                  </g>
+
+                  <!-- Looping shimmer sweep across all 4 bars -->
+                  <defs>
+                    <linearGradient id="ocShimmer" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+                      <stop offset="50%" stop-color="rgba(255,255,255,.35)"/>
+                      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                    </linearGradient>
+                  </defs>
+                  <rect class="oc-shimmer" x="-100" y="75" width="80" height="220" fill="url(#ocShimmer)" opacity=".55">
+                    <animate attributeName="x" values="-100;500" dur="3.5s" repeatCount="indefinite"/>
+                  </rect>
+
+                  <text x="240" y="310" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="11" letter-spacing="2" fill="rgba(255,255,255,.55)">BOARD-APPROVED</text>
+                  <text x="240" y="338" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="26" font-weight="700" fill="#7BFAB5" class="oc-stat-3">$5.4M</text>
+                </svg>
+              </div>
+
+            </div>
+
+            <!-- Corner state chip -->
+            <span class="oc-corner-chip">OUT · <span class="oc-corner-num">01</span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="sec" id="proof">
+  <div class="w">
+    <div class="rev" style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+      <div>
+        <p class="eye"><span class="eye-dot"></span>In Practice</p>
+        <h2 class="h2" style="margin-bottom:0;">Real buildings.<br><span class="accent">Measurable outcomes.</span></h2>
+      </div>
+      <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:700;font-family:var(--font-h);color:var(--green);text-decoration:none;margin-bottom:.2rem;">All case studies <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2.5rem;">
+
+      <!-- Seniors Living -->
+      <div class="rev proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Seniors Living Operator &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">Seven years of recurring outbreaks. One environmental signal changed everything.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"Zero respiratory outbreak weeks in 2025. The first time in seven years."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">65%</span>
+          <span class="proof-l">Fewer outbreak weeks</span>
+        </div>
+        <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- Public Venue -->
+      <div class="rev d1 proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Public Venue &amp; Infrastructure Operator &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">Fragmented risk across an entire site. Consolidated before the next event.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"One connected system replaced fragmented processes across the entire site."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">$5M</span>
+          <span class="proof-l">Loss mitigation</span>
+        </div>
+        <a href="/proof" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <!-- Commercial Office Tower — Telus Gardens -->
+      <div class="rev d2 proof-cust-card" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem;display:flex;flex-direction:column;gap:1.5rem;transition:box-shadow var(--ease),border-color var(--ease),transform var(--ease);">
+        <div>
+          <p style="font-size:clamp(.85rem,.8rem + .15vw,.95rem);font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.6rem;">Commercial Office Tower &mdash; North America</p>
+          <p style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--text);line-height:1.4;margin-bottom:.75rem;">900 building issues. 4 months to resolve them. $10.1M in forecast savings.</p>
+          <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);font-style:italic;line-height:1.6;">"Commissioning compressed from 36 months to 4. Energy intensity one third below peer towers."</p>
+        </div>
+        <div style="display:flex;align-items:baseline;gap:.6rem;border-top:1px solid var(--border);padding-top:1.25rem;margin-top:auto;">
+          <span class="proof-v">$10.1M</span>
+          <span class="proof-l">10-year forecast savings</span>
+        </div>
+        <a href="/resources#telus-garden" style="display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.78rem;color:var(--green);text-decoration:none;">Read more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+
+    <!-- Proof bottom CTA bar -->
+    <div class="rev" style="background:color-mix(in srgb,var(--green) 8%,transparent);border:1px solid color-mix(in srgb,var(--green) 25%,transparent);border-radius:var(--rlg);padding:1.5rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.25rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-family:var(--font-h);font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:.25rem;">See what Novem Digital finds in your portfolio.</p>
+        <p class="sm" style="margin:0;">Book a demo and see what surfaces in your portfolio — day one.</p>
+      </div>
+      <a href="#contact" class="btn btn-p" style="flex-shrink:0;">Get a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- TCRO INTRO -->
+<section class="sec sec--alt" id="tcro-intro">
+  <div class="wm">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center;" class="rev">
+      <div>
+        <p class="eye"><span class="eye-dot"></span>Framework</p>
+        <h2 class="h2" style="margin-bottom:1rem;">We find the failure <span class="accent">before it hits your financials.</span></h2>
+        <p class="lg" style="max-width:44ch;margin-bottom:1.75rem;">Most risk frameworks only count what already happened. Total Cost of Risk Ownership captures the full financial burden — everything that hits your P&amp;L before it makes your risk register.</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="/tcro" class="btn btn-p">Explore TCRO <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="/tcro#calculator" class="btn btn-g">TCRO Calculator</a>
+        </div>
+      </div>
+      <div class="rev d1">
+        <div class="tcro-v2-wrap">
+          <div class="tcro-v2-header">
+            <span class="tcro-v2-label">TCRO · The Full Cost of Invisible Risk</span>
+          </div>
+
+          <div class="tcro-v2-stage" id="tcroV2Stage">
+            <div class="tcro-v2-glow"></div>
+            <svg viewBox="0 0 600 600" class="tcro-v2-svg" aria-label="TCRO interactive cost framework">
+              <defs>
+                <radialGradient id="tcroCenterGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="rgba(123,250,181,.32)"/>
+                  <stop offset="100%" stop-color="rgba(123,250,181,0)"/>
+                </radialGradient>
+                <linearGradient id="tcroLineGrad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="rgba(123,250,181,0)"/>
+                  <stop offset="50%" stop-color="rgba(123,250,181,.9)"/>
+                  <stop offset="100%" stop-color="rgba(123,250,181,0)"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Outer dashed orbital ring (rotates slowly) -->
+              <circle class="tcro-orb-outer" cx="300" cy="300" r="260"
+                      fill="none" stroke="rgba(123,250,181,.18)" stroke-width="1"
+                      stroke-dasharray="2 8"/>
+              <!-- Inner solid ring -->
+              <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(123,250,181,.10)" stroke-width="1"/>
+              <!-- Center halo -->
+              <circle cx="300" cy="300" r="180" fill="url(#tcroCenterGlow)"/>
+
+              <!-- 7 connection lines from center to each satellite -->
+              <g class="tcro-lines">
+                <line class="tcro-line" data-cat="losses"     x1="300" y1="300" x2="300" y2="100"/>
+                <line class="tcro-line" data-cat="downtime"   x1="300" y1="300" x2="456" y2="175"/>
+                <line class="tcro-line" data-cat="premiums"   x1="300" y1="300" x2="495" y2="344"/>
+                <line class="tcro-line" data-cat="maintenance" x1="300" y1="300" x2="387" y2="480"/>
+                <line class="tcro-line" data-cat="compliance" x1="300" y1="300" x2="213" y2="480"/>
+                <line class="tcro-line" data-cat="overhead"   x1="300" y1="300" x2="105" y2="344"/>
+                <line class="tcro-line" data-cat="governance" x1="300" y1="300" x2="144" y2="175"/>
+              </g>
+
+              <!-- Flowing energy particles along each line (continuously) -->
+              <g class="tcro-particles">
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.2s" repeatCount="indefinite" path="M300,100 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.6s" repeatCount="indefinite" begin="0.4s" path="M456,175 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.3s" repeatCount="indefinite" begin="0.8s" path="M495,344 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.5s" repeatCount="indefinite" begin="1.2s" path="M387,480 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.4s" repeatCount="indefinite" begin="1.6s" path="M213,480 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.7s" repeatCount="indefinite" begin="2.0s" path="M105,344 L300,300"/>
+                </circle>
+                <circle r="4" fill="#7BFAB5" filter="drop-shadow(0 0 8px #7BFAB5)">
+                  <animateMotion dur="3.3s" repeatCount="indefinite" begin="2.4s" path="M144,175 L300,300"/>
+                </circle>
+              </g>
+
+              <!-- Center TCRO node -->
+              <g class="tcro-center">
+                <!-- Outer pulse ring -->
+                <circle class="tcro-pulse-ring" cx="300" cy="300" r="80"
+                        fill="none" stroke="#7BFAB5" stroke-width="2" opacity=".6"/>
+                <circle class="tcro-pulse-ring tcro-pulse-ring--2" cx="300" cy="300" r="80"
+                        fill="none" stroke="#7BFAB5" stroke-width="2" opacity=".4"/>
+                <!-- Glass core -->
+                <circle cx="300" cy="300" r="78"
+                        fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="2.5"
+                        filter="drop-shadow(0 0 20px rgba(123,250,181,.55))"/>
+                <text x="300" y="294" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="22" font-weight="700" fill="#7BFAB5">TCRO</text>
+                <text class="tcro-center-amount" x="300" y="318" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="14" font-weight="700" fill="rgba(255,255,255,.92)" letter-spacing=".5">$6.5M</text>
+                <text x="300" y="338" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="9" letter-spacing="2" fill="rgba(255,255,255,.45)">PORTFOLIO TOTAL</text>
+              </g>
+
+              <!-- 7 satellite nodes (interactive) -->
+              <g class="tcro-satellites">
+
+                <g class="tcro-sat" data-cat="losses" transform="translate(300 100)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">22%</text>
+                  <text x="0" y="-45" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Losses &amp; Claims</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="downtime" transform="translate(456 175)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">18%</text>
+                  <text x="34" y="5" text-anchor="start" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Downtime</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="premiums" transform="translate(495 344)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">15%</text>
+                  <text x="34" y="5" text-anchor="start" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Premiums</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="maintenance" transform="translate(387 480)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">12%</text>
+                  <text x="0" y="50" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Maintenance</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="compliance" transform="translate(213 480)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">9%</text>
+                  <text x="0" y="50" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Compliance</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="overhead" transform="translate(105 344)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">14%</text>
+                  <text x="-34" y="5" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Overhead</text>
+                </g>
+
+                <g class="tcro-sat" data-cat="governance" transform="translate(144 175)">
+                  <circle class="tcro-sat-halo" cx="0" cy="0" r="30" fill="rgba(123,250,181,.18)" opacity="0"/>
+                  <circle class="tcro-sat-bg" cx="0" cy="0" r="24" fill="rgba(13,26,38,.92)" stroke="#7BFAB5" stroke-width="1.5"/>
+                  <text x="0" y="5" text-anchor="middle" font-family="'Titillium Web',sans-serif" font-size="13" font-weight="700" fill="#7BFAB5">10%</text>
+                  <text x="-34" y="5" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,.92)">Governance</text>
+                </g>
+
+              </g>
+            </svg>
+          </div>
+
+          <!-- Live detail panel (updates on click) -->
+          <div class="tcro-v2-detail" id="tcroV2Detail">
+            <div class="tcro-v2-detail-left">
+              <div class="tcro-v2-cat-label">CATEGORY</div>
+              <div class="tcro-v2-cat-name" data-field="name">TCRO · Full Portfolio</div>
+            </div>
+            <div class="tcro-v2-detail-right">
+              <div class="tcro-v2-cat-label">CONTRIBUTION</div>
+              <div class="tcro-v2-cat-amount"><span data-field="amount">$6.5M</span> <span class="tcro-v2-cat-pct" data-field="pct">100%</span></div>
+            </div>
+            <p class="tcro-v2-detail-body" data-field="body">The full financial burden of building risk — direct claims plus every cost that hits your P&amp;L before it makes the risk register. Click any category to see its share.</p>
+          </div>
+
+          <div class="tcro-v2-source">Source: Novem Digital TCRO Framework, developed with strategic infrastructure partner.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="sec" id="resources">
+  <div class="wm">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:.25rem;">
+      <p class="eye" style="justify-content:center;">Free Resources</p>
+      <h2 class="h2" style="margin-bottom:1rem;">The intelligence layer your portfolio is missing.</h2>
+      <p class="lg">Two tools that help operations, finance, and risk leaders quantify invisible building risk and build the case for predictive operations.</p>
+    </div>
+    <div class="leads-g">
+      <div class="lead-card rev">
+        <div class="lead-chip">Whitepaper</div>
+        <div class="lead-card-title">The TCRO Framework: A Holistic Guide to Total Cost of Risk Ownership</div>
+        <div class="lead-card-body">Most organizations measure Cost of Risk too narrowly. This whitepaper defines every component of Total Cost of Risk Ownership and gives finance and operations leaders a shared language for defending capital and insurance decisions.</div>
+        <a href="#contact" class="btn btn-p" style="margin-top:.25rem;">Download the Whitepaper <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
+      </div>
+      <div class="lead-card rev d1">
+        <div class="lead-chip">Interactive Tool</div>
+        <div class="lead-card-title">TCRO Calculator: What Is Invisible Building Risk Costing You?</div>
+        <div class="lead-card-body">Input your portfolio's key operating data and the calculator estimates your full Total Cost of Risk Ownership and the potential financial impact of moving from reactive to predictive operations.</div>
+        <a href="#contact" class="btn btn-g" style="margin-top:.25rem;">Use the Calculator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="sec sec--alt" id="partners">
+  <div class="wm">
+    <div class="part-hdr rev">
+      <p class="eye" style="justify-content:center;">Trusted Partners</p>
+      <h2 class="h2" style="margin-bottom:1rem;">Risk reduction grounded in real loss experience, not assumptions.</h2>
+      <p class="lg">Built with global leaders in infrastructure, insurance, and risk — a foundation that cannot be replicated.</p>
+    </div>
+    <div class="part-g">
+      <div class="part rev"><div class="part-role">Strategic Infrastructure Partner</div><div class="part-name">Global Digital Energy &amp; Building Services Company</div><p class="sm">A global leader in building infrastructure and energy management operating in over 100 countries — embedding predictive intelligence directly into building systems and services for institutional real estate portfolios.</p></div>
+      <div class="part rev d1"><div class="part-role">Strategic Insurance Data Partner</div><div class="part-name">Global Commercial Insurance Company</div><p class="sm">One of the world’s largest commercial insurers — contributing 20 years of normalized institutional claims data that transforms building signals into financially defensible risk scores.</p></div>
+      <div class="part rev d2"><div class="part-role">Strategic Broker Partner</div><div class="part-name">National Insurance Brokerage</div><p class="sm">A leading Canadian brokerage using Novem data to engineer risk, strengthen submissions, and improve outcomes for institutional real estate clients at renewal.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="w">
+    <div class="cta-inner">
+      <h2 class="cta-h">See what Novem Digital finds in your portfolio <em>on day one.</em></h2>
+      <p class="cta-b">Lower costs. Control insurance. Defend every capital decision with data.</p>
+      <div class="cta-acts">
+        <a href="/get-a-demo/" class="btn-s btn-gs">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="/how-it-works/" class="btn-s btn-ol">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="w">
+    <div class="rev" style="max-width:720px;margin-inline:auto;margin-bottom:3rem;text-align:center;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>FAQ</p>
+      <h2 class="h2">Common questions about <span class="accent">Novem Digital.</span></h2>
+    </div>
+    <div style="max-width:800px;margin-inline:auto;display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      <details class="faq-item rev">
+        <summary class="faq-q">What is a Digital Risk Platform for real estate?</summary>
+        <div class="faq-a">
+          <p>A Digital Risk Platform connects operational building data, risk intelligence, and financial exposure in one system so real estate owners can predict and prevent equipment failures before they become loss events. Unlike a building management system, which monitors and controls in real time, a Digital Risk Platform translates those signals into financial outcomes, capital decisions, and audit ready evidence. Novem Digital is the only platform that combines real time monitoring with normalized insurance claims data from 7.2 million buildings.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">What is Total Cost of Risk Ownership?</summary>
+        <div class="faq-a">
+          <p>Total Cost of Risk Ownership (TCRO) is the full financial burden of invisible building risk. It includes direct claims, emergency repair premiums, insurance volatility, business interruption, compliance overhead, fragmented reporting costs, and reputational exposure. Most organizations only measure direct claims, leaving the majority of their true risk burden invisible on the P&amp;L. Novem Digital frames all value delivery through TCRO so customers can see and manage the complete picture.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d2">
+        <summary class="faq-q">How does Novem Digital predict building failure?</summary>
+        <div class="faq-a">
+          <p>Novem Digital combines real time monitoring of critical building systems with normalized insurance claims data from 7.2 million buildings across 20 years of loss history. By comparing live operational signals against historical failure patterns at the equipment and building type level, the platform identifies elevated risk before a failure event occurs. Early warnings give operations teams time to intervene at standard rates during planned downtime rather than at crisis rates after an event.</p>
+        </div>
+      </details>
+      <details class="faq-item rev">
+        <summary class="faq-q">How is Novem Digital different from a building management system?</summary>
+        <div class="faq-a">
+          <p>A building management system (BMS) monitors and controls building systems in real time. Novem Digital layers predictive risk intelligence and normalized insurance claims data on top of existing systems to make failure predictable, translate operational signals into financial exposure, and produce audit ready data for boards, lenders, and insurers. Novem does not replace a BMS — it makes its data financially useful and defensible at the executive level.</p>
+        </div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">Which types of real estate does Novem Digital serve?</summary>
+        <div class="faq-a">
+          <p>Novem Digital is built for institutional real estate owners with multi-site portfolios including commercial and mixed-use properties, seniors living and wellness facilities, data centers, and recreational and public venues. Best fit organizations have a high cost of failure, board level scrutiny on risk related costs, rising insurance pressure, fragmented asset and risk data, and a need to move from reactive to predictive operations.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot foot-v2">
+  <div class="w">
+
+    <!-- BRAND BAND: tagline + CTA -->
+    <div class="foot-v2-brand">
+      <div class="foot-v2-brand-left">
+        <p class="foot-v2-tagline">Ready to see what surfaces in <span class="accent">your portfolio?</span></p>
+      </div>
+      <a href="/get-a-demo/" class="foot-v2-cta">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- MAIN 5-COL GRID -->
+    <div class="foot-v2-g">
+
+      <div>
+        <a href="/" class="logo" aria-label="Novem Digital home">
+          <img src="/logo.png" style="height:26px;width:auto;" alt=""/>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        </a>
+        <p class="foot-v2-desc">A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.</p>
+        <div class="foot-v2-contacts">
+          <a href="tel:+18336683647" aria-label="Call Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (833) 668-3647
+          </a>
+          <a href="mailto:connect@novemdigital.com" aria-label="Email Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            connect@novemdigital.com
+          </a>
+          <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" aria-label="Novem Digital on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Industries</div>
+        <ul class="foot-v2-links">
+          <li><a href="/industries/#commercial-mixed-use">Commercial &amp; Mixed Use</a></li>
+          <li><a href="/industries/#seniors-wellness">Seniors &amp; Wellness</a></li>
+          <li><a href="/industries/#data-centers">Data Centers</a></li>
+          <li><a href="/industries/#recreational-venues">Recreational &amp; Venues</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Platform</div>
+        <ul class="foot-v2-links">
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/tcro/">TCRO Framework</a></li>
+          <li><a href="/partners/">Partners</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Resources</div>
+        <ul class="foot-v2-links">
+          <li><a href="/resources/">Case Studies</a></li>
+          <li><a href="/resources/">Insights &amp; Blog</a></li>
+          <li><a href="/resources/">Press &amp; Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Company</div>
+        <ul class="foot-v2-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM strip: copyright + zulbera attribution -->
+    <div class="foot-v2-bot">
+      <div class="foot-v2-legal">
+        <span>&copy; 2026 Novem Digital. All rights reserved.</span>
+        <span>Failure is Predictable.</span>
+      </div>
+      <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
+        Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<!-- ════════════════════════════════════════
+     SCRIPTS
+     ════════════════════════════════════════ -->
+<script>
+(function(){
+  /* Theme */
+  const root=document.documentElement;
+  const themeBtn=document.querySelector('[data-theme-toggle]');
+  if(themeBtn) themeBtn.addEventListener('click',()=>{
+    root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
+  });
+
+  /* Nav scroll */
+  const nav=document.getElementById('mainNav');
+  if(nav) addEventListener('scroll',()=>nav.classList.toggle('nav--scrolled',scrollY>40),{passive:true});
+
+  /* Mobile menu */
+  const hamburger=document.getElementById('hamburgerBtn');
+  const mobileClose=document.getElementById('mobileCloseBtn') || document.getElementById('mobileClose');
+  const mobileOverlay=document.getElementById('mobileOverlay');
+  const mobileMenu=document.getElementById('mobileMenu');
+  function openMobile(){
+    if(!mobileMenu||!mobileOverlay||!hamburger)return;
+    mobileMenu.classList.add('open');mobileOverlay.classList.add('open');
+    document.body.classList.add('no-scroll');
+    hamburger.setAttribute('aria-expanded','true');
+    mobileMenu.setAttribute('aria-hidden','false');
+  }
+  function closeMobile(){
+    if(!mobileMenu||!mobileOverlay||!hamburger)return;
+    mobileMenu.classList.remove('open');mobileOverlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    hamburger.setAttribute('aria-expanded','false');
+    mobileMenu.setAttribute('aria-hidden','true');
+  }
+  if(hamburger) hamburger.addEventListener('click',openMobile);
+  if(mobileClose) mobileClose.addEventListener('click',closeMobile);
+  if(mobileOverlay) mobileOverlay.addEventListener('click',closeMobile);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobile();});
+  document.querySelectorAll('[data-mobile-link]').forEach(l=>l.addEventListener('click',closeMobile));
+
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+})();
+</script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script><script src="/modern.js" defer></script>
+<script src="/redesign.js" defer></script>
+<script src="/hero-v2.js" defer></script>
+<script src="/home-icons.js" defer></script>
+<script src="/home-problem.js" defer></script>
+<script src="/home-outcomes.js" defer></script>
+<script src="/home-tcro.js" defer></script>
+<script src="/home-nav.js" defer></script>
+</body>
+</html>

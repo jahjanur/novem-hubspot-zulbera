@@ -1,0 +1,308 @@
+/* ════════════════════════════════════════════════════════════════
+   NOVEM DIGITAL — Modern polish layer
+   Additive only. Enhances existing markup without changing structure.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ────────── 1. ROOT TUNING — easings, durations, glow tokens ────────── */
+:root {
+  --ease-out-soft: cubic-bezier(.22, 1, .36, 1);
+  --ease-out-back: cubic-bezier(.34, 1.56, .64, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: 220ms;
+  --dur-base: 380ms;
+  --dur-slow: 700ms;
+  --glow-green: 0 0 32px rgba(123, 250, 181, 0.45);
+  --glow-blue: 0 0 32px rgba(96, 188, 214, 0.35);
+  --mesh-1: radial-gradient(at 18% 22%, rgba(123, 250, 181, .14) 0px, transparent 50%);
+  --mesh-2: radial-gradient(at 82% 78%, rgba(96, 188, 214, .12) 0px, transparent 50%);
+  --mesh-3: radial-gradient(at 50% 100%, rgba(123, 250, 181, .06) 0px, transparent 60%);
+}
+
+/* ────────── 2. GLOBAL BODY POLISH ────────── */
+html { scroll-behavior: smooth; }
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection { background: rgba(123, 250, 181, 0.25); color: #E8F4F0; }
+[data-theme="light"] ::selection { background: rgba(96, 188, 214, 0.3); color: #1E343F; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--green) 22%, transparent); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: color-mix(in srgb, var(--green) 45%, transparent); }
+
+/* ────────── 3. PAGE-LOAD ENTRANCE ────────── */
+@keyframes pgInUp { from { opacity: 0; transform: translate3d(0, 24px, 0); } to { opacity: 1; transform: none; } }
+@keyframes pgInDown { from { opacity: 0; transform: translate3d(0, -16px, 0); } to { opacity: 1; transform: none; } }
+@keyframes pgInScale { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+
+.nav { animation: pgInDown 600ms var(--ease-out-soft) both; }
+
+/* Hero entrance: stagger by direct children */
+.hero .hero-left > * { animation: pgInUp 800ms var(--ease-out-soft) both; }
+.hero .hero-left > *:nth-child(1) { animation-delay: 150ms; }
+.hero .hero-left > *:nth-child(2) { animation-delay: 280ms; }
+.hero .hero-left > *:nth-child(3) { animation-delay: 380ms; }
+.hero .hero-left > *:nth-child(4) { animation-delay: 480ms; }
+.hero .hero-left > *:nth-child(5) { animation-delay: 580ms; }
+
+.hero-stat { animation: pgInScale 900ms var(--ease-out-back) both; }
+.hero-stat:nth-child(1) { animation-delay: 620ms; }
+.hero-stat:nth-child(2) { animation-delay: 760ms; }
+.hero-stat:nth-child(3) { animation-delay: 880ms; }
+
+/* ────────── 4. GRADIENT MESH BACKGROUNDS ────────── */
+.hero::before,
+.cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--mesh-1), var(--mesh-2), var(--mesh-3);
+  pointer-events: none;
+  z-index: 1;
+  opacity: .9;
+  animation: meshDrift 18s ease-in-out infinite alternate;
+}
+.hero > .w,
+.cta > .w { position: relative; z-index: 2; }
+
+@keyframes meshDrift {
+  0%   { background-position: 0% 0%, 100% 100%, 50% 100%; }
+  50%  { background-position: 8% 6%, 92% 94%, 56% 96%; }
+  100% { background-position: -4% 4%, 104% 96%, 44% 104%; }
+}
+
+/* (gradient sweep moved to redesign.css with proper containment) */
+
+/* ────────── 6. BUTTONS — base transition only (shadows + colors now in redesign.css) ──────────
+   The previous flashy outer-glow + shimmer-sweep were extending the visual
+   hover bounds beyond the button perimeter. Removed in favor of the cleaner
+   contained hover defined in redesign.css. */
+.btn,
+.btn-s,
+.nav-demo,
+.mobile-demo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform var(--dur-fast) var(--ease-out-soft),
+              box-shadow var(--dur-base) var(--ease-out-soft),
+              filter var(--dur-fast) var(--ease-out-soft);
+}
+
+/* Magnetic button data hook */
+[data-magnetic] { will-change: transform; }
+
+/* ────────── 7. CARDS — 3D tilt, glow border on hover ────────── */
+.pil, .prob-card, .seg, .rcard, .part, .lead-card, .proof-cust-card, .insight-card {
+  transition: transform var(--dur-base) var(--ease-out-soft),
+              box-shadow var(--dur-base) var(--ease-out-soft),
+              border-color var(--dur-base) var(--ease-out-soft);
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+}
+.pil::before, .prob-card::before, .seg::before, .rcard::before,
+.part::before, .lead-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent 30%, color-mix(in srgb, var(--green) 35%, transparent) 50%, transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-out-soft);
+  pointer-events: none;
+}
+.pil:hover::before, .prob-card:hover::before, .seg:hover::before,
+.rcard:hover::before, .part:hover::before, .lead-card:hover::before { opacity: 1; }
+
+.pil:hover, .prob-card:hover, .seg:hover, .lead-card:hover, .insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,.5), 0 0 0 1px color-mix(in srgb, var(--green) 18%, transparent);
+}
+.rcard:hover, .part:hover { box-shadow: 0 24px 60px -20px rgba(0,0,0,.55); }
+
+/* Image scale on card hover (resource cards) */
+.rcard-img img { transition: transform 700ms var(--ease-out-soft), filter 400ms; }
+.rcard:hover .rcard-img img { transform: scale(1.06); filter: saturate(1.05) brightness(1.02); }
+
+/* ────────── 8. NAV — refined glassmorphism on scroll ────────── */
+.nav {
+  backdrop-filter: blur(14px) saturate(1.35);
+  -webkit-backdrop-filter: blur(14px) saturate(1.35);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 45%, transparent);
+}
+.nav--scrolled {
+  background: color-mix(in srgb, var(--bg) 92%, transparent) !important;
+  border-bottom-color: color-mix(in srgb, var(--green) 18%, transparent);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,.55);
+}
+
+.nav-item > a { position: relative; }
+.nav-item > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  height: 2px;
+  width: 0;
+  background: var(--green);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width var(--dur-base) var(--ease-out-soft);
+}
+.nav-item > a:hover::after { width: calc(100% - 1.5rem); }
+
+/* ────────── 9. SCROLL REVEAL (override + improve) ────────── */
+.rev {
+  opacity: 0;
+  transform: translate3d(0, 32px, 0) scale(.98);
+  transition: opacity var(--dur-slow) var(--ease-out-soft),
+              transform var(--dur-slow) var(--ease-out-soft);
+}
+.rev.in {
+  opacity: 1;
+  transform: none;
+}
+.d1 { transition-delay: 80ms; }
+.d2 { transition-delay: 160ms; }
+.d3 { transition-delay: 240ms; }
+.d4 { transition-delay: 320ms; }
+
+/* Slide variants */
+.rev-l { transform: translate3d(-40px, 0, 0); }
+.rev-l.in { transform: none; }
+.rev-r { transform: translate3d(40px, 0, 0); }
+.rev-r.in { transform: none; }
+
+/* ────────── 10. STATS — animated counter target ────────── */
+[data-counter] {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -.01em;
+}
+
+/* ────────── 11. FAQ — smoother expand ────────── */
+.faq-item { transition: background var(--dur-base) var(--ease-out-soft); }
+.faq-item[open] { background: color-mix(in srgb, var(--green) 5%, var(--bg)); }
+.faq-q { transition: color var(--dur-base) var(--ease-out-soft); }
+.faq-q::after { transition: transform var(--dur-base) var(--ease-out-back), color var(--dur-base); }
+.faq-a {
+  animation: faqOpen 380ms var(--ease-out-soft);
+}
+@keyframes faqOpen {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ────────── 12. FOOTER ────────── */
+.foot { position: relative; }
+.foot::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--green) 50%, transparent), transparent);
+}
+.foot-links a { position: relative; transition: color var(--dur-fast) var(--ease-out-soft), padding-left var(--dur-fast); }
+.foot-links a::before {
+  content: "→";
+  position: absolute;
+  left: -1em;
+  opacity: 0;
+  transform: translateX(-4px);
+  color: var(--green);
+  transition: opacity var(--dur-fast), transform var(--dur-fast);
+}
+.foot-links a:hover { color: var(--green); padding-left: .25rem; }
+.foot-links a:hover::before { opacity: 1; transform: translateX(0); }
+
+/* ────────── 13. MARQUEE STRIP (optional, opt-in via .marquee) ────────── */
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marqueeScroll 28s linear infinite;
+  width: max-content;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ────────── 14. CTA HALO ────────── */
+.cta .cta-h { position: relative; }
+.cta::before {
+  background: radial-gradient(ellipse 95% 100% at 50% 50%, rgba(123,250,181,.16) 0%, transparent 65%) !important;
+  animation: ctaPulse 8s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .75; transform: scale(1.04); }
+}
+
+/* ────────── 15. SECTION DIVIDER LINE GLOW ────────── */
+.sec--alt { position: relative; }
+.sec--alt::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--green) 30%, transparent) 50%, transparent);
+}
+
+/* ────────── 16. FORMS — input focus polish ────────── */
+input, textarea, select {
+  transition: border-color var(--dur-base) var(--ease-out-soft),
+              box-shadow var(--dur-base) var(--ease-out-soft),
+              background var(--dur-base) var(--ease-out-soft);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--green) 18%, transparent) !important;
+}
+
+/* (cursor glow removed — clashed with redesign noise/mesh) */
+
+/* ────────── 18. IMAGES — kenburns on hero/banner ────────── */
+.hero-bg img,
+.resources-hero-bg img,
+.prob-img img {
+  animation: kenburns 22s ease-in-out infinite alternate;
+}
+@keyframes kenburns {
+  from { transform: scale(1) translate(0, 0); }
+  to   { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+/* ────────── 19. LINKS — underline grow ────────── */
+.rcard-link, .lead-bar a, .foot-sources a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-base) var(--ease-out-soft);
+}
+.rcard-link:hover, .lead-bar a:hover, .foot-sources a:hover {
+  background-size: 100% 1px;
+}
+
+/* ────────── 20. PERFORMANCE / A11Y ────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .rev { opacity: 1 !important; transform: none !important; }
+}

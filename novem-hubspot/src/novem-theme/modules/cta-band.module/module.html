@@ -1,0 +1,17 @@
+<section class="cta"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="w">
+    <div class="cta-inner rev">
+      {{ module.headline }}
+      {% if module.body %}<p class="cta-b">{{ module.body }}</p>{% endif %}
+      <div class="cta-acts">
+        {% if module.primary_cta.label %}
+          <a href="{{ module.primary_cta.url.href }}" class="btn-s btn-gs">{{ module.primary_cta.label }}</a>
+        {% endif %}
+        {% if module.secondary_cta.label %}
+          <a href="{{ module.secondary_cta.url.href }}" class="btn-s btn-ol">{{ module.secondary_cta.label }}</a>
+        {% endif %}
+      </div>
+      {% if module.trust_line %}<p class="cta-trust" style="margin-top:1.25rem;font-size:.78rem;color:var(--faint);letter-spacing:.06em;">{{ module.trust_line }}</p>{% endif %}
+    </div>
+  </div>
+</section>

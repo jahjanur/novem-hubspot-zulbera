@@ -1,0 +1,46 @@
+<!--
+  layout: base.html
+  Base layout. All page templates extend this.
+-->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+
+  {{ standard_header_includes }}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap"/>
+
+  {{ require_css(get_asset_url('../css/main.css')) }}
+  {{ require_css(get_asset_url('../css/modern.css')) }}
+  {{ require_css(get_asset_url('../css/redesign.css')) }}
+  {{ require_css(get_asset_url('../css/footer-v2.css')) }}
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <a href="#main"
+     style="position:absolute;left:-9999px;top:auto;"
+     onfocus="this.style.left='0'">Skip to main content</a>
+
+  {% include "../partials/header.html" %}
+
+  <main id="main">
+    {% block body %}{% endblock %}
+  </main>
+
+  {% include "../partials/footer.html" %}
+
+  {{ require_js(get_asset_url('../js/main.js'), { position: 'footer' }) }}
+  {{ require_js(get_asset_url('../js/modern.js'), { position: 'footer' }) }}
+  {{ require_js(get_asset_url('../js/redesign.js'), { position: 'footer' }) }}
+  {{ require_js(get_asset_url('../js/home-nav.js'), { position: 'footer' }) }}
+
+  {{ standard_footer_includes }}
+</body>
+</html>

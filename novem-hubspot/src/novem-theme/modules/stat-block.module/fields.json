@@ -1,0 +1,8 @@
+[
+  { "name": "stats", "label": "Stats", "type": "group", "occurrence": { "min": 1, "max": 6, "default": 4 },
+    "children": [
+      { "name": "num",   "label": "Number", "type": "text", "default": "" },
+      { "name": "label", "label": "Label",  "type": "text", "default": "" }
+    ]
+  }
+]

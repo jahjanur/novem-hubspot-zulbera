@@ -1,0 +1,6 @@
+{
+  "label": "Resource card (HubDB-driven)",
+  "host_template_types": ["PAGE"],
+  "icon": "@hubspot/article",
+  "is_available_for_new_content": true
+}

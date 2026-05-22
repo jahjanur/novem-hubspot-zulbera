@@ -1,0 +1,24 @@
+<section class="sec"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="w">
+    <div class="seg-hdr">
+      {% if module.eyebrow %}<div class="eye" style="justify-content:center;"><span class="eye-dot"></span>{{ module.eyebrow }}</div>{% endif %}
+      <h2 class="h2 rev">{{ module.headline }}</h2>
+    </div>
+    <div class="seg-g">
+      {% for s in module.segments %}
+        <article class="seg rev{% if loop.index > 1 %} d{{ (loop.index - 1) % 3 + 1 }}{% endif %}"{% if s.anchor %} id="{{ s.anchor }}"{% endif %}>
+          {% if s.image.src %}
+            <div class="seg-img"><img src="{{ s.image.src }}" alt="{{ s.image.alt }}" loading="lazy"></div>
+          {% endif %}
+          <div class="seg-body">
+            <h3 class="h3 seg-t">{{ s.title }}</h3>
+            <div class="sm">{{ s.body }}</div>
+            {% if s.cta_label %}
+              <a href="{{ s.cta_url.href }}" class="rcard-link" style="margin-top:auto;">{{ s.cta_label }} <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

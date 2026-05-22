@@ -1,0 +1,9 @@
+[
+  { "name": "headline", "label": "Section headline", "type": "text", "default": "Intelligence." },
+  { "name": "sub",      "label": "Section sub-headline", "type": "richtext", "default": "<p class=\"lg\">Case studies, white papers, and risk intelligence built on real institutional portfolios.</p>" },
+  { "name": "show_filter", "label": "Show type filter bar?", "type": "boolean", "default": true },
+  { "name": "type_filter", "label": "Lock to a single type (optional)", "type": "choice", "default": "",
+    "choices": [["","All types"],["case-study","Case Study"],["white-paper","White Paper"],["blog","Blog"],["press-release","Press Release"]]
+  },
+  { "name": "limit", "label": "Max results (0 = all)", "type": "number", "default": 0 }
+]

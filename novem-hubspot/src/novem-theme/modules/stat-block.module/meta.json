@@ -1,0 +1,6 @@
+{
+  "label": "Stat block (4-up strip)",
+  "host_template_types": ["PAGE"],
+  "icon": "@hubspot/stats",
+  "is_available_for_new_content": true
+}

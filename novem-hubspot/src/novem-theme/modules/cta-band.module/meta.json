@@ -1,0 +1,6 @@
+{
+  "label": "CTA band",
+  "host_template_types": ["PAGE"],
+  "icon": "@hubspot/cta",
+  "is_available_for_new_content": true
+}

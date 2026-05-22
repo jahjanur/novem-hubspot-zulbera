@@ -1,0 +1,22 @@
+{# Resolves the form ID either from theme settings (theme.forms.*) or from the overridden module.form. #}
+{% if module.form.form_id %}
+  {% form
+    form_to_use="{{ module.form.form_id }}",
+    response_response_type="{{ module.form.response_type }}",
+    response_message="{{ module.form.message }}"
+  %}
+{% else %}
+  {% set chosen_id = "" %}
+  {% if module.form_choice == "demo" %}{% set chosen_id = theme.forms.demo_form_id %}{% endif %}
+  {% if module.form_choice == "partner" %}{% set chosen_id = theme.forms.partner_form_id %}{% endif %}
+  {% if module.form_choice == "careers" %}{% set chosen_id = theme.forms.careers_form_id %}{% endif %}
+
+  {% if chosen_id %}
+    {% form form_to_use="{{ chosen_id }}", response_response_type="inline", response_message="Thanks — we'll be in touch." %}
+  {% else %}
+    <div style="padding:1.5rem;border:1px dashed var(--border2);border-radius:var(--rlg);color:var(--muted);font-size:.875rem;">
+      <strong style="color:var(--text);">Form ID missing.</strong>
+      Set the {{ module.form_choice|capitalize }} Form GUID in <code>Design Manager → novem-theme → Settings → Forms</code>.
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,68 @@
+{# Renders resource cards from the `resources` HubDB table. Table ID is set in theme.hubdb.resources_table_id. #}
+{% set table_id = theme.hubdb.resources_table_id %}
+
+<section class="sec" id="resources">
+  <div class="w">
+    <div style="text-align:center;max-width:54ch;margin:0 auto 3rem;">
+      <div class="eye" style="justify-content:center;"><span class="eye-dot"></span>Resources</div>
+      <h2 class="h2 rev">{{ module.headline }}</h2>
+      <div class="lg rev d1">{{ module.sub }}</div>
+    </div>
+
+    {% if module.show_filter and not module.type_filter %}
+      <div class="filter-bar rev">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="case-study">Case Studies</button>
+        <button class="filter-btn" data-filter="white-paper">White Papers</button>
+        <button class="filter-btn" data-filter="blog">Blog</button>
+        <button class="filter-btn" data-filter="press-release">Press Releases</button>
+      </div>
+    {% endif %}
+
+    {% if table_id %}
+      {% set query = "" %}
+      {% if module.type_filter %}{% set query = "type__eq=" + module.type_filter %}{% endif %}
+      {% if module.limit and module.limit > 0 %}
+        {% set query = query + (query ? "&" : "") + "limit=" + module.limit|string %}
+      {% endif %}
+      {% set rows = hubdb_table_rows(table_id, query) %}
+
+      <div class="resource-grid">
+        {% for row in rows %}
+          <a class="rcard" data-type="{{ row.type }}" href="/resources/{{ row.hs_path }}">
+            <div class="rcard-img">
+              {% if row.hero_image %}<img src="{{ row.hero_image.url }}" alt="{{ row.title|escape }}" loading="lazy">{% endif %}
+              <span class="rcard-badge rcard-badge--{% if row.type == 'case-study' %}cs{% elif row.type == 'white-paper' %}wp{% elif row.type == 'blog' %}bl{% elif row.type == 'press-release' %}pr{% endif %}">
+                {% if row.type == 'case-study' %}Case Study
+                {% elif row.type == 'white-paper' %}White Paper
+                {% elif row.type == 'blog' %}Blog
+                {% elif row.type == 'press-release' %}Press Release
+                {% endif %}
+              </span>
+            </div>
+            <div class="rcard-body">
+              <div class="rcard-meta">
+                {% if row.industry %}<span class="rcard-industry">{{ row.industry }}</span><span class="rcard-dot"></span>{% endif %}
+                {% if row.publish_date %}<span class="rcard-date">{{ row.publish_date|datetimeformat('%Y') }}</span>{% endif %}
+              </div>
+              <h3 class="rcard-title">{{ row.title }}</h3>
+              <p class="rcard-excerpt">{{ row.summary }}</p>
+              {% if row.stat1_num or row.stat2_num %}
+                <div class="rcard-stats">
+                  {% if row.stat1_num %}<div><div class="rcard-stat-num">{{ row.stat1_num }}</div><div class="rcard-stat-lbl">{{ row.stat1_label }}</div></div>{% endif %}
+                  {% if row.stat2_num %}<div><div class="rcard-stat-num">{{ row.stat2_num }}</div><div class="rcard-stat-lbl">{{ row.stat2_label }}</div></div>{% endif %}
+                </div>
+              {% endif %}
+              <span class="rcard-link">Read {{ row.type|replace("-"," ") }} <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </div>
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div style="padding:1.5rem;border:1px dashed var(--border2);border-radius:var(--rlg);color:var(--muted);">
+        <strong style="color:var(--text);">Resources table ID missing.</strong>
+        Create the <code>resources</code> HubDB table (see <code>hubdb/resources_schema.csv</code>), then paste its ID into <code>Design Manager → novem-theme → Settings → HubDB</code>.
+      </div>
+    {% endif %}
+  </div>
+</section>

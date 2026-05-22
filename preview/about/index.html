@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About Novem Digital | Built to Make Failure Predictable</title>
+<meta name="description" content="Learn how Novem Digital was founded, meet the executive team, and discover the mission behind the only Digital Risk Platform that makes building failure predictable.">
+<meta name="keywords" content="Novem Digital, about us, founding story, executive team, digital risk platform, TCRO, building failure prediction, Vancouver BC">
+<link rel="canonical" href="/about/">
+<meta property="og:title" content="About Novem Digital | Built to Make Failure Predictable">
+<meta property="og:description" content="Novem Digital combines continuous monitoring with 20+ years of insurance data to make building failure predictable for institutional portfolios globally.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1546436836-07a91091f160?w=1200&h=630&fit=crop">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://novemdigital.com/about/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Novem Digital | Built to Make Failure Predictable">
+<meta name="twitter:description" content="The only Digital Risk Platform that makes building failure predictable for institutional portfolios.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1546436836-07a91091f160?w=1200&h=630&fit=crop">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Novem Digital",
+  "url": "https://novemdigital.com",
+  "description": "Novem Digital makes building failure predictable by surfacing complete asset inventories and early failure warnings so organizations can reduce Total Cost of Risk Ownership.",
+  "foundingLocation": {"@type": "Place", "name": "Vancouver, BC, Canada"},
+  "areaServed": ["Canada", "United States", "Europe"],
+  "slogan": "Failure is Predictable.",
+  "employee": [
+    {"@type": "Person", "name": "Clint Undseth", "jobTitle": "Chief Executive Officer"},
+    {"@type": "Person", "name": "David Crawford", "jobTitle": "Chief Financial Officer"},
+    {"@type": "Person", "name": "Nicole Cheffey", "jobTitle": "Chief Marketing Officer"},
+    {"@type": "Person", "name": "Gord Jardin", "jobTitle": "Chief Risk & Data Officer"},
+    {"@type": "Person", "name": "Dr. Robert Whetsel", "jobTitle": "Chief Technology Officer"},
+    {"@type": "Person", "name": "Grant R. Jay", "jobTitle": "Chief Revenue Officer"}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ══ TOKENS — exact match to all site pages ══ */
+:root {
+  --green: #7BFAB5;
+  --blue: #60BCD6;
+  --gun: #1E343F;
+  --gun-mid: #243C48;
+  --gun-dark: #111A1F;
+  --text: #E8F4F0;
+  --muted: #8BBCCA;
+  --faint: #4A7080;
+  --border: #2C4250;
+  --border2: #324E5C;
+  --surf: #1E343F;
+  --surf2: #243C48;
+  --bg: #111A1F;
+  --font-h: 'Titillium Web', 'Arial Narrow', sans-serif;
+  --font-b: 'DM Sans', 'Helvetica Neue', sans-serif;
+  --r: 9999px;
+  --rxl: 1rem;
+  --rlg: .75rem;
+  --rmd: .5rem;
+  --sh-md: 0 4px 20px rgba(0,0,0,.4);
+  --sh-lg: 0 12px 48px rgba(0,0,0,.55);
+  --ease: 200ms cubic-bezier(.16,1,.3,1);
+}
+
+/* ══ RESET ══ */
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { min-height: 100dvh; font-family: var(--font-b); font-size: clamp(1.05rem,1rem + .3vw,1.2rem); color: var(--text); background: var(--bg); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button { background: none; border: none; cursor: pointer; }
+body.no-scroll { overflow: hidden; }
+
+/* ══ LAYOUT ══ */
+.w  { max-width: 1200px; margin-inline: auto; padding-inline: clamp(1.25rem,5vw,3rem); }
+.wm { max-width: 960px;  margin-inline: auto; padding-inline: clamp(1.25rem,5vw,3rem); }
+.sec { padding-block: clamp(4rem,8vw,7rem); }
+
+/* ══ TYPE CLASSES — exact match ══ */
+.eye { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; color: var(--green); display: flex; align-items: center; gap: .5rem; margin-bottom: 1rem; }
+.h1  { font-family: var(--font-h); font-size: clamp(3.2rem,1.5rem + 6.5vw,7rem); font-weight: 700; line-height: 1.02; color: var(--text); }
+.h2  { font-family: var(--font-h); font-size: clamp(2rem,1.3rem + 3vw,3.6rem); font-weight: 700; line-height: 1.1; color: var(--text); }
+.h3  { font-family: var(--font-h); font-size: clamp(1.1rem,1rem + .6vw,1.5rem); font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: .6rem; }
+.lg  { font-size: clamp(1.1rem,1rem + .4vw,1.3rem); color: #D4E8EE; line-height: 1.75; }
+.sm  { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: #C8DDE6; line-height: 1.75; }
+.accent { color: var(--green); }
+
+/* ══ BUTTONS — exact match ══ */
+.btn { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-h); font-weight: 700; font-size: clamp(.875rem,.85rem + .1vw,1rem); padding: .875rem 2rem; border-radius: var(--r); text-decoration: none; transition: transform var(--ease), opacity var(--ease), box-shadow var(--ease); cursor: pointer; border: none; white-space: nowrap; }
+.btn-p { background: var(--green); color: var(--gun); }
+.btn-p:hover { opacity: .88; box-shadow: 0 6px 24px rgba(123,250,181,.25); }
+.btn-ghost { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-h); font-weight: 700; font-size: clamp(.875rem,.85rem + .1vw,1rem); padding: .875rem 2rem; border-radius: var(--r); text-decoration: none; color: rgba(232,244,240,.8); border: 1px solid rgba(232,244,240,.22); transition: color var(--ease), border-color var(--ease), transform var(--ease); white-space: nowrap; }
+.btn-ghost:hover { color: var(--text); border-color: rgba(232,244,240,.55); transform: translateY(-1px); }
+
+/* ══ NAV ══ */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; padding-block: .75rem; background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid color-mix(in srgb, var(--border) 55%, transparent); transition: background .3s, box-shadow .3s; }
+.nav--scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.35); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .5rem; text-decoration: none; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: .25rem; margin-left: 1.5rem; }
+.nav-item { position: relative; }
+.nav-item > a { font-family: var(--font-b); font-size: .875rem; font-weight: 500; color: var(--muted); text-decoration: none; padding: .5rem .75rem; border-radius: .375rem; display: inline-flex; align-items: center; gap: .3rem; transition: color var(--ease), background var(--ease); white-space: nowrap; }
+.nav-item > a:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.nav-item--tcro > a { color: #7BFAB5; font-weight: 600; }
+.nav-item--tcro > a:hover { color: #7BFAB5; background: color-mix(in srgb, #7BFAB5 8%, transparent); }
+.nav-item--active > a { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: .5rem; flex-shrink: 0; }
+.tbtn { color: var(--muted); padding: .4rem; border-radius: .5rem; display: flex; align-items: center; background: none; border: none; cursor: pointer; }
+.tbtn:hover { color: var(--text); background: color-mix(in srgb, var(--text) 6%, transparent); }
+.nav-login { font-size: .875rem; font-weight: 500; color: var(--faint); text-decoration: none; padding: .5rem .75rem; transition: color var(--ease); }
+.nav-login:hover { color: var(--text); }
+.nav-demo { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-h); font-weight: 700; font-size: .875rem; padding: .55rem 1.35rem; border-radius: var(--r); background: #7BFAB5; color: #1E343F; text-decoration: none; transition: transform var(--ease), opacity var(--ease), box-shadow var(--ease); white-space: nowrap; }
+.nav-demo:hover { transform: translateY(-1px); opacity: .9; box-shadow: 0 4px 16px rgba(123,250,181,.25); }
+.nav-hamburger { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; color: var(--text); border-radius: .5rem; transition: background var(--ease); }
+.nav-hamburger:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.nav-hamburger svg { pointer-events: none; }
+
+/* ══ MOBILE NAV ══ */
+.mobile-overlay { position: fixed; inset: 0; z-index: 300; background: rgba(0,0,0,.6); backdrop-filter: blur(4px); opacity: 0; visibility: hidden; transition: opacity .3s ease; }
+.mobile-overlay.open { opacity: 1; visibility: visible; }
+.mobile-menu { position: fixed; top: 0; right: 0; bottom: 0; z-index: 301; width: min(88vw,380px); background: var(--gun); display: flex; flex-direction: column; transform: translateX(100%); transition: transform .35s cubic-bezier(.16,1,.3,1); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+[data-theme="light"] .mobile-menu { background: #fff; }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.mobile-close { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--text); border-radius: .375rem; transition: background var(--ease); }
+.mobile-close:hover { background: color-mix(in srgb, var(--text) 8%, transparent); }
+.mobile-nav-list { flex: 1; padding: .75rem 0; overflow-y: auto; }
+.mobile-nav-item { border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent); }
+.mobile-nav-item:last-child { border-bottom: none; }
+.mobile-nav-trigger { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; font-family: var(--font-h); font-weight: 700; font-size: 1rem; color: var(--text); text-decoration: none; transition: background var(--ease); }
+.mobile-nav-trigger:hover { background: color-mix(in srgb, var(--text) 5%, transparent); }
+a.mobile-nav-trigger { cursor: pointer; }
+.mobile-nav-trigger--tcro { color: #7BFAB5; }
+[data-theme="light"] .mobile-nav-trigger--tcro { color: #60BCD6; }
+.mobile-bottom { padding: 1.25rem 1.5rem; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: .75rem; flex-shrink: 0; }
+.mobile-login { display: block; text-align: center; padding: .75rem; font-size: .9rem; font-weight: 500; color: var(--faint); text-decoration: none; border-radius: .375rem; transition: color var(--ease), background var(--ease); }
+.mobile-login:hover { color: var(--text); background: color-mix(in srgb, var(--text) 5%, transparent); }
+.mobile-demo { display: block; text-align: center; padding: .875rem; font-family: var(--font-h); font-weight: 700; font-size: .95rem; background: #7BFAB5; color: #1E343F; border-radius: var(--r); text-decoration: none; transition: opacity var(--ease); }
+.mobile-demo:hover { opacity: .9; }
+
+@media (max-width: 1023px) { .nav-links, .nav-right { display: none; } .nav-hamburger { display: flex; } }
+
+/* ══ REVEAL ══ */
+.rev { opacity: 0; transform: translateY(26px); transition: opacity .6s ease, transform .6s ease; }
+.rev.in { opacity: 1; transform: none; }
+.d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
+@media (prefers-reduced-motion: reduce) { .rev { opacity: 1; transform: none; transition: none; } }
+
+
+/* ══ HERO ══ */
+.hero { position: relative; overflow: hidden; min-height: 72svh; display: flex; align-items: center; background: #0F1C24; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; opacity: .98; filter: saturate(1.1) brightness(1.5); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(105deg, rgba(15,24,30,.82) 0%, rgba(15,24,30,.60) 45%, rgba(15,24,30,.25) 100%); }
+.hero-w { position: relative; z-index: 1; padding-block: clamp(7.5rem,14vw,10.5rem); }
+.hero-head { margin-bottom: 1.5rem; }
+.hero-tag { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--green); margin-bottom: 1.75rem; }
+.hero-sub { max-width: 48ch; margin-bottom: 1.5rem; }
+.hero-acts { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+
+/* ══ STORY ══ */
+.story-bg { background: var(--surf); }
+.story-g { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+.story-body p { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: #C8DDE6; line-height: 1.75; margin-bottom: 1.25rem; }
+.story-body p:last-child { margin-bottom: 0; }
+.story-body strong { color: var(--text); font-weight: 600; }
+.pull-quote { margin-top: 2rem; margin-bottom: 0; background: color-mix(in srgb, var(--green) 6%, transparent); border-left: 3px solid var(--green); border-radius: 0 var(--rlg) var(--rlg) 0; padding: 1.5rem 1.75rem; }
+.pull-quote p { font-family: var(--font-h); font-weight: 600; font-size: clamp(1.15rem,1rem + .8vw,1.65rem); color: var(--text); line-height: 1.35; margin: 0 !important; }
+@media (max-width: 800px) { .story-g { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+/* ══ PILLARS ══ */
+.pillars-bg { background: var(--bg); }
+.pillars-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+.pillar-card { background: var(--surf2); border: 1px solid var(--border2); border-radius: var(--rxl); padding: 2rem 1.75rem; transition: border-color var(--ease); }
+.pillar-card:hover { border-color: color-mix(in srgb, var(--green) 40%, transparent); }
+.pillar-icon { width: 44px; height: 44px; border-radius: .625rem; background: color-mix(in srgb, var(--green) 10%, transparent); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+.pillar-icon svg { width: 22px; height: 22px; stroke: var(--green); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 700px) { .pillars-g { grid-template-columns: 1fr; } }
+
+/* ══ NUMBERS ══ */
+.numbers-bg { background: var(--surf); }
+.numbers-g { display: grid; grid-template-columns: repeat(3,1fr); margin-top: 3rem; border: 1px solid var(--border2); border-radius: var(--rxl); overflow: hidden; }
+.num-cell { padding: 3rem 2rem; text-align: center; background: var(--surf2); border-right: 1px solid var(--border2); }
+.num-cell:last-child { border-right: none; }
+.num-val { font-family: var(--font-h); font-weight: 700; font-size: clamp(2.8rem,2rem + 3vw,5rem); color: var(--green); line-height: 1; }
+.num-lbl { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); margin-top: .75rem; line-height: 1.5; }
+@media (max-width: 700px) { .numbers-g { grid-template-columns: 1fr; } .num-cell { border-right: none; border-bottom: 1px solid var(--border2); } .num-cell:last-child { border-bottom: none; } }
+
+/* ══ TAGLINE BREAK ══ */
+.tagline-break { background: var(--gun-dark); padding-top: clamp(3.5rem,7vw,5.5rem); padding-bottom: 2rem; text-align: center; }
+.team-bg { padding-top: clamp(2.5rem,4vw,3.5rem) !important; }
+.tagline-break h2 { font-family: var(--font-h); font-weight: 700; font-size: clamp(2.6rem,1.4rem + 5vw,5.5rem); color: var(--text); letter-spacing: -.02em; line-height: 1.05; }
+.tagline-break p { font-size: clamp(1.1rem,1rem + .4vw,1.3rem); color: #D4E8EE; max-width: 52ch; margin: 1.25rem auto 0; line-height: 1.65; margin-bottom: 0; }
+
+/* ══ TEAM ══ */
+.team-bg { background: var(--bg); }
+.team-g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+.team-card { background: var(--surf); border: 1px solid var(--border2); border-radius: var(--rxl); overflow: hidden; display: flex; flex-direction: column; transition: border-color var(--ease), transform var(--ease); }
+.team-card:hover { border-color: color-mix(in srgb, var(--green) 35%, transparent); transform: translateY(-2px); }
+.team-avatar { height: 220px; position: relative; overflow: hidden; }
+.team-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.team-avatar-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; position: relative; }
+.team-avatar-placeholder::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,250,181,.08) 0%, rgba(96,188,214,.05) 100%); }
+.team-initials { font-family: var(--font-h); font-weight: 700; font-size: 2.8rem; color: rgba(232,244,240,.4); letter-spacing: -.02em; position: relative; z-index: 1; }
+.av-1 { background: linear-gradient(135deg,#1C3F5C,#0F2233); }
+.av-2 { background: linear-gradient(135deg,#1D3A4E,#112030); }
+.av-3 { background: linear-gradient(135deg,#1A3D50,#0E2236); }
+.av-4 { background: linear-gradient(135deg,#162E40,#091520); }
+.av-5 { background: linear-gradient(135deg,#1F3E56,#122030); }
+.av-6 { background: linear-gradient(135deg,#193548,#0C1D28); }
+.team-body { padding: 1.5rem 1.5rem 1.75rem; flex: 1; }
+.team-name { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.1rem,1rem + .4vw,1.3rem); color: var(--text); margin-bottom: .2rem; }
+.team-role { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--green); margin-bottom: .85rem; }
+.team-bio { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); line-height: 1.65; }
+@media (max-width: 900px) { .team-g { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px) { .team-g { grid-template-columns: 1fr; } }
+
+/* ══ BOARD ══ */
+.board-bg { background: var(--surf); }
+.board-g { display: grid; grid-template-columns: repeat(2,1fr); gap: 1.5rem; margin-top: 3rem; }
+.board-card { background: var(--surf2); border: 1px solid var(--border2); border-radius: var(--rxl); padding: 1.75rem; display: flex; gap: 1.25rem; align-items: flex-start; transition: border-color var(--ease); }
+.board-card:hover { border-color: color-mix(in srgb, var(--blue) 40%, transparent); }
+.board-mono { width: 56px; height: 56px; border-radius: .625rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-weight: 700; font-size: 1.2rem; color: rgba(232,244,240,.6); position: relative; overflow: hidden; }
+.board-mono::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(123,250,181,.1), rgba(96,188,214,.05)); }
+.board-mono span { position: relative; z-index: 1; }
+.bm-1 { background: linear-gradient(135deg,#1C3F5C,#0F2233); }
+.bm-2 { background: linear-gradient(135deg,#1A3D50,#0E2236); }
+.bm-3 { background: linear-gradient(135deg,#162E40,#091520); }
+.bm-4 { background: linear-gradient(135deg,#1F3E56,#122030); }
+.board-text h3 { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.05rem,1rem + .3vw,1.25rem); color: var(--text); margin-bottom: .2rem; }
+.board-role { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--blue); margin-bottom: .75rem; display: block; }
+.board-bio { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); line-height: 1.65; }
+@media (max-width: 700px) { .board-g { grid-template-columns: 1fr; } .board-card { flex-direction: column; gap: 1rem; } }
+
+/* ══ CAREERS ══ */
+.careers-bg { background: var(--bg); }
+.careers-g { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(3rem,6vw,6rem); align-items: start; }
+.values-g { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.value-row { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; background: var(--surf2); border: 1px solid var(--border2); border-radius: var(--rlg); transition: border-color var(--ease); }
+.value-row:hover { border-color: color-mix(in srgb, var(--green) 35%, transparent); }
+.value-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; margin-top: .45rem; }
+.value-row h4 { font-family: var(--font-h); font-weight: 700; font-size: clamp(1rem,.95rem + .2vw,1.15rem); color: var(--text); margin-bottom: .2rem; }
+.value-row p { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); line-height: 1.6; }
+.careers-box { background: var(--surf); border: 1px solid var(--border2); border-radius: var(--rxl); padding: 2.25rem 2rem; position: sticky; top: 96px; }
+.careers-box h3 { font-family: var(--font-h); font-weight: 700; font-size: clamp(1.4rem,1.2rem + 1vw,2rem); color: var(--text); margin-bottom: .5rem; line-height: 1.2; }
+.careers-box > p { font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: var(--muted); line-height: 1.7; margin-bottom: 1.75rem; }
+.perks { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 2rem; }
+.perk { display: flex; align-items: center; gap: .75rem; font-size: clamp(1rem,.95rem + .25vw,1.125rem); color: #C8DDE6; }
+.perk svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2; flex-shrink: 0; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 800px) { .careers-g { grid-template-columns: 1fr; } .careers-box { position: static; } }
+
+/* ══ CTA ══ */
+.cta { background: var(--gun); padding-block: clamp(4rem,8vw,6.5rem); position: relative; overflow: hidden; }
+.cta::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 60% at 50% 120%, rgba(123,250,181,.07) 0%, transparent 70%); pointer-events: none; }
+.cta-h { font-family: var(--font-h); font-size: clamp(1.9rem,1.2rem + 2.8vw,3.5rem); font-weight: 700; color: #E8F4F0; line-height: 1.1; margin-bottom: 1.25rem; }
+.cta-b { font-size: clamp(1rem,.95rem + .2vw,1.1rem); color: #8BBCCA; margin-bottom: 2.5rem; line-height: 1.7; max-width: 50ch; }
+.cta-acts { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+/* ══ FOOTER ══ */
+.foot { padding-block: 3.5rem; border-top: 1px solid var(--border); }
+.foot-g { display: grid; grid-template-columns: 2fr repeat(5,1fr); gap: 2rem; }
+.foot-sources li { font-size: .72rem; color: var(--faint); line-height: 1.6; }
+.foot-sources li * { font-size: .72rem; }
+.foot-sources a { color: var(--faint); text-decoration: underline; text-underline-offset: 2px; }
+.foot-sources a:hover { color: var(--green); }
+.foot-desc { font-size: .875rem; color: var(--muted); margin-top: 1rem; max-width: 30ch; line-height: 1.7; }
+.foot-ct { font-family: var(--font-h); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em; color: var(--text); margin-bottom: 1rem; }
+.foot-links { display: flex; flex-direction: column; gap: .7rem; list-style: none; padding: 0; margin: 0; }
+.foot-links a { font-size: .875rem; color: var(--muted); text-decoration: none; }
+.foot-links a:hover { color: var(--green); }
+.foot-bot { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.foot-legal { font-size: .75rem; color: var(--faint); }
+@media (max-width: 900px) { .foot-g { grid-template-columns: 2fr 1fr 1fr; } }
+@media (max-width: 600px) { .foot-g { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .foot-g { grid-template-columns: 1fr; } }
+</style>
+<link rel="stylesheet" href="/modern.css">
+<link rel="stylesheet" href="/redesign.css">
+<link rel="stylesheet" href="/footer-v2.css">
+<link rel="stylesheet" href="about-v2.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Novem Digital home">
+        <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+      </a>
+      <div class="nav-links" id="desktopNav">
+        <div class="nav-item"><a href="/">Home</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item has-dropdown" data-dropdown="platform">
+          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform">
+            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">How It Works</span>
+              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
+            </a>
+            <a href="/tcro/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">TCRO Framework</span>
+              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
+            </a>
+            <a href="/industries/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Industries</span>
+              <span class="nav-dd-desc">Sectors we serve</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown" data-dropdown="resources">
+          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources">
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Case Studies</span>
+              <span class="nav-dd-desc">Real portfolio outcomes</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Insights &amp; Blog</span>
+              <span class="nav-dd-desc">Research &amp; industry analysis</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Press &amp; Whitepapers</span>
+              <span class="nav-dd-desc">Announcements and research</span>
+            </a>
+            <a href="/partners/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Partners</span>
+              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
+            </a>
+            <a href="/careers/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Careers</span>
+              <span class="nav-dd-desc">Join the team</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="/contact/">Contact</a></div>
+      </div>
+      <div class="nav-right">
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#" class="nav-login">Login</a>
+        <a href="../get-a-demo/" class="nav-demo">Get a Demo</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo" aria-label="Novem Digital home"><img src="logo.png" style="height:24px;width:auto;flex-shrink:0;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-list">
+    <div class="mobile-nav-item">
+      <a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="platform">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Platform <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/how-it-works/" class="mobile-sub-item" data-mobile-link>How It Works</a>
+        <a href="/tcro/" class="mobile-sub-item" data-mobile-link>TCRO Framework</a>
+        <a href="/industries/" class="mobile-sub-item" data-mobile-link>Industries</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="resources">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
+        <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/contact/" class="mobile-nav-trigger" data-mobile-link>Contact</a>
+    </div>
+  </div>
+  <!-- /mobile-nav-list -->
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="/#contact" class="mobile-demo" data-mobile-link>Get a Demo</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ══ HERO ══ -->
+<section class="hero" aria-label="About Novem Digital">
+  <div class="hero-bg">
+    <img
+      src="about-hero.jpg"
+      alt="Global city skyline at twilight with subtle data network overlay"
+      loading="eager"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="w hero-w">
+    <p class="hero-tag rev">Our Story</p>
+    <div class="hero-head rev d1">
+      <h1 class="h1">Built on<br>a <span class="accent">hard truth.</span></h1>
+    </div>
+    <p class="hero-sub lg rev d2">Most owners don't know which critical systems are about to fail. That gap costs more than they realize. We built Novem Digital to change that.</p>
+    <p class="sm rev d3" style="color:var(--muted);">Headquartered in Vancouver, BC, Canada &nbsp;·&nbsp; Serving portfolios globally</p>
+    <div class="hero-acts rev d3">
+      <a href="../get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/how-it-works/" class="btn-ghost">The Platform</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOUNDING STORY ══ -->
+<section class="sec story-bg" id="story">
+  <div class="w">
+    <div class="story-head">
+      <p class="eye rev">Why We Built Novem Digital</p>
+      <h2 class="h2 rev d1">Risk was invisible.<br>We made it <span class="accent">predictable.</span></h2>
+      <p class="story-lede lg rev d2">A three-step journey from operating in the dark to a platform that proves failure is predictable.</p>
+    </div>
+
+    <ol class="story-stages">
+      <li class="story-stage rev">
+        <span class="story-stage-num">01</span>
+        <span class="story-stage-tag">The Problem</span>
+        <h3 class="story-stage-h">Buildings were a black box.</h3>
+        <p>Handovers took years. Operating costs were hidden. Risk was invisible — and <strong>the owner absorbed all of it.</strong></p>
+      </li>
+      <li class="story-stage rev d1">
+        <span class="story-stage-num">02</span>
+        <span class="story-stage-tag">The Insight</span>
+        <h3 class="story-stage-h">Failure has a signature.</h3>
+        <p>Real-time signals paired with 20+ years of loss and claims data revealed clear patterns — failures we could see coming weeks ahead.</p>
+      </li>
+      <li class="story-stage rev d2">
+        <span class="story-stage-num">03</span>
+        <span class="story-stage-tag">The Outcome</span>
+        <h3 class="story-stage-h">Predictable wins. Every quarter.</h3>
+        <p>Faster occupancy. Lower emergency spend. Better insurance outcomes. Owners, operators, and insurers all save money.</p>
+      </li>
+    </ol>
+
+    <div class="pull-quote story-pull rev d3">
+      <p>"Failure is Predictable." That is not a tagline — it is what the data kept telling us, until we built a platform to prove it at scale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THREE PILLARS ══ -->
+<section class="sec pillars-bg" id="pillars">
+  <div class="w">
+    <p class="eye rev">What We Stand For</p>
+    <h2 class="h2 rev d1">Three principles.<br><span class="accent">One platform.</span></h2>
+    <div class="pillars-g">
+      <div class="pillar-card rev d1">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg>
+        </div>
+        <h3 class="h3">See What Others Can't</h3>
+        <p class="sm">Complete asset inventories. Real-time signals. Early warnings surfaced before failure becomes an emergency — or a claim.</p>
+      </div>
+      <div class="pillar-card rev d2">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="h3">Make Data Pay</h3>
+        <p class="sm">Better insurance outcomes. EBITDA protection. Every decision backed by audit-ready data that turns building intelligence into a financial asset.</p>
+      </div>
+      <div class="pillar-card rev d3">
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3 class="h3">One Source of Truth</h3>
+        <p class="sm">Owners, operators, insurers, and capital partners aligned on a single platform. No silos. No surprises. No hidden risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BY THE NUMBERS ══ -->
+<section class="sec numbers-bg" id="numbers">
+  <div class="w">
+    <p class="eye rev">By the Numbers</p>
+    <h2 class="h2 rev d1">Proof, <span class="accent">not promises.</span></h2>
+    <div class="numbers-g">
+      <div class="num-cell rev">
+        <div class="num-val">20+</div>
+        <div class="num-lbl">Years of insurance &amp; equipment loss data powering the platform</div>
+      </div>
+      <div class="num-cell rev d1">
+        <div class="num-val">3</div>
+        <div class="num-lbl">Global markets — Canada, the United States, and Europe</div>
+      </div>
+      <div class="num-cell rev d2">
+        <div class="num-val">100%</div>
+        <div class="num-lbl">Audit-ready data for every capital and insurance decision</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TAGLINE BREAK ══ -->
+<div class="tagline-break">
+  <div class="wm">
+    <h2 class="rev">Failure is <span class="accent">Predictable.</span></h2>
+    <p class="rev d1">Behind every avoided failure is a resident who didn't lose heat, an operator who didn't blow the budget, and an insurer who didn't face a surprise claim.</p>
+  </div>
+</div>
+
+<!-- ══ EXECUTIVE TEAM ══ -->
+<section class="sec team-bg" id="team">
+  <div class="w">
+    <p class="eye rev">Executive Team</p>
+    <h2 class="h2 rev d1">Led by operators<br>who've <span class="accent">built at scale.</span></h2>
+    <p class="lg rev d2" style="max-width:52ch;margin-top:.75rem;">Decades of experience in building performance, financial governance, actuarial science, enterprise AI, and revenue growth — united by one mission.</p>
+
+    <div class="team-g">
+
+      <div class="team-card rev">
+        <div class="team-avatar">
+          <img src="Clint-Undseth.jpg" alt="Clint Undseth — Chief Executive Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Clint Undseth</div>
+          <div class="team-role">Chief Executive Officer</div>
+          <p class="team-bio">Founder. Previously scaled Centre for Building Performance to nearly $870M in revenue. Deep expertise in building performance, digital transformation, and institutional partnerships.</p>
+        </div>
+      </div>
+
+      <div class="team-card rev d1">
+        <div class="team-avatar">
+          <img src="David-Crawford.jpg" alt="David Crawford — Chief Financial Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">David Crawford</div>
+          <div class="team-role">Chief Financial Officer</div>
+          <p class="team-bio">Former VP Finance at Pacific National Exhibition, overseeing a $70M annual budget. Brings financial governance, capital planning, and board-level reporting discipline.</p>
+        </div>
+      </div>
+
+      <div class="team-card rev d2">
+        <div class="team-avatar">
+          <img src="NIcole-Cheffey.jpg" alt="Nicole Cheffey — Chief Marketing Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Nicole Cheffey</div>
+          <div class="team-role">Chief Marketing Officer</div>
+          <p class="team-bio">20+ years scaling B2B SaaS from Series A to IPO across BuildDirect, Elastic Path, Absolute Software, and gofor. Leads AI-enabled marketing operations and partner-led growth.</p>
+        </div>
+      </div>
+
+      <div class="team-card rev">
+        <div class="team-avatar">
+          <img src="Gord-Jardin.jpg" alt="Gord Jardin — Chief Risk & Data Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Gord Jardin</div>
+          <div class="team-role">Chief Risk &amp; Data Officer</div>
+          <p class="team-bio">25+ years in risk modeling, actuarial science, and data strategy. Former Chief Actuarial Officer across reinsurance and capital markets insurance. Architect of Novem's predictive risk layer.</p>
+        </div>
+      </div>
+
+      <div class="team-card rev d1">
+        <div class="team-avatar">
+          <img src="Dr.-Robert-Whetsel.jpg" alt="Dr. Robert Whetsel — Chief Technology Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Dr. Robert Whetsel</div>
+          <div class="team-role">Chief Technology Officer</div>
+          <p class="team-bio">Federal AI architect and MIT executive alumnus. Former FDA Associate Director for Data Architecture. 30+ years of enterprise transformation. Founder of ACMEWERX.</p>
+        </div>
+      </div>
+
+      <div class="team-card rev d2">
+        <div class="team-avatar">
+          <img src="Grant-Jay.jpg" alt="Grant R. Jay — Chief Revenue Officer">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Grant R. Jay</div>
+          <div class="team-role">Chief Revenue Officer</div>
+          <p class="team-bio">15+ years in GTM and business development across deep tech, critical infrastructure, and smart buildings. Bell Presidents Club (169%), Motorola Leadership Circle.</p>
+        </div>
+      </div>
+
+    </div>
+    <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <p style="font-size:1rem;color:var(--muted);line-height:1.6;">Have a question or want to connect with the team?</p>
+      <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+        <a href="tel:+18336683647" style="display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:600;font-size:.9rem;color:var(--text);text-decoration:none;letter-spacing:.02em;"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2.77h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.09a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'/></svg>+1 (833) 668-3647</a>
+        <a href="mailto:connect@novemdigital.com" style="display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--green);text-decoration:none;letter-spacing:.02em;"><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>connect@novemdigital.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOARD & ADVISORS ══ -->
+<section class="sec board-bg" id="board">
+  <div class="w">
+    <p class="eye rev">Board &amp; Advisors</p>
+    <h2 class="h2 rev d1">Guided by leaders<br>who've <span class="accent">done it before.</span></h2>
+    <p class="lg rev d2" style="max-width:52ch;margin-top:.75rem;">Institutional CRE, insurance markets, cleantech, and energy — the experience that turns strategy into outcomes.</p>
+    <div class="board-g">
+      <div class="board-card rev">
+        <div class="board-mono bm-1"><span>DS</span></div>
+        <div class="board-text">
+          <h3>Dermot Sweeney</h3>
+          <span class="board-role">Board Member &amp; Investor</span>
+          <p class="board-bio">Founder of a major Canadian commercial real estate architecture firm. Experienced CRE investor with multiple successful exits and deep institutional portfolio insight.</p>
+        </div>
+      </div>
+      <div class="board-card rev d1">
+        <div class="board-mono bm-2"><span>MR</span></div>
+        <div class="board-text">
+          <h3>Marty Reed</h3>
+          <span class="board-role">Board Advisor</span>
+          <p class="board-bio">Partner at Evok Innovations. Bay Area executive and cleantech investor with multiple successful exits. Guides deep-tech ventures from early stage through scale.</p>
+        </div>
+      </div>
+      <div class="board-card rev">
+        <div class="board-mono bm-3"><span>HS</span></div>
+        <div class="board-text">
+          <h3>Hélène Stanway</h3>
+          <span class="board-role">Board Advisor</span>
+          <p class="board-bio">Senior leader at AXA XL driving innovation across Lloyd's Property business. Provides insurance-sector, underwriting, and emerging-technology perspective.</p>
+        </div>
+      </div>
+      <div class="board-card rev d1">
+        <div class="board-mono bm-4"><span>PU</span></div>
+        <div class="board-text">
+          <h3>Perry Undseth</h3>
+          <span class="board-role">Strategic Advisor</span>
+          <p class="board-bio">Co-founder of One Exchange, a leading North American energy and carbon trading platform. Supports Novem Digital's ESG and environmental market strategy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CAREERS ══ -->
+<section class="sec careers-bg" id="careers">
+  <div class="w">
+    <div class="careers-g">
+      <div>
+        <p class="eye rev">Join Our Team</p>
+        <h2 class="h2 rev d1">We build differently.<br>We hire <span class="accent">the same way.</span></h2>
+        <p class="lg rev d2" style="max-width:44ch;margin-top:.75rem;margin-bottom:0;">Remote-first. Values-driven. A lean team solving a hard problem that matters to the real world.</p>
+        <div class="values-g">
+          <div class="value-row rev">
+            <div class="value-dot"></div>
+            <div>
+              <h4>Remote First, Always</h4>
+              <p>We hire the best people regardless of location. Our team operates on trust, clarity, and outcomes — not face time.</p>
+            </div>
+          </div>
+          <div class="value-row rev d1">
+            <div class="value-dot"></div>
+            <div>
+              <h4>Ownership Over Hierarchy</h4>
+              <p>Everyone owns a meaningful piece of the outcome. We move fast, communicate directly, and let results speak louder than titles.</p>
+            </div>
+          </div>
+          <div class="value-row rev d2">
+            <div class="value-dot"></div>
+            <div>
+              <h4>Data Over Opinion</h4>
+              <p>We build a platform that makes risk visible — so we hold ourselves to the same standard. Decisions are backed by evidence.</p>
+            </div>
+          </div>
+          <div class="value-row rev d3">
+            <div class="value-dot"></div>
+            <div>
+              <h4>Impact at the Edge</h4>
+              <p>Our work touches the buildings where people live, work, and recover. When we get it right, real people benefit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="careers-box rev d1">
+          <img src="team-photo.jpg" alt="Novem Digital team collaborating" style="width:100%;height:180px;object-fit:cover;border-radius:var(--rlg);margin-bottom:1.5rem;display:block;">
+          <h3>Shape the future of building intelligence.</h3>
+          <p>We are operators, engineers, actuaries, and marketers at the intersection of real estate, insurance, and AI. If you thrive in ambiguity and want your work to matter, we should talk.</p>
+          <div class="perks">
+            <div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fully remote — Canada, US &amp; Europe</div>
+            <div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Competitive equity &amp; compensation</div>
+            <div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Flexible hours — outcomes over face time</div>
+            <div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>High-trust, low-ego culture</div>
+            <div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Work with direct human impact</div>
+          </div>
+          <a href="../careers/" class="btn btn-p" style="width:100%;justify-content:center;">View Open Positions <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <p style="font-size:.78rem;color:var(--faint);margin-top:1rem;text-align:center;">Explore open roles, our values, and how to join the team.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta" id="contact">
+  <div class="wm" style="position:relative;z-index:1;">
+    <p class="eye rev">Ready to see it?</p>
+    <h2 class="cta-h rev d1">Risk stays invisible<br>until it <span class="accent">isn't.</span></h2>
+    <p class="cta-b rev d2">Join institutional portfolios across North America and Europe who trust Novem Digital to protect their assets — before failure becomes the headline.</p>
+    <div class="cta-acts rev d3">
+      <a href="../get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="/how-it-works/" class="btn-ghost">The Platform</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="foot foot-v2">
+  <div class="w">
+
+    <!-- BRAND BAND: tagline + CTA -->
+    <div class="foot-v2-brand">
+      <div class="foot-v2-brand-left">
+        <p class="foot-v2-tagline">Ready to see what surfaces in <span class="accent">your portfolio?</span></p>
+      </div>
+      <a href="/get-a-demo/" class="foot-v2-cta">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- MAIN 5-COL GRID -->
+    <div class="foot-v2-g">
+
+      <div>
+        <a href="/" class="logo" aria-label="Novem Digital home">
+          <img src="/logo.png" style="height:26px;width:auto;" alt=""/>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        </a>
+        <p class="foot-v2-desc">A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.</p>
+        <div class="foot-v2-contacts">
+          <a href="tel:+18336683647" aria-label="Call Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (833) 668-3647
+          </a>
+          <a href="mailto:connect@novemdigital.com" aria-label="Email Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            connect@novemdigital.com
+          </a>
+          <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" aria-label="Novem Digital on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Industries</div>
+        <ul class="foot-v2-links">
+          <li><a href="/industries/#commercial-mixed-use">Commercial &amp; Mixed Use</a></li>
+          <li><a href="/industries/#seniors-wellness">Seniors &amp; Wellness</a></li>
+          <li><a href="/industries/#data-centers">Data Centers</a></li>
+          <li><a href="/industries/#recreational-venues">Recreational &amp; Venues</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Platform</div>
+        <ul class="foot-v2-links">
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/tcro/">TCRO Framework</a></li>
+          <li><a href="/partners/">Partners</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Resources</div>
+        <ul class="foot-v2-links">
+          <li><a href="/resources/">Case Studies</a></li>
+          <li><a href="/resources/">Insights &amp; Blog</a></li>
+          <li><a href="/resources/">Press &amp; Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Company</div>
+        <ul class="foot-v2-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM strip: copyright + zulbera attribution -->
+    <div class="foot-v2-bot">
+      <div class="foot-v2-legal">
+        <span>&copy; 2026 Novem Digital. All rights reserved.</span>
+        <span>Failure is Predictable.</span>
+      </div>
+      <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
+        Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+(function(){
+  const nav = document.getElementById('mainNav');
+  if(nav) addEventListener('scroll', () => nav.classList.toggle('nav--scrolled', scrollY > 40), {passive:true});
+
+  const hamburger     = document.getElementById('hamburgerBtn');
+  const mobileClose   = document.getElementById('mobileCloseBtn');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const mobileMenu    = document.getElementById('mobileMenu');
+
+  function openMobile() {
+    mobileMenu.classList.add('open'); mobileOverlay.classList.add('open');
+    document.body.classList.add('no-scroll');
+    hamburger.setAttribute('aria-expanded','true');
+    mobileMenu.setAttribute('aria-hidden','false');
+  }
+  function closeMobile() {
+    mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    hamburger.setAttribute('aria-expanded','false');
+    mobileMenu.setAttribute('aria-hidden','true');
+  }
+  if(hamburger)     hamburger.addEventListener('click', openMobile);
+  if(mobileClose)   mobileClose.addEventListener('click', closeMobile);
+  if(mobileOverlay) mobileOverlay.addEventListener('click', closeMobile);
+  document.addEventListener('keydown', e => { if(e.key==='Escape') closeMobile(); });
+  document.querySelectorAll('[data-mobile-link]').forEach(l => l.addEventListener('click', closeMobile));
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, {threshold: .08, rootMargin: '0px 0px -40px 0px'});
+  document.querySelectorAll('.rev').forEach(el => obs.observe(el));
+  // Immediately reveal anything already in viewport on load
+  setTimeout(() => {
+    document.querySelectorAll('.rev:not(.in)').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight) el.classList.add('in');
+    });
+  }, 50);
+
+  // Theme toggle
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  if(themeBtn){
+    themeBtn.addEventListener('click', () => {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', html.getAttribute('data-theme')==='dark' ? 'light' : 'dark');
+    });
+  }
+})();
+</script>
+<script src="/modern.js" defer></script>
+<script src="/redesign.js" defer></script>
+<script src="/home-nav.js" defer></script>
+</body>
+</html>

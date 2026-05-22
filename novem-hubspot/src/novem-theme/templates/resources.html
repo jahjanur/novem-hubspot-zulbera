@@ -1,0 +1,211 @@
+<!--
+  templateType: page
+  label: "Resources (listing)"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Resources | Novem Digital — Case Studies, White Papers &amp; Building Risk Intelligence #}
+{# meta description: Real results from institutional real estate portfolios. Case studies, white papers, and risk intelligence showing how predictive building data prevents insurance claims, reduces costs, and defends capital decisions. #}
+
+{% block extra_head %}
+<style>
+/* ═══ TOKENS ═══ */
+
+/* ═══ RESET ═══ */
+
+/* ═══ LAYOUT ═══ */
+
+/* ═══ TYPE ═══ */
+
+50%{opacity:.3}}
+
+/* ═══ BUTTONS ═══ */
+
+/* ═══ NAV ═══ */
+
+[data-theme="light"] 
+
+/* ═══ MOBILE NAV ═══ */
+
+[data-theme="light"] 
+
+a
+
+[data-theme="light"] 
+
+@media(max-width:1023px){}
+
+/* ═══ HERO ═══ */
+.resources-hero{position:relative;overflow:hidden;padding-block:clamp(8.5rem,15vw,12rem) clamp(4rem,7vw,6rem);}
+.resources-hero-bg{position:absolute;inset:0;}
+.resources-hero-bg 
+.resources-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,24,30,.95) 0%,rgba(15,24,30,.78) 40%,rgba(15,24,30,.38) 100%);}
+.resources-hero-content{position:relative;z-index:1;}
+
+/* ═══ INSIGHT STRIP ═══ */
+.insight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+@media(max-width:720px){.insight-strip{grid-template-columns:1fr;}}
+.insight-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--rlg);padding:1.5rem;border-left:2px solid color-mix(in srgb,var(--green) 45%,transparent);}
+.insight-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);margin-bottom:.6rem;}
+.insight-stat{font-family:var(--font-h);font-weight:700;font-size:clamp(1.4rem,2vw,2rem);color:var(--text);line-height:1;margin-bottom:.4rem;}
+.insight-
+
+/* ═══ FILTER BAR ═══ */
+.filter-bar{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:3rem;}
+.filter-btn{font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;padding:.45rem 1.1rem;border-radius:var(--r);cursor:pointer;transition:background var(--ease),color var(--ease),border-color var(--ease);border:1px solid var(--border);color:var(--muted);background:transparent;}
+.filter-btn:hover{color:var(--text);border-color:var(--border2);}
+.filter-btn.active{background:color-mix(in srgb,var(--green) 10%,transparent);color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,var(--border));}
+.filter-btn[data-type="case-study"].active{background:color-mix(in srgb,var(--cs) 10%,transparent);color:var(--cs);border-color:color-mix(in srgb,var(--cs) 40%,var(--border));}
+.filter-btn[data-type="white-paper"].active{background:color-mix(in srgb,var(--wp) 10%,transparent);color:var(--wp);border-color:color-mix(in srgb,var(--wp) 40%,var(--border));}
+.filter-btn[data-type="blog"].active{background:color-mix(in srgb,var(--bl) 10%,transparent);color:var(--bl);border-color:color-mix(in srgb,var(--bl) 40%,var(--border));}
+.filter-btn[data-type="press-release"].active{background:color-mix(in srgb,var(--pr) 10%,transparent);color:var(--pr);border-color:color-mix(in srgb,var(--pr) 40%,var(--border));}
+
+/* ═══ SECTION HEADING ═══ */
+.section-divider{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+.section-divider-label{font-family:var(--font-h);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;white-space:nowrap;}
+.section-divider-line{flex:1;height:1px;background:var(--border);}
+.section-divider--cs .section-divider-label{color:var(--cs);}
+.section-divider--wp .section-divider-label{color:var(--wp);}
+.section-divider--bl .section-divider-label{color:var(--bl);}
+.section-divider--pr .section-divider-label{color:var(--pr);}
+
+/* ═══ RESOURCE CARDS ═══ */
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3.5rem;}
+@media(max-width:1024px){.resource-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.resource-grid{grid-template-columns:1fr;}}
+.resource-grid--featured{grid-template-columns:repeat(2,1fr);}
+@media(max-width:820px){.resource-grid--featured{grid-template-columns:1fr;}}
+
+.rcard{background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;display:flex;flex-direction:column;transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease);text-decoration:none;color:inherit;}
+.rcard:hover{border-color:color-mix(in srgb,var(--cs) 30%,var(--border));box-shadow:var(--sh-lg);transform:translateY(-4px);}
+.rcard[data-type="white-paper"]:hover{border-color:color-mix(in srgb,var(--wp) 30%,var(--border));}
+.rcard[data-type="blog"]:hover{border-color:color-mix(in srgb,var(--bl) 30%,var(--border));}
+.rcard[data-type="press-release"]:hover{border-color:color-mix(in srgb,var(--pr) 30%,var(--border));}
+
+/* Card image */
+.rcard-
+.rcard-img 
+.rcard:hover .rcard-img 
+/* Type badge on image */
+.rcard-badge{position:absolute;top:.75rem;left:.75rem;font-size:clamp(.78rem,.74rem + .1vw,.86rem);font-weight:700;text-transform:uppercase;letter-spacing:.10em;border-radius:var(--r);padding:.28rem .8rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.rcard-badge--cs{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--cs);border:1px solid color-mix(in srgb,var(--cs) 35%,transparent);}
+.rcard-badge--wp{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--wp);border:1px solid color-mix(in srgb,var(--wp) 35%,transparent);}
+.rcard-badge--bl{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--bl);border:1px solid color-mix(in srgb,var(--bl) 35%,transparent);}
+.rcard-badge--pr{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--pr);border:1px solid color-mix(in srgb,var(--pr) 35%,transparent);}
+
+/* Card body */
+.rcard-
+.rcard-met
+.rcard-industry{font-size:clamp(.82rem,.78rem + .1vw,.9rem);font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);}
+.rcard-dot{width:3px;height:3px;border-radius:50%;background:var(--faint);}
+.rcard-date{font-size:clamp(.82rem,.78rem + .1vw,.9rem);color:var(--faint);}
+.rcard-title{font-family:var(--font-h);font-weight:700;font-size:clamp(1rem,.9rem + .35vw,1.2rem);color:var(--text);line-height:1.25;}
+.rcard-excerpt{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);line-height:1.6;flex:1;}
+/* Key stat row */
+.rcard-stats{display:flex;gap:1.25rem;padding:.75rem 0;border-top:1px solid var(--border);margin-top:auto;}
+.rcard-stat-num{font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--green);line-height:1;}
+.rcard-stat-lbl{font-size:clamp(.78rem,.74rem + .1vw,.86rem);color:var(--faint);text-transform:uppercase;letter-spacing:.07em;margin-top:.15rem;}
+/* Read link */
+.rcard-link{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.88rem,.84rem + .1vw,.95rem);text-transform:uppercase;letter-spacing:.07em;color:var(--green);transition:gap var(--ease);}
+.rcard:hover .rcard-link{gap:.6rem;}
+.rcard[data-type="white-paper"] .rcard-link{color:var(--wp);}
+.rcard[data-type="blog"] .rcard-link{color:var(--bl);}
+.rcard[data-type="press-release"] .rcard-link{color:var(--pr);}
+
+/* Featured card (spans 2 cols) */
+.rcard--featured{grid-column:1/-1;}
+.rcard--featured .rcard-
+.rcard--featured .rcard-
+.rcard--featured .rcard-title{font-size:clamp(1.15rem,1rem + .55vw,1.45rem);}
+@media(max-width:820px){.rcard--featured .rcard-}
+
+/* Coming soon card */
+.rcard--soon{opacity:.65;cursor:default;}
+.rcard--soon:hover{transform:none;box-shadow:none;border-color:var(--border);}
+.rcard-coming{font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);padding:.4rem .9rem;border:1px dashed var(--border2);border-radius:var(--r);display:inline-block;margin-top:.5rem;}
+
+/* ═══ FAQ ═══ */
+.faq-wrap{border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;}
+.faq-item{background:var(--bg);border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:var(--font-h);font-weight:700;font-size:clamp(.95rem,.9rem + .3vw,1.1rem);color:var(--text);padding:1.5rem 1.75rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color var(--ease),background var(--ease);}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--green);flex-shrink:0;transition:transform var(--ease);}
+details[open] .faq-q::after{transform:rotate(45deg);}
+details[open] .faq-q{color:var(--green);}
+.faq-q:hover{background:color-mix(in srgb,var(--green) 4%,transparent);}
+.faq-
+
+/* ═══ CTA ═══ */
+.ct
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%);pointer-events:none;}
+.cta-inner{text-align:center;max-width:48ch;margin-inline:auto;position:relative;}
+
+/* ═══ FOOTER ═══ */
+
+@media(max-width:900px){}
+@media(max-width:600px){}
+@media(max-width:480px){}
+
+/* REVEAL */
+</style>
+{% endblock %}
+
+{% block body %}
+<!-- ═══ HERO ═══ -->
+<section class="resources-hero" aria-label="Resources">
+  <div class="resources-hero-bg">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop&bri=15"
+         alt="City at night — global portfolio" loading="eager"/>
+  </div>
+  <div class="resources-hero-overlay"></div>
+  <div class="w resources-hero-content">
+    <div style="max-width:640px;">
+      <div class="hero-platform-tag" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-bottom:1.75rem;display:inline-flex;align-items:center;gap:.5rem;">● Resources</div>
+      <h1 class="h1" style="margin-bottom:1.25rem;">Proof that risk is<br><span class="accent">predictable.</span></h1>
+      <p class="lg" style="max-width:44ch;">Real results from institutional portfolios across North America and Europe — case studies, insights, and intelligence built for operators who move fast on data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESOURCE LIBRARY ═══ -->
+{% module "resources_grid" path="../modules/resource-card", headline="Intelligence.", sub="<p class=\"lg\">Case studies, white papers, and risk intelligence built on real institutional portfolios.</p>", show_filter=true %}
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec sec--alt">
+  <div class="wm">
+    <div class="eye"><span class="eye-dot"></span>FAQ</div>
+    <h2 class="h2" style="margin-bottom:2.5rem;">Common <span class="accent">questions.</span></h2>
+    <div class="faq-wrap">
+      <details class="faq-item">
+        <summary class="faq-q">What types of resources does Novem Digital publish?</summary>
+        <p class="faq-a">We publish case studies documenting real outcomes across commercial real estate, seniors living, data centers, and public venues — plus white papers, blog perspectives, and press releases. Case studies open in a dedicated page with full data, methodology, and results.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the TCRO Framework whitepaper?</summary>
+        <p class="faq-a">The TCRO Framework whitepaper defines Total Cost of Risk Ownership — the financial standard that captures everything traditional Cost of Risk misses. It gives finance and operations leaders a shared language for defending capital allocation and insurance decisions with audit-ready data.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How can I access the full case studies?</summary>
+        <p class="faq-a">Each case study card opens the full study in a new page — including challenge, solution, pullquotes, and detailed results tables. No form required. Click any "Read case study" link to open it.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">When will white papers and blog content be published?</summary>
+        <p class="faq-a">White papers, blog posts, and press releases are currently in development. Content is published as it is cleared for release. Get in touch if you'd like early access to specific topics — we're happy to share what's in the pipeline.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta" id="cta">
+  <div class="w">
+    <div class="cta-inner">
+      <h2 class="h2 cta-h" style="margin-bottom:1rem;">Failure is <span class="accent">Predictable.</span></h2>
+      <p class="lg cta-b" style="max-width:44ch;margin-inline:auto;margin-bottom:2rem;">Lower costs. Control insurance. Defend every capital decision with data.</p>
+      <a href="/get-a-demo/" class="btn btn-p">Get a Demo</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

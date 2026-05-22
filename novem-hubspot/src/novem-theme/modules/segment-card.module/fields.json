@@ -1,0 +1,15 @@
+[
+  { "name": "anchor_id", "label": "Anchor ID", "type": "text", "default": "segments" },
+  { "name": "eyebrow",   "label": "Eyebrow",   "type": "text", "default": "Industries" },
+  { "name": "headline",  "label": "Headline",  "type": "text", "default": "Built for institutional portfolios where failure has consequences." },
+  { "name": "segments", "label": "Segments", "type": "group", "occurrence": { "min": 1, "default": 4 },
+    "children": [
+      { "name": "title",   "label": "Title",        "type": "text",  "default": "" },
+      { "name": "anchor",  "label": "Anchor slug",  "type": "text",  "default": "" },
+      { "name": "image",   "label": "Image",        "type": "image", "default": { "src": "", "alt": "" } },
+      { "name": "body",    "label": "Body",         "type": "richtext", "default": "" },
+      { "name": "cta_label", "label": "CTA label",  "type": "text",  "default": "Talk to us" },
+      { "name": "cta_url",   "label": "CTA URL",    "type": "url",   "default": { "type": "EXTERNAL", "href": "/get-a-demo/" } }
+    ]
+  }
+]

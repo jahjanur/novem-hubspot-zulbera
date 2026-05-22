@@ -1,0 +1,33 @@
+<section class="hero">
+  <div class="hero-bg">
+    <img src="{{ module.background.src }}" alt="{{ module.background.alt }}" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="w hero-w">
+    <div class="hero-inner">
+      <div class="hero-left">
+        {% if module.eyebrow %}<div class="hero-platform-tag"><span class="eye-dot"></span>{{ module.eyebrow }}</div>{% endif %}
+        {% if module.sr_only_h1 %}<h1 class="sr-only">{{ module.sr_only_h1 }}</h1>{% endif %}
+        <p class="h1 hero-head" aria-hidden="true">{{ module.headline_top }}<br><span class="accent">{{ module.headline_accent }}</span></p>
+        <div class="lg hero-sub">{{ module.sub }}</div>
+        <div class="hero-acts">
+          {% if module.primary_cta.label %}
+            <a href="{{ module.primary_cta.url.href }}" class="btn btn-p">{{ module.primary_cta.label }} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          {% endif %}
+          {% if module.secondary_cta.label %}
+            <a href="{{ module.secondary_cta.url.href }}" class="btn btn-ghost">{{ module.secondary_cta.label }}</a>
+          {% endif %}
+        </div>
+      </div>
+      {% if module.show_stats and module.stats|length > 0 %}
+      <div class="hero-right">
+        <div class="hero-stats">
+          {% for stat in module.stats %}
+            <div class="hero-stat"><span class="hero-stat-num">{{ stat.num }}</span><span class="hero-stat-lbl">{{ stat.label }}</span></div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

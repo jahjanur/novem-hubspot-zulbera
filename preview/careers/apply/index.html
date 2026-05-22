@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Express Interest | Careers at Novem Digital</title>
+  <meta name="description" content="Join the Novem Digital team. Express your interest in shaping the future of building intelligence."/>
+  <link rel="canonical" href="/careers/apply/"/>
+  <meta property="og:title" content="Express Interest | Careers at Novem Digital"/>
+  <meta property="og:description" content="Join the Novem Digital team. Express your interest in shaping the future of building intelligence."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://novemdigital.com/careers/apply/"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80&auto=format&fit=crop"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Express Interest | Novem Digital Careers"/>
+  <meta name="robots" content="noindex"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root{
+      --green:#7BFAB5;--blue:#60BCD6;--gun:#1E343F;--gun-mid:#243C48;--gun-dark:#111A1F;
+      --text:#E8F4F0;--muted:#8BBCCA;--faint:#4A7080;
+      --border:#2C4250;--border2:#324E5C;--surf:#1E343F;--surf2:#243C48;--bg:#111A1F;
+      --font-h:'Titillium Web','Arial Narrow',sans-serif;
+      --font-b:'DM Sans','Helvetica Neue',sans-serif;
+      --r:9999px;--rxl:1rem;--rlg:.75rem;
+      --ease:200ms cubic-bezier(.16,1,.3,1);
+    }
+    [data-theme="light"]{
+      --bg:#F4F8F7;--text:#0E1F27;--muted:#3A6070;--faint:#7AAABB;
+      --surf:#FFFFFF;--surf2:#EBF3F0;--gun:#1E343F;--gun-mid:#243C48;
+      --border:#C8DCDA;--border2:#B0CECA;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{min-height:100dvh;font-family:var(--font-b);font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--text);background:var(--bg);line-height:1.75;}
+    img{display:block;max-width:100%;height:auto;}
+    a{transition:color var(--ease),opacity var(--ease);}
+
+    /* ── NAV ── */
+    .w{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem);}
+    .nav{position:fixed;top:0;left:0;right:0;z-index:200;padding-block:.75rem;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid color-mix(in srgb,var(--border) 55%,transparent);transition:background .3s;}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+    .logo{display:flex;align-items:center;gap:.4rem;text-decoration:none;flex-shrink:0;}
+    .nav-links{display:flex;align-items:center;gap:.25rem;margin-left:1.5rem;}
+    .nav-item>a{font-family:var(--font-b);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.5rem .75rem;border-radius:.375rem;display:inline-flex;align-items:center;transition:color var(--ease),background var(--ease);white-space:nowrap;}
+    .nav-item>a:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+    .nav-item--tcro>a{color:var(--green);}
+    .nav-item--tcro>a:hover{color:#7BFAB5;background:color-mix(in srgb,#7BFAB5 8%,transparent);}
+    .nav-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
+    .nav-login{font-size:.875rem;font-weight:500;color:var(--faint);text-decoration:none;padding:.5rem .75rem;transition:color var(--ease);}
+    .nav-login:hover{color:var(--text);}
+    .nav-demo{display:inline-flex;align-items:center;font-family:var(--font-h);font-weight:700;font-size:.875rem;padding:.55rem 1.35rem;border-radius:var(--r);background:#7BFAB5;color:#1E343F;text-decoration:none;transition:transform var(--ease),opacity var(--ease);white-space:nowrap;}
+    .nav-demo:hover{transform:translateY(-1px);opacity:.9;}
+    .tbtn{color:var(--muted);padding:.4rem;border-radius:.5rem;display:flex;align-items:center;background:none;border:none;cursor:pointer;}
+    .tbtn:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+    .nav-hamburger{display:none;width:40px;height:40px;align-items:center;justify-content:center;color:var(--text);border-radius:.5rem;background:none;border:none;cursor:pointer;}
+    @media(max-width:1023px){.nav-links,.nav-login,.tbtn{display:none!important;}.nav-hamburger{display:flex!important;}}
+
+    /* ── MOBILE DRAWER ── */
+    .mobile-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .3s ease;}
+    .mobile-overlay.open{opacity:1;visibility:visible;}
+    .mobile-menu{position:fixed;top:0;right:0;bottom:0;z-index:301;width:min(88vw,380px);background:var(--gun);transform:translateX(100%);transition:transform .35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow-y:auto;}
+    .mobile-menu.open{transform:translateX(0);}
+    .mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);flex-shrink:0;}
+    .mobile-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--text);border-radius:.375rem;background:none;border:none;cursor:pointer;}
+    .mobile-nav-list{flex:1;padding:.75rem 0;overflow-y:auto;}
+    .mobile-nav-item{border-bottom:1px solid color-mix(in srgb,var(--border) 50%,transparent);}
+    .mobile-nav-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;font-family:var(--font-h);font-weight:700;font-size:1rem;color:var(--text);text-decoration:none;transition:background var(--ease);}
+    .mobile-nav-trigger:hover{background:color-mix(in srgb,var(--text) 5%,transparent);}
+    .mobile-nav-trigger--tcro{color:var(--green);}
+    .mobile-bottom{padding:1.25rem 1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;}
+    .mobile-login{display:block;text-align:center;padding:.75rem;font-size:.9rem;font-weight:500;color:var(--faint);text-decoration:none;border-radius:.375rem;}
+    .mobile-demo{display:block;text-align:center;padding:.875rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;background:#7BFAB5;color:#1E343F;border-radius:var(--r);text-decoration:none;transition:opacity var(--ease);}
+    .mobile-demo:hover{opacity:.88;}
+
+    /* ── PAGE LAYOUT ── */
+    .page-wrap{min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px;}
+    @media(max-width:900px){.page-wrap{grid-template-columns:1fr;}.right-panel{padding:2rem 1.5rem;}}
+
+    /* ── LEFT PANEL ── */
+    .left-panel{position:relative;background:var(--gun);display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,4vw,3.5rem);min-height:calc(100dvh - 64px);overflow:hidden;}
+    .left-panel-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&q=80&auto=format&fit=crop');background-size:cover;background-position:center;z-index:0;filter:brightness(.5) saturate(.75);}
+    .left-content{position:relative;z-index:1;}
+    .left-content{}
+    .left-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;}
+    .left-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .left-h1{font-family:var(--font-h);font-size:clamp(1.7rem,1rem + 2.5vw,2.75rem);font-weight:700;line-height:1.1;color:var(--text);margin-bottom:1rem;}
+    .left-h1 span{color:var(--green);}
+    .left-desc{font-size:clamp(.95rem,.9rem + .25vw,1.1rem);color:#E0EEF3;line-height:1.7;max-width:42ch;margin-bottom:2.5rem;}
+    .proof-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2.5rem;}
+    .proof-item{display:flex;align-items:flex-start;gap:.75rem;font-size:clamp(.875rem,.85rem + .15vw,1rem);color:#D8ECF2;}
+    .proof-check{width:18px;height:18px;border-radius:50%;background:color-mix(in srgb,var(--green) 18%,transparent);border:1px solid color-mix(in srgb,var(--green) 40%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem;}
+    .proof-check svg{color:var(--green);}
+    .social-proof{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid color-mix(in srgb,var(--border) 60%,transparent);}
+    .social-proof-text{font-size:.85rem;color:var(--faint);line-height:1.5;}
+    .social-proof-text strong{color:var(--muted);font-weight:600;}
+
+    /* ── VALUES STRIP ── */
+    .values-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;}
+    .value-item{display:flex;align-items:flex-start;gap:.75rem;}
+    .value-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.6rem;}
+    .value-text{font-size:.95rem;color:#D8ECF2;line-height:1.6;}
+    .value-text strong{color:var(--text);font-weight:600;}
+
+    /* ── RIGHT PANEL (FORM) ── */
+    .right-panel{background:var(--bg);padding:clamp(2.5rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;}
+    .form-header{margin-bottom:2rem;}
+    .form-title{font-family:var(--font-h);font-size:clamp(1.4rem,1.1rem + 1.2vw,2rem);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:.6rem;}
+    .form-subtitle{font-size:clamp(.9rem,.875rem + .15vw,1rem);color:var(--muted);}
+
+    /* ── FORM FIELDS ── */
+    .careers-form{display:flex;flex-direction:column;gap:1.25rem;max-width:520px;}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+    @media(max-width:560px){.field-row{grid-template-columns:1fr;}}
+    .field{display:flex;flex-direction:column;gap:.4rem;}
+    .field label{font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+    .req{color:var(--green);}
+    .field input,.field select,.field textarea{width:100%;padding:.75rem 1rem;background:var(--surf);border:1px solid var(--border2);border-radius:var(--rlg);color:var(--text);font-family:var(--font-b);font-size:.95rem;transition:border-color var(--ease),box-shadow var(--ease);outline:none;-webkit-appearance:none;}
+    .field input::placeholder,.field textarea::placeholder{color:var(--faint);}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 15%,transparent);}
+    .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238BBCCA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='1 1 6 7 11 1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;}
+    .field select option{background:var(--gun);}
+    .field textarea{resize:vertical;min-height:100px;line-height:1.6;}
+    .field-error{font-size:.78rem;color:#F87171;display:none;}
+    .field.has-error input,.field.has-error select,.field.has-error textarea{border-color:#F87171;}
+    .field.has-error .field-error{display:block;}
+    .field-hint{font-size:.78rem;color:var(--faint);margin-top:.25rem;}
+
+    /* ── STATUS BANNER ── */
+    .careers-status{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:600;color:var(--muted);background:color-mix(in srgb,var(--blue) 10%,transparent);border:1px solid color-mix(in srgb,var(--blue) 25%,transparent);border-radius:var(--r);padding:.35rem .85rem;margin-bottom:.75rem;}
+    .careers-status-dot{width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0;}
+    .btn-submit{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;font-family:var(--font-h);font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:var(--r);background:var(--green);color:var(--gun);border:none;cursor:pointer;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);}
+    .btn-submit:hover{transform:translateY(-2px);opacity:.9;box-shadow:0 6px 24px rgba(123,250,181,.25);}
+    .btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+    .btn-spinner{width:18px;height:18px;border:2.5px solid rgba(30,52,63,.3);border-top-color:var(--gun);border-radius:50%;animation:spin .7s linear infinite;display:none;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ── SUCCESS STATE ── */
+    .form-success{display:none;flex-direction:column;align-items:center;text-align:center;padding:3rem 2rem;gap:1.25rem;max-width:520px;}
+    .form-success.show{display:flex;}
+    .success-icon{width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--green) 15%,transparent);border:1px solid color-mix(in srgb,var(--green) 35%,transparent);display:flex;align-items:center;justify-content:center;}
+    .success-title{font-family:var(--font-h);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.2rem);font-weight:700;color:var(--text);}
+    .success-body{font-size:clamp(.95rem,.9rem + .15vw,1.05rem);color:var(--muted);max-width:36ch;line-height:1.7;}
+    .success-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--green);text-decoration:none;margin-top:.5rem;}
+
+    /* ── FOOTER ── */
+    .foot{padding-block:3.5rem;border-top:1px solid var(--border);}
+    .foot-g{display:grid;grid-template-columns:2fr repeat(5,1fr);gap:2rem;}
+    .foot-desc{font-size:.875rem;color:var(--muted);margin-top:1rem;max-width:30ch;line-height:1.7;}
+    .foot-ct{font-family:var(--font-h);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--text);margin-bottom:1rem;}
+    .foot-links{display:flex;flex-direction:column;gap:.7rem;list-style:none;padding:0;margin:0;}
+    .foot-links a{font-size:.875rem;color:var(--muted);text-decoration:none;transition:color var(--ease);}
+    .foot-links a:hover{color:var(--green);}
+    .foot-bot{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .foot-legal{font-size:.75rem;color:var(--faint);}
+    @media(max-width:900px){.foot-g{grid-template-columns:2fr 1fr 1fr;}.foot-brand{grid-column:1/-1;}}
+    @media(max-width:600px){.foot-g{grid-template-columns:1fr 1fr;}}
+    @media(max-width:480px){.foot-g{grid-template-columns:1fr;}}
+
+  </style>
+<link rel="stylesheet" href="/modern.css">
+<link rel="stylesheet" href="/redesign.css">
+<link rel="stylesheet" href="/footer-v2.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="w">
+    <div class="nav-inner">
+      <a href="../../" class="logo" aria-label="Novem Digital home">
+        <img src="../logo.png" style="height:26px;width:auto;" alt=""/>
+        <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+      </a>
+      <div class="nav-links" id="desktopNav">
+        <div class="nav-item"><a href="/">Home</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item has-dropdown" data-dropdown="platform">
+          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform">
+            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">How It Works</span>
+              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
+            </a>
+            <a href="/tcro/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">TCRO Framework</span>
+              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
+            </a>
+            <a href="/industries/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Industries</span>
+              <span class="nav-dd-desc">Sectors we serve</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown" data-dropdown="resources">
+          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources">
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Case Studies</span>
+              <span class="nav-dd-desc">Real portfolio outcomes</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Insights &amp; Blog</span>
+              <span class="nav-dd-desc">Research &amp; industry analysis</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Press &amp; Whitepapers</span>
+              <span class="nav-dd-desc">Announcements and research</span>
+            </a>
+            <a href="/partners/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Partners</span>
+              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
+            </a>
+            <a href="/careers/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Careers</span>
+              <span class="nav-dd-desc">Join the team</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="/contact/">Contact</a></div>
+      </div>
+      <div class="nav-right">
+        <button class="tbtn" id="tbtn" aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a class="nav-login" href="#">Login</a>
+        <a class="nav-demo" href="../../get-a-demo/">Get a Demo</a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="2" y1="5" x2="18" y2="5"/><line x1="2" y1="10" x2="18" y2="10"/><line x1="2" y1="15" x2="18" y2="15"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <div class="mobile-menu-header">
+    <a href="../../" class="logo"><img src="../logo.png" style="height:26px;width:auto;" alt=""/><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="4" x2="16" y2="16"/><line x1="16" y1="4" x2="4" y2="16"/></svg></button>
+  </div>
+  <div class="mobile-nav-list">
+    <div class="mobile-nav-item">
+      <a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="platform">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Platform <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/how-it-works/" class="mobile-sub-item" data-mobile-link>How It Works</a>
+        <a href="/tcro/" class="mobile-sub-item" data-mobile-link>TCRO Framework</a>
+        <a href="/industries/" class="mobile-sub-item" data-mobile-link>Industries</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="resources">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
+        <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/contact/" class="mobile-nav-trigger" data-mobile-link>Contact</a>
+    </div>
+  </div>
+  <!-- /mobile-nav-list -->
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="../../get-a-demo/" class="mobile-demo">Get a Demo</a>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main id="main">
+  <div class="page-wrap">
+
+    <!-- LEFT: VALUE PANEL -->
+    <div class="left-panel">
+      <div class="left-panel-bg" aria-hidden="true"></div>
+      <div class="left-content">
+        <div class="left-eyebrow"><span class="left-eyebrow-dot"></span>Careers</div>
+        <h1 class="left-h1">Shape the Future of<br>Building <span>Intelligence.</span></h1>
+        <p class="left-desc">We're a small, ambitious team building something the industry has never seen. If you believe operational failure is predictable — and want to prove it — we want to hear from you.</p>
+
+        <div class="values-list">
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Mission-driven work</strong> — every line of code and every conversation protects real people in real buildings.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Global from day one</strong> — portfolios across Canada, the United States, and Europe.</div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div class="value-text"><strong>Small team, high ownership</strong> — your work ships and you see the impact.</div>
+          </div>
+
+        </div>
+
+        <div class="social-proof">
+          <div class="social-proof-text">
+            <strong>Headquartered in Vancouver, Canada</strong><br>
+            Remote-friendly · Global portfolio
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM PANEL -->
+    <div class="right-panel">
+      <div class="form-header">
+        <div class="form-title">Express Interest</div>
+        <div class="careers-status">
+          <span class="careers-status-dot"></span>
+          <span>No open roles at this time — check back soon.</span>
+        </div>
+        <div class="form-subtitle">We keep exceptional candidates on file. When the right role opens, you'll hear from us first.</div>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success" id="formSuccess" role="status">
+        <div class="success-icon">
+          <svg width="28" height="28" fill="none" stroke="#7BFAB5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="4 13 10 19 22 7"/></svg>
+        </div>
+        <div class="success-title">We'll be in touch.</div>
+        <p class="success-body">Thanks for expressing your interest. When the right role opens, we'll reach out.</p>
+        <a href="../../careers/" class="success-back">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to About
+        </a>
+      </div>
+
+      <!-- FORM -->
+      <form class="careers-form" id="careersForm" novalidate>
+        <input type="hidden" name="lead_source" value="Careers - Express Interest"/>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="firstname">First Name <span class="req">*</span></label>
+            <input type="text" id="firstname" name="firstname" placeholder="Jane" autocomplete="given-name" required/>
+            <span class="field-error">Required.</span>
+          </div>
+          <div class="field">
+            <label for="lastname">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastname" name="lastname" placeholder="Smith" autocomplete="family-name" required/>
+            <span class="field-error">Required.</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required/>
+          <span class="field-error">Please enter a valid email.</span>
+        </div>
+
+        <div class="field">
+          <label for="jobtitle">Current Title <span class="req">*</span></label>
+          <input type="text" id="jobtitle" name="jobtitle" placeholder="e.g. Senior Product Manager" required/>
+          <span class="field-error">Required.</span>
+        </div>
+
+        <div class="field">
+          <label for="area_of_interest">Area of Interest <span class="req">*</span></label>
+          <select id="area_of_interest" name="area_of_interest" required>
+            <option value="">Select an area…</option>
+            <option value="Engineering / Product">Engineering / Product</option>
+            <option value="Data Science / AI">Data Science / AI</option>
+            <option value="Sales / Business Development">Sales / Business Development</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Operations">Operations</option>
+            <option value="Finance">Finance</option>
+            <option value="Other">Other</option>
+          </select>
+          <span class="field-error">Please select an area.</span>
+        </div>
+
+        <div class="field">
+          <label for="linkedin_url">LinkedIn Profile</label>
+          <input type="url" id="linkedin_url" name="linkedin_url" placeholder="https://linkedin.com/in/yourname"/>
+          <span class="field-hint">Optional but helpful.</span>
+        </div>
+
+        <div class="field">
+          <label for="message">Tell us about yourself <span class="req">*</span></label>
+          <textarea id="message" name="message" placeholder="What excites you about Novem? What would you bring to the team?" rows="4" required></textarea>
+          <span class="field-error">Please tell us a little about yourself.</span>
+        </div>
+
+        <button type="submit" class="btn-submit" id="submitBtn">
+          <span id="btn-label">Express Interest</span>
+          <div class="btn-spinner" id="btn-spinner"></div>
+        </button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot foot-v2">
+  <div class="w">
+
+    <!-- BRAND BAND: tagline + CTA -->
+    <div class="foot-v2-brand">
+      <div class="foot-v2-brand-left">
+        <p class="foot-v2-tagline">Ready to see what surfaces in <span class="accent">your portfolio?</span></p>
+      </div>
+      <a href="/get-a-demo/" class="foot-v2-cta">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- MAIN 5-COL GRID -->
+    <div class="foot-v2-g">
+
+      <div>
+        <a href="/" class="logo" aria-label="Novem Digital home">
+          <img src="/logo.png" style="height:26px;width:auto;" alt=""/>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        </a>
+        <p class="foot-v2-desc">A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.</p>
+        <div class="foot-v2-contacts">
+          <a href="tel:+18336683647" aria-label="Call Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (833) 668-3647
+          </a>
+          <a href="mailto:connect@novemdigital.com" aria-label="Email Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            connect@novemdigital.com
+          </a>
+          <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" aria-label="Novem Digital on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Industries</div>
+        <ul class="foot-v2-links">
+          <li><a href="/industries/#commercial-mixed-use">Commercial &amp; Mixed Use</a></li>
+          <li><a href="/industries/#seniors-wellness">Seniors &amp; Wellness</a></li>
+          <li><a href="/industries/#data-centers">Data Centers</a></li>
+          <li><a href="/industries/#recreational-venues">Recreational &amp; Venues</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Platform</div>
+        <ul class="foot-v2-links">
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/tcro/">TCRO Framework</a></li>
+          <li><a href="/partners/">Partners</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Resources</div>
+        <ul class="foot-v2-links">
+          <li><a href="/resources/">Case Studies</a></li>
+          <li><a href="/resources/">Insights &amp; Blog</a></li>
+          <li><a href="/resources/">Press &amp; Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Company</div>
+        <ul class="foot-v2-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM strip: copyright + zulbera attribution -->
+    <div class="foot-v2-bot">
+      <div class="foot-v2-legal">
+        <span>&copy; 2026 Novem Digital. All rights reserved.</span>
+        <span>Failure is Predictable.</span>
+      </div>
+      <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
+        Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const HS_PORTAL_ID = 'REPLACE_WITH_PORTAL_ID';
+const HS_FORM_ID   = 'REPLACE_WITH_CAREERS_FORM_ID';
+
+// Theme toggle
+const root = document.documentElement;
+const tbtn = document.getElementById('tbtn');
+const saved = localStorage.getItem('nd-theme') || 'dark';
+root.setAttribute('data-theme', saved);
+tbtn.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('nd-theme', next);
+});
+
+// Mobile nav
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileOverlay = document.getElementById('mobile-overlay');
+const mobileClose = document.getElementById('mobile-close');
+function openMenu(){mobileMenu.classList.add('open');mobileOverlay.classList.add('open');hamburger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeMenu(){mobileMenu.classList.remove('open');mobileOverlay.classList.remove('open');hamburger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+hamburger.addEventListener('click',openMenu);
+mobileClose.addEventListener('click',closeMenu);
+mobileOverlay.addEventListener('click',closeMenu);
+
+// Form submission
+const form = document.getElementById('careersForm');
+const submitBtn = document.getElementById('submitBtn');
+const btnLabel = document.getElementById('btn-label');
+const btnSpinner = document.getElementById('btn-spinner');
+const formSuccess = document.getElementById('formSuccess');
+
+function validateField(field){
+  const parent = field.closest('.field');
+  if(!parent) return true;
+  const required = field.hasAttribute('required');
+  let valid = true;
+  if(required && !field.value.trim()) valid = false;
+  if(field.type==='email' && field.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) valid = false;
+  parent.classList.toggle('has-error', !valid);
+  return valid;
+}
+
+form.querySelectorAll('input,select,textarea').forEach(el => {
+  el.addEventListener('blur', () => validateField(el));
+  el.addEventListener('input', () => { if(el.closest('.field')?.classList.contains('has-error')) validateField(el); });
+});
+
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  let allValid = true;
+  form.querySelectorAll('input[required],select[required],textarea[required]').forEach(el => { if(!validateField(el)) allValid = false; });
+  if(!allValid) return;
+
+  submitBtn.disabled = true;
+  btnLabel.textContent = 'Sending…';
+  btnSpinner.style.display = 'block';
+
+  const fields = [
+    { name: 'firstname',         value: form.firstname.value.trim() },
+    { name: 'lastname',          value: form.lastname.value.trim() },
+    { name: 'email',             value: form.email.value.trim() },
+    { name: 'jobtitle',          value: form.jobtitle.value.trim() },
+    { name: 'area_of_interest',  value: form.area_of_interest.value },
+    { name: 'linkedin_url',      value: form.linkedin_url.value.trim() },
+    { name: 'message',           value: form.message.value.trim() },
+    { name: 'lead_source',       value: 'Careers - Express Interest' },
+  ].filter(f => f.value);
+
+  const payload = { fields, context: { pageUri: window.location.href, pageName: document.title } };
+
+  try {
+    if(HS_PORTAL_ID === 'REPLACE_WITH_PORTAL_ID'){
+      await new Promise(r => setTimeout(r, 900));
+    } else {
+      const res = await fetch(`https://api.hsforms.com/submissions/v3/integration/submit/${HS_PORTAL_ID}/${HS_FORM_ID}`, {
+        method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload)
+      });
+      if(!res.ok) throw new Error('Submission failed');
+    }
+    form.style.display = 'none';
+    document.querySelector('.form-header').style.display = 'none';
+    formSuccess.classList.add('show');
+  } catch(err) {
+    btnLabel.textContent = 'Something went wrong — please try again.';
+    btnSpinner.style.display = 'none';
+    submitBtn.disabled = false;
+  }
+});
+</script>
+<script src="/modern.js" defer></script>
+<script src="/redesign.js" defer></script>
+<script src="/home-nav.js" defer></script>
+</body>
+</html>

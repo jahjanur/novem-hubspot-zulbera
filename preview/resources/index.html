@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resources | Novem Digital — Case Studies, White Papers &amp; Building Risk Intelligence</title>
+  <meta name="description" content="Real results from institutional real estate portfolios. Case studies, white papers, and risk intelligence showing how predictive building data prevents insurance claims, reduces costs, and defends capital decisions."/>
+  <link rel="canonical" href="/resources/"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <meta name="keywords" content="institutional real estate case studies, building risk white paper, TCRO framework, predictive commissioning, commercial real estate risk intelligence, seniors living risk management, building failure prevention, insurance claim reduction, Novem Digital CTO, Novem Digital CRO, Dr. Robert Whetsel, Grant Jay, leadership announcement, predictive building intelligence, zero-trust AI architecture"/>
+  <meta property="og:title" content="Resources | Novem Digital — Case Studies &amp; Building Risk Intelligence"/>
+  <meta property="og:description" content="Real results from institutional portfolios. Case studies, white papers, and intelligence showing how predictive building data prevents claims, reduces costs, and defends capital decisions."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://novemdigital.com/resources"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&auto=format&fit=crop"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Resources | Novem Digital — Case Studies &amp; Risk Intelligence"/>
+  <meta name="twitter:description" content="Real results from institutional real estate portfolios. Predictive building data that prevents insurance claims, reduces costs, and defends capital."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80&auto=format&fit=crop"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+
+/* ═══ TOKENS ═══ */
+:root{
+  --green:#7BFAB5;--blue:#60BCD6;
+  --gun:#1C3040;--gun-mid:#213848;--gun-dark:#0F1C24;
+  --text:#E8F4F0;--muted:#9DC5D0;--faint:#5A8090;
+  --border:#2E4A5A;--border2:#365460;
+  --surf:#1A2F3C;--surf2:#213848;--bg:#131E26;
+  --font-h:'Titillium Web','Arial Narrow',sans-serif;
+  --font-b:'DM Sans','Helvetica Neue',sans-serif;
+  --r:9999px;--rxl:1rem;--rlg:.75rem;
+  --sh-md:0 4px 20px rgba(0,0,0,.4);--sh-lg:0 12px 48px rgba(0,0,0,.55);
+  --ease:200ms cubic-bezier(.16,1,.3,1);
+  /* Content type colours */
+  --cs:#7BFAB5;        /* Case Study — green */
+  --wp:#60BCD6;        /* White Paper — blue */
+  --bl:#B8A0E8;        /* Blog — violet */
+  --pr:#F5C842;        /* Press Release — amber */
+}
+[data-theme="light"]{
+  --green:#60BCD6;--blue:#2A7FA0;
+  --text:#1E343F;--muted:#4A6070;--faint:#8AA4B0;
+  --border:#C8D5D0;--border2:#D4DDD9;
+  --surf:#FFFFFF;--surf2:#F0F4F2;--bg:#F4F6F4;
+  --sh-md:0 4px 20px rgba(30,52,63,.1);--sh-lg:0 12px 48px rgba(30,52,63,.15);
+}
+
+/* ═══ RESET ═══ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-font-smoothing:antialiased;}
+body{min-height:100dvh;font-family:var(--font-b);font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--text);background:var(--bg);line-height:1.6;transition:background .3s,color .3s;}
+img{display:block;max-width:100%;height:auto;}
+ul{list-style:none;}
+button{cursor:pointer;background:none;border:none;font:inherit;}
+a{transition:color var(--ease),opacity var(--ease);}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0;}
+
+/* ═══ LAYOUT ═══ */
+.w{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem);}
+.wm{max-width:960px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem);}
+.sec{padding-block:clamp(4rem,8vw,7rem);}
+.sec--alt{background:var(--surf);}
+.sec--gun{background:var(--gun);}
+
+/* ═══ TYPE ═══ */
+.eye{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;}
+.eye-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h1{font-family:var(--font-h);font-size:clamp(3.2rem,1.5rem + 6.5vw,7rem);font-weight:700;line-height:1.02;color:var(--text);}
+.h2{font-family:var(--font-h);font-size:clamp(2rem,1.3rem + 3vw,3.6rem);font-weight:700;line-height:1.1;color:var(--text);}
+.h3{font-family:var(--font-h);font-size:clamp(1.15rem,1rem + .7vw,1.6rem);font-weight:700;line-height:1.2;color:var(--text);}
+.accent{color:var(--green);}
+.lg{font-size:clamp(1.1rem,1rem + .4vw,1.3rem);color:#D4E8EE;line-height:1.75;}
+.sm{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:#C8DDE6;line-height:1.75;}
+
+/* ═══ BUTTONS ═══ */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.875rem,.85rem + .1vw,1rem);padding:.875rem 2rem;border-radius:var(--r);text-decoration:none;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);cursor:pointer;border:none;white-space:nowrap;}
+.btn:hover{transform:translateY(-2px);}
+.btn-p{background:var(--green);color:var(--gun);}
+.btn-p:hover{opacity:.88;box-shadow:0 6px 24px rgba(123,250,181,.25);}
+.btn-g{color:var(--muted);border:1px solid var(--border2);background:transparent;}
+.btn-g:hover{color:var(--text);border-color:var(--muted);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.875rem,.85rem + .1vw,1rem);padding:.875rem 2rem;border-radius:var(--r);text-decoration:none;color:rgba(232,244,240,.8);border:1px solid rgba(232,244,240,.22);transition:color var(--ease),border-color var(--ease),transform var(--ease);white-space:nowrap;}
+.btn-ghost:hover{color:#E8F4F0;border-color:rgba(232,244,240,.5);transform:translateY(-2px);}
+
+/* ═══ NAV ═══ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding-block:.75rem;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid color-mix(in srgb,var(--border) 55%,transparent);transition:background .3s,box-shadow .3s;}
+.nav--scrolled{box-shadow:0 4px 24px rgba(0,0,0,.35);}
+[data-theme="light"] .nav--scrolled{box-shadow:0 4px 24px rgba(30,52,63,.12);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.logo{display:flex;align-items:center;gap:.4rem;text-decoration:none;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:.25rem;margin-left:1.5rem;}
+.nav-item{position:relative;}
+.nav-item>a{font-family:var(--font-b);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.5rem .75rem;border-radius:.375rem;display:inline-flex;align-items:center;gap:.3rem;transition:color var(--ease),background var(--ease);white-space:nowrap;}
+.nav-item>a:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+.nav-item--tcro>a{color:#7BFAB5;font-weight:600;}
+.nav-item--tcro>a:hover{color:#7BFAB5;background:color-mix(in srgb,#7BFAB5 8%,transparent);}
+.nav-item--active>a{color:var(--text);font-weight:600;}
+.nav-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
+.nav-login{font-size:.875rem;font-weight:500;color:var(--faint);text-decoration:none;padding:.5rem .75rem;transition:color var(--ease);}
+.nav-login:hover{color:var(--text);}
+.nav-demo{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-h);font-weight:700;font-size:.875rem;padding:.55rem 1.35rem;border-radius:var(--r);background:#7BFAB5;color:#1E343F;text-decoration:none;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);white-space:nowrap;}
+.nav-demo:hover{transform:translateY(-1px);opacity:.9;box-shadow:0 4px 16px rgba(123,250,181,.25);}
+.tbtn{color:var(--muted);padding:.4rem;border-radius:.5rem;display:flex;align-items:center;}
+.tbtn:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+.nav-hamburger{display:none;width:40px;height:40px;align-items:center;justify-content:center;color:var(--text);border-radius:.5rem;transition:background var(--ease);}
+.nav-hamburger:hover{background:color-mix(in srgb,var(--text) 8%,transparent);}
+.nav-hamburger svg{pointer-events:none;}
+
+/* ═══ MOBILE NAV ═══ */
+.mobile-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .3s ease;}
+.mobile-overlay.open{opacity:1;visibility:visible;}
+.mobile-menu{position:fixed;top:0;right:0;bottom:0;z-index:301;width:min(88vw,380px);background:var(--gun);transform:translateX(100%);transition:transform .35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow-y:auto;}
+[data-theme="light"] .mobile-menu{background:#fff;}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);flex-shrink:0;}
+.mobile-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--text);border-radius:.375rem;transition:background var(--ease);}
+.mobile-close:hover{background:color-mix(in srgb,var(--text) 8%,transparent);}
+.mobile-nav-list{flex:1;padding:.75rem 0;overflow-y:auto;}
+.mobile-nav-item{border-bottom:1px solid color-mix(in srgb,var(--border) 50%,transparent);}
+.mobile-nav-item:last-child{border-bottom:none;}
+.mobile-nav-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;font-family:var(--font-h);font-weight:700;font-size:1rem;color:var(--text);text-decoration:none;transition:background var(--ease);}
+.mobile-nav-trigger:hover{background:color-mix(in srgb,var(--text) 5%,transparent);}
+a.mobile-nav-trigger{cursor:pointer;}
+.mobile-nav-trigger--tcro{color:#7BFAB5;}
+[data-theme="light"] .mobile-nav-trigger--tcro{color:#60BCD6;}
+.mobile-bottom{padding:1.25rem 1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;}
+.mobile-login{display:block;text-align:center;padding:.75rem;font-size:.9rem;font-weight:500;color:var(--faint);text-decoration:none;border-radius:.375rem;transition:color var(--ease),background var(--ease);}
+.mobile-login:hover{color:var(--text);background:color-mix(in srgb,var(--text) 5%,transparent);}
+.mobile-demo{display:block;text-align:center;padding:.875rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;background:#7BFAB5;color:#1E343F;border-radius:var(--r);text-decoration:none;transition:opacity var(--ease);}
+.mobile-demo:hover{opacity:.9;}
+@media(max-width:1023px){.nav-links,.nav-right{display:none;}.nav-hamburger{display:flex;}}
+body.no-scroll{overflow:hidden;}
+
+/* ═══ HERO ═══ */
+.resources-hero{position:relative;overflow:hidden;padding-block:clamp(8.5rem,15vw,12rem) clamp(4rem,7vw,6rem);}
+.resources-hero-bg{position:absolute;inset:0;}
+.resources-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 50%;filter:saturate(.8) brightness(1.28);}
+.resources-hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,24,30,.95) 0%,rgba(15,24,30,.78) 40%,rgba(15,24,30,.38) 100%);}
+.resources-hero-content{position:relative;z-index:1;}
+
+/* ═══ INSIGHT STRIP ═══ */
+.insight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+@media(max-width:720px){.insight-strip{grid-template-columns:1fr;}}
+.insight-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--rlg);padding:1.5rem;border-left:2px solid color-mix(in srgb,var(--green) 45%,transparent);}
+.insight-label{font-size:.62rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);margin-bottom:.6rem;}
+.insight-stat{font-family:var(--font-h);font-weight:700;font-size:clamp(1.4rem,2vw,2rem);color:var(--text);line-height:1;margin-bottom:.4rem;}
+.insight-body{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);line-height:1.6;}
+
+/* ═══ FILTER BAR ═══ */
+.filter-bar{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;margin-bottom:3rem;}
+.filter-btn{font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;padding:.45rem 1.1rem;border-radius:var(--r);cursor:pointer;transition:background var(--ease),color var(--ease),border-color var(--ease);border:1px solid var(--border);color:var(--muted);background:transparent;}
+.filter-btn:hover{color:var(--text);border-color:var(--border2);}
+.filter-btn.active{background:color-mix(in srgb,var(--green) 10%,transparent);color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,var(--border));}
+.filter-btn[data-type="case-study"].active{background:color-mix(in srgb,var(--cs) 10%,transparent);color:var(--cs);border-color:color-mix(in srgb,var(--cs) 40%,var(--border));}
+.filter-btn[data-type="white-paper"].active{background:color-mix(in srgb,var(--wp) 10%,transparent);color:var(--wp);border-color:color-mix(in srgb,var(--wp) 40%,var(--border));}
+.filter-btn[data-type="blog"].active{background:color-mix(in srgb,var(--bl) 10%,transparent);color:var(--bl);border-color:color-mix(in srgb,var(--bl) 40%,var(--border));}
+.filter-btn[data-type="press-release"].active{background:color-mix(in srgb,var(--pr) 10%,transparent);color:var(--pr);border-color:color-mix(in srgb,var(--pr) 40%,var(--border));}
+
+/* ═══ SECTION HEADING ═══ */
+.section-divider{display:flex;align-items:center;gap:1rem;margin-bottom:2rem;}
+.section-divider-label{font-family:var(--font-h);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.14em;white-space:nowrap;}
+.section-divider-line{flex:1;height:1px;background:var(--border);}
+.section-divider--cs .section-divider-label{color:var(--cs);}
+.section-divider--wp .section-divider-label{color:var(--wp);}
+.section-divider--bl .section-divider-label{color:var(--bl);}
+.section-divider--pr .section-divider-label{color:var(--pr);}
+
+/* ═══ RESOURCE CARDS ═══ */
+.resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:3.5rem;}
+@media(max-width:1024px){.resource-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.resource-grid{grid-template-columns:1fr;}}
+.resource-grid--featured{grid-template-columns:repeat(2,1fr);}
+@media(max-width:820px){.resource-grid--featured{grid-template-columns:1fr;}}
+
+.rcard{background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;display:flex;flex-direction:column;transition:border-color var(--ease),box-shadow var(--ease),transform var(--ease);text-decoration:none;color:inherit;}
+.rcard:hover{border-color:color-mix(in srgb,var(--cs) 30%,var(--border));box-shadow:var(--sh-lg);transform:translateY(-4px);}
+.rcard[data-type="white-paper"]:hover{border-color:color-mix(in srgb,var(--wp) 30%,var(--border));}
+.rcard[data-type="blog"]:hover{border-color:color-mix(in srgb,var(--bl) 30%,var(--border));}
+.rcard[data-type="press-release"]:hover{border-color:color-mix(in srgb,var(--pr) 30%,var(--border));}
+
+/* Card image */
+.rcard-img{aspect-ratio:16/9;overflow:hidden;position:relative;}
+.rcard-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.75) brightness(.9);transition:transform .4s ease,filter .4s ease;}
+.rcard:hover .rcard-img img{transform:scale(1.04);filter:saturate(.85) brightness(.95);}
+/* Type badge on image */
+.rcard-badge{position:absolute;top:.75rem;left:.75rem;font-size:clamp(.78rem,.74rem + .1vw,.86rem);font-weight:700;text-transform:uppercase;letter-spacing:.10em;border-radius:var(--r);padding:.28rem .8rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+.rcard-badge--cs{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--cs);border:1px solid color-mix(in srgb,var(--cs) 35%,transparent);}
+.rcard-badge--wp{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--wp);border:1px solid color-mix(in srgb,var(--wp) 35%,transparent);}
+.rcard-badge--bl{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--bl);border:1px solid color-mix(in srgb,var(--bl) 35%,transparent);}
+.rcard-badge--pr{background:color-mix(in srgb,var(--gun-dark) 80%,transparent);color:var(--pr);border:1px solid color-mix(in srgb,var(--pr) 35%,transparent);}
+
+/* Card body */
+.rcard-body{padding:1.5rem;display:flex;flex-direction:column;flex:1;gap:.6rem;}
+.rcard-meta{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+.rcard-industry{font-size:clamp(.82rem,.78rem + .1vw,.9rem);font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--faint);}
+.rcard-dot{width:3px;height:3px;border-radius:50%;background:var(--faint);}
+.rcard-date{font-size:clamp(.82rem,.78rem + .1vw,.9rem);color:var(--faint);}
+.rcard-title{font-family:var(--font-h);font-weight:700;font-size:clamp(1rem,.9rem + .35vw,1.2rem);color:var(--text);line-height:1.25;}
+.rcard-excerpt{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);line-height:1.6;flex:1;}
+/* Key stat row */
+.rcard-stats{display:flex;gap:1.25rem;padding:.75rem 0;border-top:1px solid var(--border);margin-top:auto;}
+.rcard-stat-num{font-family:var(--font-h);font-weight:700;font-size:1.05rem;color:var(--green);line-height:1;}
+.rcard-stat-lbl{font-size:clamp(.78rem,.74rem + .1vw,.86rem);color:var(--faint);text-transform:uppercase;letter-spacing:.07em;margin-top:.15rem;}
+/* Read link */
+.rcard-link{display:inline-flex;align-items:center;gap:.35rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.88rem,.84rem + .1vw,.95rem);text-transform:uppercase;letter-spacing:.07em;color:var(--green);transition:gap var(--ease);}
+.rcard:hover .rcard-link{gap:.6rem;}
+.rcard[data-type="white-paper"] .rcard-link{color:var(--wp);}
+.rcard[data-type="blog"] .rcard-link{color:var(--bl);}
+.rcard[data-type="press-release"] .rcard-link{color:var(--pr);}
+
+/* Featured card (spans 2 cols) */
+.rcard--featured{grid-column:1/-1;}
+.rcard--featured .rcard-img{aspect-ratio:21/9;}
+.rcard--featured .rcard-body{padding:2rem;}
+.rcard--featured .rcard-title{font-size:clamp(1.15rem,1rem + .55vw,1.45rem);}
+@media(max-width:820px){.rcard--featured .rcard-img{aspect-ratio:16/9;}}
+
+/* Coming soon card */
+.rcard--soon{opacity:.65;cursor:default;}
+.rcard--soon:hover{transform:none;box-shadow:none;border-color:var(--border);}
+.rcard-coming{font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);padding:.4rem .9rem;border:1px dashed var(--border2);border-radius:var(--r);display:inline-block;margin-top:.5rem;}
+
+/* ═══ FAQ ═══ */
+.faq-wrap{border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;}
+.faq-item{background:var(--bg);border-bottom:1px solid var(--border);}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{font-family:var(--font-h);font-weight:700;font-size:clamp(.95rem,.9rem + .3vw,1.1rem);color:var(--text);padding:1.5rem 1.75rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color var(--ease),background var(--ease);}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--green);flex-shrink:0;transition:transform var(--ease);}
+details[open] .faq-q::after{transform:rotate(45deg);}
+details[open] .faq-q{color:var(--green);}
+.faq-q:hover{background:color-mix(in srgb,var(--green) 4%,transparent);}
+.faq-a{padding:0 1.75rem 1.5rem;font-size:clamp(.875rem,.85rem + .15vw,1rem);color:var(--muted);line-height:1.75;max-width:68ch;}
+
+/* ═══ CTA ═══ */
+.cta{background:var(--gun);padding-block:clamp(4rem,8vw,6.5rem);position:relative;overflow:hidden;}
+.cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%);pointer-events:none;}
+.cta-inner{text-align:center;max-width:48ch;margin-inline:auto;position:relative;}
+
+/* ═══ FOOTER ═══ */
+.foot{padding-block:3.5rem;border-top:1px solid var(--border);}
+.foot-g{display:grid;grid-template-columns:2fr repeat(5,1fr);gap:2rem;}
+.foot-desc{font-size:.875rem;color:var(--muted);margin-top:1rem;max-width:30ch;line-height:1.7;}
+.foot-ct{font-family:var(--font-h);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--text);margin-bottom:1rem;}
+.foot-links{display:flex;flex-direction:column;gap:.7rem;}
+.foot-links a{font-size:.875rem;color:var(--muted);text-decoration:none;}
+.foot-links a:hover{color:var(--green);}
+.foot-bot{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.foot-legal{font-size:.75rem;color:var(--faint);}
+@media(max-width:900px){.foot-g{grid-template-columns:2fr 1fr 1fr;}}
+@media(max-width:600px){.foot-g{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.foot-g{grid-template-columns:1fr;}}
+
+/* REVEAL */
+.rev{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.rev.in{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none;}}
+body.no-scroll{overflow:hidden;}
+
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://novemdigital.com/#org",
+        "name": "Novem Digital",
+        "url": "https://novemdigital.com",
+        "logo": { "@type": "ImageObject", "url": "https://novemdigital.com/logo.png" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Vancouver", "addressRegion": "BC", "addressCountry": "CA" },
+        "areaServed": ["CA","US","GB","DE","FR"],
+        "knowsAbout": ["Predictive building risk","Institutional real estate","Insurance claims reduction","Automated continuous commissioning","Total Cost of Risk Ownership","Building failure prediction","Seniors living risk management"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://novemdigital.com/#website",
+        "url": "https://novemdigital.com",
+        "name": "Novem Digital",
+        "publisher": { "@id": "https://novemdigital.com/#org" }
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://novemdigital.com/resources",
+        "url": "https://novemdigital.com/resources",
+        "name": "Resources | Novem Digital — Case Studies, White Papers & Building Risk Intelligence",
+        "description": "Real results from institutional real estate portfolios. Case studies, white papers, and risk intelligence showing how predictive building data prevents insurance claims, reduces costs, and defends capital decisions.",
+        "isPartOf": { "@id": "https://novemdigital.com/#website" },
+        "publisher": { "@id": "https://novemdigital.com/#org" },
+        "hasPart": [
+          {
+            "@type": "Article",
+            "@id": "https://novemdigital.com/resources/bc-events",
+            "url": "https://novemdigital.com/resources/bc-events",
+            "headline": "BC Events Campus: $5M Insurance Claim Prevented Through Predictive Risk Monitoring",
+            "description": "How Novem Digital deployed predictive sensors across a 184-acre, 50-year-old public events campus — catching an ice-making plant failure before a $5M claim and uncovering a $400K annual gas leak on installation day.",
+            "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80&auto=format&fit=crop",
+            "author": { "@id": "https://novemdigital.com/#org" },
+            "publisher": { "@id": "https://novemdigital.com/#org" },
+            "about": ["building risk monitoring","insurance claim prevention","predictive maintenance","public venues"]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://novemdigital.com/resources/lrhg",
+            "url": "https://novemdigital.com/resources/lrhg",
+            "headline": "LRHG Pioneer Lodge: 65% Fewer Outbreak Weeks Through Air Quality Intelligence",
+            "description": "Continuous air quality monitoring at Pioneer Lodge in Lloydminster, Alberta, Canada reduced respiratory outbreak weeks by 65% and delivered zero outbreaks for 12 consecutive months.",
+            "image": "https://images.unsplash.com/photo-1559329007-0c7a6ec94f81?w=800&q=80&auto=format&fit=crop",
+            "author": { "@id": "https://novemdigital.com/#org" },
+            "publisher": { "@id": "https://novemdigital.com/#org" },
+            "about": ["seniors living risk management","air quality monitoring","infection control","respiratory outbreak prevention"]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://novemdigital.com/resources/telus-garden",
+            "url": "https://novemdigital.com/resources/telus-garden",
+            "headline": "LEED Platinum Office Tower: 900 Issues Resolved in 4 Months, $10.1M Forecast Savings",
+            "description": "Automated Continuous Commissioning compressed a 36-month commissioning cycle to 4 months at a LEED Platinum commercial office tower in North America — resolving 900 building issues with a $10.1M 10-year savings forecast.",
+            "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop",
+            "author": { "@id": "https://novemdigital.com/#org" },
+            "publisher": { "@id": "https://novemdigital.com/#org" },
+            "about": ["automated continuous commissioning","LEED Platinum","commercial real estate","building commissioning","energy savings"]
+          },
+          {
+            "@type": "Article",
+            "@id": "https://novemdigital.com/resources/bethany-riverview",
+            "url": "https://novemdigital.com/resources/bethany-riverview",
+            "headline": "Bethany Riverview: $93K Saved at Handover Through Automated Commissioning",
+            "description": "A $53M new seniors living facility in Calgary, Alberta, Canada had HVAC failures, unresponsive rooftop units, and a heat exchanger delivering no heat — all caught by Novem before a single resident moved in.",
+            "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&auto=format&fit=crop",
+            "author": { "@id": "https://novemdigital.com/#org" },
+            "publisher": { "@id": "https://novemdigital.com/#org" },
+            "about": ["seniors living commissioning","HVAC failure detection","building handover","automated commissioning","Calgary"]
+          },
+          {
+            "@type": "TechArticle",
+            "@id": "https://novemdigital.com/tcro",
+            "url": "https://novemdigital.com/tcro",
+            "headline": "The TCRO Framework: Total Cost of Risk Ownership for Institutional Real Estate",
+            "description": "The financial standard for measuring the complete cost of building risk across institutional real estate portfolios — giving finance and operations leaders a single number to defend capital allocation and insurance decisions.",
+            "author": { "@id": "https://novemdigital.com/#org" },
+            "publisher": { "@id": "https://novemdigital.com/#org" }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What resources does Novem Digital publish for institutional real estate operators?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital publishes case studies, white papers, blog posts, and press releases. Case studies document real financial outcomes across commercial real estate, seniors living, data centers, and public venues in North America and Europe. The TCRO Framework white paper defines the financial standard for measuring total building risk cost. Each resource opens as a dedicated page with no form required." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much can predictive building risk monitoring save on insurance costs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital case studies document a prevented $5M insurance claim at a public events campus, zero premium increase despite aging infrastructure, and $93K saved at handover for a new seniors living facility. The TCRO Calculator allows operators to model their own savings based on portfolio size and asset class." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the TCRO Framework?",
+            "acceptedAnswer": { "@type": "Answer", "text": "TCRO stands for Total Cost of Risk Ownership. It is the financial standard Novem Digital developed to capture the complete cost of building risk — including emergency repairs, volatile insurance premiums, unplanned capital spend, and regulatory exposure — that traditional Cost of Risk models miss. It gives finance and operations leaders a shared language for defending capital allocation with audit-ready data." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Novem Digital work with seniors living operators?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Novem Digital has deployed air quality monitoring and predictive risk intelligence at seniors living facilities across North America. Case studies include Pioneer Lodge in Lloydminster, Alberta, Canada — where outbreak weeks dropped 65% — and Bethany Riverview in Calgary, Alberta, Canada, where critical HVAC failures were caught before residents moved in." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is automated continuous commissioning?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Automated continuous commissioning is Novem Digital's process of running analytical formulas against live building data to detect, flag, and track every performance issue in real time. At a LEED Platinum office tower in North America, this compressed a standard 36-month commissioning cycle to 4 months and surfaced 900 building issues — each with a clear digital forensics trail for resolution." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="stylesheet" href="/modern.css">
+<link rel="stylesheet" href="/redesign.css">
+<link rel="stylesheet" href="/footer-v2.css">
+</head>
+<body>
+
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Novem Digital home">
+        <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+      </a>
+      <div class="nav-links" id="desktopNav">
+        <div class="nav-item"><a href="/">Home</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
+        <div class="nav-item has-dropdown" data-dropdown="platform">
+          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform">
+            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">How It Works</span>
+              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
+            </a>
+            <a href="/tcro/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">TCRO Framework</span>
+              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
+            </a>
+            <a href="/industries/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Industries</span>
+              <span class="nav-dd-desc">Sectors we serve</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item has-dropdown" data-dropdown="resources">
+          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources">
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Case Studies</span>
+              <span class="nav-dd-desc">Real portfolio outcomes</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Insights &amp; Blog</span>
+              <span class="nav-dd-desc">Research &amp; industry analysis</span>
+            </a>
+            <a href="/resources/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Press &amp; Whitepapers</span>
+              <span class="nav-dd-desc">Announcements and research</span>
+            </a>
+            <a href="/partners/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Partners</span>
+              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
+            </a>
+            <a href="/careers/" class="nav-dd-item" role="menuitem">
+              <span class="nav-dd-title">Careers</span>
+              <span class="nav-dd-desc">Join the team</span>
+            </a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="/contact/">Contact</a></div>
+      </div>
+      <div class="nav-right">
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <a href="#" class="nav-login">Login</a>
+        <a href="/get-a-demo/" class="nav-demo">Get a Demo</a>
+      </div>
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-menu-header">
+    <a href="/" class="logo" aria-label="Novem Digital home"><img src="logo.png" style="height:24px;width:auto;flex-shrink:0;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="mobile-nav-list">
+    <div class="mobile-nav-item">
+      <a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="platform">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Platform <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/how-it-works/" class="mobile-sub-item" data-mobile-link>How It Works</a>
+        <a href="/tcro/" class="mobile-sub-item" data-mobile-link>TCRO Framework</a>
+        <a href="/industries/" class="mobile-sub-item" data-mobile-link>Industries</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item has-submenu" data-submenu="resources">
+      <button class="mobile-nav-trigger" type="button" aria-expanded="false">
+        Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="mobile-submenu">
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
+        <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/contact/" class="mobile-nav-trigger" data-mobile-link>Contact</a>
+    </div>
+  </div>
+  <!-- /mobile-nav-list -->
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="/get-a-demo/" class="mobile-demo" data-mobile-link>Get a Demo</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ═══ HERO ═══ -->
+<section class="resources-hero" aria-label="Resources">
+  <div class="resources-hero-bg">
+    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop&bri=15"
+         alt="City at night — global portfolio" loading="eager"/>
+  </div>
+  <div class="resources-hero-overlay"></div>
+  <div class="w resources-hero-content">
+    <div style="max-width:640px;">
+      <div class="hero-platform-tag" style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-bottom:1.75rem;display:inline-flex;align-items:center;gap:.5rem;">● Resources</div>
+      <h1 class="h1" style="margin-bottom:1.25rem;">Proof that risk is<br><span class="accent">predictable.</span></h1>
+      <p class="lg" style="max-width:44ch;">Real results from institutional portfolios across North America and Europe — case studies, insights, and intelligence built for operators who move fast on data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESOURCE LIBRARY ═══ -->
+<section class="sec" id="library">
+  <div class="w">
+
+    <!-- Filter bar -->
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <div>
+        <div class="eye"><span class="eye-dot"></span>Resource Library</div>
+        <h2 class="h2">Intelligence.<br><span class="accent">In every format.</span></h2>
+      </div>
+    </div>
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-type="all">All</button>
+      <button class="filter-btn" data-type="case-study">Case Studies</button>
+      <button class="filter-btn" data-type="white-paper">White Papers</button>
+      <button class="filter-btn" data-type="blog">Blog</button>
+      <button class="filter-btn" data-type="press-release">Press Releases</button>
+    </div>
+
+    <!-- ── CASE STUDIES ── -->
+    <div class="section-divider section-divider--cs content-section" data-section="case-study">
+      <span class="section-divider-label">Case Studies</span>
+      <span class="section-divider-line"></span>
+    </div>
+
+    <!-- 3-col grid: all case studies equal size -->
+    <div class="resource-grid content-section" data-section="case-study">
+
+      <!-- BC Events Campus -->
+      <a class="rcard rev" data-type="case-study"
+         href="/resources/bc-events" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-img">
+          <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop"
+               alt="BC events campus — predictive risk monitoring" loading="lazy"/>
+          <span class="rcard-badge rcard-badge--cs">Case Study</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Public Venues</span>
+            <span class="rcard-dot"></span>
+            <span class="rcard-date">2026</span>
+          </div>
+          <h3 class="rcard-title">$5M Claim Prevented. $400K Gas Leak Found. Insurance Held Flat.</h3>
+          <p class="rcard-excerpt">A 50-year-old events campus with no predictive visibility. Vibration sensors, seismic valves, and decibel monitoring changed everything — without replacing a single system.</p>
+          <div class="rcard-stats">
+            <div><div class="rcard-stat-num">$5M</div><div class="rcard-stat-lbl">Claim prevented</div></div>
+            <div><div class="rcard-stat-num">$400K+</div><div class="rcard-stat-lbl">Gas leak found</div></div>
+          </div>
+          <span class="rcard-link">Read case study <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+
+      <!-- LRHG Pioneer Lodge -->
+      <a class="rcard rev" data-type="case-study"
+         href="/resources/lrhg" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-img">
+          <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=800&q=80&auto=format&fit=crop"
+               alt="Seniors living care facility" loading="lazy"/>
+          <span class="rcard-badge rcard-badge--cs">Case Study</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Seniors Living</span>
+            <span class="rcard-dot"></span>
+            <span class="rcard-date">2026</span>
+          </div>
+          <h3 class="rcard-title">Seven Years of Outbreaks. Stopped.</h3>
+          <p class="rcard-excerpt">Continuous air quality monitoring reduced outbreak weeks by 65% at Pioneer Lodge — delivering zero outbreaks in the following 12 months for 120 residents in North America.</p>
+          <div class="rcard-stats">
+            <div><div class="rcard-stat-num">65%</div><div class="rcard-stat-lbl">Fewer outbreaks</div></div>
+            <div><div class="rcard-stat-num">Zero</div><div class="rcard-stat-lbl">Outbreaks 12 mo.</div></div>
+          </div>
+          <span class="rcard-link">Read case study <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Telus Garden -->
+      <a class="rcard rev d1" data-type="case-study"
+         href="/resources/telus-garden" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-img">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop"
+               alt="Modern commercial office tower" loading="lazy"/>
+          <span class="rcard-badge rcard-badge--cs">Case Study</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Commercial RE</span>
+            <span class="rcard-dot"></span>
+            <span class="rcard-date">2025</span>
+          </div>
+          <h3 class="rcard-title">900 Issues. 4 Months. $10.1M Saved.</h3>
+          <p class="rcard-excerpt">Automated Continuous Commissioning compressed a 36-month cycle to 4 months at a LEED Platinum office tower in North America — resolving 900 issues and setting a 10-year savings trajectory.</p>
+          <div class="rcard-stats">
+            <div><div class="rcard-stat-num">$10.1M</div><div class="rcard-stat-lbl">10-yr savings</div></div>
+            <div><div class="rcard-stat-num">32 mo.</div><div class="rcard-stat-lbl">Time saved</div></div>
+          </div>
+          <span class="rcard-link">Read case study <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Bethany Riverview -->
+      <a class="rcard rev d2" data-type="case-study"
+         href="/resources/bethany-riverview" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-img">
+          <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80&auto=format&fit=crop"
+               alt="Seniors care facility — Bethany Riverview commissioning case study" loading="lazy"/>
+          <span class="rcard-badge rcard-badge--cs">Case Study</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Seniors Living</span>
+            <span class="rcard-dot"></span>
+            <span class="rcard-date">2024</span>
+          </div>
+          <h3 class="rcard-title">Brand New Building. Hidden Failures. $93K Saved.</h3>
+          <p class="rcard-excerpt">A $53M seniors facility in North America assumed new equipment meant no issues. Novem caught fan drives that couldn't run, HVAC not responding, and a heat exchanger delivering no heat — before move-in.</p>
+          <div class="rcard-stats">
+            <div><div class="rcard-stat-num">$93K</div><div class="rcard-stat-lbl">At handover</div></div>
+            <div><div class="rcard-stat-num">$109K</div><div class="rcard-stat-lbl">Annual savings</div></div>
+          </div>
+          <span class="rcard-link">Read case study <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+
+  
+    <!-- ── WHITE PAPERS ── -->
+    <div class="section-divider section-divider--wp content-section" data-section="white-paper" style="margin-top:1rem;">
+      <span class="section-divider-label">White Papers</span>
+      <span class="section-divider-line"></span>
+    </div>
+
+    <div class="resource-grid content-section" data-section="white-paper">
+
+      <!-- TCRO Whitepaper -->
+      <a class="rcard rev" data-type="white-paper"
+         href="/tcro" target="_blank" rel="noopener noreferrer">
+        <div class="rcard-img">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80&auto=format&fit=crop"
+               alt="Financial risk analysis" loading="lazy"/>
+          <span class="rcard-badge rcard-badge--wp">White Paper</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Framework</span>
+            <span class="rcard-dot"></span>
+            <span class="rcard-date">2025</span>
+          </div>
+          <h3 class="rcard-title">The TCRO Framework: Total Cost of Risk Ownership</h3>
+          <p class="rcard-excerpt">The financial standard for measuring the complete cost of building risk across institutional real estate portfolios. Define, quantify, and defend every risk decision with a single number.</p>
+          <span class="rcard-link" style="margin-top:auto;">Read whitepaper <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+      </a>
+
+      <!-- Coming soon WP -->
+      <div class="rcard rcard--soon rev d1" data-type="white-paper">
+        <div class="rcard-img" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80&auto=format&fit=crop" alt="Insurance and risk data analysis" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="rcard-badge rcard-badge--wp">White Paper</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Risk &amp; Insurance</span>
+          </div>
+          <h3 class="rcard-title">Insurance &amp; Building Data: A New Underwriting Standard</h3>
+          <p class="rcard-excerpt">How real-time building performance data is reshaping commercial property underwriting — and what operators need to bring to the table.</p>
+          <span class="rcard-coming">Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Coming soon WP 2 -->
+      <div class="rcard rcard--soon rev d2" data-type="white-paper">
+        <div class="rcard-img" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?w=800&q=80&auto=format&fit=crop" alt="Capital planning and financial strategy" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="rcard-badge rcard-badge--wp">White Paper</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta">
+            <span class="rcard-industry">Capital Planning</span>
+          </div>
+          <h3 class="rcard-title">Defending Capital: Data-Driven Reserve Fund Strategies</h3>
+          <p class="rcard-excerpt">How institutional operators are replacing gut-feel capital allocation with continuous performance data — and winning board approval faster.</p>
+          <span class="rcard-coming">Coming Soon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── BLOG ── -->
+    <div class="section-divider section-divider--bl content-section" data-section="blog" style="margin-top:1rem;">
+      <span class="section-divider-label">Blog</span>
+      <span class="section-divider-line"></span>
+    </div>
+
+    <div class="resource-grid content-section" data-section="blog">
+
+      <div class="rcard rcard--soon rev" data-type="blog">
+        <div class="rcard-img" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80&auto=format&fit=crop" alt="Risk framework analysis" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="rcard-badge" style="background:color-mix(in srgb,var(--bl,#B8A0E8) 80%,#000);color:#fff;">Blog</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta"><span class="rcard-industry" style="color:var(--bl);">Perspective</span></div>
+          <h3 class="rcard-title">Why the COR Framework Misses What Matters Most</h3>
+          <p class="rcard-excerpt">Traditional Cost of Risk models were built for reactive operations. Here's what they miss — and why a new standard is emerging.</p>
+          <span class="rcard-coming">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="rcard rcard--soon rev d1" data-type="blog">
+        <div class="rcard-img" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&auto=format&fit=crop" alt="Building commissioning and construction data" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="rcard-badge" style="background:color-mix(in srgb,var(--bl,#B8A0E8) 80%,#000);color:#fff;">Blog</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta"><span class="rcard-industry" style="color:var(--bl);">Insight</span></div>
+          <h3 class="rcard-title">The Commissioning Gap: What Data Reveals After Construction</h3>
+          <p class="rcard-excerpt">New buildings routinely harbour undiscovered failures. Continuous commissioning is changing what operators know — and when they know it.</p>
+          <span class="rcard-coming">Coming Soon</span>
+        </div>
+      </div>
+
+      <div class="rcard rcard--soon rev d2" data-type="blog">
+        <div class="rcard-img" style="overflow:hidden;">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80&auto=format&fit=crop" alt="Air quality and seniors care environment" loading="lazy" style="width:100%;height:100%;object-fit:cover;"/>
+          <span class="rcard-badge" style="background:color-mix(in srgb,var(--bl,#B8A0E8) 80%,#000);color:#fff;">Blog</span>
+        </div>
+        <div class="rcard-body">
+          <div class="rcard-meta"><span class="rcard-industry" style="color:var(--bl);">Industry</span></div>
+          <h3 class="rcard-title">Air Quality as an Infection Control Tool in Seniors Care</h3>
+          <p class="rcard-excerpt">How environmental monitoring is becoming a standard of care expectation — and what boards are asking operators about it.</p>
+          <span class="rcard-coming">Coming Soon</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── PRESS RELEASES ── -->
+    <div class="section-divider section-divider--pr content-section" data-section="press-release" style="margin-top:1rem;">
+      <span class="section-divider-label">Press Releases</span>
+      <span class="section-divider-line"></span>
+    </div>
+
+    <div class="resource-grid content-section" data-section="press-release">
+
+      <!-- PR: Dr. Whetsel CTO -->
+      <a class="rcard" data-type="press-release" href="pr-whetsel/" target="_blank" rel="noopener" style="text-decoration:none;display:flex;flex-direction:column;">
+        <div class="rcard-img" style="overflow:hidden;position:relative;background:#111A1F;display:flex;flex-direction:row;">
+          <!-- Left: executive portrait -->
+          <div style="flex:0 0 42%;position:relative;overflow:hidden;">
+            <img src="Dr.-Robert-Whetsel.jpg" alt="Dr. Robert Whetsel" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:none;"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,#111A1F 100%);"></div>
+          </div>
+          <!-- Right: branded announcement panel -->
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:1.25rem 1.1rem 1.25rem .6rem;background:#111A1F;position:relative;">
+            <!-- Top accent rule -->
+            <div style="width:28px;height:2px;background:linear-gradient(90deg,#7BFAB5,#60BCD6);margin-bottom:.85rem;border-radius:2px;"></div>
+            <div style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:#7BFAB5;margin-bottom:.5rem;">New Appointment</div>
+            <div style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:1.05rem;color:#E8F4F0;line-height:1.18;margin-bottom:.3rem;">Dr. Robert Whetsel</div>
+            <div style="font-size:.72rem;color:#8BBCCA;line-height:1.4;margin-bottom:.9rem;">Chief Technology Officer<br/><span style="color:#4A7080;">Novem Digital</span></div>
+            <div style="font-size:.68rem;color:#4A7080;text-transform:uppercase;letter-spacing:.1em;">Apr 21, 2026</div>
+          </div>
+          <span class="rcard-badge" style="top:.65rem;right:.65rem;background:rgba(123,250,181,.12);border:1px solid rgba(123,250,181,.25);color:#7BFAB5;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:.62rem;">Press Release</span>
+        </div>
+        <div class="rcard-body" style="flex:1;display:flex;flex-direction:column;">
+          <div class="rcard-meta">
+            <span class="rcard-industry" style="color:var(--pr);">Leadership</span>
+            <span class="rcard-date">April 21, 2026</span>
+          </div>
+          <h3 class="rcard-title">Novem Digital Appoints Dr. Robert Whetsel as Chief Technology Officer</h3>
+          <p class="rcard-excerpt">Federal AI architect, MIT executive alumnus, and complexity researcher with 30+ years of enterprise transformation joins to lead Novem's technical vision.</p>
+          <span class="rcard-link">Read Press Release →</span>
+        </div>
+      </a>
+
+      <!-- PR: Grant Jay CRO -->
+      <a class="rcard" data-type="press-release" href="pr-jay/" target="_blank" rel="noopener" style="text-decoration:none;display:flex;flex-direction:column;">
+        <div class="rcard-img" style="overflow:hidden;position:relative;background:#111A1F;display:flex;flex-direction:row;">
+          <!-- Left: executive portrait -->
+          <div style="flex:0 0 42%;position:relative;overflow:hidden;">
+            <img src="Grant-Jay.jpg" alt="Grant R. Jay" style="width:100%;height:100%;object-fit:cover;object-position:top center;filter:none;"/>
+            <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent 60%,#111A1F 100%);"></div>
+          </div>
+          <!-- Right: branded announcement panel -->
+          <div style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:1.25rem 1.1rem 1.25rem .6rem;background:#111A1F;position:relative;">
+            <!-- Top accent rule -->
+            <div style="width:28px;height:2px;background:linear-gradient(90deg,#60BCD6,#7BFAB5);margin-bottom:.85rem;border-radius:2px;"></div>
+            <div style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:#60BCD6;margin-bottom:.5rem;">New Appointment</div>
+            <div style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:1.05rem;color:#E8F4F0;line-height:1.18;margin-bottom:.3rem;">Grant R. Jay</div>
+            <div style="font-size:.72rem;color:#8BBCCA;line-height:1.4;margin-bottom:.9rem;">Chief Revenue Officer<br/><span style="color:#4A7080;">Novem Digital</span></div>
+            <div style="font-size:.68rem;color:#4A7080;text-transform:uppercase;letter-spacing:.1em;">Apr 21, 2026</div>
+          </div>
+          <span class="rcard-badge" style="top:.65rem;right:.65rem;background:rgba(96,188,214,.12);border:1px solid rgba(96,188,214,.25);color:#60BCD6;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-size:.62rem;">Press Release</span>
+        </div>
+        <div class="rcard-body" style="flex:1;display:flex;flex-direction:column;">
+          <div class="rcard-meta">
+            <span class="rcard-industry" style="color:var(--pr);">Leadership</span>
+            <span class="rcard-date">April 21, 2026</span>
+          </div>
+          <h3 class="rcard-title">Novem Digital Appoints Grant R. Jay as Chief Revenue Officer</h3>
+          <p class="rcard-excerpt">Strategic GTM leader with 15+ years driving enterprise revenue across deep tech, critical infrastructure, and AI platforms joins to lead global commercial expansion.</p>
+          <span class="rcard-link">Read Press Release →</span>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec sec--alt">
+  <div class="wm">
+    <div class="eye"><span class="eye-dot"></span>FAQ</div>
+    <h2 class="h2" style="margin-bottom:2.5rem;">Common <span class="accent">questions.</span></h2>
+    <div class="faq-wrap">
+      <details class="faq-item">
+        <summary class="faq-q">What types of resources does Novem Digital publish?</summary>
+        <p class="faq-a">We publish case studies documenting real outcomes across commercial real estate, seniors living, data centers, and public venues — plus white papers, blog perspectives, and press releases. Case studies open in a dedicated page with full data, methodology, and results.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the TCRO Framework whitepaper?</summary>
+        <p class="faq-a">The TCRO Framework whitepaper defines Total Cost of Risk Ownership — the financial standard that captures everything traditional Cost of Risk misses. It gives finance and operations leaders a shared language for defending capital allocation and insurance decisions with audit-ready data.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How can I access the full case studies?</summary>
+        <p class="faq-a">Each case study card opens the full study in a new page — including challenge, solution, pullquotes, and detailed results tables. No form required. Click any "Read case study" link to open it.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">When will white papers and blog content be published?</summary>
+        <p class="faq-a">White papers, blog posts, and press releases are currently in development. Content is published as it is cleared for release. Get in touch if you'd like early access to specific topics — we're happy to share what's in the pipeline.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta" id="cta">
+  <div class="w">
+    <div class="cta-inner">
+      <h2 class="h2 cta-h" style="margin-bottom:1rem;">Failure is <span class="accent">Predictable.</span></h2>
+      <p class="lg cta-b" style="max-width:44ch;margin-inline:auto;margin-bottom:2rem;">Lower costs. Control insurance. Defend every capital decision with data.</p>
+      <a href="/get-a-demo/" class="btn btn-p">Get a Demo</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot foot-v2">
+  <div class="w">
+
+    <!-- BRAND BAND: tagline + CTA -->
+    <div class="foot-v2-brand">
+      <div class="foot-v2-brand-left">
+        <p class="foot-v2-tagline">Ready to see what surfaces in <span class="accent">your portfolio?</span></p>
+      </div>
+      <a href="/get-a-demo/" class="foot-v2-cta">Get a Demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <!-- MAIN 5-COL GRID -->
+    <div class="foot-v2-g">
+
+      <div>
+        <a href="/" class="logo" aria-label="Novem Digital home">
+          <img src="/logo.png" style="height:26px;width:auto;" alt=""/>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span>
+          <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        </a>
+        <p class="foot-v2-desc">A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.</p>
+        <div class="foot-v2-contacts">
+          <a href="tel:+18336683647" aria-label="Call Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +1 (833) 668-3647
+          </a>
+          <a href="mailto:connect@novemdigital.com" aria-label="Email Novem Digital">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            connect@novemdigital.com
+          </a>
+          <a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer" aria-label="Novem Digital on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Industries</div>
+        <ul class="foot-v2-links">
+          <li><a href="/industries/#commercial-mixed-use">Commercial &amp; Mixed Use</a></li>
+          <li><a href="/industries/#seniors-wellness">Seniors &amp; Wellness</a></li>
+          <li><a href="/industries/#data-centers">Data Centers</a></li>
+          <li><a href="/industries/#recreational-venues">Recreational &amp; Venues</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Platform</div>
+        <ul class="foot-v2-links">
+          <li><a href="/how-it-works/">How It Works</a></li>
+          <li><a href="/tcro/">TCRO Framework</a></li>
+          <li><a href="/partners/">Partners</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Resources</div>
+        <ul class="foot-v2-links">
+          <li><a href="/resources/">Case Studies</a></li>
+          <li><a href="/resources/">Insights &amp; Blog</a></li>
+          <li><a href="/resources/">Press &amp; Whitepapers</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="foot-v2-ct">Company</div>
+        <ul class="foot-v2-links">
+          <li><a href="/about/">About</a></li>
+          <li><a href="/careers/">Careers</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM strip: copyright + zulbera attribution -->
+    <div class="foot-v2-bot">
+      <div class="foot-v2-legal">
+        <span>&copy; 2026 Novem Digital. All rights reserved.</span>
+        <span>Failure is Predictable.</span>
+      </div>
+      <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
+        Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
+      </a>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* Theme */
+  const root=document.documentElement;
+  const themeBtn=document.querySelector('[data-theme-toggle]');
+  if(themeBtn) themeBtn.addEventListener('click',()=>{
+    root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
+  });
+
+  /* Nav scroll */
+  const nav=document.getElementById('mainNav');
+  if(nav) addEventListener('scroll',()=>nav.classList.toggle('nav--scrolled',scrollY>40),{passive:true});
+
+  /* Mobile menu */
+  const hamburger=document.getElementById('hamburgerBtn');
+  const mobileClose=document.getElementById('mobileCloseBtn');
+  const mobileOverlay=document.getElementById('mobileOverlay');
+  const mobileMenu=document.getElementById('mobileMenu');
+  function openMobile(){if(!mobileMenu||!mobileOverlay||!hamburger)return;mobileMenu.classList.add('open');mobileOverlay.classList.add('open');document.body.classList.add('no-scroll');hamburger.setAttribute('aria-expanded','true');mobileMenu.setAttribute('aria-hidden','false');}
+  function closeMobile(){if(!mobileMenu||!mobileOverlay||!hamburger)return;mobileMenu.classList.remove('open');mobileOverlay.classList.remove('open');document.body.classList.remove('no-scroll');hamburger.setAttribute('aria-expanded','false');mobileMenu.setAttribute('aria-hidden','true');}
+  if(hamburger) hamburger.addEventListener('click',openMobile);
+  if(mobileClose) mobileClose.addEventListener('click',closeMobile);
+  if(mobileOverlay) mobileOverlay.addEventListener('click',closeMobile);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobile();});
+  document.querySelectorAll('[data-mobile-link]').forEach(l=>l.addEventListener('click',closeMobile));
+
+  /* Filter logic */
+  const filterBtns=document.querySelectorAll('.filter-btn');
+  const allCards=document.querySelectorAll('.rcard');
+  const allSections=document.querySelectorAll('.content-section');
+
+  filterBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const type=btn.getAttribute('data-type');
+      if(type==='all'){
+        allCards.forEach(c=>{c.style.display='';});
+        allSections.forEach(s=>{s.style.display='';});
+      } else {
+        // Show/hide sections (dividers and grids)
+        allSections.forEach(s=>{
+          const sec=s.getAttribute('data-section');
+          s.style.display=(sec===type)?'':'none';
+        });
+        // Show/hide cards
+        allCards.forEach(c=>{
+          const ct=c.getAttribute('data-type');
+          c.style.display=(ct===type)?'':'none';
+        });
+      }
+    });
+  });
+
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+  },{threshold:.08});
+  document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+})();
+</script>
+
+<script src="/modern.js" defer></script>
+<script src="/redesign.js" defer></script>
+<script src="/home-nav.js" defer></script>
+</body>
+</html>

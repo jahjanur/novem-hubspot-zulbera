@@ -1,0 +1,166 @@
+<!--
+  templateType: page
+  label: "Resource: Press Release (HubDB)"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Novem Digital Appoints Dr. Robert Whetsel as Chief Technology Officer | Novem Digital #}
+{# meta description: Novem Digital welcomes Dr. Robert Whetsel as Chief Technology Officer. A federal AI architect, MIT executive alumnus, and complexity researcher, Dr. Whetsel brings 30+ years of enterprise transformation experience to Novem's predictive intelligence platform. #}
+
+{% block extra_head %}
+<style>
+50%{opacity:.3}}
+
+/* NAV */
+
+@media(max-width:1023px){}
+/* HERO */
+.hero{position:relative;min-height:52vh;display:flex;align-items:flex-end;padding-bottom:clamp(3rem,6vw,5rem);overflow:hidden;}
+.hero-bg{position:absolute;inset:0;z-index:0;}
+.hero-bg 
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(10,18,24,.72) 0%,rgba(15,28,36,.55) 40%,rgba(19,30,38,.78) 100%);}
+.hero-content{position:relative;z-index:1;}
+/* META BAR */
+.pr-met
+.pr-badge{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;padding:.3rem .8rem;border-radius:var(--r);background:color-mix(in srgb,#F5C842 12%,transparent);color:#F5C842;border:1px solid color-mix(in srgb,#F5C842 30%,transparent);}
+.pr-date{font-size:.9rem;color:var(--faint);}
+.pr-location{font-size:.9rem;color:var(--faint);}
+/* BODY */
+.pr-
+.pr-body p{margin-bottom:1.5rem;color:#D4E8EE;line-height:1.8;}
+.pr-body h2{font-family:var(--font-h);font-size:clamp(1.3rem,1.1rem + 1vw,1.9rem);font-weight:700;color:var(--text);margin-bottom:1rem;margin-top:2.5rem;line-height:1.2;}
+.pr-body blockquote{border-left:3px solid var(--green);padding-left:1.5rem;margin:2.5rem 0;color:#D4E8EE;font-size:clamp(1.1rem,1rem + .4vw,1.3rem);line-height:1.7;font-style:italic;}
+.pr-body blockquote cite{display:block;margin-top:.75rem;font-size:.9rem;font-style:normal;color:var(--faint);}
+.pr-body 
+.pr-body ul li{color:#C8DDE6;font-size:clamp(1rem,.95rem + .25vw,1.125rem);}
+/* EXEC CARD */
+.exec-card{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;background:var(--surf);border:1px solid var(--border2);border-radius:var(--rxl);padding:1.75rem;margin:2.5rem 0;}
+.exec-avatar{width:72px;height:72px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+.exec-avatar 
+.exec-name{font-family:var(--font-h);font-weight:700;font-size:1.1rem;color:var(--text);margin-bottom:.2rem;}
+.exec-title{font-size:.875rem;color:var(--green);margin-bottom:.5rem;}
+.exec-bio{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:#C8DDE6;line-height:1.65;}
+@media(max-width:600px){.exec-card{grid-template-columns:1fr;}}
+/* FOOTER */
+footer{background:var(--gun-dark);border-top:1px solid var(--border);padding-block:clamp(3rem,6vw,5rem);}
+
+@media(max-width:900px){}
+@media(max-width:500px){}
+
+/* SHARE / DOWNLOAD BAR */
+.action-bar{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;}
+.action-btn{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;padding:.55rem 1.1rem;border-radius:var(--r);border:1px solid var(--border2);background:transparent;color:var(--muted);cursor:pointer;text-decoration:none;transition:color var(--ease),border-color var(--ease),background var(--ease);}
+.action-btn:hover{color:var(--text);border-color:var(--muted);background:color-mix(in srgb,var(--text) 5%,transparent);}
+.action-btn--share.copied{color:var(--green);border-color:var(--green);}
+.action-btn svg{flex-shrink:0;}
+@media print{
+
+  .hero{min-height:28vh!important;}
+  .hero-bg::after{background:rgba(0,0,0,.45)!important;}
+  .h1,.h2,.h3,
+  .art-body p,.pr-body p,.art-body li,.pr-body li{color:#333!important;}
+  .art-body blockquote,.pr-body blockquote{color:#444!important;border-left-color:#333!important;}
+  blockquote cite{color:#666!important;}
+  .exec-card,.pull-stat,.finding-card,.findings-grid .finding-card{background:#f5f5f5!important;border-color:#ccc!important;}
+  .finding-num,.pull-stat-num{color:#1a5c3a!important;}
+  .exec-title{color:#1a5c3a!important;}
+  
+}
+</style>
+{% endblock %}
+
+{% block body %}
+<section style="padding-block:clamp(3.5rem,7vw,6rem);">
+  <div class="wm">
+
+    <!-- Meta bar -->
+    <div class="pr-meta">
+      <span class="pr-badge">Press Release</span>
+      <span class="pr-date">April 21, 2026</span>
+      <span class="pr-location">Vancouver, BC, Canada</span>
+    </div>
+
+    <!-- SHARE / DOWNLOAD BAR -->
+    <div class="action-bar">
+      <button class="action-btn action-btn--share" id="shareBtn" title="Copy link to clipboard">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        <span id="shareBtnLabel">Share</span>
+      </button>
+      <button class="action-btn action-btn--download" id="downloadBtn" title="Download as PDF">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </button>
+    </div>
+
+    <div class="pr-body">
+      <h2 style="margin-top:0;">Novem Digital Appoints Dr. Robert Whetsel as Chief Technology Officer</h2>
+      <p style="font-size:clamp(1.1rem,1rem + .35vw,1.3rem);color:#D4E8EE;font-style:italic;margin-bottom:2rem;"><em>Federal AI architect and MIT executive alumnus joins to lead technology strategy for predictive real estate intelligence — globally.</em></p>
+
+      <p><strong style="color:var(--text);">VANCOUVER, BC, April 21, 2026</strong> — Novem Digital, the predictive intelligence platform purpose-built for institutional real estate portfolios, today announced the appointment of Dr. Robert Whetsel as Chief Technology Officer. Dr. Whetsel brings more than 30 years of enterprise transformation experience at the intersection of AI, data architecture, and complex systems — most recently as Associate Director for Data Architecture at the U.S. Food and Drug Administration (FDA).</p>
+
+      <p>In this newly established executive role, Dr. Whetsel will lead Novem Digital's technical vision and product architecture — accelerating the platform's ability to surface predictive risk signals across commercial real estate, seniors living, data centers, and public venues.</p>
+
+      <blockquote>
+        "Failure is predictable. That has always been true — what has changed is our ability to act on it before it becomes a problem. Novem is building something rare: a platform where AI, data integrity, and operational reality converge. I came here to make that architecture as rigorous and trustworthy as it is powerful."
+        <cite>— Dr. Robert Whetsel, Chief Technology Officer, Novem Digital</cite>
+      </blockquote>
+
+      <h2>A Career Built on Making Complexity Legible</h2>
+      <p>Dr. Whetsel is a computer scientist by training and a polymath by practice. Over four decades spanning the U.S. Air Force, Army, Department of Defense, and FDA, he has guided some of the most complex federal modernization initiatives on record — including one of the largest network consolidation projects in U.S. government history.</p>
+
+      <p>At the FDA, Dr. Whetsel inherited a portfolio burdened by analytical technical debt and legacy systems with prohibitive overhead. He responded by architecting an agency-wide product strategy that transformed how internal government users identify, develop, and manage technical products — a model that speaks directly to the challenge Novem's customers face: enormous institutional infrastructure, aging data systems, and the pressure to make faster, better-informed decisions.</p>
+
+      <p>His published research on measuring big data variety using Kolmogorov's Complexity Theory — presented at the IEEE International Conference on Computers and Communications — reflects a rare ability to apply theoretical computer science to real-world operational problems. His work on zero-trust AI architecture and AI-human collaboration addresses the critical question facing every institutional operator: not just <em>what</em> the data says, but <em>whether</em> you can trust what it says.</p>
+
+      <h2>Why Dr. Whetsel — and Why Now</h2>
+      <p>Institutional portfolios are generating more data than ever before. But data volume without interpretive architecture is noise. Novem Digital was founded on the conviction that predictive intelligence — when built correctly — changes the nature of risk for property owners, operators, and their insurance partners.</p>
+
+      <p>Dr. Whetsel's appointment accelerates three strategic priorities:</p>
+      <ul>
+        <li><strong style="color:var(--text);">Zero-Trust Data Architecture</strong> — ensuring every signal, every inference, and every risk flag can be validated and audited end to end</li>
+        <li><strong style="color:var(--text);">AI-Human Collaboration Frameworks</strong> — designing systems that amplify operator judgment rather than replace it</li>
+        <li><strong style="color:var(--text);">Complexity-Informed Risk Modeling</strong> — applying systems theory to the interconnected failure modes that define large-scale building portfolios</li>
+      </ul>
+
+      <p>His MIT Sloan Executive Certificates in Management &amp; Leadership, Strategy &amp; Innovation, and Technology &amp; Operations — combined with his Advanced Certificate for Executives in Management, Innovation, and Technology — position him uniquely at the intersection of technical depth and organizational leadership.</p>
+
+      <blockquote>
+        "Dr. Whetsel has spent his career doing exactly what our platform does: finding signal in systems that appear too complex to manage. His background in federal AI, zero-trust architecture, and complexity research is precisely what our customers need from us — and what our next phase of growth demands."
+        <cite>— Novem Digital Executive Leadership</cite>
+      </blockquote>
+
+      <h2>About Dr. Robert Whetsel</h2>
+      <div class="exec-card">
+        <div class="exec-avatar">
+          <img src="../../about/Dr.-Robert-Whetsel.jpg" alt="Dr. Robert Whetsel"/>
+        </div>
+        <div>
+          <div class="exec-name">Dr. Robert Whetsel</div>
+          <div class="exec-title">Chief Technology Officer — Novem Digital</div>
+          <p class="exec-bio">Federal technology executive. Complexity researcher. AI architect. Dr. Whetsel holds advanced degrees in computer science and executive credentials from MIT Sloan School of Management. He served for over 30 years across the U.S. Air Force, Army, Department of Defense, and FDA — guiding enterprise AI modernization, data architecture strategy, and national-scale technology transformation. He is the founder of ACMEWERX and holds a patent in trusted client-centric application architecture.</p>
+        </div>
+      </div>
+
+      <h2>About Novem Digital</h2>
+      <p>Novem Digital delivers predictive intelligence for institutional real estate portfolios. The platform surfaces risk signals before they become operational failures or insurance claims — protecting asset value across commercial real estate, seniors living, data centers, and public venues. Headquartered in Vancouver, Canada. Serving portfolios globally.</p>
+
+      <p style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--faint);">
+        <strong style="color:var(--muted);">Media Contact</strong><br>
+        Novem Digital Communications<br>
+        Vancouver, Canada
+      </p>
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:4rem;padding:2.5rem;background:var(--surf);border:1px solid var(--border2);border-radius:var(--rxl);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;">
+      <div>
+        <div class="h3" style="margin-bottom:.5rem;">See the platform in action.</div>
+        <p style="font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:var(--muted);max-width:40ch;">Discover how Novem's predictive intelligence protects institutional portfolios — before failure becomes a claim.</p>
+      </div>
+      <a href="/get-a-demo/" class="btn btn-p">Get a Demo</a>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

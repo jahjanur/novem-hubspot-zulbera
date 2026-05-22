@@ -1,0 +1,62 @@
+# ── OS / editor ──
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# ── Python cache ──
+__pycache__/
+*.pyc
+*.pyo
+
+# ── Claude Code / skills cache ──
+.sixth/
+
+# ── HubSpot original ZIPs (source material — not needed in repo) ──
+01-Homepage.zip
+02-Platform.zip
+03-Industries.zip
+04-TCRO.zip
+05-Partners.zip
+06-Resources.zip
+07-About.zip
+08-Careers.zip
+09-404.zip
+10-Form-Get-a-Demo.zip
+11-Form-Partner.zip
+12-Form-Careers-Apply.zip
+13-Template-Case-Study.zip
+14-Template-Whitepaper.zip
+15-Template-Blog.zip
+16-Template-Press-Release.zip
+
+# ── Raw source media at the project root (large originals; only the
+#    optimised copies inside preview/ are tracked) ──
+0520Novem.mp4
+HeroVideo.mp4
+IndustrialHeroImage.png
+industry-commercial.png
+industry-datacenter.png
+industry-recreational.png
+industry-senior.png
+predictPillar.png
+provePillar.png
+seePillar.png
+ABoutHeroSEctionIMageNovem.png
+
+# ── Extracted source from the original ZIPs (kept locally for reference) ──
+unzipped/
+
+# ── Node / package managers (in case anyone adds them later) ──
+node_modules/
+.npm/
+.yarn/
+package-lock.json
+
+# ── HubSpot CLI local state ──
+hubspot.config.yml
+*.hubspotrc
+.env
+.env.*

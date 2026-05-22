@@ -1,0 +1,157 @@
+<!--
+  templateType: page
+  label: "Become a Partner (form)"
+  isAvailableForNewContent: true
+  -->
+{% extends "../layouts/base.html" %}
+
+{# Suggested page settings — title: Become a Partner | Novem Digital #}
+{# meta description: Partner with Novem Digital. Join our global ecosystem of insurers, brokers, and infrastructure specialists. #}
+
+{% block extra_head %}
+<style>
+/* ── NAV ── */
+
+    @media(max-width:1023px){}
+
+    /* ── MOBILE DRAWER ── */
+
+    /* ── PAGE LAYOUT ── */
+    .page-wrap{min-height:100dvh;display:grid;grid-template-columns:1fr 1fr;padding-top:64px;}
+    @media(max-width:900px){.page-wrap{grid-template-columns:1fr;}.right-panel{padding:2rem 1.5rem;}}
+
+    /* ── LEFT PANEL ── */
+    .left-panel{position:relative;background:var(--gun);display:flex;flex-direction:column;justify-content:center;padding:clamp(2.5rem,4vw,3.5rem);min-height:calc(100dvh - 64px);overflow:hidden;}
+    .left-panel-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80&auto=format&fit=crop');background-size:cover;background-position:center top;z-index:0;filter:brightness(.55) saturate(.8);}
+    .left-content{position:relative;z-index:1;}
+    .left-content{}
+    .left-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:1.25rem;}
+    .left-eyebrow-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+    50%{opacity:.3}}
+    .left-h1{font-family:var(--font-h);font-size:clamp(1.7rem,1rem + 2.5vw,2.75rem);font-weight:700;line-height:1.1;color:var(--text);margin-bottom:1rem;}
+    .left-h1 span{color:var(--green);}
+    .left-desc{font-size:clamp(.95rem,.9rem + .25vw,1.1rem);color:#E0EEF3;line-height:1.7;max-width:42ch;margin-bottom:2.5rem;}
+    .proof-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2.5rem;}
+    .proof-item{display:flex;align-items:flex-start;gap:.75rem;font-size:clamp(.875rem,.85rem + .15vw,1rem);color:#D8ECF2;}
+    .proof-check{width:18px;height:18px;border-radius:50%;background:color-mix(in srgb,var(--green) 18%,transparent);border:1px solid color-mix(in srgb,var(--green) 40%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:.15rem;}
+    .proof-check svg{color:var(--green);}
+    .social-proof{display:flex;align-items:center;gap:1rem;padding-top:1.5rem;border-top:1px solid color-mix(in srgb,var(--border) 60%,transparent);}
+    .social-proof-text{font-size:.85rem;color:var(--faint);line-height:1.5;}
+    .social-proof-text strong{color:var(--muted);font-weight:600;}
+
+    /* ── PARTNER TIERS ── */
+    .tier-list{display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem;}
+    .tier-item{display:flex;align-items:center;gap:1rem;padding:.875rem 1rem;background:rgba(17,26,31,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid rgba(123,250,181,.22);border-radius:var(--rlg);}
+    .tier-icon{width:32px;height:32px;border-radius:.5rem;background:color-mix(in srgb,var(--green) 12%,transparent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .tier-icon svg{color:var(--green);}
+    .tier-label{font-family:var(--font-h);font-weight:700;font-size:.875rem;color:#E8F4F0;}
+    .tier-sub{font-size:.8rem;color:#A8D4E0;}
+
+    /* ── RIGHT PANEL (FORM) ── */
+    .right-panel{background:var(--bg);padding:clamp(2.5rem,5vw,4rem);display:flex;flex-direction:column;justify-content:center;}
+    .form-header{margin-bottom:2rem;}
+    .form-title{font-family:var(--font-h);font-size:clamp(1.4rem,1.1rem + 1.2vw,2rem);font-weight:700;color:var(--text);line-height:1.15;margin-bottom:.6rem;}
+    .form-subtitle{font-size:clamp(.9rem,.875rem + .15vw,1rem);color:var(--muted);}
+
+    /* ── FORM FIELDS ── */
+    .partner-form{display:flex;flex-direction:column;gap:1.25rem;max-width:520px;}
+    .field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
+    @media(max-width:560px){.field-row{grid-template-columns:1fr;}}
+    .field{display:flex;flex-direction:column;gap:.4rem;}
+    .field label{font-size:.8rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+    .req{color:var(--green);}
+    .field input,.field select,.field textare
+    .field input::placeholder,.field textarea::placeholder{color:var(--faint);}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px color-mix(in srgb,var(--green) 15%,transparent);}
+    .field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238BBCCA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='1 1 6 7 11 1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer;}
+    .field select option{background:var(--gun);}
+    .field textare
+    .field-error{font-size:.78rem;color:#F87171;display:none;}
+    .field.has-error input,.field.has-error select,.field.has-error textare
+    .field.has-error .field-error{display:block;}
+    .btn-submit{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;font-family:var(--font-h);font-weight:700;font-size:1rem;padding:1rem 2rem;border-radius:var(--r);background:var(--green);color:var(--gun);border:none;cursor:pointer;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);}
+    .btn-submit:hover{transform:translateY(-2px);opacity:.9;box-shadow:0 6px 24px rgba(123,250,181,.25);}
+    .btn-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+    .btn-spinner{width:18px;height:18px;border:2.5px solid rgba(30,52,63,.3);border-top-color:var(--gun);border-radius:50%;animation:spin .7s linear infinite;display:none;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ── SUCCESS STATE ── */
+    .form-success{display:none;flex-direction:column;align-items:center;text-align:center;padding:3rem 2rem;gap:1.25rem;max-width:520px;}
+    .form-success.show{display:flex;}
+    .success-icon{width:56px;height:56px;border-radius:50%;background:color-mix(in srgb,var(--green) 15%,transparent);border:1px solid color-mix(in srgb,var(--green) 35%,transparent);display:flex;align-items:center;justify-content:center;}
+    .success-title{font-family:var(--font-h);font-size:clamp(1.5rem,1.2rem + 1.2vw,2.2rem);font-weight:700;color:var(--text);}
+    .success-
+    .success-back{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--green);text-decoration:none;margin-top:.5rem;}
+
+    /* ── FOOTER ── */
+
+    @media(max-width:900px){}
+    @media(max-width:600px){}
+    @media(max-width:480px){}
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="page-wrap">
+
+    <!-- LEFT: VALUE PANEL -->
+    <div class="left-panel">
+      <div class="left-panel-bg" aria-hidden="true"></div>
+      <div class="left-content">
+        <div class="left-eyebrow" id="ctx-eyebrow"><span class="left-eyebrow-dot"></span>Partner Program</div>
+        <h1 class="left-h1" id="ctx-h1">Build the Future of<br>Intelligent <span>Real Estate.</span></h1>
+        <p class="left-desc" id="ctx-desc">We partner with insurers, brokers, technology providers, and infrastructure specialists who share our belief that operational failure is predictable — and preventable.</p>
+
+        <div class="tier-list">
+          <div class="tier-item">
+            <div class="tier-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div><div class="tier-label">Insurance Carrier</div><div class="tier-sub">Global commercial insurers</div></div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+            <div><div class="tier-label">MGA / Broker</div><div class="tier-sub">Specialty lines and risk advisors</div></div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+            <div><div class="tier-label">Hardware &amp; IoT</div><div class="tier-sub">Sensors, devices, and infrastructure</div></div>
+          </div>
+          <div class="tier-item">
+            <div class="tier-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><div class="tier-label">Technology &amp; Platform</div><div class="tier-sub">Software, BMS, and data platforms</div></div>
+          </div>
+        </div>
+
+        <div class="social-proof">
+          <div class="social-proof-text">
+            <strong>Serving institutional portfolios globally</strong><br>
+            Canada · United States · Europe
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM PANEL -->
+    <div class="right-panel">
+      <div class="form-header">
+        <div class="form-title" id="ctx-form-title">Become a Partner</div>
+        <div class="form-subtitle" id="ctx-form-subtitle">Tell us about your organization and we'll be in touch within two business days.</div>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success" id="formSuccess" role="status">
+        <div class="success-icon">
+          <svg width="28" height="28" fill="none" stroke="#7BFAB5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="4 13 10 19 22 7"/></svg>
+        </div>
+        <div class="success-title">Application received.</div>
+        <p class="success-body">Thanks for your interest in partnering with Novem. Our partnerships team will be in touch within two business days.</p>
+        <a href="../" class="success-back">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to home
+        </a>
+      </div>
+
+      <!-- FORM -->
+      {% module "form" path="../modules/hubspot-form", form_choice="partner" %}
+    </div>
+  </div>
+{% endblock %}

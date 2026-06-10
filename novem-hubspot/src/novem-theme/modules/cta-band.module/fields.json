@@ -1,16 +1,16 @@
 [
   { "name": "anchor_id",      "label": "Anchor ID (optional)", "type": "text", "default": "contact" },
   { "name": "headline",       "label": "Headline (HTML allowed, use <em> for accent)", "type": "richtext", "default": "<h2 class=\"cta-h\">See what Novem Digital finds in your portfolio <em>on day one.</em></h2>" },
-  { "name": "body",           "label": "Body",      "type": "text",     "default": "Lower costs. Control insurance. Defend every capital decision with data." },
+  { "name": "body_text",           "label": "Body",      "type": "text",     "default": "Lower costs. Control insurance. Defend every capital decision with data." },
   { "name": "primary_cta",    "label": "Primary CTA",   "type": "group",
     "children": [
-      { "name": "label", "label": "Label", "type": "text", "default": "Get a Demo" },
+      { "name": "cta_label", "label": "Label", "type": "text", "default": "Get a Demo" },
       { "name": "url",   "label": "URL",   "type": "url",  "default": { "type": "EXTERNAL", "href": "/get-a-demo/" } }
     ]
   },
   { "name": "secondary_cta",  "label": "Secondary CTA", "type": "group",
     "children": [
-      { "name": "label", "label": "Label", "type": "text", "default": "Learn More" },
+      { "name": "cta_label", "label": "Label", "type": "text", "default": "Learn More" },
       { "name": "url",   "label": "URL",   "type": "url",  "default": { "type": "EXTERNAL", "href": "/how-it-works/" } }
     ]
   },

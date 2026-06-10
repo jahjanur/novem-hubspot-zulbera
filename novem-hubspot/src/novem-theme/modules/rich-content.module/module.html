@@ -1,0 +1,5 @@
+<section class="sec{% if module.background_style == 'light' %} sec--alt{% elif module.background_style == 'none' %}" style="padding-block:0;{% endif %}"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="{% if module.max_width == 'narrow' %}wm{% else %}w{% endif %}">
+    <div class="rev">{{ module.content }}</div>
+  </div>
+</section>

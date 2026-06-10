@@ -1,0 +1,84 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "background_style",
+    "label": "Background",
+    "type": "choice",
+    "default": "dark",
+    "choices": [
+      [
+        "dark",
+        "Dark"
+      ],
+      [
+        "light",
+        "Light"
+      ]
+    ]
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "By the Numbers"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Proof,"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "not promises."
+  },
+  {
+    "name": "stats",
+    "label": "Stats",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "num",
+        "label": "Number",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "lbl",
+        "label": "Label",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "num": "7.2M",
+        "lbl": "Buildings analyzed"
+      },
+      {
+        "num": "20yr",
+        "lbl": "Of normalized loss data"
+      },
+      {
+        "num": "30%",
+        "lbl": "Better capital IRR"
+      },
+      {
+        "num": "$5M+",
+        "lbl": "Loss mitigation per portfolio"
+      }
+    ]
+  }
+]

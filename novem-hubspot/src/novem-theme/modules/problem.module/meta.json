@@ -1,0 +1,8 @@
+{
+  "label": "Problem (3 cards)",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon": "@hubspot/banner",
+  "is_available_for_new_content": true
+}

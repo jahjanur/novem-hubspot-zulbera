@@ -1,0 +1,73 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "partners"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Trusted Partners"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Risk reduction grounded in real loss experience, not assumptions."
+  },
+  {
+    "name": "sub",
+    "label": "Sub-headline",
+    "type": "text",
+    "default": "Built with global leaders in infrastructure, insurance, and risk \u2014 a foundation that cannot be replicated."
+  },
+  {
+    "name": "partners",
+    "label": "Partners",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "role",
+        "label": "Role label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "company_name",
+        "label": "Partner name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "text",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "role": "Strategic Infrastructure Partner",
+        "company_name": "Global Digital Energy & Building Services Company",
+        "text": "A global leader in building infrastructure and energy management operating in over 100 countries \u2014 embedding predictive intelligence directly into building systems and services for institutional real estate portfolios."
+      },
+      {
+        "role": "Strategic Insurance Data Partner",
+        "company_name": "Global Commercial Insurance Company",
+        "text": "One of the world's largest commercial insurers \u2014 contributing 20 years of normalized institutional claims data that transforms building signals into financially defensible risk scores."
+      },
+      {
+        "role": "Strategic Broker Partner",
+        "company_name": "National Insurance Brokerage",
+        "text": "A leading Canadian brokerage using Novem data to engineer risk, strengthen submissions, and improve outcomes for institutional real estate clients at renewal."
+      }
+    ]
+  }
+]

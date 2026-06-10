@@ -1,0 +1,52 @@
+<section class="sec sec--alt" id="{{ module.anchor_id }}">
+  <div class="wm">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center;" class="rev">
+      <div>
+        <p class="eye"><span class="eye-dot"></span>{{ module.eyebrow }}</p>
+        <h2 class="h2" style="margin-bottom:1rem;">{{ module.headline }} <span class="accent">{{ module.headline_accent }}</span></h2>
+        <p class="lg" style="max-width:44ch;margin-bottom:1.75rem;">{{ module.sub }}</p>
+        <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a href="{{ module.btn_primary_url.href }}" class="btn btn-p">{{ module.btn_primary_label }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="{{ module.btn_secondary_url.href }}" class="btn btn-g">{{ module.btn_secondary_label }}</a>
+        </div>
+      </div>
+      <div class="rev d1">
+        <div class="tcro-diagram-wrap">
+          <div class="tcro-diagram-label">{{ module.diagram_label }}</div>
+          <svg viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" aria-label="TCRO diagram showing 7 cost categories">
+            <circle cx="210" cy="210" r="185" stroke="var(--border)" stroke-width="1" stroke-dasharray="3 6" opacity=".4"/>
+            <circle cx="210" cy="210" r="145" stroke="var(--border)" stroke-width="1" opacity=".6"/>
+            <circle cx="210" cy="210" r="58" fill="var(--surf2)" stroke="var(--green)" stroke-width="2.5"/>
+            <text x="210" y="204" text-anchor="middle" fill="var(--green)" font-family="Titillium Web,sans-serif" font-size="13" font-weight="700">TCRO</text>
+            <text x="210" y="220" text-anchor="middle" fill="var(--muted)" font-family="DM Sans,sans-serif" font-size="11">Total Cost of</text>
+            <text x="210" y="232" text-anchor="middle" fill="var(--muted)" font-family="DM Sans,sans-serif" font-size="11">Risk Ownership</text>
+            <line x1="210" y1="152" x2="210" y2="68" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="320" y2="118" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="348" y2="248" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="272" y2="348" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="268" x2="148" y2="348" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="72" y2="248" stroke="var(--border)" stroke-width="1"/>
+            <line x1="210" y1="152" x2="100" y2="118" stroke="var(--border)" stroke-width="1"/>
+            <circle cx="210" cy="68" r="5" fill="var(--green)"/>
+            <circle cx="320" cy="118" r="5" fill="var(--blue)"/>
+            <circle cx="348" cy="248" r="5" fill="var(--green)"/>
+            <circle cx="272" cy="348" r="5" fill="var(--blue)"/>
+            <circle cx="148" cy="348" r="5" fill="var(--green)"/>
+            <circle cx="72" cy="248" r="5" fill="var(--blue)"/>
+            <circle cx="100" cy="118" r="5" fill="var(--green)"/>
+            <text x="210" y="48" text-anchor="middle" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Losses &amp; Claims</text>
+            <text x="334" y="108" text-anchor="start" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Downtime</text>
+            <text x="362" y="252" text-anchor="start" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Premiums</text>
+            <text x="284" y="352" text-anchor="start" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Maintenance</text>
+            <text x="134" y="394" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Compliance</text>
+            <text x="56" y="252" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Overhead</text>
+            <text x="86" y="108" text-anchor="end" fill="var(--text)" font-family="DM Sans,sans-serif" font-size="13" font-weight="600">Governance</text>
+          </svg>
+          <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);">
+            <span style="font-size:1rem;color:var(--faint);">{{ module.diagram_source }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,18 +1,9 @@
 (function () {
   const root = document.documentElement;
 
-  const themeBtn = document.querySelector('[data-theme-toggle]');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('novem-theme', next); } catch (e) {}
-    });
-  }
-  try {
-    const saved = localStorage.getItem('novem-theme');
-    if (saved) root.setAttribute('data-theme', saved);
-  } catch (e) {}
+  /* Theme toggle is handled by js/modern.js (event delegation, capture phase).
+     Don't attach a second handler here — it would fire after modern.js and
+     toggle the theme back, making the button appear broken. */
 
   const nav = document.getElementById('mainNav');
   if (nav) {

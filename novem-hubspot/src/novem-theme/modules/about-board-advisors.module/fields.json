@@ -1,0 +1,94 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "board"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Board & Advisors"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Guided by leaders who've"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "done it before."
+  },
+  {
+    "name": "intro",
+    "label": "Intro paragraph",
+    "type": "richtext",
+    "default": "<p class='lg'>Institutional CRE, insurance markets, cleantech, and energy \u2014 the experience that turns strategy into outcomes.</p>"
+  },
+  {
+    "name": "people",
+    "label": "Advisors",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "full_name",
+        "label": "Full name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "role",
+        "label": "Role",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "initials",
+        "label": "Initials (for monogram)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "bio",
+        "label": "Short bio",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "full_name": "Dermot Sweeney",
+        "role": "Board Member & Investor",
+        "initials": "DS",
+        "bio": "<p>Founder of a major Canadian commercial real estate architecture firm. Experienced CRE investor with multiple successful exits and deep institutional portfolio insight.</p>"
+      },
+      {
+        "full_name": "Marty Reed",
+        "role": "Board Advisor",
+        "initials": "MR",
+        "bio": "<p>Partner at Evok Innovations. Bay Area executive and cleantech investor with multiple successful exits. Guides deep-tech ventures from early stage through scale.</p>"
+      },
+      {
+        "full_name": "H\u00e9l\u00e8ne Stanway",
+        "role": "Board Advisor",
+        "initials": "HS",
+        "bio": "<p>Senior leader at AXA XL driving innovation across Lloyd's Property business. Provides insurance-sector, underwriting, and emerging-technology perspective.</p>"
+      },
+      {
+        "full_name": "Perry Undseth",
+        "role": "Strategic Advisor",
+        "initials": "PU",
+        "bio": "<p>Co-founder of One Exchange, a leading North American energy and carbon trading platform. Supports Novem Digital's ESG and environmental market strategy.</p>"
+      }
+    ]
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "team"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Executive Team"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Led by operators who've"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "built at scale."
+  },
+  {
+    "name": "intro",
+    "label": "Intro paragraph",
+    "type": "richtext",
+    "default": "<p class='lg'>Decades of experience in building performance, financial governance, actuarial science, enterprise AI, and revenue growth \u2014 united by one mission.</p>"
+  },
+  {
+    "name": "people",
+    "label": "Executives",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "default": 6
+    },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Photo",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "full_name",
+        "label": "Full name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "role",
+        "label": "Role",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "bio",
+        "label": "Short bio",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/Clint-Undseth.jpg",
+          "alt": "Clint Undseth"
+        },
+        "full_name": "Clint Undseth",
+        "role": "Chief Executive Officer",
+        "bio": "<p>Founder. Previously scaled Centre for Building Performance to nearly $870M in revenue. Deep expertise in building performance, digital transformation, and institutional partnerships.</p>"
+      },
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/David-Crawford.jpg",
+          "alt": "David Crawford"
+        },
+        "full_name": "David Crawford",
+        "role": "Chief Financial Officer",
+        "bio": "<p>Former VP Finance at Pacific National Exhibition, overseeing a $70M annual budget. Brings financial governance, capital planning, and board-level reporting discipline.</p>"
+      },
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/NIcole-Cheffey.jpg",
+          "alt": "Nicole Cheffey"
+        },
+        "full_name": "Nicole Cheffey",
+        "role": "Chief Marketing Officer",
+        "bio": "<p>20+ years scaling B2B SaaS from Series A to IPO across BuildDirect, Elastic Path, Absolute Software, and gofor. Leads AI-enabled marketing operations and partner-led growth.</p>"
+      },
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/Gord-Jardin.jpg",
+          "alt": "Gord Jardin"
+        },
+        "full_name": "Gord Jardin",
+        "role": "Chief Risk & Data Officer",
+        "bio": "<p>25+ years in risk modeling, actuarial science, and data strategy. Former Chief Actuarial Officer across reinsurance and capital markets insurance. Architect of Novem's predictive risk layer.</p>"
+      },
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/Dr.-Robert-Whetsel.jpg",
+          "alt": "Dr. Robert Whetsel"
+        },
+        "full_name": "Dr. Robert Whetsel",
+        "role": "Chief Technology Officer",
+        "bio": "<p>Federal AI architect and MIT executive alumnus. Former FDA Associate Director for Data Architecture. 30+ years of enterprise transformation. Founder of ACMEWERX.</p>"
+      },
+      {
+        "photo": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/about/Grant-Jay.jpg",
+          "alt": "Grant R. Jay"
+        },
+        "full_name": "Grant R. Jay",
+        "role": "Chief Revenue Officer",
+        "bio": "<p>15+ years in GTM and business development across deep tech, critical infrastructure, and smart buildings. Bell Presidents Club (169%), Motorola Leadership Circle.</p>"
+      }
+    ]
+  }
+]

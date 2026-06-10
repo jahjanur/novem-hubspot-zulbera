@@ -1,38 +1,24 @@
-<!--
-  partial: header.html
-  Top navigation + mobile drawer.
-  Menu items + Login URL + Demo CTA URL come from theme fields (navigation group).
--->
-{% set logo = theme.brand.logo %}
-{% set demo_url = theme.navigation.demo_url.href|default("/get-a-demo/", true) %}
-{% set login_url = theme.navigation.login_url.href|default("#", true) %}
+{% set company_name = theme.brand.company_name|default('Novem Digital', true) %}
+{% set logo_src     = theme.brand.logo.src|default('https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/logo.png', true) %}
+{% set demo_url     = theme.navigation.demo_url.href|default('/get-a-demo/', true) %}
+{% set login_url    = theme.navigation.login_url.href|default('#', true) %}
 
 <nav class="nav" id="mainNav" aria-label="Main navigation">
   <div class="w">
     <div class="nav-inner">
 
-      <a href="/" class="logo" aria-label="{{ theme.brand.company_name }} home">
-        <img src="{{ logo.src }}" alt="" style="height:26px;width:auto;">
+      <a href="/" class="logo" aria-label="{{ company_name }} home">
+        <img src="{{ logo_src }}" alt="" style="height:26px;width:auto;">
         <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
       </a>
 
       <div class="nav-links" id="desktopNav">
-        {% set menu_items = menu(theme.navigation.items.name|default("Header Menu"), 'flat') %}
-        {% if menu_items|length > 0 %}
-          {% for item in menu_items %}
-            <div class="nav-item">
-              <a href="{{ item.url }}">{{ item.label }}</a>
-            </div>
-          {% endfor %}
-        {% else %}
-          <div class="nav-item"><a href="/">Home</a></div>
-          <div class="nav-item"><a href="/how-it-works/">Platform</a></div>
-          <div class="nav-item"><a href="/industries/">Industries</a></div>
-          <div class="nav-item"><a href="/tcro/">TCRO</a></div>
-          <div class="nav-item"><a href="/partners/">Partners</a></div>
-          <div class="nav-item"><a href="/resources/">Resources</a></div>
-          <div class="nav-item"><a href="/about/">About</a></div>
-        {% endif %}
+        <div class="nav-item"><a href="/how-it-works/">Platform</a></div>
+        <div class="nav-item"><a href="/industries/">Industries</a></div>
+        <div class="nav-item nav-item--tcro"><a href="/tcro/">TCRO</a></div>
+        <div class="nav-item"><a href="/partners/">Partners</a></div>
+        <div class="nav-item"><a href="/resources/">Resources</a></div>
+        <div class="nav-item"><a href="/about/">About</a></div>
       </div>
 
       <div class="nav-right">
@@ -53,8 +39,8 @@
 <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
   <div class="mobile-menu-header">
-    <a href="/" class="logo" aria-label="{{ theme.brand.company_name }} home">
-      <img src="{{ logo.src }}" alt="" style="height:24px;width:auto;flex-shrink:0;">
+    <a href="/" class="logo" aria-label="{{ company_name }} home">
+      <img src="{{ logo_src }}" alt="" style="height:24px;width:auto;flex-shrink:0;">
       <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
     </a>
     <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">
@@ -63,22 +49,12 @@
   </div>
 
   <div class="mobile-nav-list">
-    {% set menu_items = menu(theme.navigation.items.name|default("Header Menu"), 'flat') %}
-    {% if menu_items|length > 0 %}
-      {% for item in menu_items %}
-        <div class="mobile-nav-item">
-          <a href="{{ item.url }}" class="mobile-nav-trigger" data-mobile-link>{{ item.label }}</a>
-        </div>
-      {% endfor %}
-    {% else %}
-      <div class="mobile-nav-item"><a href="/" class="mobile-nav-trigger" data-mobile-link>Home</a></div>
-      <div class="mobile-nav-item"><a href="/how-it-works/" class="mobile-nav-trigger" data-mobile-link>Platform</a></div>
-      <div class="mobile-nav-item"><a href="/industries/" class="mobile-nav-trigger" data-mobile-link>Industries</a></div>
-      <div class="mobile-nav-item"><a href="/tcro/" class="mobile-nav-trigger" data-mobile-link>TCRO</a></div>
-      <div class="mobile-nav-item"><a href="/partners/" class="mobile-nav-trigger" data-mobile-link>Partners</a></div>
-      <div class="mobile-nav-item"><a href="/resources/" class="mobile-nav-trigger" data-mobile-link>Resources</a></div>
-      <div class="mobile-nav-item"><a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a></div>
-    {% endif %}
+    <div class="mobile-nav-item"><a href="/how-it-works/" class="mobile-nav-trigger" data-mobile-link>Platform</a></div>
+    <div class="mobile-nav-item"><a href="/industries/" class="mobile-nav-trigger" data-mobile-link>Industries</a></div>
+    <div class="mobile-nav-item nav-item--tcro"><a href="/tcro/" class="mobile-nav-trigger mobile-nav-trigger--tcro" data-mobile-link style="color:#7BFAB5;">TCRO</a></div>
+    <div class="mobile-nav-item"><a href="/partners/" class="mobile-nav-trigger" data-mobile-link>Partners</a></div>
+    <div class="mobile-nav-item"><a href="/resources/" class="mobile-nav-trigger" data-mobile-link>Resources</a></div>
+    <div class="mobile-nav-item"><a href="/about/" class="mobile-nav-trigger" data-mobile-link>About</a></div>
   </div>
 
   <div class="mobile-bottom">
@@ -86,3 +62,44 @@
     <a href="{{ demo_url }}" class="mobile-demo" data-mobile-link>Get a Demo</a>
   </div>
 </div>
+
+<script>
+/* Desktop dropdown + mobile submenu handlers (idempotent — re-runs are safe). */
+(function () {
+  if (window.__novemNavBound) return; window.__novemNavBound = true;
+
+  /* Desktop: open dropdown on hover/focus, close on mouse leave + outside click */
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(function (item) {
+    var trigger = item.querySelector('a');
+    var open = function () { item.classList.add('open'); };
+    var close = function () { item.classList.remove('open'); };
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+    if (trigger) {
+      trigger.addEventListener('focus', open);
+      trigger.addEventListener('click', function (e) {
+        /* Let the link navigate when clicked, but on touch devices we want a tap to open dropdown first */
+        if (window.matchMedia('(hover: none)').matches && !item.classList.contains('open')) {
+          e.preventDefault();
+          open();
+        }
+      });
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.nav-item.has-dropdown')) {
+      document.querySelectorAll('.nav-item.has-dropdown.open').forEach(function (i) { i.classList.remove('open'); });
+    }
+  });
+
+  /* Mobile: tap to expand a submenu */
+  document.querySelectorAll('.mobile-nav-item.has-submenu > .mobile-nav-trigger').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var parent = btn.parentElement;
+      var willOpen = !parent.classList.contains('open');
+      parent.classList.toggle('open');
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+})();
+</script>

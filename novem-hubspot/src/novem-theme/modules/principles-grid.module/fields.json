@@ -1,0 +1,100 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "background_style",
+    "label": "Background",
+    "type": "choice",
+    "default": "dark",
+    "choices": [
+      [
+        "dark",
+        "Dark"
+      ],
+      [
+        "light",
+        "Light"
+      ]
+    ]
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "What We Stand For"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Three principles."
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "One platform."
+  },
+  {
+    "name": "columns",
+    "label": "Columns",
+    "type": "choice",
+    "default": "3",
+    "choices": [
+      [
+        "2",
+        "2 columns"
+      ],
+      [
+        "3",
+        "3 columns"
+      ],
+      [
+        "4",
+        "4 columns"
+      ]
+    ]
+  },
+  {
+    "name": "items",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "text",
+        "label": "Body",
+        "type": "richtext",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "title": "Predictive over reactive",
+        "text": "<p class=\"sm\">We build for what comes next, not what already happened.</p>"
+      },
+      {
+        "title": "Defensible over directional",
+        "text": "<p class=\"sm\">Every output we produce is grounded in audit-ready data.</p>"
+      },
+      {
+        "title": "Operator-led over consultant-led",
+        "text": "<p class=\"sm\">Built by operators who have run the buildings, signed the deals, defended the numbers.</p>"
+      }
+    ]
+  }
+]

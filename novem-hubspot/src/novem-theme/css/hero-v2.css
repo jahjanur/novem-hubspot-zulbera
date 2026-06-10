@@ -192,9 +192,69 @@
 }
 @media (max-width: 768px) { .hero-v2-scrollcue { display: none; } }
 
-/* Reduced motion */
+/* Mobile: shift video framing leftward so the skyline/foreground is
+   better composed behind the heading + CTAs on the left side of the
+   viewport. */
+@media (max-width: 768px) {
+  .hero-v2-video { object-position: 75% 55% !important; }
+}
+
+/* Reduced motion — keep scroll-scrub (it's controlled video playback, not a
+   flashy animation). Only disable the decorative accent shimmer. */
 @media (prefers-reduced-motion: reduce) {
-  .hero-v2-track { height: 100vh; }
-  .hero-v2-sticky { position: relative; }
   .hero-v2-accent, .hero-v2-scrollcue, .hero-v2-tag-dot { animation: none; }
+}
+
+/* ─── Cinematic feathered blur — soft top & bottom edges ───
+   Taller overlays (~28vh) + smooth easing mask + slightly stronger
+   blur for that movie-poster look. The mask uses 5 stops to follow
+   a perceptually smooth ease-out curve rather than a sharp linear
+   fall-off, so there's never a visible "band" line. */
+.hero-v2-sticky .blur-overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 28vh;
+  z-index: 2;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(35px) saturate(1.4);
+          backdrop-filter: blur(35px) saturate(1.4);
+}
+.hero-v2-sticky .blur-overlay-top {
+  top: 0;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1)    0%,
+    rgba(0,0,0,.92) 25%,
+    rgba(0,0,0,.68) 55%,
+    rgba(0,0,0,.32) 80%,
+    rgba(0,0,0,0)  100%
+  );
+          mask-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0,1)    0%,
+    rgba(0,0,0,.92) 25%,
+    rgba(0,0,0,.68) 55%,
+    rgba(0,0,0,.32) 80%,
+    rgba(0,0,0,0)  100%
+  );
+}
+.hero-v2-sticky .blur-overlay-bottom {
+  bottom: 0;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0,0,0,1)    0%,
+    rgba(0,0,0,.92) 25%,
+    rgba(0,0,0,.68) 55%,
+    rgba(0,0,0,.32) 80%,
+    rgba(0,0,0,0)  100%
+  );
+          mask-image: linear-gradient(
+    to top,
+    rgba(0,0,0,1)    0%,
+    rgba(0,0,0,.92) 25%,
+    rgba(0,0,0,.68) 55%,
+    rgba(0,0,0,.32) 80%,
+    rgba(0,0,0,0)  100%
+  );
 }

@@ -655,7 +655,7 @@ nav.nav .tbtn:hover { color: var(--t-100) !important; background: rgba(255,255,2
   margin-right: .2rem;
 }
 .mk-tile--healthy .mk-tile-status { color: var(--acc-g); }
-.mk-tile--watch   .mk-tile-status { color: #F5C842; }
+.mk-tile--watch   .mk-tile-status { color: #60BCD6; }
 .mk-tile--risk    .mk-tile-status { color: #FF8B6E; }
 .mk-tile-bar {
   position: absolute;
@@ -665,7 +665,7 @@ nav.nav .tbtn:hover { color: var(--t-100) !important; background: rgba(255,255,2
   opacity: .6;
 }
 .mk-tile--healthy .mk-tile-bar { color: var(--acc-g); width: 12%; }
-.mk-tile--watch   .mk-tile-bar { color: #F5C842; width: 34%; }
+.mk-tile--watch   .mk-tile-bar { color: #60BCD6; width: 34%; }
 .mk-tile--risk    .mk-tile-bar { color: #FF8B6E; width: 87%; }
 
 /* Chart row */
@@ -722,22 +722,22 @@ nav.nav .tbtn:hover { color: var(--t-100) !important; background: rgba(255,255,2
   align-items: center;
   gap: .6rem;
   padding: .7rem .9rem;
-  background: color-mix(in srgb, #F5C842 8%, transparent);
-  border: 1px solid color-mix(in srgb, #F5C842 22%, transparent);
+  background: color-mix(in srgb, #60BCD6 8%, transparent);
+  border: 1px solid color-mix(in srgb, #60BCD6 22%, transparent);
   border-radius: var(--rd-sm);
 }
 .mk-alert-icon {
   width: 24px; height: 24px;
   flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
-  color: #F5C842;
+  color: #60BCD6;
 }
 .mk-alert-text {
   font-size: .75rem;
   color: var(--text);
   line-height: 1.4;
 }
-.mk-alert-text strong { color: #F5C842; font-family: var(--f-display); }
+.mk-alert-text strong { color: #60BCD6; font-family: var(--f-display); }
 
 /* Floating chips around the mockup */
 .hero-mockup-wrap {
@@ -1321,8 +1321,8 @@ form button[type="submit"]:hover {
    REVEAL ANIMATIONS — refined
    ════════════════════════════════════════════════════════ */
 .rev {
-  opacity: 0;
-  transform: translate3d(0, 28px, 0);
+  opacity: 1;
+  transform: none;
   transition: opacity .8s var(--ez), transform .8s var(--ez);
 }
 .rev.in { opacity: 1; transform: none; }
@@ -1348,4 +1348,259 @@ form button[type="submit"]:hover {
 @media print {
   body::before, body::after { display: none; }
   .nav, .sticky-cta, .scroll-progress, .marquee-strip, .hero-live-widget { display: none !important; }
+}
+
+/* ════════════════════════════════════════════════════════
+   DROPDOWN NAV MENUS — Platform & Resources
+   ════════════════════════════════════════════════════════ */
+nav.nav .nav-item.has-dropdown { position: relative; }
+nav.nav .nav-item.has-dropdown > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .3rem !important;
+}
+nav.nav .nav-caret {
+  width: 12px; height: 12px;
+  transition: transform .2s ease;
+  flex-shrink: 0;
+}
+nav.nav .nav-item.has-dropdown.open .nav-caret { transform: rotate(180deg); }
+
+nav.nav .nav-dropdown {
+  position: absolute !important;
+  top: calc(100% + .35rem) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(6px) !important;
+  background: rgba(13, 26, 38, 0.96) !important;
+  backdrop-filter: blur(20px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(1.4) !important;
+  border: 1px solid var(--br-mid) !important;
+  border-radius: 16px !important;
+  padding: .65rem !important;
+  min-width: 280px !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .2s ease, transform .2s ease !important;
+  box-shadow: 0 16px 48px -16px rgba(0,0,0,.6) !important;
+  z-index: 210 !important;
+}
+nav.nav .nav-item.has-dropdown.open .nav-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+[data-theme="light"] nav.nav .nav-dropdown {
+  background: rgba(255,255,255,.98) !important;
+  border-color: rgba(30,52,63,.12) !important;
+  box-shadow: 0 16px 48px -16px rgba(30,52,63,.25) !important;
+}
+
+nav.nav .nav-dropdown .dd-link {
+  display: block !important;
+  padding: .65rem .75rem !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: background .2s ease !important;
+}
+nav.nav .nav-dropdown .dd-link:hover {
+  background: rgba(255,255,255,.06) !important;
+}
+[data-theme="light"] nav.nav .nav-dropdown .dd-link:hover {
+  background: rgba(30,52,63,.05) !important;
+}
+
+nav.nav .nav-dropdown .dd-link-title {
+  font-family: var(--f-display, 'Titillium Web', sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: .9rem !important;
+  color: var(--text) !important;
+  letter-spacing: .01em !important;
+  text-decoration: none !important;
+  display: block !important;
+  margin-bottom: .15rem !important;
+  line-height: 1.3 !important;
+}
+nav.nav .nav-dropdown .dd-link-desc {
+  font-size: .78rem !important;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  display: block !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+}
+
+/* ════════════════════════════════════════════════════════
+   TCRO nav item — ALWAYS green, in both dark + light mode
+   Higher specificity than the floating-pill nav overrides
+   ════════════════════════════════════════════════════════ */
+nav.nav .nav-item.nav-item--tcro > a,
+nav.nav .nav-links .nav-item.nav-item--tcro > a {
+  color: #7BFAB5 !important;
+  font-weight: 700 !important;
+}
+nav.nav .nav-item.nav-item--tcro > a:hover {
+  color: #7BFAB5 !important;
+  background: color-mix(in srgb, #7BFAB5 14%, transparent) !important;
+}
+[data-theme="light"] nav.nav .nav-item.nav-item--tcro > a,
+[data-theme="light"] nav.nav .nav-links .nav-item.nav-item--tcro > a {
+  color: #1E9B4F !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] nav.nav .nav-item.nav-item--tcro > a:hover {
+  background: color-mix(in srgb, #1E9B4F 12%, transparent) !important;
+}
+/* Mobile TCRO item too */
+.mobile-nav-item .mobile-nav-trigger--tcro,
+.mobile-nav-item a.mobile-nav-trigger--tcro {
+  color: #7BFAB5 !important;
+  font-weight: 700 !important;
+}
+[data-theme="light"] .mobile-nav-item .mobile-nav-trigger--tcro {
+  color: #1E9B4F !important;
+}
+
+
+/* ════════════════════════════════════════════════════════
+   MOBILE NAV — strictly scoped (only inside the .mobile-menu drawer)
+   ════════════════════════════════════════════════════════ */
+@media (max-width: 1023px) {
+  nav.nav .nav-links { display: none !important; }
+  nav.nav .nav-right .nav-login,
+  nav.nav .nav-right .nav-demo { display: none !important; }
+  nav.nav .nav-hamburger { display: flex !important; }
+}
+@media (min-width: 1024px) {
+  nav.nav .nav-hamburger { display: none !important; }
+  /* Hard-hide the mobile drawer at desktop widths so it never bleeds into the page */
+  .mobile-menu, .mobile-overlay { display: none !important; }
+}
+
+/* Inside the drawer ONLY — full-width Get-a-Demo button */
+.mobile-menu .mobile-bottom {
+  padding: 1.25rem 1.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: .75rem !important;
+}
+.mobile-menu .mobile-bottom .mobile-demo {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  padding: 1rem 1.5rem !important;
+  font-family: var(--f-display, "Titillium Web", sans-serif) !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  background: #7BFAB5 !important;
+  color: #1E343F !important;
+  -webkit-text-fill-color: #1E343F !important;
+  border-radius: 9999px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+}
+.mobile-menu .mobile-bottom .mobile-login {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  padding: .75rem !important;
+  text-decoration: none !important;
+}
+
+/* ════════════════════════════════════════════════════════
+   MOBILE DRAWER — bulletproof default-hidden
+   The drawer MUST never render inline on the page. It only appears
+   when JavaScript adds the .open class.
+   ════════════════════════════════════════════════════════ */
+.mobile-menu,
+div.mobile-menu,
+#mobileMenu {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  z-index: 301 !important;
+  width: min(88vw, 380px) !important;
+  background: var(--gun, #1E343F) !important;
+  transform: translateX(110%) !important;
+  transition: transform .35s cubic-bezier(.16,1,.3,1) !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow-y: auto !important;
+}
+.mobile-menu.open,
+div.mobile-menu.open,
+#mobileMenu.open {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.mobile-overlay,
+div.mobile-overlay,
+#mobileOverlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 300 !important;
+  background: rgba(0,0,0,.55) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity .3s ease !important;
+}
+.mobile-overlay.open,
+div.mobile-overlay.open,
+#mobileOverlay.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+
+
+/* ════════════════════════════════════════════════════════
+   MOBILE DRAWER — DISPLAY:NONE by default (HARD HIDE)
+   Overrides the prior visibility/transform-based hide.
+   Only visible when .open is added by JS (hamburger click).
+   ════════════════════════════════════════════════════════ */
+.mobile-menu,
+div.mobile-menu,
+#mobileMenu,
+.mobile-overlay,
+div.mobile-overlay,
+#mobileOverlay {
+  display: none !important;
+}
+
+.mobile-menu.open,
+div.mobile-menu.open,
+#mobileMenu.open {
+  display: flex !important;
+  flex-direction: column !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;
+  z-index: 301 !important;
+  width: min(88vw, 380px) !important;
+  background: var(--gun, #1E343F) !important;
+  overflow-y: auto !important;
+  transform: translateX(0) !important;
+}
+.mobile-overlay.open,
+div.mobile-overlay.open,
+#mobileOverlay.open {
+  display: block !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 300 !important;
+  background: rgba(0,0,0,.55) !important;
 }

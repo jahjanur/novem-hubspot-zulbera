@@ -1,0 +1,19 @@
+<section class="sec" id="{{ module.anchor_id }}">
+  <div class="wm">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:.25rem;">
+      <p class="eye" style="justify-content:center;">{{ module.eyebrow }}</p>
+      <h2 class="h2" style="margin-bottom:1rem;">{{ module.headline }}</h2>
+      <p class="lg">{{ module.sub }}</p>
+    </div>
+    <div class="leads-g">
+      {% for c in module.cards %}
+        <div class="lead-card rev{% if not loop.first %} d{{ loop.index0 }}{% endif %}">
+          <div class="lead-chip">{{ c.chip }}</div>
+          <div class="lead-card-title">{{ c.title }}</div>
+          <div class="lead-card-body">{{ c.text }}</div>
+          <a href="{{ c.btn_url.href }}" class="btn {% if c.btn_style == 'primary' %}btn-p{% else %}btn-g{% endif %}" style="margin-top:.25rem;">{{ c.btn_label }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

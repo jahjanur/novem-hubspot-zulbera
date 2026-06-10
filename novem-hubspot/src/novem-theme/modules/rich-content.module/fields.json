@@ -1,0 +1,50 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "background_style",
+    "label": "Background",
+    "type": "choice",
+    "default": "dark",
+    "choices": [
+      [
+        "dark",
+        "Dark"
+      ],
+      [
+        "light",
+        "Light"
+      ],
+      [
+        "none",
+        "None (transparent)"
+      ]
+    ]
+  },
+  {
+    "name": "max_width",
+    "label": "Max width",
+    "type": "choice",
+    "default": "wide",
+    "choices": [
+      [
+        "wide",
+        "Wide (1200px)"
+      ],
+      [
+        "narrow",
+        "Narrow (960px)"
+      ]
+    ]
+  },
+  {
+    "name": "content",
+    "label": "Content (rich text + HTML)",
+    "type": "richtext",
+    "default": "<p class='lg'>Edit this rich content block. You can paste HTML, headings, lists, images.</p>"
+  }
+]

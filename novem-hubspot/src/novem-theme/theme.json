@@ -1,12 +1,16 @@
 {
-  "label": "Novem Digital",
+  "label": "Novem Digital \u2014 Zulbera v19",
   "preview_path": "./templates/home.html",
   "screenshot_path": "./images/theme-screenshot.png",
   "enable_domain_stylesheets": false,
   "version": "1.0.0",
   "responsive_breakpoints": [
-    { "name": "mobile", "mediaQuery": "@media (max-width: 767px)" },
-    { "name": "tablet", "mediaQuery": "@media (max-width: 1024px)" },
-    { "name": "desktop", "mediaQuery": "@media (min-width: 1025px)" }
+    {
+      "name": "mobile",
+      "mediaQuery": "@media (max-width: 767px)",
+      "previewWidth": {
+        "value": 400
+      }
+    }
   ]
 }

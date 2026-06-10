@@ -1,0 +1,18 @@
+<section class="sec sec--alt" id="{{ module.anchor_id }}">
+  <div class="wm">
+    <div class="part-hdr rev">
+      <p class="eye" style="justify-content:center;">{{ module.eyebrow }}</p>
+      <h2 class="h2" style="margin-bottom:1rem;">{{ module.headline }}</h2>
+      <p class="lg">{{ module.sub }}</p>
+    </div>
+    <div class="part-g">
+      {% for p in module.partners %}
+        <div class="part rev{% if not loop.first %} d{{ loop.index0 }}{% endif %}">
+          <div class="part-role">{{ p.role }}</div>
+          <div class="part-name">{{ p.company_name }}</div>
+          <p class="sm">{{ p.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

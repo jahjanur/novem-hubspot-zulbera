@@ -458,3 +458,79 @@
   .oc-content { min-height: auto; }
   .oc-progress { display: none; }
 }
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE REFINEMENT — under 700px / true phone widths
+   - Drop sticky-scroll storytelling entirely (it requires a tall
+     pin + viewport-paired visual that has nowhere to live on a
+     phone). Render the three states as a vertical card stack and
+     drop the heavy visualization frame.
+   - Tighten typography so headlines/numbers don't dominate.
+   ════════════════════════════════════════════════════════════ */
+@media (max-width: 700px) {
+  .sec--outcomes-v2 {
+    height: auto !important;
+    padding-block: 3rem 4rem !important;
+  }
+  .sec--outcomes-v2 .oc-track { height: auto; }
+  .sec--outcomes-v2 .oc-pin {
+    position: relative; height: auto;
+    align-items: flex-start;
+    padding-block: 0;
+  }
+  /* Hide ambient orbs + the visualization frame entirely on mobile */
+  .sec--outcomes-v2 .oc-bg-orb { display: none; }
+  .oc-visual { display: none; }
+
+  /* Header */
+  .oc-hdr { margin: 0 0 2rem; }
+  .oc-hdr .h2 {
+    font-size: clamp(1.85rem, 1.1rem + 4vw, 2.4rem) !important;
+    line-height: 1.1 !important;
+  }
+  .oc-hdr .eye { margin-bottom: .85rem !important; }
+
+  /* Single column, three text states stacked as cards */
+  .oc-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .oc-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-height: auto;
+  }
+
+  /* Each text state becomes its own card */
+  .oc-state {
+    padding: 1.5rem 1.25rem 1.6rem;
+    background: color-mix(in srgb, var(--surf) 60%, transparent);
+    border: 1px solid color-mix(in srgb, var(--green) 14%, var(--border));
+    border-radius: 18px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.04);
+  }
+
+  /* Step header — number + pill on same row, smaller scale */
+  .oc-step { gap: .9rem; margin-bottom: .9rem; align-items: center; }
+  .oc-num  { font-size: 2.8rem !important; line-height: .9 !important; }
+  .oc-name { font-size: .65rem; padding: .35rem .7rem; letter-spacing: .18em; }
+
+  /* Headline + body */
+  .oc-h    { font-size: 1.45rem !important; line-height: 1.18 !important; max-width: none; margin-bottom: .7rem; }
+  .oc-body { font-size: .98rem; line-height: 1.55; margin-bottom: 1.1rem; max-width: none; }
+
+  /* Bullets */
+  .oc-bullets { gap: .55rem; }
+  .oc-bullets li { font-size: .92rem; line-height: 1.4; }
+  .oc-bullets li::before { width: 18px; height: 18px; background-size: 10px 10px; }
+}
+
+/* Even narrower viewports — squeeze further */
+@media (max-width: 380px) {
+  .oc-hdr .h2 { font-size: 1.65rem !important; }
+  .oc-num    { font-size: 2.4rem !important; }
+  .oc-h      { font-size: 1.3rem !important; }
+  .oc-state  { padding: 1.25rem 1rem 1.4rem; }
+}

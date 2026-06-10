@@ -7,7 +7,7 @@
       { "name": "title",   "label": "Title",        "type": "text",  "default": "" },
       { "name": "anchor",  "label": "Anchor slug",  "type": "text",  "default": "" },
       { "name": "image",   "label": "Image",        "type": "image", "default": { "src": "", "alt": "" } },
-      { "name": "body",    "label": "Body",         "type": "richtext", "default": "" },
+      { "name": "body_text",    "label": "Body",         "type": "richtext", "default": "" },
       { "name": "cta_label", "label": "CTA label",  "type": "text",  "default": "Talk to us" },
       { "name": "cta_url",   "label": "CTA URL",    "type": "url",   "default": { "type": "EXTERNAL", "href": "/get-a-demo/" } }
     ]

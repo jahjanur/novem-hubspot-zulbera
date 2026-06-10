@@ -11,11 +11,11 @@
         <p class="h1 hero-head" aria-hidden="true">{{ module.headline_top }}<br><span class="accent">{{ module.headline_accent }}</span></p>
         <div class="lg hero-sub">{{ module.sub }}</div>
         <div class="hero-acts">
-          {% if module.primary_cta.label %}
-            <a href="{{ module.primary_cta.url.href }}" class="btn btn-p">{{ module.primary_cta.label }} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          {% if module.primary_cta.cta_label %}
+            <a href="{{ module.primary_cta.url.href }}" class="btn btn-p">{{ module.primary_cta.cta_label }} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           {% endif %}
-          {% if module.secondary_cta.label %}
-            <a href="{{ module.secondary_cta.url.href }}" class="btn btn-ghost">{{ module.secondary_cta.label }}</a>
+          {% if module.secondary_cta.cta_label %}
+            <a href="{{ module.secondary_cta.url.href }}" class="btn btn-ghost">{{ module.secondary_cta.cta_label }}</a>
           {% endif %}
         </div>
       </div>
@@ -23,7 +23,7 @@
       <div class="hero-right">
         <div class="hero-stats">
           {% for stat in module.stats %}
-            <div class="hero-stat"><span class="hero-stat-num">{{ stat.num }}</span><span class="hero-stat-lbl">{{ stat.label }}</span></div>
+            <div class="hero-stat"><span class="hero-stat-num">{{ stat.num }}</span><span class="hero-stat-lbl">{{ stat.stat_lbl }}</span></div>
           {% endfor %}
         </div>
       </div>

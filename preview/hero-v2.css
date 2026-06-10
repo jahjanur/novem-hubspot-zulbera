@@ -199,10 +199,9 @@
   .hero-v2-video { object-position: 75% 55% !important; }
 }
 
-/* Reduced motion */
+/* Reduced motion — keep scroll-scrub (it's controlled video playback, not a
+   flashy animation). Only disable the decorative accent shimmer. */
 @media (prefers-reduced-motion: reduce) {
-  .hero-v2-track { height: 100vh; }
-  .hero-v2-sticky { position: relative; }
   .hero-v2-accent, .hero-v2-scrollcue, .hero-v2-tag-dot { animation: none; }
 }
 

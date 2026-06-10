@@ -1,0 +1,8 @@
+{
+  "label": "Inner-page hero (eyebrow + h1 + subhead)",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon": "@hubspot/banner",
+  "is_available_for_new_content": true
+}

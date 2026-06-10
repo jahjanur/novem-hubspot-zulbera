@@ -10,8 +10,8 @@
   <meta property="og:description" content="TCRO is the standard. Most portfolios carry six times more risk than their reports show. Find out what yours really costs."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://novemdigital.com/tcro"/>
-  <meta property="og:image" content="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1200&q=80&auto=format&fit=crop"/>
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1200&q=80&auto=format&fit=crop"/>
+  <meta property="og:image" content="tcro-hero.jpg"/>
+  <meta name="twitter:image" content="tcro-hero.jpg"/>
 
   <script type="application/ld+json">
   {
@@ -171,8 +171,8 @@ a.mobile-nav-trigger{cursor:pointer;}
 .hero-bg{position:absolute;inset:0;z-index:0;}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:.99;filter:saturate(.75) brightness(1.45);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(108deg,rgba(17,26,31,.96) 0%,rgba(17,26,31,.82) 42%,rgba(17,26,31,.35) 100%),linear-gradient(to bottom,rgba(17,26,31,.5) 0%,rgba(17,26,31,.0) 55%);}
-[data-theme="light"] .hero-bg img{opacity:.22;filter:saturate(.4) brightness(.7);}
-[data-theme="light"] .hero-overlay{background:linear-gradient(108deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.92) 45%,rgba(244,246,244,.55) 100%);}
+[data-theme="light"] .hero-bg img { opacity: 1; filter: none; }
+[data-theme="light"] .hero-overlay { background: linear-gradient(105deg,rgba(244,246,244,.45) 0%,rgba(244,246,244,.18) 50%,rgba(244,246,244,0) 100%); }
 .hero-w{position:relative;z-index:1;padding-block:clamp(7.5rem,14vw,10.5rem);}
 
 /* Hero layout — left text, right stat block */
@@ -341,72 +341,67 @@ details[open] .faq-q{color:var(--green);}
 <link rel="stylesheet" href="/modern.css">
 <link rel="stylesheet" href="/redesign.css">
 <link rel="stylesheet" href="/footer-v2.css">
+<link rel="stylesheet" href="tcro-v2.css">
 </head>
 <body>
 
 <!-- ════════ NAV ════════ -->
 <nav class="nav" id="mainNav" aria-label="Main navigation">
-  <div class="w nav-inner">
-    <a href="/" class="logo" aria-label="Novem Digital home">
-        <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+  <div class="w">
+    <div class="nav-inner">
+
+      <a href="/" class="logo" aria-label="Novem Digital home">
+        <img src="logo.png" style="height:26px;width:auto;" alt="">
+        <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
       </a>
-    <div class="nav-links" id="desktopNav">
+
+      <div class="nav-links" id="desktopNav">
         <div class="nav-item"><a href="/">Home</a></div>
         <div class="nav-item"><a href="/about/">About</a></div>
+
         <div class="nav-item has-dropdown" data-dropdown="platform">
-          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-          <div class="nav-dropdown" role="menu" aria-label="Platform">
-            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">How It Works</span>
-              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
-            </a>
-            <a href="/tcro/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">TCRO Framework</span>
-              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
-            </a>
-            <a href="/industries/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Industries</span>
-              <span class="nav-dd-desc">Sectors we serve</span>
-            </a>
+          <a href="/how-it-works/">Platform
+            <svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform menu">
+            <a class="dd-link" href="/how-it-works/" role="menuitem"><div class="dd-link-title">Platform</div><div class="dd-link-desc">Predictive risk intelligence</div></a>
+            <a class="dd-link" href="/industries/" role="menuitem"><div class="dd-link-title">Industries</div><div class="dd-link-desc">Commercial, Seniors, Data Centers, Recreational</div></a>
+            <a class="dd-link" href="/tcro/" role="menuitem"><div class="dd-link-title" style="color:#7BFAB5;">TCRO Framework</div><div class="dd-link-desc">Total Cost of Risk Ownership</div></a>
+            <a class="dd-link" href="/partners/" role="menuitem"><div class="dd-link-title">Partners</div><div class="dd-link-desc">Infrastructure, insurance, brokers</div></a>
           </div>
         </div>
+
+        <div class="nav-item nav-item--tcro"><a href="/tcro/">TCRO</a></div>
+
         <div class="nav-item has-dropdown" data-dropdown="resources">
-          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-          <div class="nav-dropdown" role="menu" aria-label="Resources">
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Case Studies</span>
-              <span class="nav-dd-desc">Real portfolio outcomes</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Insights &amp; Blog</span>
-              <span class="nav-dd-desc">Research &amp; industry analysis</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Press &amp; Whitepapers</span>
-              <span class="nav-dd-desc">Announcements and research</span>
-            </a>
-            <a href="/partners/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Partners</span>
-              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
-            </a>
-            <a href="/careers/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Careers</span>
-              <span class="nav-dd-desc">Join the team</span>
-            </a>
+          <a href="/resources/">Resources
+            <svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources menu">
+            <a class="dd-link" href="/resources/" role="menuitem"><div class="dd-link-title">All Resources</div><div class="dd-link-desc">Browse everything</div></a>
+            <a class="dd-link" href="/resources/?type=case-study" role="menuitem"><div class="dd-link-title">Case Studies</div><div class="dd-link-desc">Real portfolio outcomes</div></a>
+            <a class="dd-link" href="/resources/?type=white-paper" role="menuitem"><div class="dd-link-title">Whitepapers</div><div class="dd-link-desc">Frameworks &amp; methodology</div></a>
+            <a class="dd-link" href="/resources/?type=blog" role="menuitem"><div class="dd-link-title">Blog</div><div class="dd-link-desc">Industry analysis</div></a>
+            <a class="dd-link" href="/resources/?type=press-release" role="menuitem"><div class="dd-link-title">Press Releases</div><div class="dd-link-desc">Announcements</div></a>
+            <a class="dd-link" href="/careers/" role="menuitem"><div class="dd-link-title">Careers</div><div class="dd-link-desc">Join the team</div></a>
           </div>
         </div>
+
         <div class="nav-item"><a href="/contact/">Contact</a></div>
       </div>
-    <div class="nav-right">
-      <button class="tbtn" data-theme-toggle aria-label="Toggle colour theme">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+
+      <div class="nav-right">
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#" class="nav-login">Login</a>
+        <a href="/get-a-demo/" class="nav-demo">Get a Demo</a>
+      </div>
+
+      <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <a href="#" class="nav-login">Login</a>
-      <a href="#calculator" class="nav-demo">Calculate TCRO</a>
     </div>
-    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
   </div>
 </nav>
 
@@ -441,9 +436,7 @@ details[open] .faq-q{color:var(--green);}
         Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div class="mobile-submenu">
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Resources Hub</a>
         <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
         <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
       </div>
@@ -463,7 +456,7 @@ details[open] .faq-q{color:var(--green);}
 <!-- ════════ HERO ════════ -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1800&q=85&auto=format&fit=crop&bri=15" alt="" role="presentation" loading="eager"/>
+    <img src="tcro-hero.jpg" alt="" role="presentation" loading="eager"/>
   </div>
   <div class="hero-overlay" aria-hidden="true"></div>
   <div class="w hero-w">
@@ -511,6 +504,13 @@ details[open] .faq-q{color:var(--green);}
       <div class="edu-text rev">
         <p class="eye"><span class="eye-dot"></span>What is TCRO?</p>
         <h2 class="h2">Cost of Risk measures<br><span class="accent">what happened.</span><br>TCRO measures<br><span class="accent">what it actually costs.</span></h2>
+        <div class="iceberg-visual">
+          <img src="tcro-iceberg.jpg" alt="An iceberg metaphor showing the small visible tip (COR) above water and the massive hidden mass (TCRO) below" loading="lazy"/>
+          <div class="iceberg-caption">
+            <span class="ic-tip"><span class="ic-dot ic-dot--cor"></span>Cost of Risk — the visible tip</span>
+            <span class="ic-tip"><span class="ic-dot ic-dot--tcro"></span>Total Cost of Risk Ownership — the full mass</span>
+          </div>
+        </div>
         <p class="sm">Traditional Cost of Risk (COR) is an insurance construct. It captures what the insurer sees: claims, premiums, deductibles. TCRO is a financial standard. It captures the full burden — including every cost that never makes it into a risk report.</p>
         <p class="sm">For most institutional portfolios, the costs COR misses are larger than the costs it measures.</p>
         <a href="#calculator" class="btn btn-p" style="align-self:flex-start;margin-top:.5rem;">Find your number <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -585,7 +585,8 @@ details[open] .faq-q{color:var(--green);}
 </section>
 
 <!-- ════════ CALCULATOR ════════ -->
-<section class="sec" id="calculator">
+<section class="sec calculator-section" id="calculator">
+  <div class="calculator-bg" aria-hidden="true"></div>
   <div class="w">
     <div class="rev" style="max-width:46ch;margin-bottom:3rem;">
       <p class="eye"><span class="eye-dot"></span>TCRO Calculator</p>
@@ -747,7 +748,7 @@ details[open] .faq-q{color:var(--green);}
         <a href="#" class="btn btn-p">Download the Framework <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="../get-a-demo/?from=tcro" class="btn btn-ghost">Book a TCRO Session</a>
       </div>
-      <p class="cta-trust">Novem Digital &mdash; Failure is Predictable.</p>
+      <p class="cta-trust">Novem Digital &mdash; Failures are Predictable.</p>
     </div>
   </div>
 </section>
@@ -835,7 +836,7 @@ details[open] .faq-q{color:var(--green);}
     <div class="foot-v2-bot">
       <div class="foot-v2-legal">
         <span>&copy; 2026 Novem Digital. All rights reserved.</span>
-        <span>Failure is Predictable.</span>
+        <span>Failures are Predictable.</span>
       </div>
       <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
         Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
@@ -848,12 +849,7 @@ details[open] .faq-q{color:var(--green);}
 <!-- ════════ SCRIPTS ════════ -->
 <script>
 (function(){
-  /* Theme */
-  const root=document.documentElement;
-  const themeBtn=document.querySelector('[data-theme-toggle]');
-  if(themeBtn) themeBtn.addEventListener('click',()=>{
-    root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
-  });
+  /* Theme toggle handled exclusively by modern.js */
 
   /* Nav scroll */
   const nav=document.getElementById('mainNav');
@@ -969,5 +965,19 @@ details[open] .faq-q{color:var(--green);}
 <script src="/modern.js" defer></script>
 <script src="/redesign.js" defer></script>
 <script src="/home-nav.js" defer></script>
+<script>
+(function(){
+  if (window.__novemNavBound) return; window.__novemNavBound = true;
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(function(item){
+    item.addEventListener('mouseenter', function(){ item.classList.add('open'); });
+    item.addEventListener('mouseleave', function(){ item.classList.remove('open'); });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-item.has-dropdown')) {
+      document.querySelectorAll('.nav-item.has-dropdown.open').forEach(function(i){ i.classList.remove('open'); });
+    }
+  });
+})();
+</script>
 </body>
 </html>

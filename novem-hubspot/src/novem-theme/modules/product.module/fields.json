@@ -1,0 +1,121 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "product"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Product"
+  },
+  {
+    "name": "headline",
+    "label": "Headline (plain text)",
+    "type": "text",
+    "default": "The platform built to make building failure"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "predictable."
+  },
+  {
+    "name": "sub",
+    "label": "Sub-headline",
+    "type": "text",
+    "default": "One platform. Lower costs, controlled insurance, defensible capital. Risk stops being invisible."
+  },
+  {
+    "name": "mockup_label",
+    "label": "Dashboard top-bar label",
+    "type": "text",
+    "default": "Novem Digital Risk Platform"
+  },
+  {
+    "name": "pillars",
+    "label": "Pillars",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "tag",
+        "label": "Small label (above title)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "title",
+        "label": "Title (h3)",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "text",
+        "label": "Body",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "tag": "See everything you own",
+        "title": "Complete asset inventory, live across every building.",
+        "text": "A complete picture of every critical system \u2014 condition, age, and financial exposure \u2014 before any loss event."
+      },
+      {
+        "tag": "Predict before it costs you",
+        "title": "Early warnings grounded in 20 years of real claims data.",
+        "text": "Early warnings ranked by financial consequence \u2014 not a wall of alarms."
+      },
+      {
+        "tag": "Prove and improve",
+        "title": "Audit ready data from source to board report.",
+        "text": "Every capital and insurance decision backed by audit-ready data \u2014 not estimates."
+      }
+    ]
+  },
+  {
+    "name": "show_pillar_buttons",
+    "label": "Show buttons on third pillar?",
+    "type": "boolean",
+    "default": true
+  },
+  {
+    "name": "btn_primary_label",
+    "label": "Primary button label",
+    "type": "text",
+    "default": "Get a Demo"
+  },
+  {
+    "name": "btn_primary_url",
+    "label": "Primary button URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "/get-a-demo/"
+    }
+  },
+  {
+    "name": "btn_secondary_label",
+    "label": "Secondary button label",
+    "type": "text",
+    "default": "See results"
+  },
+  {
+    "name": "btn_secondary_url",
+    "label": "Secondary button URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "#proof"
+    }
+  }
+]

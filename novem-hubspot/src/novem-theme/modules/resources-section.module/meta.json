@@ -1,0 +1,8 @@
+{
+  "label": "Resources section (2 lead cards)",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon": "@hubspot/banner",
+  "is_available_for_new_content": true
+}

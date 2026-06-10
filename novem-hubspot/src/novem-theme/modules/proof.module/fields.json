@@ -1,0 +1,154 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "proof"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "In Practice"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Real buildings."
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent \u2014 new line)",
+    "type": "text",
+    "default": "Measurable outcomes."
+  },
+  {
+    "name": "all_link_label",
+    "label": "Top-right link label",
+    "type": "text",
+    "default": "All case studies"
+  },
+  {
+    "name": "all_link_url",
+    "label": "Top-right link URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "/resources/"
+    }
+  },
+  {
+    "name": "cards",
+    "label": "Case studies",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "tag",
+        "label": "Industry label",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "title",
+        "label": "Card title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "quote",
+        "label": "Pull-quote",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "stat",
+        "label": "Stat number",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "stat_label",
+        "label": "Stat caption",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "read_url",
+        "label": "Read more URL",
+        "type": "url",
+        "default": {
+          "type": "EXTERNAL",
+          "href": "/resources/"
+        }
+      }
+    ],
+    "default": [
+      {
+        "tag": "Seniors Living Operator \u2014 North America",
+        "title": "Seven years of recurring outbreaks. One environmental signal changed everything.",
+        "quote": "Zero respiratory outbreak weeks in 2025. The first time in seven years.",
+        "stat": "65%",
+        "stat_label": "Fewer outbreak weeks",
+        "read_url": {
+          "type": "EXTERNAL",
+          "href": "/resources/bethany-riverview/"
+        }
+      },
+      {
+        "tag": "Public Venue & Infrastructure Operator \u2014 North America",
+        "title": "Fragmented risk across an entire site. Consolidated before the next event.",
+        "quote": "One connected system replaced fragmented processes across the entire site.",
+        "stat": "$5M",
+        "stat_label": "Loss mitigation",
+        "read_url": {
+          "type": "EXTERNAL",
+          "href": "/resources/bc-events/"
+        }
+      },
+      {
+        "tag": "Commercial Office Tower \u2014 North America",
+        "title": "900 building issues. 4 months to resolve them. $10.1M in forecast savings.",
+        "quote": "Commissioning compressed from 36 months to 4. Energy intensity one third below peer towers.",
+        "stat": "$10.1M",
+        "stat_label": "10-year forecast savings",
+        "read_url": {
+          "type": "EXTERNAL",
+          "href": "/resources/telus-garden/"
+        }
+      }
+    ]
+  },
+  {
+    "name": "cta_band_title",
+    "label": "Bottom CTA band \u2014 title",
+    "type": "text",
+    "default": "See what Novem Digital finds in your portfolio."
+  },
+  {
+    "name": "cta_band_body",
+    "label": "Bottom CTA band \u2014 body",
+    "type": "text",
+    "default": "Book a demo and see what surfaces in your portfolio \u2014 day one."
+  },
+  {
+    "name": "cta_band_btn_label",
+    "label": "Bottom CTA \u2014 button label",
+    "type": "text",
+    "default": "Get a Demo"
+  },
+  {
+    "name": "cta_band_btn_url",
+    "label": "Bottom CTA \u2014 button URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "/get-a-demo/"
+    }
+  }
+]

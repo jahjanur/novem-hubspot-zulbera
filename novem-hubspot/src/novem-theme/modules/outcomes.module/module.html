@@ -1,0 +1,19 @@
+<section class="sec sec--alt" id="{{ module.anchor_id }}">
+  <div class="wm">
+    <div class="rev" style="text-align:center;max-width:44ch;margin-inline:auto;margin-bottom:3rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>{{ module.eyebrow }}</p>
+      <h2 class="h2">{{ module.headline }} <span class="accent">{{ module.headline_accent }}</span></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      {% for item in module.items %}
+        <div class="rev{% if not loop.first %} d{{ loop.index0 }}{% endif %}" style="padding:2rem 2.5rem;background:{% if loop.index is odd %}var(--bg){% else %}var(--surf){% endif %};display:flex;align-items:center;gap:2rem;">
+          <span style="font-family:var(--font-h);font-weight:700;font-size:clamp(2rem,3vw,2.8rem);color:var(--green);line-height:1;flex-shrink:0;min-width:3ch;">{{ '%02d' | format(loop.index) }}</span>
+          <div>
+            <div style="font-family:var(--font-h);font-weight:700;font-size:clamp(1.1rem,1rem+.6vw,1.4rem);color:var(--text);margin-bottom:.35rem;">{{ item.title }}</div>
+            <p class="sm" style="margin:0;">{{ item.text }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

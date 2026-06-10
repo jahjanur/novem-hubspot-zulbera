@@ -1,0 +1,102 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "background_style",
+    "label": "Background",
+    "type": "choice",
+    "default": "dark",
+    "choices": [
+      [
+        "dark",
+        "Dark"
+      ],
+      [
+        "light",
+        "Light"
+      ]
+    ]
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Industries"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Built for institutional portfolios"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "where failure has consequences."
+  },
+  {
+    "name": "items",
+    "label": "Industries",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 8,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "image",
+        "label": "Image",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "description",
+        "label": "Description",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "link_url",
+        "label": "Card link URL (optional)",
+        "type": "url",
+        "default": {
+          "type": "EXTERNAL",
+          "href": ""
+        }
+      }
+    ],
+    "default": [
+      {
+        "title": "Commercial & Mixed Use",
+        "description": "Office, retail, and mixed-use towers where downtime and insurance volatility hit the P&L hardest."
+      },
+      {
+        "title": "Seniors & Wellness",
+        "description": "Long-term care, assisted living, and wellness facilities where environmental risk meets resident safety."
+      },
+      {
+        "title": "Data Centers",
+        "description": "Mission-critical infrastructure where a single failure cascades into seven-figure losses."
+      },
+      {
+        "title": "Recreational & Venues",
+        "description": "Stadiums, arenas, and public venues with concentrated risk and high-stakes operational windows."
+      }
+    ]
+  }
+]

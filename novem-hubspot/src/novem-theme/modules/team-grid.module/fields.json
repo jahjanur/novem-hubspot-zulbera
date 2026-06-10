@@ -1,0 +1,111 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": ""
+  },
+  {
+    "name": "background_style",
+    "label": "Background",
+    "type": "choice",
+    "default": "dark",
+    "choices": [
+      [
+        "dark",
+        "Dark"
+      ],
+      [
+        "light",
+        "Light"
+      ]
+    ]
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Executive Team"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Led by operators who've"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "built at scale."
+  },
+  {
+    "name": "columns",
+    "label": "Columns",
+    "type": "choice",
+    "default": "3",
+    "choices": [
+      [
+        "2",
+        "2"
+      ],
+      [
+        "3",
+        "3"
+      ],
+      [
+        "4",
+        "4"
+      ]
+    ]
+  },
+  {
+    "name": "people",
+    "label": "People",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 12,
+      "default": 4
+    },
+    "children": [
+      {
+        "name": "photo",
+        "label": "Photo",
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
+      },
+      {
+        "name": "full_name",
+        "label": "Full name",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "role",
+        "label": "Role / title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "bio",
+        "label": "Short bio",
+        "type": "richtext",
+        "default": ""
+      },
+      {
+        "name": "linkedin",
+        "label": "LinkedIn URL (optional)",
+        "type": "url",
+        "default": {
+          "type": "EXTERNAL",
+          "href": ""
+        }
+      }
+    ],
+    "default": []
+  }
+]

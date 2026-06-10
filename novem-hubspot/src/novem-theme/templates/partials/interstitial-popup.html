@@ -1,0 +1,47 @@
+<div class="interstitial-overlay" id="interstitialOverlay" aria-hidden="true">
+  <div class="interstitial-modal" role="dialog" aria-modal="true" aria-labelledby="interstitialHeading">
+    <button class="interstitial-close" id="interstitialClose" aria-label="Close popup">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <p class="interstitial-eye"><span class="eye-dot"></span>Stop guessing</p>
+    <h2 class="interstitial-h" id="interstitialHeading">Failures are <span class="accent">Predictable.</span></h2>
+    <p class="interstitial-sub">See what's about to fail in your portfolio — and what it will cost — before it does.</p>
+    <a href="/get-a-demo/" class="interstitial-cta">Get a Demo
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <button class="interstitial-dismiss" id="interstitialDismiss" type="button">No thanks</button>
+  </div>
+</div>
+<style>
+  .interstitial-overlay { position:fixed; inset:0; z-index:400; background:rgba(0,8,12,.78); backdrop-filter:blur(8px); display:none; align-items:center; justify-content:center; padding:1.5rem; }
+  .interstitial-overlay.open { display:flex; animation:interFade .35s ease-out; }
+  @keyframes interFade { from { opacity:0; } to { opacity:1; } }
+  .interstitial-modal { position:relative; max-width:520px; width:100%; background:linear-gradient(145deg, rgba(30,52,63,.98), rgba(20,40,50,.98)); border:1px solid rgba(123,250,181,.18); border-radius:24px; padding:3rem 2.5rem; text-align:center; box-shadow:0 30px 80px -20px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.04) inset; }
+  .interstitial-close { position:absolute; top:1rem; right:1rem; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); color:#E8F4F0; width:36px; height:36px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s; }
+  .interstitial-close:hover { background:rgba(255,255,255,.14); }
+  .interstitial-eye { display:inline-flex; align-items:center; gap:.5rem; background:rgba(123,250,181,.1); color:#7BFAB5; padding:.5rem 1.1rem; border-radius:9999px; font-family:'Titillium Web',sans-serif; font-weight:600; font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; border:1px solid rgba(123,250,181,.25); margin-bottom:1.5rem; }
+  .interstitial-h { font-family:'Titillium Web',sans-serif; font-weight:700; font-size:clamp(2rem,3vw + .5rem,2.75rem); line-height:1.05; letter-spacing:-.02em; color:#E8F4F0; margin-bottom:1rem; }
+  .interstitial-h .accent { background:linear-gradient(135deg,#7BFAB5,#60BCD6); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+  .interstitial-sub { color:#A8B5BD; font-size:1.05rem; line-height:1.55; margin-bottom:2rem; max-width:42ch; margin-inline:auto; }
+  .interstitial-cta { display:inline-flex; align-items:center; gap:.5rem; background:#7BFAB5; color:#1E343F; font-family:'Titillium Web',sans-serif; font-weight:700; font-size:1rem; padding:.95rem 2.25rem; border-radius:9999px; text-decoration:none; transition:transform .2s, box-shadow .2s; box-shadow:0 6px 18px -4px rgba(123,250,181,.45); }
+  .interstitial-cta:hover { transform:translateY(-1px); box-shadow:0 10px 24px -4px rgba(123,250,181,.6); }
+  .interstitial-dismiss { display:block; margin:1.25rem auto 0; background:none; border:none; color:#7e8990; font-size:.85rem; cursor:pointer; padding:.5rem 1rem; }
+  .interstitial-dismiss:hover { color:#E8F4F0; }
+</style>
+<script>
+(function(){
+  if (window.__novemInterstitialBound) return; window.__novemInterstitialBound = true;
+  var DISMISS_KEY = 'nd-interstitial-dismissed';
+  try { if (sessionStorage.getItem(DISMISS_KEY)) return; } catch(e){}
+  var overlay = document.getElementById('interstitialOverlay');
+  if (!overlay) return;
+  var close = function(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); try { sessionStorage.setItem(DISMISS_KEY,'1'); } catch(e){} };
+  setTimeout(function(){ overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); }, 8000);
+  var closeBtn = document.getElementById('interstitialClose');
+  var dismissBtn = document.getElementById('interstitialDismiss');
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  if (dismissBtn) dismissBtn.addEventListener('click', close);
+  overlay.addEventListener('click', function(e){ if (e.target === overlay) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && overlay.classList.contains('open')) close(); });
+})();
+</script>

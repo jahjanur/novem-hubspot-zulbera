@@ -11,8 +11,8 @@
   <meta property="og:description" content="Novem Digital predicts building failures before they happen. See how our digital risk platform reduces Total Cost of Risk Ownership across North America."/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://novemdigital.com/how-it-works"/>
-  <meta property="og:image" content="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop"/>
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop"/>
+  <meta property="og:image" content="/images/platform/platform-hero.jpg"/>
+  <meta name="twitter:image" content="/images/platform/platform-hero.jpg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
@@ -147,10 +147,10 @@ a.mobile-nav-trigger{cursor:pointer;}
    ═══════════════════════════════════════════ */
 .hero{position:relative;overflow:hidden;min-height:100svh;display:flex;align-items:center;background:linear-gradient(135deg,#0F1C24 0%,#1C3040 50%,#0F1C24 100%);}
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:.99;filter:saturate(.85) brightness(1.28);}
-[data-theme="light"] .hero-bg img{opacity:.32;filter:saturate(.45) brightness(.8);}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;opacity:.99;}
+[data-theme="light"] .hero-bg img { opacity: 1; filter: none; }
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(17,26,31,.96) 0%,rgba(17,26,31,.78) 42%,rgba(17,26,31,.35) 100%);}
-[data-theme="light"] .hero-overlay{background:linear-gradient(105deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.9) 40%,rgba(244,246,244,.6) 100%);}
+[data-theme="light"] .hero-overlay { background: linear-gradient(105deg,rgba(244,246,244,.45) 0%,rgba(244,246,244,.18) 50%,rgba(244,246,244,0) 100%); }
 .hero-w{position:relative;z-index:1;padding-block:clamp(7.5rem,14vw,10.5rem);}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(3rem,6vw,6rem);align-items:center;}
 .hero-platform-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--green);margin-bottom:1.75rem;}
@@ -222,7 +222,7 @@ a.mobile-nav-trigger{cursor:pointer;}
 .app-visual-bar{display:flex;gap:6px;align-items:center;padding:.7rem 1rem;background:var(--gun-dark);border-bottom:1px solid var(--border);}
 .app-visual-bar .dot{width:8px;height:8px;border-radius:50%;background:var(--faint);opacity:.35;}
 .app-visual-bar .lbl{margin-left:.5rem;font-size:.62rem;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;font-family:var(--font-h);}
-.app-visual img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;filter:saturate(.75) brightness(.85) hue-rotate(165deg);}
+.app-visual img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;}
 @media(max-width:820px){.app-block,.app-block.flip{grid-template-columns:1fr;direction:ltr;}}
 
 @media (max-width: 900px) { #product .w > div:last-child { grid-template-columns: 1fr !important; } }
@@ -402,7 +402,7 @@ body.no-scroll{overflow:hidden;}
     {"@type":"Organization","@id":"https://acerainsurance.com/#organization","name":"National Insurance Brokerage","url":"https://novemdigital.com"}
   ]}
   </script>
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=85&auto=format&fit=crop&bri=15" fetchpriority="high"/>
+  <link rel="preload" as="image" href="/images/platform/platform-hero.jpg" fetchpriority="high"/>
 <link rel="stylesheet" href="/modern.css">
 <link rel="stylesheet" href="/redesign.css">
 <link rel="stylesheet" href="/footer-v2.css">
@@ -414,61 +414,55 @@ body.no-scroll{overflow:hidden;}
 <nav class="nav" id="mainNav" aria-label="Main navigation">
   <div class="w">
     <div class="nav-inner">
+
       <a href="/" class="logo" aria-label="Novem Digital home">
-        <img src="data:image/png;base64,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" style="height:26px;width:auto;" alt=""><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
+        <img src="logo.png" style="height:26px;width:auto;" alt="">
+        <span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;white-space:nowrap;margin-left:6px;">NOVEM</span><span style="font-family:'Titillium Web','Arial Narrow',sans-serif;font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;white-space:nowrap;">DIGITAL</span>
       </a>
+
       <div class="nav-links" id="desktopNav">
         <div class="nav-item"><a href="/">Home</a></div>
         <div class="nav-item"><a href="/about/">About</a></div>
+
         <div class="nav-item has-dropdown" data-dropdown="platform">
-          <a href="/how-it-works/" class="nav-dd-trigger">Platform <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-          <div class="nav-dropdown" role="menu" aria-label="Platform">
-            <a href="/how-it-works/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">How It Works</span>
-              <span class="nav-dd-desc">Platform architecture &amp; data flow</span>
-            </a>
-            <a href="/tcro/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">TCRO Framework</span>
-              <span class="nav-dd-desc">Total Cost of Risk Ownership</span>
-            </a>
-            <a href="/industries/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Industries</span>
-              <span class="nav-dd-desc">Sectors we serve</span>
-            </a>
+          <a href="/how-it-works/">Platform
+            <svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu" aria-label="Platform menu">
+            <a class="dd-link" href="/how-it-works/" role="menuitem"><div class="dd-link-title">Platform</div><div class="dd-link-desc">Predictive risk intelligence</div></a>
+            <a class="dd-link" href="/industries/" role="menuitem"><div class="dd-link-title">Industries</div><div class="dd-link-desc">Commercial, Seniors, Data Centers, Recreational</div></a>
+            <a class="dd-link" href="/tcro/" role="menuitem"><div class="dd-link-title" style="color:#7BFAB5;">TCRO Framework</div><div class="dd-link-desc">Total Cost of Risk Ownership</div></a>
+            <a class="dd-link" href="/partners/" role="menuitem"><div class="dd-link-title">Partners</div><div class="dd-link-desc">Infrastructure, insurance, brokers</div></a>
           </div>
         </div>
+
+        <div class="nav-item nav-item--tcro"><a href="/tcro/">TCRO</a></div>
+
         <div class="nav-item has-dropdown" data-dropdown="resources">
-          <a href="/resources/" class="nav-dd-trigger">Resources <svg class="nav-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
-          <div class="nav-dropdown" role="menu" aria-label="Resources">
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Case Studies</span>
-              <span class="nav-dd-desc">Real portfolio outcomes</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Insights &amp; Blog</span>
-              <span class="nav-dd-desc">Research &amp; industry analysis</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Press &amp; Whitepapers</span>
-              <span class="nav-dd-desc">Announcements and research</span>
-            </a>
-            <a href="/partners/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Partners</span>
-              <span class="nav-dd-desc">Ecosystem &amp; integrations</span>
-            </a>
-            <a href="/careers/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Careers</span>
-              <span class="nav-dd-desc">Join the team</span>
-            </a>
+          <a href="/resources/">Resources
+            <svg class="nav-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown" role="menu" aria-label="Resources menu">
+            <a class="dd-link" href="/resources/" role="menuitem"><div class="dd-link-title">All Resources</div><div class="dd-link-desc">Browse everything</div></a>
+            <a class="dd-link" href="/resources/?type=case-study" role="menuitem"><div class="dd-link-title">Case Studies</div><div class="dd-link-desc">Real portfolio outcomes</div></a>
+            <a class="dd-link" href="/resources/?type=white-paper" role="menuitem"><div class="dd-link-title">Whitepapers</div><div class="dd-link-desc">Frameworks &amp; methodology</div></a>
+            <a class="dd-link" href="/resources/?type=blog" role="menuitem"><div class="dd-link-title">Blog</div><div class="dd-link-desc">Industry analysis</div></a>
+            <a class="dd-link" href="/resources/?type=press-release" role="menuitem"><div class="dd-link-title">Press Releases</div><div class="dd-link-desc">Announcements</div></a>
+            <a class="dd-link" href="/careers/" role="menuitem"><div class="dd-link-title">Careers</div><div class="dd-link-desc">Join the team</div></a>
           </div>
         </div>
+
         <div class="nav-item"><a href="/contact/">Contact</a></div>
       </div>
+
       <div class="nav-right">
-        <button class="tbtn" data-theme-toggle aria-label="Toggle theme"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="tbtn" data-theme-toggle aria-label="Toggle theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <a href="#" class="nav-login">Login</a>
         <a href="/get-a-demo/" class="nav-demo">Get a Demo</a>
       </div>
+
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -504,9 +498,7 @@ body.no-scroll{overflow:hidden;}
         Resources <svg class="mob-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
       <div class="mobile-submenu">
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Resources Hub</a>
         <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
         <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
       </div>
@@ -528,7 +520,7 @@ body.no-scroll{overflow:hidden;}
 <!-- ════════ HERO ════════ -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1800&q=85&auto=format&fit=crop&bri=15" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
+    <img src="/images/platform/platform-hero.jpg" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
     <div class="hero-overlay"></div>
   </div>
   <div class="w hero-w">
@@ -629,7 +621,7 @@ body.no-scroll{overflow:hidden;}
       </div>
       <div class="app-visual">
         <div class="app-visual-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="lbl">Know Your Building</span></div>
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=85&auto=format&fit=crop" alt="Asset inventory dashboard" width="900" height="563" loading="lazy"/>
+        <img src="/images/platform/app-01-laptop.jpg" alt="Asset inventory dashboard" width="900" height="563" loading="lazy"/>
       </div>
     </div>
 
@@ -648,7 +640,7 @@ body.no-scroll{overflow:hidden;}
       </div>
       <div class="app-visual">
         <div class="app-visual-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="lbl">Predictive Operations</span></div>
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=900&q=85&auto=format&fit=crop" alt="Operations monitoring dashboard" width="900" height="563" loading="lazy"/>
+        <img src="/images/platform/app-02-phone.jpg" alt="Operations monitoring dashboard" width="900" height="563" loading="lazy"/>
       </div>
     </div>
 
@@ -668,7 +660,7 @@ body.no-scroll{overflow:hidden;}
       </div>
       <div class="app-visual">
         <div class="app-visual-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="lbl">Capital Planning</span></div>
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=85&auto=format&fit=crop" alt="Capital planning analytics" width="900" height="563" loading="lazy"/>
+        <img src="/images/platform/app-03-browser.jpg" alt="Capital planning analytics" width="900" height="563" loading="lazy"/>
       </div>
     </div>
 
@@ -829,7 +821,7 @@ body.no-scroll{overflow:hidden;}
         <a href="/get-a-demo/" class="btn-s btn-gs">Get a Demo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="/tcro#calculator" class="btn-s btn-ol">TCRO Calculator</a>
       </div>
-      <p class="cta-trust">Novem Digital. Failure is Predictable.</p>
+      <p class="cta-trust">Novem Digital. Failures are Predictable.</p>
     </div>
   </div>
 </section>
@@ -917,7 +909,7 @@ body.no-scroll{overflow:hidden;}
     <div class="foot-v2-bot">
       <div class="foot-v2-legal">
         <span>&copy; 2026 Novem Digital. All rights reserved.</span>
-        <span>Failure is Predictable.</span>
+        <span>Failures are Predictable.</span>
       </div>
       <a class="foot-v2-made" href="https://zulbera.com" target="_blank" rel="noopener noreferrer" aria-label="Made by Zulbera">
         Made with <span class="foot-v2-made-heart">&hearts;</span> by <span class="foot-v2-made-brand">Zulbera</span>
@@ -929,12 +921,7 @@ body.no-scroll{overflow:hidden;}
 
 <script>
 (function(){
-  /* Theme */
-  const root=document.documentElement;
-  const themeBtn=document.querySelector('[data-theme-toggle]');
-  if(themeBtn) themeBtn.addEventListener('click',()=>{
-    root.setAttribute('data-theme',root.getAttribute('data-theme')==='dark'?'light':'dark');
-  });
+  /* Theme toggle handled exclusively by modern.js */
 
   /* Nav scroll */
   const nav=document.getElementById('mainNav');
@@ -975,5 +962,19 @@ body.no-scroll{overflow:hidden;}
 <script src="/modern.js" defer></script>
 <script src="/redesign.js" defer></script>
 <script src="/home-nav.js" defer></script>
+<script>
+(function(){
+  if (window.__novemNavBound) return; window.__novemNavBound = true;
+  document.querySelectorAll('.nav-item.has-dropdown').forEach(function(item){
+    item.addEventListener('mouseenter', function(){ item.classList.add('open'); });
+    item.addEventListener('mouseleave', function(){ item.classList.remove('open'); });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.nav-item.has-dropdown')) {
+      document.querySelectorAll('.nav-item.has-dropdown.open').forEach(function(i){ i.classList.remove('open'); });
+    }
+  });
+})();
+</script>
 </body>
 </html>

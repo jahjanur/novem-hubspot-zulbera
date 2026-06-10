@@ -2,64 +2,223 @@
   templateType: page
   label: "Industries"
   isAvailableForNewContent: true
-  -->
-{% extends "../layouts/base.html" %}
+-->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industries | Novem Digital — Digital Risk Platform for Institutional Real Estate</title>
+  <meta name="description" content="Novem Digital makes building failure predictable across commercial real estate, seniors living, data centers, and public venues. See how institutional portfolio operators reduce Total Cost of Risk Ownership."/>
+  <link rel="canonical" href="/industries/"/>
+  <meta property="og:title" content="Industries | Novem Digital — Digital Risk Platform for Institutional Real Estate"/>
+  <meta property="og:description" content="Novem Digital makes building failure predictable for institutional real estate portfolios. Commercial, seniors living, data centers, and public venues."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://novemdigital.com/industries"/>
+  <meta property="og:image" content="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industries-hero.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Industries | Novem Digital — Predictive Risk for Real Estate"/>
+  <meta name="twitter:description" content="Predictive building intelligence for commercial real estate, seniors living, data centers, and public venues globally."/>
+  <meta name="twitter:image" content="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industries-hero.jpg"/>
 
-{# Suggested page settings — title: Industries | Novem Digital — Digital Risk Platform for Institutional Real Estate #}
-{# meta description: Novem Digital makes building failure predictable across commercial real estate, seniors living, data centers, and public venues. See how institutional portfolio operators reduce Total Cost of Risk Ownership. #}
+  <!-- FAQPage + WebPage Schema for AEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://novemdigital.com/industries",
+        "url": "https://novemdigital.com/industries",
+        "name": "Industries | Novem Digital",
+        "description": "Novem Digital makes building failure predictable across commercial real estate, seniors living, data centers, and public venues.",
+        "isPartOf": { "@id": "https://novemdigital.com" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://novemdigital.com" },
+            { "@type": "ListItem", "position": 2, "name": "Industries", "item": "https://novemdigital.com/industries" }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Which industries does Novem Digital serve?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital serves institutional real estate owners and operators across four portfolio types: commercial and mixed-use real estate, seniors living and wellness communities, data centers, and recreational venues and public facilities. The common thread is multi-site portfolios where building failure carries a material financial, operational, or human consequence." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Total Cost of Risk Ownership (TCRO) in commercial real estate?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Total Cost of Risk Ownership (TCRO) is a framework introduced by Novem Digital that captures the full financial burden of building risk — beyond direct insurance claims. In commercial real estate, TCRO includes emergency repair premiums, capital timing losses from age-based planning, insurance volatility from insufficient monitoring data, compliance overhead, and reputational exposure to boards and lenders. Most organizations only measure direct claims, leaving the majority of their true risk burden unmanaged." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Novem Digital help seniors living operators reduce outbreak costs?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital surfaces environmental risk signals — including HVAC performance, air quality, and water system conditions — before they deteriorate into health events. Seniors living operators use the platform to move from reactive outbreak response to predictive environmental risk management, with audit-ready evidence for families, regulators, and insurers. One operator achieved zero respiratory outbreak weeks in a single year after seven years of recurring outbreaks." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Novem Digital support data center uptime and compliance?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Novem Digital gives data center operators continuous visibility into early failure signals across cooling, power, and critical infrastructure systems — before those signals become downtime events. The platform produces audit-ready monitoring records that support compliance obligations and insurance renewals, and connects live condition data directly to capital planning decisions." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Novem Digital work with existing building management systems?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Novem Digital connects to what you already own, then adds targeted monitoring coverage only where financial exposure is highest. No rip-and-replace required. The platform creates one credible digital risk record across every building type and every site in your portfolio." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Novem Digital help with insurance renewals?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Regardless of asset class, Novem Digital produces continuous audit-ready data that demonstrates proactive risk management to underwriters. Instead of defending a renewal with historical claims data alone, operators go to market with documented evidence of monitoring, early intervention, and measurable risk reduction — which translates directly to stronger submissions and more defensible premium conversations." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
-{% block extra_head %}
-<style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+
+  <style>
 /* ═══════════════════════════════════════════
    BRAND TOKENS
    ═══════════════════════════════════════════ */
+:root {
+  --green:#7BFAB5; --blue:#60BCD6; --gun:#1E343F; --gun-mid:#243C48;
+  --gun-dark:#111A1F; --text:#E8F4F0; --muted:#8BBCCA; --faint:#4A7080;
+  --border:#2C4250; --border2:#324E5C; --surf:#1E343F; --surf2:#243C48;
+  --bg:#111A1F; --font-h:'Titillium Web','Arial Narrow',sans-serif;
+  --font-b:'DM Sans','Helvetica Neue',sans-serif;
+  --r:9999px; --rxl:1rem; --rlg:.75rem; --rmd:.5rem;
+  --sh-md:0 4px 20px rgba(0,0,0,.4); --sh-lg:0 12px 48px rgba(0,0,0,.55);
+  --ease:200ms cubic-bezier(.16,1,.3,1);
+}
+[data-theme="light"] {
+  --text:#1E343F; --muted:#4A6070; --faint:#8AA4B0; --border:#C8D5D0;
+  --border2:#D4DDD9; --surf:#FFFFFF; --surf2:#F0F4F2; --bg:#F4F6F4;
+  --sh-md:0 4px 20px rgba(30,52,63,.1); --sh-lg:0 12px 48px rgba(30,52,63,.15);
+}
 
 /* ═══════════════════════════════════════════
    RESET + BASE
    ═══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-font-smoothing:antialiased;}
+body{min-height:100dvh;font-family:var(--font-b);font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--text);background:var(--bg);line-height:1.6;transition:background .3s,color .3s;}
+img{display:block;max-width:100%;height:auto;}
+ul{list-style:none;}
+button{cursor:pointer;background:none;border:none;font:inherit;}
+a{transition:color var(--ease),opacity var(--ease);}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:4px;}
+body.no-scroll{overflow:hidden;}
 
 /* ═══════════════════════════════════════════
    UTILITIES
    ═══════════════════════════════════════════ */
-
-50%{opacity:.3}}
-
+.w{max-width:1200px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem);}
+.wm{max-width:960px;margin-inline:auto;padding-inline:clamp(1.25rem,5vw,3rem);}
+.eye{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);display:flex;align-items:center;gap:.5rem;margin-bottom:1rem;}
+.eye-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 2s ease-in-out infinite;flex-shrink:0;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.h1{font-family:var(--font-h);font-size:clamp(3.2rem,1.5rem + 6.5vw,7rem);font-weight:700;line-height:1.02;color:var(--text);}
+.h2{font-family:var(--font-h);font-size:clamp(2rem,1.3rem + 3vw,3.6rem);font-weight:700;line-height:1.1;color:var(--text);}
+.h3{font-family:var(--font-h);font-size:clamp(1.15rem,1rem + .6vw,1.5rem);font-weight:700;line-height:1.2;color:var(--text);}
+.accent{color:var(--green);}
+.lg{font-size:clamp(1.1rem,1rem + .4vw,1.3rem);color:#D4E8EE;line-height:1.7;}
+.sm{font-size:clamp(1rem,.95rem + .25vw,1.125rem);color:#C8DDE6;line-height:1.75;}
+.sec{padding-block:clamp(4rem,8vw,7rem);}
+.sec--alt{background:var(--surf);}
 .sec--dark{background:var(--gun-dark);}
 
 /* ═══════════════════════════════════════════
    BUTTONS
    ═══════════════════════════════════════════ */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.875rem,.85rem + .1vw,1rem);padding:.875rem 2rem;border-radius:var(--r);text-decoration:none;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);cursor:pointer;border:none;white-space:nowrap;}
+.btn:hover{transform:translateY(-2px);}
+.btn-p{background:var(--green);color:var(--gun);}
+.btn-p:hover{opacity:.88;box-shadow:0 6px 24px rgba(123,250,181,.25);}
+.btn-g{color:var(--muted);border:1px solid var(--border2);background:transparent;}
+.btn-g:hover{color:var(--text);border-color:var(--muted);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-h);font-weight:700;font-size:clamp(.875rem,.85rem + .1vw,1rem);padding:.875rem 2rem;border-radius:var(--r);text-decoration:none;color:rgba(232,244,240,.8);border:1px solid rgba(232,244,240,.22);transition:color var(--ease),border-color var(--ease),transform var(--ease);white-space:nowrap;}
+.btn-ghost:hover{color:#E8F4F0;border-color:rgba(232,244,240,.5);transform:translateY(-2px);}
 
 /* ═══════════════════════════════════════════
    NAV — Desktop
    ═══════════════════════════════════════════ */
-
+.nav{position:fixed;top:0;left:0;right:0;z-index:200;padding-block:.75rem;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid color-mix(in srgb,var(--border) 55%,transparent);transition:background .3s,box-shadow .3s;}
+.nav--scrolled{box-shadow:0 4px 24px rgba(0,0,0,.35);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.logo{display:flex;align-items:center;gap:.4rem;text-decoration:none;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:.25rem;margin-left:1.5rem;}
+.nav-item{position:relative;}
+.nav-item>a,.nav-item>button{font-family:var(--font-b);font-size:.875rem;font-weight:500;color:var(--muted);text-decoration:none;padding:.5rem .75rem;border-radius:.375rem;display:inline-flex;align-items:center;gap:.3rem;transition:color var(--ease),background var(--ease);white-space:nowrap;}
+.nav-item>a:hover,.nav-item>button:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+.nav-item--active>a{color:var(--text);}
+.nav-item--tcro>a{color:#7BFAB5;font-weight:600;}
+.nav-item--tcro>a:hover{color:#7BFAB5;background:color-mix(in srgb,#7BFAB5 8%,transparent);}
+.nav-caret{width:10px;height:10px;flex-shrink:0;transition:transform var(--ease);}
+.nav-item.open .nav-caret{transform:rotate(180deg);}
+.nav-dropdown{position:absolute;top:calc(100% + .5rem);left:50%;transform:translateX(-50%) translateY(6px);background:var(--surf);border:1px solid var(--border);border-radius:var(--rlg);box-shadow:var(--sh-lg);padding:1.25rem;min-width:240px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--ease),transform var(--ease);}
+.nav-item.open .nav-dropdown{opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);}
 .dd-link{display:block;padding:.625rem .75rem;border-radius:.375rem;text-decoration:none;transition:background var(--ease);}
 .dd-link:hover{background:color-mix(in srgb,var(--green) 8%,transparent);}
 .dd-link-title{font-family:var(--font-h);font-weight:700;font-size:.875rem;color:var(--text);margin-bottom:.15rem;}
 .dd-link-desc{font-size:.78rem;color:var(--muted);line-height:1.45;}
+.nav-right{display:flex;align-items:center;gap:.5rem;flex-shrink:0;}
+.nav-login{font-size:.875rem;font-weight:500;color:var(--faint);text-decoration:none;padding:.5rem .75rem;transition:color var(--ease);}
+.nav-login:hover{color:var(--text);}
+.nav-demo{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-h);font-weight:700;font-size:.875rem;padding:.55rem 1.35rem;border-radius:var(--r);background:#7BFAB5;color:#1E343F;text-decoration:none;transition:transform var(--ease),opacity var(--ease),box-shadow var(--ease);white-space:nowrap;}
+.nav-demo:hover{transform:translateY(-1px);opacity:.9;box-shadow:0 4px 16px rgba(123,250,181,.25);}
+.tbtn{color:var(--muted);padding:.4rem;border-radius:.5rem;display:flex;align-items:center;}
+.tbtn:hover{color:var(--text);background:color-mix(in srgb,var(--text) 6%,transparent);}
+.nav-hamburger{display:none;width:40px;height:40px;align-items:center;justify-content:center;color:var(--text);border-radius:.5rem;transition:background var(--ease);}
+.nav-hamburger:hover{background:color-mix(in srgb,var(--text) 8%,transparent);}
 
 /* ═══════════════════════════════════════════
    NAV — Mobile
    ═══════════════════════════════════════════ */
-
-[data-theme="light"] 
-
-a
-
+.mobile-overlay{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.6);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:opacity .3s ease;}
+.mobile-overlay.open{opacity:1;visibility:visible;}
+.mobile-menu{position:fixed;top:0;right:0;bottom:0;z-index:301;width:min(88vw,380px);background:var(--gun);transform:translateX(100%);transition:transform .35s cubic-bezier(.16,1,.3,1);display:flex;flex-direction:column;overflow-y:auto;}
+[data-theme="light"] .mobile-menu{background:#fff;}
+.mobile-menu.open{transform:translateX(0);}
+.mobile-menu-header{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid var(--border);flex-shrink:0;}
+.mobile-close{width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:var(--text);border-radius:.375rem;transition:background var(--ease);}
+.mobile-close:hover{background:color-mix(in srgb,var(--text) 8%,transparent);}
+.mobile-nav-list{flex:1;padding:.75rem 0;overflow-y:auto;}
+.mobile-nav-item{border-bottom:1px solid color-mix(in srgb,var(--border) 50%,transparent);}
+.mobile-nav-item:last-child{border-bottom:none;}
+.mobile-nav-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;font-family:var(--font-h);font-weight:700;font-size:1rem;color:var(--text);text-decoration:none;transition:background var(--ease);}
+.mobile-nav-trigger:hover{background:color-mix(in srgb,var(--text) 5%,transparent);}
+a.mobile-nav-trigger{cursor:pointer;}
+.mobile-nav-trigger--tcro{color:#7BFAB5;}
 .mob-caret{width:16px;height:16px;color:var(--faint);transition:transform var(--ease);}
-
-@media(max-width:1023px){}
+.mobile-nav-item.open .mob-caret{transform:rotate(180deg);}
+.mobile-subnav{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.16,1,.3,1);}
+.mobile-nav-item.open .mobile-subnav{max-height:400px;}
+.mobile-subnav a{display:block;padding:.75rem 1.5rem .75rem 2.5rem;font-size:.9rem;color:var(--muted);text-decoration:none;transition:color var(--ease),background var(--ease);}
+.mobile-subnav a:hover{color:var(--text);background:color-mix(in srgb,var(--text) 4%,transparent);}
+.mobile-bottom{padding:1.25rem 1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;}
+.mobile-login{display:block;text-align:center;padding:.75rem;font-size:.9rem;font-weight:500;color:var(--faint);text-decoration:none;border-radius:.375rem;transition:color var(--ease),background var(--ease);}
+.mobile-login:hover{color:var(--text);}
+.mobile-demo{display:block;text-align:center;padding:.875rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;background:#7BFAB5;color:#1E343F;border-radius:var(--r);text-decoration:none;}
+.mobile-demo:hover{opacity:.9;}
+@media(max-width:1023px){.nav-links,.nav-right{display:none;}.nav-hamburger{display:flex;}}
 
 /* ═══════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════ */
 .hero{position:relative;overflow:hidden;min-height:92svh;display:flex;align-items:center;}
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg 
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:.99;filter:saturate(.78) brightness(1.25);}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(17,26,31,.97) 0%,rgba(17,26,31,.82) 40%,rgba(17,26,31,.42) 100%);}
-[data-theme="light"] .hero-bg 
-[data-theme="light"] .hero-overlay{background:linear-gradient(105deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.9) 40%,rgba(244,246,244,.6) 100%);}
+[data-theme="light"] .hero-bg img { opacity: 1; filter: none; }
+[data-theme="light"] .hero-overlay { background: linear-gradient(105deg,rgba(244,246,244,.45) 0%,rgba(244,246,244,.18) 50%,rgba(244,246,244,0) 100%); }
 .hero-w{position:relative;z-index:1;padding-block:clamp(7.5rem,14vw,10.5rem);}
 .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(3rem,6vw,6rem);align-items:center;}
 .hero-acts{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-top:2.25rem;}
@@ -72,6 +231,14 @@ a
 .hero-tile-icon{color:var(--green);}
 .hero-tile-name{font-family:var(--font-h);font-weight:700;font-size:.95rem;color:var(--text);line-height:1.25;}
 .hero-tile-proof{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-top:auto;}
+
+/* Hero stat cards (mirrors home.html .hero-stat pattern) */
+.hero-stats{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;}
+.hero-stat{background:rgba(17,26,31,.65);border:1px solid rgba(123,250,181,.18);border-radius:var(--rlg);padding:1.25rem 1.75rem;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;align-items:baseline;gap:1rem;}
+[data-theme="light"] .hero-stat{background:rgba(255,255,255,.82);border-color:rgba(30,52,63,.12);box-shadow:var(--sh-md);}
+.hero-stat-num{font-family:var(--font-h);font-weight:700;font-size:clamp(1.6rem,1.3rem + 1.5vw,2.4rem);color:var(--green);line-height:1;white-space:nowrap;}
+.hero-stat-lbl{font-size:clamp(1.05rem,1rem + .2vw,1.2rem);color:var(--muted);line-height:1.4;font-weight:500;}
+
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-tiles-wrap{display:none;}}
 
 /* ═══════════════════════════════════════════
@@ -80,17 +247,17 @@ a
 .port-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:stretch;}
 .port-grid--flip{direction:rtl;}
 .port-grid--flip>*{direction:ltr;}
-.port-
-.port-img 
+.port-img{border-radius:var(--rxl);overflow:hidden;box-shadow:var(--sh-lg);min-height:380px;}
+.port-img img{width:100%;height:100%;min-height:380px;object-fit:cover;display:block;}
 .port-img-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(17,26,31,.05) 0%,rgba(17,26,31,.5) 100%);pointer-events:none;}
-.port-
+.port-body{display:flex;flex-direction:column;gap:1.25rem;}
 .port-challenges{display:flex;flex-direction:column;gap:.55rem;padding:1.25rem;background:color-mix(in srgb,var(--text) 4%,transparent);border:1px solid var(--border);border-radius:var(--rlg);}
 .port-ch-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--faint);margin-bottom:.5rem;}
 .port-ch{display:flex;align-items:flex-start;gap:.7rem;font-size:clamp(.9rem,.875rem + .1vw,1rem);color:var(--muted);line-height:1.6;}
 .port-ch::before{content:'';width:.4rem;height:.4rem;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.48rem;opacity:.7;}
 .port-proof{background:color-mix(in srgb,var(--green) 6%,transparent);border:1px solid color-mix(in srgb,var(--green) 22%,transparent);border-radius:var(--rlg);padding:1.25rem 1.5rem;display:flex;align-items:baseline;gap:.85rem;}
 .port-proof-val{font-family:var(--font-h);font-weight:700;font-size:clamp(1.5rem,1.3rem + .8vw,2rem);color:var(--green);line-height:1;white-space:nowrap;}
-.port-proof-
+.port-proof-body{}
 .port-proof-lbl{font-size:clamp(.875rem,.85rem + .1vw,.95rem);color:var(--muted);line-height:1.5;}
 .port-proof-cat{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.2rem;}
 .port-link{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--font-h);font-weight:700;font-size:.95rem;color:var(--green);text-decoration:none;margin-top:.5rem;}
@@ -98,8 +265,8 @@ a
 .port-link:hover svg{transform:translateX(3px);}
 @media(max-width:860px){
   .port-grid,.port-grid--flip{grid-template-columns:1fr;direction:ltr;}
-  .port-
-  .port-img 
+  .port-img{position:static;height:240px;}
+  .port-img img{height:240px;}
 }
 
 /* ═══════════════════════════════════════════
@@ -125,7 +292,7 @@ a
 .cor-missing-chips span{font-size:.78rem;color:#8BBCCA;background:rgba(139,188,202,.12);border:1px solid rgba(139,188,202,.3);border-radius:var(--r);padding:.22rem .7rem;text-decoration:line-through;}
 .cor-item-new{display:flex;align-items:flex-start;gap:.7rem;}
 .cor-dot{width:.45rem;height:.45rem;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.38rem;}
-.cor-item-
+.cor-item-body{}
 .cor-item-title{font-size:.95rem;color:var(--text);font-weight:600;line-height:1.4;}
 .cor-item-desc{font-size:.82rem;color:var(--muted);margin-top:.1rem;line-height:1.4;}
 .cor-source{font-size:.8rem;color:var(--muted);padding:.875rem 1.5rem;border-top:1px solid rgba(123,250,181,.15);line-height:1.6;}
@@ -170,12 +337,12 @@ a
 details[open] .faq-q::after{transform:rotate(45deg);}
 details[open] .faq-q{color:var(--green);}
 .faq-q:hover{background:color-mix(in srgb,var(--green) 4%,transparent);}
-.faq-
+.faq-a{padding:0 1.75rem 1.5rem;font-size:clamp(1rem,.95rem + .2vw,1.1rem);color:var(--muted);line-height:1.75;max-width:68ch;}
 
 /* ═══════════════════════════════════════════
    CLOSING CTA
    ═══════════════════════════════════════════ */
-.ct
+.cta{background:var(--gun);padding-block:clamp(4rem,8vw,6.5rem);position:relative;overflow:hidden;}
 .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%);pointer-events:none;}
 .cta-inner{text-align:center;max-width:50ch;margin-inline:auto;position:relative;}
 .cta-h{font-family:var(--font-h);font-size:clamp(1.9rem,1.2rem + 2.8vw,3.5rem);font-weight:700;color:#E8F4F0;line-height:1.1;margin-bottom:1.25rem;}
@@ -187,22 +354,467 @@ details[open] .faq-q{color:var(--green);}
 /* ═══════════════════════════════════════════
    FOOTER
    ═══════════════════════════════════════════ */
-
-@media(max-width:900px){}
-@media(max-width:600px){}
-@media(max-width:480px){}
+.foot{padding-block:3.5rem;border-top:1px solid var(--border);}
+.foot-g{display:grid;grid-template-columns:2fr repeat(5,1fr);gap:2rem;}
+.foot-desc{font-size:.875rem;color:var(--muted);margin-top:1rem;max-width:30ch;line-height:1.7;}
+.foot-ct{font-family:var(--font-h);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--text);margin-bottom:1rem;}
+.foot-links{display:flex;flex-direction:column;gap:.7rem;}
+.foot-links a{font-size:.875rem;color:var(--muted);text-decoration:none;}
+.foot-links a:hover{color:var(--green);}
+.foot-bot{margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.foot-legal{font-size:.75rem;color:var(--faint);}
+@media(max-width:900px){.foot-g{grid-template-columns:2fr 1fr 1fr;}}
+@media(max-width:600px){.foot-g{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.foot-g{grid-template-columns:1fr;}}
 
 /* ═══════════════════════════════════════════
    REVEAL ANIMATIONS
    ═══════════════════════════════════════════ */
-</style>
-{% endblock %}
+.rev{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease;}
+.rev.in{opacity:1;transform:none;}
+.d1{transition-delay:.1s;}.d2{transition-delay:.2s;}.d3{transition-delay:.3s;}
+@media(prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none;}}
+  </style>
+  {{ standard_header_includes }}
+  <style>/* inlined: footer-v2.css */
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER v2 — modern, refined, scoped to .foot-v2
+   Replaces the original .foot styling site-wide when this class
+   is applied to the <footer> element.
+   ═══════════════════════════════════════════════════════════════ */
 
-{% block body %}
+.foot-v2 {
+  position: relative;
+  padding-block: clamp(4rem, 7vw, 6rem) 1.5rem !important;
+  border-top: none !important;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in srgb, var(--green) 8%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg,
+                    color-mix(in srgb, var(--surf) 30%, var(--bg)) 0%,
+                    var(--bg) 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Top edge gradient line */
+.foot-v2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80%, 900px);
+  height: 1px;
+  background: linear-gradient(90deg,
+                              transparent,
+                              color-mix(in srgb, var(--green) 60%, transparent) 50%,
+                              transparent);
+}
+
+/* Subtle grid pattern in background (very faint) */
+.foot-v2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--green) 3%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 20%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 20%, black 0%, transparent 75%);
+  opacity: .6;
+}
+
+.foot-v2 .w { position: relative; z-index: 1; }
+
+/* ─── BRAND BAND (top — logo + big tagline) ─────────────── */
+.foot-v2-brand {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  margin-bottom: 3rem;
+}
+.foot-v2-brand-left {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.foot-v2-tagline {
+  font-family: var(--font-h);
+  font-size: clamp(1.4rem, .8vw + 1.2rem, 1.95rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.022em;
+  color: var(--text);
+  margin: 0;
+  max-width: 28ch;
+}
+.foot-v2-tagline .accent {
+  background: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.foot-v2-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .9rem 1.6rem;
+  background: var(--green);
+  color: var(--gun) !important;
+  -webkit-text-fill-color: var(--gun) !important;
+  border-radius: 9999px;
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  /* Contained shadow — no spread that extends beyond visual bounds */
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.5) inset,
+    0 4px 12px -4px rgba(123,250,181,.35),
+    0 1px 2px rgba(0,0,0,.18);
+  transition: transform .2s cubic-bezier(.16,1,.3,1),
+              box-shadow .25s cubic-bezier(.16,1,.3,1),
+              filter .2s cubic-bezier(.16,1,.3,1);
+  white-space: nowrap;
+}
+[data-theme="light"] .foot-v2-cta {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+.foot-v2-cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.55) inset,
+    0 6px 14px -4px rgba(123,250,181,.45),
+    0 1px 2px rgba(0,0,0,.2);
+}
+
+/* ─── MAIN GRID — clean 5-column layout ─────────────────── */
+.foot-v2-g {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.foot-v2-g .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.foot-v2-desc {
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 32ch;
+  margin-bottom: 1.25rem;
+}
+.foot-v2-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin-top: 1rem;
+}
+.foot-v2-contacts a {
+  font-size: .9rem;
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  transition: color .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-contacts a svg {
+  width: 14px;
+  height: 14px;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.foot-v2-contacts a:hover { color: var(--green); }
+
+.foot-v2-ct {
+  font-family: var(--font-h);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+  opacity: .85;
+}
+.foot-v2-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+}
+.foot-v2-links a {
+  font-size: .92rem;
+  color: var(--muted);
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  transition: color .2s cubic-bezier(.16,1,.3,1),
+              padding-left .25s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-links a::before {
+  content: "→";
+  position: absolute;
+  left: -.95em;
+  opacity: 0;
+  transform: translateX(-4px);
+  color: var(--green);
+  transition: opacity .2s cubic-bezier(.16,1,.3,1),
+              transform .2s cubic-bezier(.16,1,.3,1);
+  font-size: .9em;
+}
+.foot-v2-links a:hover {
+  color: var(--green);
+  padding-left: .35em;
+}
+.foot-v2-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+.foot-v2-links a svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ─── DATA SOURCES (compact strip at bottom) ─────────────── */
+.foot-v2-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .75rem 2rem;
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+}
+.foot-v2-sources-label {
+  font-family: var(--font-h);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  grid-column: 1 / -1;
+}
+.foot-v2-sources li {
+  font-size: .78rem;
+  color: var(--faint);
+  line-height: 1.5;
+  list-style: none;
+}
+.foot-v2-sources sup {
+  color: var(--green);
+  font-weight: 700;
+  margin-right: .25rem;
+}
+.foot-v2-sources a {
+  color: var(--faint);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--faint) 40%, transparent);
+  text-underline-offset: 2px;
+  transition: color .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-sources a:hover { color: var(--green); }
+
+/* ─── BOTTOM STRIP — copyright + zulbera attribution ────── */
+.foot-v2-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+.foot-v2-legal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: .78rem;
+  color: var(--faint);
+}
+.foot-v2-legal span:last-child {
+  font-family: var(--font-h);
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+/* Made with ❤️ by Zulbera */
+.foot-v2-made {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .8rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: .45rem .85rem;
+  background: color-mix(in srgb, var(--surf) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 9999px;
+  transition: border-color .25s cubic-bezier(.16,1,.3,1),
+              background .25s cubic-bezier(.16,1,.3,1),
+              transform .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-made-heart {
+  display: inline-block;
+  color: #FF5C7C;
+  font-size: 1em;
+  line-height: 1;
+  animation: footHeartBeat 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes footHeartBeat {
+  0%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.18); }
+  40%, 80% { transform: scale(1); }
+}
+.foot-v2-made-brand {
+  font-weight: 700;
+  color: var(--text);
+  transition: color .25s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-made:hover {
+  border-color: color-mix(in srgb, #FF5C7C 35%, var(--border));
+  background: color-mix(in srgb, #FF5C7C 6%, var(--surf));
+  transform: translateY(-1px);
+}
+.foot-v2-made:hover .foot-v2-made-brand {
+  background: linear-gradient(120deg, #FF5C7C 0%, #FFB36E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .foot-v2-g { grid-template-columns: 1fr 1fr 1fr; }
+  .foot-v2-g > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .foot-v2-brand { grid-template-columns: 1fr; }
+  .foot-v2-g { grid-template-columns: 1fr 1fr; }
+  .foot-v2-g > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .foot-v2-g { grid-template-columns: 1fr; }
+  .foot-v2-bot { justify-content: center; text-align: center; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .foot-v2-made-heart { animation: none; }
+}
+
+/* ─── Light theme — comprehensive ──────────────────────── */
+[data-theme="light"] .foot-v2 {
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 0%, color-mix(in srgb, #60BCD6 14%, transparent) 0%, transparent 65%),
+    linear-gradient(180deg, #FFFFFF 0%, #ECF2F4 100%) !important;
+}
+[data-theme="light"] .foot-v2::before {
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in srgb, #60BCD6 65%, transparent) 50%,
+    transparent);
+}
+[data-theme="light"] .foot-v2::after {
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg,  color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px);
+  opacity: .45;
+}
+[data-theme="light"] .foot-v2-brand {
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-tagline { color: #1E343F; }
+[data-theme="light"] .foot-v2-tagline .accent {
+  background: linear-gradient(120deg, #60BCD6 0%, #1E343F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="light"] .foot-v2-desc { color: #4A6B79; }
+[data-theme="light"] .foot-v2-ct { color: #1E343F; opacity: .9; }
+[data-theme="light"] .foot-v2-links a,
+[data-theme="light"] .foot-v2-contacts a { color: #4A6B79; }
+[data-theme="light"] .foot-v2-links a::before,
+[data-theme="light"] .foot-v2-contacts a svg { color: #60BCD6; }
+[data-theme="light"] .foot-v2-links a:hover,
+[data-theme="light"] .foot-v2-contacts a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-sources {
+  border-top-color: rgba(30,52,63,.10);
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-sources-label,
+[data-theme="light"] .foot-v2-sources li,
+[data-theme="light"] .foot-v2-sources a {
+  color: #6A8593;
+}
+[data-theme="light"] .foot-v2-sources sup,
+[data-theme="light"] .foot-v2-sources a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-legal { color: #6A8593; }
+[data-theme="light"] .foot-v2-legal span:last-child { color: #4A6B79; }
+
+/* Made-with pill — light mode */
+[data-theme="light"] .foot-v2-made {
+  background: #FFFFFF !important;
+  border-color: rgba(30,52,63,.12) !important;
+  color: #4A6B79;
+  box-shadow: 0 2px 8px -2px rgba(30,52,63,.08);
+}
+[data-theme="light"] .foot-v2-made-brand { color: #1E343F; }
+[data-theme="light"] .foot-v2-made:hover {
+  border-color: color-mix(in srgb, #FF5C7C 40%, rgba(30,52,63,.12)) !important;
+  background: color-mix(in srgb, #FF5C7C 5%, #FFFFFF) !important;
+}
+
+/* Top brand CTA in light mode */
+[data-theme="light"] .foot-v2-cta {
+  color: #1E343F !important;
+  -webkit-text-fill-color: #1E343F !important;
+}
+
+</style>
+</head>
+<body>
+<a href="#main" style="position:absolute;left:-9999px;top:auto;" onfocus="this.style.left='0'">Skip to main content</a>
+
+<!-- ════════ NAV ════════ -->
+<!-- Novem Digital header partial — top navigation + mobile drawer. -->
+{% set company_name = theme.brand.company_name|default('Novem Digital', true) %}
+{% set logo_src     = theme.brand.logo.src|default('https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/logo.png', true) %}
+{% set demo_url     = theme.navigation.demo_url.href|default('/get-a-demo/', true) %}
+{% set login_url    = theme.navigation.login_url.href|default('#', true) %}
+
+{% include "./partials/header.html" %}
+
+<main id="main">
+
 <!-- ════════ HERO ════════ -->
 <section class="hero" style="background:linear-gradient(135deg,#0F1C24 0%,#1C3040 50%,#0F1C24 100%);">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?w=1800&q=85&auto=format&fit=crop&bri=15" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
+    <img src="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industries-hero.jpg" alt="" aria-hidden="true" width="1800" height="1000" loading="eager" decoding="async"/>
     <div class="hero-overlay"></div>
   </div>
   <div class="w hero-w">
@@ -211,6 +823,11 @@ details[open] .faq-q{color:var(--green);}
         <div class="eye"><span class="eye-dot"></span>Who We Serve</div>
         <h1 class="h1" style="margin-bottom:1.5rem;">Risk you can't see<br><span class="accent">is risk you<br>can't manage.</span></h1>
         <p class="lg" style="max-width:46ch;">Four portfolio types. One platform. Failure becomes predictable across all of them.</p>
+        <div class="hero-stats" style="display:flex; gap:1rem; margin-top:2rem; flex-wrap:wrap;">
+          <div class="hero-stat"><span class="hero-stat-num">4</span><span class="hero-stat-lbl">Portfolio types</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">7.2M</span><span class="hero-stat-lbl">Buildings analyzed</span></div>
+          <div class="hero-stat"><span class="hero-stat-num">30%</span><span class="hero-stat-lbl">Better capital IRR</span></div>
+        </div>
         <div class="hero-acts">
           <a href="/get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           <a href="/how-it-works/" class="btn btn-ghost">See Platform</a>
@@ -249,7 +866,8 @@ details[open] .faq-q{color:var(--green);}
   <div class="w">
     <div class="port-grid">
       <div class="port-img" style="position:relative;">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80&auto=format&fit=crop" alt="Commercial real estate portfolio" loading="lazy"/>
+        <!-- TODO from Nicole feedback: replace with people-focused stock image; client to provide -->
+        <img src="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industry-commercial.jpg" alt="Commercial real estate portfolio" loading="lazy"/>
         <div class="port-img-overlay"></div>
       </div>
       <div class="port-body">
@@ -277,7 +895,8 @@ details[open] .faq-q{color:var(--green);}
   <div class="w">
     <div class="port-grid port-grid--flip">
       <div class="port-img" style="position:relative;">
-        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80&auto=format&fit=crop" alt="Seniors living and wellness community" loading="lazy"/>
+        <!-- TODO from Nicole feedback: replace with people-focused stock image; client to provide -->
+        <img src="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industry-seniors.jpg" alt="Seniors living and wellness community" loading="lazy"/>
         <div class="port-img-overlay"></div>
       </div>
       <div class="port-body">
@@ -305,7 +924,8 @@ details[open] .faq-q{color:var(--green);}
   <div class="w">
     <div class="port-grid">
       <div class="port-img" style="position:relative;">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=80&auto=format&fit=crop" alt="Data center critical infrastructure" loading="lazy"/>
+        <!-- TODO from Nicole feedback: replace with people-focused stock image; client to provide -->
+        <img src="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industry-datacenter.jpg" alt="Data center critical infrastructure" loading="lazy"/>
         <div class="port-img-overlay"></div>
       </div>
       <div class="port-body">
@@ -333,7 +953,8 @@ details[open] .faq-q{color:var(--green);}
   <div class="w">
     <div class="port-grid port-grid--flip">
       <div class="port-img" style="position:relative;">
-        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=900&q=80&auto=format&fit=crop" alt="Public venue and recreation facility" loading="lazy"/>
+        <!-- TODO from Nicole feedback: replace with people-focused stock image; client to provide -->
+        <img src="https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/industries/industry-recreational.jpg" alt="Public venue and recreation facility" loading="lazy"/>
         <div class="port-img-overlay"></div>
       </div>
       <div class="port-body">
@@ -506,11 +1127,78 @@ details[open] .faq-q{color:var(--green);}
       <h2 class="cta-h">See what failure looks like<br>in <em>your portfolio</em><br>before it happens.</h2>
       <p class="cta-b">Most organizations find material risk exposure in their first session — systems with no monitoring, assets at elevated failure probability that never appeared in a risk report. Book a demo and see what surfaces in your portfolio on day one.</p>
       <div class="cta-acts">
-        <a href="/get-a-demo/" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#" class="btn btn-p">Get a Demo <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         <a href="/how-it-works/" class="btn btn-ghost">Explore Platform</a>
       </div>
-      <p class="cta-trust">Novem Digital &mdash; Failure is Predictable.</p>
+      <p class="cta-trust">Novem Digital &mdash; Failures are Predictable.</p>
     </div>
   </div>
 </section>
-{% endblock %}
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<!-- Novem Digital footer partial v2 — premium footer with brand CTA band, 5-column grid, data sources strip, and bottom legal strip. -->
+{% set company_name = theme.brand.company_name|default('Novem Digital', true) %}
+{% set logo_src     = theme.brand.logo.src|default('https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/logo.png', true) %}
+{% set phone        = theme.brand.phone|default('+1 (833) 668-3647', true) %}
+{% set phone_href   = theme.brand.phone_href|default('tel:+18336683647', true) %}
+{% set email        = theme.brand.email|default('connect@novemdigital.com', true) %}
+{% set linkedin_url = theme.brand.linkedin_url|default('https://www.linkedin.com/company/novem-digital/', true) %}
+{% set tagline      = theme.brand.tagline|default('Failures are Predictable.', true) %}
+{% set foot_desc    = theme.footer.description|default('A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada.', true) %}
+{% set foot_legal   = theme.footer.legal|default('© 2026 Novem Digital. All rights reserved.', true) %}
+
+{% include "./partials/interstitial-popup.html" %}
+{% include "./partials/footer.html" %}
+
+
+<!-- ════════ SCRIPTS ════════ -->
+<script>
+(function(){
+  /* Theme */
+  const root=document.documentElement;
+  const themeBtn=document.querySelector('[data-theme-toggle]');
+  if(themeBtn) themeBtn.addEventListener('click',()=>{
+    /* inline theme toggle disabled — handled by modern.js */
+  });
+
+  /* Nav scroll */
+  const nav=document.getElementById('mainNav');
+  if(nav) addEventListener('scroll',()=>nav.classList.toggle('nav--scrolled',scrollY>40),{passive:true});
+
+  /* Mobile menu */
+  const hamburger=document.getElementById('hamburgerBtn');
+  const mobileClose=document.getElementById('mobileCloseBtn') || document.getElementById('mobileClose');
+  const mobileOverlay=document.getElementById('mobileOverlay');
+  const mobileMenu=document.getElementById('mobileMenu');
+  function openMobile(){
+    if(!mobileMenu||!mobileOverlay||!hamburger)return;
+    mobileMenu.classList.add('open');mobileOverlay.classList.add('open');
+    document.body.classList.add('no-scroll');
+    hamburger.setAttribute('aria-expanded','true');
+    mobileMenu.setAttribute('aria-hidden','false');
+  }
+  function closeMobile(){
+    if(!mobileMenu||!mobileOverlay||!hamburger)return;
+    mobileMenu.classList.remove('open');mobileOverlay.classList.remove('open');
+    document.body.classList.remove('no-scroll');
+    hamburger.setAttribute('aria-expanded','false');
+    mobileMenu.setAttribute('aria-hidden','true');
+  }
+  if(hamburger) hamburger.addEventListener('click',openMobile);
+  if(mobileClose) mobileClose.addEventListener('click',closeMobile);
+  if(mobileOverlay) mobileOverlay.addEventListener('click',closeMobile);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMobile();});
+  document.querySelectorAll('[data-mobile-link]').forEach(l=>l.addEventListener('click',closeMobile));
+
+  /* Reveal */
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.rev').forEach(el=>obs.observe(el));
+})();
+</script>
+  {{ standard_footer_includes }}
+</body>
+</html>

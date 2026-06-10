@@ -1,0 +1,70 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "platform"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "The Problem"
+  },
+  {
+    "name": "headline",
+    "label": "Headline (plain text)",
+    "type": "text",
+    "default": "You are paying for failures"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent \u2014 green)",
+    "type": "text",
+    "default": "you could have prevented."
+  },
+  {
+    "name": "sub",
+    "label": "Sub-headline",
+    "type": "text",
+    "default": "Most real estate owners do not know what critical systems they have, how old they are, or which are at risk. Risk stays invisible until it becomes a loss event."
+  },
+  {
+    "name": "cards",
+    "label": "Cards",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "text",
+        "label": "Body",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "title": "Expensive surprises",
+        "text": "Emergency repairs, volatile insurance, and unplanned capital spend absorb margin you should never have lost."
+      },
+      {
+        "title": "Running blind",
+        "text": "Boards and insurers ask for audit-ready evidence that does not exist."
+      },
+      {
+        "title": "Hidden financial burden",
+        "text": "Traditional Cost of Risk misses the gaps that hit your P&L first."
+      }
+    ]
+  }
+]

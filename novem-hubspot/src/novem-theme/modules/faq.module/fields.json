@@ -4,8 +4,30 @@
   { "name": "headline",  "label": "Headline",  "type": "text", "default": "Common questions about Novem Digital." },
   { "name": "items", "label": "FAQ items", "type": "group", "occurrence": { "min": 1, "default": 5 },
     "children": [
-      { "name": "question", "label": "Question", "type": "text", "default": "" },
+      { "name": "question", "label": "Question", "type": "text",     "default": "" },
       { "name": "answer",   "label": "Answer",   "type": "richtext", "default": "" }
+    ],
+    "default": [
+      {
+        "question": "What is a Digital Risk Platform for real estate?",
+        "answer": "<p>A Digital Risk Platform connects operational building data, risk intelligence, and financial exposure in one system so real estate owners can predict and prevent equipment failures before they become loss events. Unlike a building management system, which monitors and controls in real time, a Digital Risk Platform translates those signals into financial outcomes, capital decisions, and audit-ready evidence. Novem Digital is the only platform that combines real time monitoring with normalized insurance claims data from 7.2 million buildings.</p>"
+      },
+      {
+        "question": "What is Total Cost of Risk Ownership?",
+        "answer": "<p>Total Cost of Risk Ownership (TCRO) is the full financial burden of invisible building risk. It includes direct claims, emergency repair premiums, insurance volatility, business interruption, compliance overhead, fragmented reporting costs, and reputational exposure. Most organizations only measure direct claims, leaving the majority of their true risk burden invisible on the P&L. Novem Digital frames all value delivery through TCRO so customers can see and manage the complete picture.</p>"
+      },
+      {
+        "question": "How does Novem Digital predict building failure?",
+        "answer": "<p>Novem Digital combines real time monitoring of critical building systems with normalized insurance claims data from 7.2 million buildings across 20 years of loss history. By comparing live operational signals against historical failure patterns at the equipment and building type level, the platform identifies elevated risk before a failure event occurs. Early warnings give operations teams time to intervene at standard rates during planned downtime rather than at crisis rates after an event.</p>"
+      },
+      {
+        "question": "How is Novem Digital different from a building management system?",
+        "answer": "<p>A building management system (BMS) monitors and controls building systems in real time. Novem Digital layers predictive risk intelligence and normalized insurance claims data on top of existing systems to make failure predictable, translate operational signals into financial exposure, and produce audit-ready data for boards, lenders, and insurers. Novem does not replace a BMS — it makes its data financially useful and defensible at the executive level.</p>"
+      },
+      {
+        "question": "Which types of real estate does Novem Digital serve?",
+        "answer": "<p>Novem Digital is built for institutional real estate owners with multi-site portfolios including commercial and mixed-use properties, seniors living and wellness facilities, data centers, and recreational and public venues. Best-fit organizations have a high cost of failure, board-level scrutiny on risk-related costs, rising insurance pressure, fragmented asset and risk data, and a need to move from reactive to predictive operations.</p>"
+      }
     ]
   }
 ]

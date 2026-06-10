@@ -79,9 +79,10 @@
     eye: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
   };
 
-  // Homepage now uses hero-v2 (self-contained). Skip old hero wrapping there.
+  // Homepage hero is now the static 2-column layout (per client direction).
+  // Dynamic video injection + scroll-pin treatment intentionally disabled.
   const heroV2 = document.getElementById('heroV2');
-  if (hero && isHomepage && !heroV2) {
+  if (false && hero && isHomepage && !heroV2) {
     // ═══ STEP 1: wrap existing hero contents in a sticky pinned viewport ═══
     if (!hero.querySelector('.hero-pin')) {
       const pin = document.createElement('div');

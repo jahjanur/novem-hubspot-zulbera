@@ -6,6 +6,28 @@
   'use strict';
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ─── THEME TOGGLE — runs for everyone, including reduced-motion users
+     (it's not an animation, it's a user-preference setting).
+     Uses event delegation on document so it works regardless of when the
+     toggle button is added to the DOM and survives anything that wraps or
+     re-renders the nav. ─── */
+  try {
+    const saved = localStorage.getItem('novem-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  } catch (e) {}
+  document.addEventListener('click', function (e) {
+    const btn = e.target && e.target.closest && e.target.closest('[data-theme-toggle]');
+    if (!btn) return;
+    e.preventDefault();
+    const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('novem-theme', next); } catch (err) {}
+  }, true);  /* capture phase so we beat any handler that might stopPropagation */
+
+  /* Everything below this line is animation-related and can be skipped
+     when the user has reduced motion enabled. */
   if (reduce) return;
 
   /* ─── REVEAL ON SCROLL ─────────────────────────────── */
@@ -109,18 +131,8 @@
     });
   });
 
-  /* ─── THEME PERSISTENCE ────────────────────────────── */
-  try {
-    const saved = localStorage.getItem('novem-theme');
-    if (saved) document.documentElement.setAttribute('data-theme', saved);
-  } catch (e) {}
-  const themeBtn = document.querySelector('[data-theme-toggle]');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('novem-theme', next); } catch (e) {}
-    });
-  }
+  /* Theme persistence + toggle handler is now at the top of this IIFE so it
+     runs even when reduced-motion is on. Don't duplicate here. */
 
   /* ─── REMOVE LEGACY CURSOR GLOW (cleanup if previously injected) ── */
   document.querySelectorAll('.cursor-glow').forEach((el) => el.remove());

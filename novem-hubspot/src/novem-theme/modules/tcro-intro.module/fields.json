@@ -1,0 +1,74 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "tcro-intro"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "Framework"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "We find the failure"
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "before it hits your financials."
+  },
+  {
+    "name": "sub",
+    "label": "Sub-headline",
+    "type": "text",
+    "default": "Most risk frameworks only count what already happened. Total Cost of Risk Ownership captures the full financial burden \u2014 everything that hits your P&L before it makes your risk register."
+  },
+  {
+    "name": "btn_primary_label",
+    "label": "Primary CTA label",
+    "type": "text",
+    "default": "Explore TCRO"
+  },
+  {
+    "name": "btn_primary_url",
+    "label": "Primary CTA URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "/tcro/"
+    }
+  },
+  {
+    "name": "btn_secondary_label",
+    "label": "Secondary CTA label",
+    "type": "text",
+    "default": "TCRO Calculator"
+  },
+  {
+    "name": "btn_secondary_url",
+    "label": "Secondary CTA URL",
+    "type": "url",
+    "default": {
+      "type": "EXTERNAL",
+      "href": "/tcro/#calculator"
+    }
+  },
+  {
+    "name": "diagram_label",
+    "label": "Diagram caption (top)",
+    "type": "text",
+    "default": "TCRO \u2014 The Full Cost of Invisible Risk"
+  },
+  {
+    "name": "diagram_source",
+    "label": "Source line (under diagram)",
+    "type": "text",
+    "default": "Source: Novem Digital TCRO Framework, developed with strategic infrastructure partner"
+  }
+]

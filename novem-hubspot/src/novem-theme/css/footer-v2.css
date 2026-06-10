@@ -345,10 +345,73 @@
   .foot-v2-made-heart { animation: none; }
 }
 
-/* Light theme — softer */
+/* ─── Light theme — comprehensive ──────────────────────── */
 [data-theme="light"] .foot-v2 {
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in srgb, var(--green) 14%, transparent) 0%, transparent 70%),
-    linear-gradient(180deg, #F4F6F4 0%, #FFFFFF 100%);
+    radial-gradient(ellipse 80% 45% at 50% 0%, color-mix(in srgb, #60BCD6 14%, transparent) 0%, transparent 65%),
+    linear-gradient(180deg, #FFFFFF 0%, #ECF2F4 100%) !important;
 }
-[data-theme="light"] .foot-v2-made { background: rgba(255,255,255,.7); }
+[data-theme="light"] .foot-v2::before {
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in srgb, #60BCD6 65%, transparent) 50%,
+    transparent);
+}
+[data-theme="light"] .foot-v2::after {
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg,  color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px);
+  opacity: .45;
+}
+[data-theme="light"] .foot-v2-brand {
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-tagline { color: #1E343F; }
+[data-theme="light"] .foot-v2-tagline .accent {
+  background: linear-gradient(120deg, #60BCD6 0%, #1E343F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="light"] .foot-v2-desc { color: #4A6B79; }
+[data-theme="light"] .foot-v2-ct { color: #1E343F; opacity: .9; }
+[data-theme="light"] .foot-v2-links a,
+[data-theme="light"] .foot-v2-contacts a { color: #4A6B79; }
+[data-theme="light"] .foot-v2-links a::before,
+[data-theme="light"] .foot-v2-contacts a svg { color: #60BCD6; }
+[data-theme="light"] .foot-v2-links a:hover,
+[data-theme="light"] .foot-v2-contacts a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-sources {
+  border-top-color: rgba(30,52,63,.10);
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-sources-label,
+[data-theme="light"] .foot-v2-sources li,
+[data-theme="light"] .foot-v2-sources a {
+  color: #6A8593;
+}
+[data-theme="light"] .foot-v2-sources sup,
+[data-theme="light"] .foot-v2-sources a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-legal { color: #6A8593; }
+[data-theme="light"] .foot-v2-legal span:last-child { color: #4A6B79; }
+
+/* Made-with pill — light mode */
+[data-theme="light"] .foot-v2-made {
+  background: #FFFFFF !important;
+  border-color: rgba(30,52,63,.12) !important;
+  color: #4A6B79;
+  box-shadow: 0 2px 8px -2px rgba(30,52,63,.08);
+}
+[data-theme="light"] .foot-v2-made-brand { color: #1E343F; }
+[data-theme="light"] .foot-v2-made:hover {
+  border-color: color-mix(in srgb, #FF5C7C 40%, rgba(30,52,63,.12)) !important;
+  background: color-mix(in srgb, #FF5C7C 5%, #FFFFFF) !important;
+}
+
+/* Top brand CTA in light mode */
+[data-theme="light"] .foot-v2-cta {
+  color: #1E343F !important;
+  -webkit-text-fill-color: #1E343F !important;
+}

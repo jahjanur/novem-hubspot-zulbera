@@ -1,0 +1,14 @@
+<section class="sec{% if module.background_style == 'light' %} sec--alt{% endif %}"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="wm">
+    <div class="rev" style="{% if module.alignment == 'center' %}text-align:center;max-width:680px;margin-inline:auto;{% endif %}">
+      <p class="eye"{% if module.alignment == 'center' %} style="justify-content:center;"{% endif %}><span class="eye-dot"></span>{{ module.eyebrow }}</p>
+      <h2 class="h2" style="margin-bottom:1.25rem;">{{ module.headline }}{% if module.headline_accent %} <span class="accent">{{ module.headline_accent }}</span>{% endif %}</h2>
+      <div>{{ module.content }}</div>
+      {% if module.show_cta %}
+        <div style="margin-top:1.75rem;{% if module.alignment == 'center' %}display:flex;justify-content:center;{% endif %}">
+          <a href="{{ module.cta_url.href }}" class="btn btn-p">{{ module.cta_label }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

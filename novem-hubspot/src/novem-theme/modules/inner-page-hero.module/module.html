@@ -1,0 +1,14 @@
+<section class="hero"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %} style="min-height:auto;padding-block:clamp(7rem,12vw,9rem);">
+  {% if module.background.src %}
+    <div class="hero-bg"><img src="{{ module.background.src }}" alt="{{ module.background.alt }}" aria-hidden="true" loading="eager" decoding="async"/>
+      {% if module.show_overlay %}<div class="hero-overlay"></div>{% endif %}
+    </div>
+  {% endif %}
+  <div class="w hero-w" style="padding-block:0;">
+    <div style="max-width:780px;">
+      <div class="hero-platform-tag"><span class="eye-dot"></span>{{ module.eyebrow }}</div>
+      <p class="h1 hero-head">{{ module.headline_top }}<br><span class="accent">{{ module.headline_accent }}</span></p>
+      <div class="lg hero-sub">{{ module.sub }}</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+{
+  "label": "About \u2014 Board & Advisors",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon": "@hubspot/banner",
+  "is_available_for_new_content": true
+}

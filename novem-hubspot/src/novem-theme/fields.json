@@ -4,57 +4,42 @@
     "label": "Brand",
     "type": "group",
     "children": [
-      { "name": "company_name",         "label": "Company name",        "type": "text", "default": "NOVEM DIGITAL" },
-      { "name": "tagline",              "label": "Tagline",             "type": "text", "default": "Failure is Predictable." },
-      { "name": "logo",                 "label": "Logo",                "type": "image",
-        "default": { "src": "/novem-theme/images/logo.png", "alt": "Novem Digital", "width": 26, "height": 26 } },
-      { "name": "phone",                "label": "Phone",               "type": "text", "default": "+1 (833) 668-3647" },
-      { "name": "phone_href",           "label": "Phone link (tel:)",   "type": "text", "default": "tel:+18336683647" },
-      { "name": "email",                "label": "Contact email",       "type": "text", "default": "connect@novemdigital.com" },
-      { "name": "linkedin_url",         "label": "LinkedIn URL",        "type": "text", "default": "https://www.linkedin.com/company/novem-digital/" }
-    ]
-  },
-  {
-    "name": "navigation",
-    "label": "Header navigation",
-    "type": "group",
-    "children": [
-      { "name": "items",                "label": "Menu items",          "type": "menu",
-        "default": { "name": "Header Menu", "tree": [] } },
-      { "name": "login_url",            "label": "Login URL",           "type": "url",
-        "default": { "type": "EXTERNAL", "href": "#" } },
-      { "name": "demo_url",             "label": "Demo CTA URL",        "type": "url",
-        "default": { "type": "EXTERNAL", "href": "/get-a-demo/" } }
-    ]
-  },
-  {
-    "name": "forms",
-    "label": "HubSpot Form IDs",
-    "type": "group",
-    "help_text": "Create the three native HubSpot Forms (Marketing → Forms), then paste the form GUIDs here.",
-    "children": [
-      { "name": "portal_id",            "label": "HubSpot Portal ID",   "type": "text", "default": "" },
-      { "name": "demo_form_id",         "label": "Demo Form GUID",      "type": "text", "default": "" },
-      { "name": "partner_form_id",      "label": "Partner Form GUID",   "type": "text", "default": "" },
-      { "name": "careers_form_id",      "label": "Careers Form GUID",   "type": "text", "default": "" }
-    ]
-  },
-  {
-    "name": "hubdb",
-    "label": "HubDB",
-    "type": "group",
-    "help_text": "Create the 'resources' HubDB table (schema in hubdb/resources_schema.csv) and paste its numeric ID here.",
-    "children": [
-      { "name": "resources_table_id",   "label": "Resources HubDB table ID", "type": "text", "default": "" }
-    ]
-  },
-  {
-    "name": "footer",
-    "label": "Footer",
-    "type": "group",
-    "children": [
-      { "name": "description",          "label": "Footer description",  "type": "text", "default": "A global digital risk platform making building failure predictable for institutional real estate. Headquartered in Vancouver, BC, Canada." },
-      { "name": "legal",                "label": "Legal line",          "type": "text", "default": "2025 Novem Digital. All rights reserved." }
+      {
+        "name": "logo",
+        "label": "Logo",
+        "type": "image",
+        "default": {
+          "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_19/images/logo.png",
+          "alt": "Novem Digital"
+        }
+      },
+      {
+        "name": "primary_color",
+        "label": "Primary brand color (green)",
+        "type": "color",
+        "default": {
+          "color": "#7BFAB5",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "secondary_color",
+        "label": "Secondary brand color (blue)",
+        "type": "color",
+        "default": {
+          "color": "#60BCD6",
+          "opacity": 100
+        }
+      },
+      {
+        "name": "ink_color",
+        "label": "Ink / dark surface color",
+        "type": "color",
+        "default": {
+          "color": "#1E343F",
+          "opacity": 100
+        }
+      }
     ]
   }
 ]

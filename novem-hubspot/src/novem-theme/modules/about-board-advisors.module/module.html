@@ -1,0 +1,21 @@
+<section class="sec"{% if module.anchor_id %} id="{{ module.anchor_id }}"{% endif %}>
+  <div class="w">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:1rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>{{ module.eyebrow }}</p>
+      <h2 class="h2">{{ module.headline }} <span class="accent">{{ module.headline_accent }}</span></h2>
+    </div>
+    <div class="rev" style="text-align:center;max-width:60ch;margin-inline:auto;margin-bottom:3rem;">{{ module.intro }}</div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
+      {% for p in module.people %}
+        <div class="rev" style="background:var(--surf);border:1px solid var(--border);border-radius:var(--rxl);padding:1.5rem;display:flex;gap:1.25rem;align-items:flex-start;">
+          <div style="flex-shrink:0;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#7BFAB5,#60BCD6);display:flex;align-items:center;justify-content:center;color:#1E343F;font-family:var(--font-h);font-weight:800;font-size:1.1rem;letter-spacing:.05em;">{{ p.initials }}</div>
+          <div style="flex:1;">
+            <div class="h3" style="margin-bottom:.2rem;">{{ p.full_name }}</div>
+            <p style="font-size:.875rem;color:var(--green);font-weight:600;letter-spacing:.05em;margin-bottom:.5rem;">{{ p.role }}</p>
+            <div class="sm">{{ p.bio }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

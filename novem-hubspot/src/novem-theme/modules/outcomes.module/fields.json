@@ -1,0 +1,64 @@
+[
+  {
+    "name": "anchor_id",
+    "label": "Anchor ID",
+    "type": "text",
+    "default": "outcomes"
+  },
+  {
+    "name": "eyebrow",
+    "label": "Eyebrow",
+    "type": "text",
+    "default": "What You Get"
+  },
+  {
+    "name": "headline",
+    "label": "Headline",
+    "type": "text",
+    "default": "Three outcomes."
+  },
+  {
+    "name": "headline_accent",
+    "label": "Headline (accent)",
+    "type": "text",
+    "default": "Every customer."
+  },
+  {
+    "name": "items",
+    "label": "Outcomes",
+    "type": "group",
+    "occurrence": {
+      "min": 1,
+      "max": 6,
+      "default": 3
+    },
+    "children": [
+      {
+        "name": "title",
+        "label": "Title",
+        "type": "text",
+        "default": ""
+      },
+      {
+        "name": "text",
+        "label": "Body",
+        "type": "text",
+        "default": ""
+      }
+    ],
+    "default": [
+      {
+        "title": "Lower operating and repair costs.",
+        "text": "Planned work at standard rates. Emergency callouts stop. Mechanical costs drop."
+      },
+      {
+        "title": "Control your insurance costs.",
+        "text": "Insurance is no longer a fixed line. Continuous risk data gives you leverage at renewal \u2014 and mid-term."
+      },
+      {
+        "title": "Make capital planning defensible.",
+        "text": "Every allocation backed by condition data and loss history. Boards and lenders get evidence, not estimates."
+      }
+    ]
+  }
+]

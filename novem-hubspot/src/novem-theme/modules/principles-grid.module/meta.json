@@ -1,0 +1,8 @@
+{
+  "label": "Principles grid (cards with optional icon)",
+  "host_template_types": [
+    "PAGE"
+  ],
+  "icon": "@hubspot/banner",
+  "is_available_for_new_content": true
+}

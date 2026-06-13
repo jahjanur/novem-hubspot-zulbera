@@ -6,8 +6,7 @@ Structure (locked):
   Home | About | Platform v | Resources v | Contact
 
 Platform v   -> How It Works, TCRO Framework, Industries
-Resources v  -> Case Studies, Insights & Blog, Press & Whitepapers,
-                Partners, Careers
+Resources v  -> Resources hub, Partners, Careers
 """
 import re
 import pathlib
@@ -45,16 +44,8 @@ DESKTOP_NAV_INNER = f'''<div class="nav-item"><a href="/">Home</a></div>
           <a href="/resources/" class="nav-dd-trigger">Resources {CARET_SVG}</a>
           <div class="nav-dropdown" role="menu" aria-label="Resources">
             <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Case Studies</span>
-              <span class="nav-dd-desc">Real portfolio outcomes</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Insights &amp; Blog</span>
-              <span class="nav-dd-desc">Research &amp; industry analysis</span>
-            </a>
-            <a href="/resources/" class="nav-dd-item" role="menuitem">
-              <span class="nav-dd-title">Press &amp; Whitepapers</span>
-              <span class="nav-dd-desc">Announcements and research</span>
+              <span class="nav-dd-title">Resources Hub</span>
+              <span class="nav-dd-desc">Case studies, insights, press &amp; whitepapers</span>
             </a>
             <a href="/partners/" class="nav-dd-item" role="menuitem">
               <span class="nav-dd-title">Partners</span>
@@ -104,9 +95,7 @@ MOBILE_NAV = f'''<div class="mobile-nav-list">
         Resources {MOB_CARET}
       </button>
       <div class="mobile-submenu">
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Case Studies</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Insights &amp; Blog</a>
-        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Press &amp; Whitepapers</a>
+        <a href="/resources/" class="mobile-sub-item" data-mobile-link>Resources Hub</a>
         <a href="/partners/" class="mobile-sub-item" data-mobile-link>Partners</a>
         <a href="/careers/" class="mobile-sub-item" data-mobile-link>Careers</a>
       </div>

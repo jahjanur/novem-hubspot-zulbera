@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TCRO — Total Cost of Risk Ownership | Novem Digital</title>
+  <meta name="description" content="Total Cost of Risk Ownership (TCRO) measures the full financial burden of building risk — including the costs your insurance report never shows. Estimate yours."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* HERO */
+    .hero{position:relative;overflow:hidden;min-height:88svh;display:flex;align-items:center;}
+    .hero-bg{position:absolute;inset:0;z-index:0;}
+    .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:saturate(.75) brightness(1.4);}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(108deg,rgba(17,26,31,.96) 0%,rgba(17,26,31,.82) 42%,rgba(17,26,31,.35) 100%),linear-gradient(to bottom,rgba(17,26,31,.5) 0%,rgba(17,26,31,0) 55%);}
+    [data-theme="light"] .hero-bg img{opacity:.22;filter:saturate(.4) brightness(.7);}
+    [data-theme="light"] .hero-overlay{background:linear-gradient(108deg,rgba(244,246,244,.98) 0%,rgba(244,246,244,.92) 45%,rgba(244,246,244,.55) 100%);}
+    .hero-w{position:relative;z-index:1;padding-block:clamp(7.5rem,14vw,10.5rem);}
+    .hero-inner{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(3rem,6vw,7rem);align-items:center;}
+    .tcro-word{font-family:var(--font-h);font-size:clamp(5rem,3rem + 10vw,11rem);font-weight:700;line-height:.9;letter-spacing:-.02em;color:var(--green);display:block;text-shadow:0 2px 24px rgba(0,0,0,.5);}
+    .tcro-spelled{font-family:var(--font-h);font-size:clamp(1.3rem,1rem + 1vw,1.9rem);font-weight:300;color:var(--text);letter-spacing:.03em;margin-bottom:2rem;opacity:.9;text-shadow:0 1px 12px rgba(0,0,0,.6);}
+    .tcro-def{max-width:50ch;font-size:clamp(1.05rem,1rem + .25vw,1.2rem);color:#C8DDE6;line-height:1.75;border-left:2px solid var(--green);padding-left:1.5rem;margin-bottom:2.25rem;text-shadow:0 1px 10px rgba(0,0,0,.55);}
+    [data-theme="light"] .tcro-def{color:var(--muted);}
+    .hero-acts{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .hero-authority{display:inline-flex;flex-direction:column;gap:.55rem;margin-top:2.5rem;padding:1rem 1.25rem;background:rgba(17,26,31,.72);backdrop-filter:blur(12px);border:1px solid rgba(123,250,181,.18);border-radius:.75rem;}
+    .hero-auth-item{display:flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:500;color:#E8F4F0;line-height:1.4;}
+    [data-theme="light"] .hero-auth-item{color:var(--text);}
+    .hero-auth-item svg{flex-shrink:0;color:var(--green);}
+    .hero-stat-col{display:flex;flex-direction:column;gap:1.5rem;}
+    .hero-stat{background:rgba(30,52,63,.65);border:1px solid var(--border);border-radius:var(--rxl);padding:2rem 1.75rem;backdrop-filter:blur(16px);}
+    .hero-stat-val{font-family:var(--font-h);font-size:clamp(3rem,2.5rem + 2vw,4rem);font-weight:700;color:var(--green);line-height:1;margin-bottom:.75rem;}
+    .hero-stat-lbl{font-size:clamp(1rem,.95rem + .2vw,1.15rem);color:var(--text);line-height:1.55;font-weight:500;}
+    .hero-stat-sub{font-size:.8rem;color:var(--muted);margin-top:.6rem;line-height:1.5;}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr;}.hero-stat-col{flex-direction:row;margin-top:2rem;}.hero-stat{flex:1;min-width:0;}}
+    @media(max-width:520px){.hero-stat-col{flex-direction:column;}.hero-stat{flex:none;}.hero-acts .btn,.hero-acts .btn-ghost{width:100%;justify-content:center;}}
+
+    /* EDU */
+    .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,7rem);align-items:center;}
+    .edu-text{display:flex;flex-direction:column;gap:1.5rem;}
+    .cor-vs{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;}
+    .cor-row{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+    .cor-row-head{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;background:rgba(17,26,31,.8);}
+    .cor-row-head-cell{padding:.875rem 1.5rem;font-family:var(--font-h);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);}
+    .cor-row-head-cell--tcro{color:var(--green);}
+    .cor-cell{padding:1.1rem 1.5rem;font-size:clamp(.88rem,.875rem + .05vw,.95rem);line-height:1.5;border-top:1px solid var(--border);}
+    .cor-cell--left{color:var(--muted);background:rgba(17,26,31,.5);}
+    .cor-cell--left.strike{text-decoration:line-through;opacity:.55;}
+    .cor-cell--right{color:var(--text);background:color-mix(in srgb,var(--green) 4%,transparent);}
+    .cor-cell--right.highlight{color:var(--green);font-weight:600;}
+    .cor-source-row{padding:.875rem 1.5rem;background:rgba(17,26,31,.6);border-top:1px solid var(--border);font-size:.78rem;color:var(--faint);}
+    @media(max-width:780px){.edu-grid{grid-template-columns:1fr;}}
+
+    /* GAP */
+    .gap-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+    .gap-card{border-radius:var(--rxl);padding:2.25rem 2rem;}
+    .gap-card--neutral{background:color-mix(in srgb,var(--text) 3%,transparent);border:1px solid var(--border);}
+    .gap-card--green{background:color-mix(in srgb,var(--green) 6%,transparent);border:1px solid rgba(123,250,181,.3);}
+    .gap-num{font-family:var(--font-h);font-weight:700;font-size:clamp(2.2rem,1.8rem + 1.5vw,3rem);color:var(--green);line-height:1;margin-bottom:.5rem;}
+    .gap-label{font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:.75rem;line-height:1.3;}
+    .gap-desc{font-size:clamp(.88rem,.875rem + .05vw,.95rem);color:var(--muted);line-height:1.65;}
+    @media(max-width:760px){.gap-row{grid-template-columns:1fr;}}
+
+    /* CALCULATOR */
+    .calc-wrap{background:var(--gun);border:1px solid var(--border2);border-radius:calc(var(--rxl)*1.5);overflow:hidden;position:relative;}
+    .calc-topbar{height:3px;background:linear-gradient(90deg,var(--green),var(--blue),var(--green));background-size:200% 100%;animation:shimmer 3s linear infinite;}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .calc-header{padding:2.5rem 2.5rem 2rem;border-bottom:1px solid var(--border);}
+    .calc-title{font-family:var(--font-h);font-weight:700;font-size:clamp(1.4rem,1.2rem + .8vw,2rem);color:var(--text);margin-bottom:.35rem;}
+    .calc-sub{font-size:clamp(.9rem,.875rem + .1vw,1rem);color:var(--muted);line-height:1.6;}
+    .calc-body{padding:2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start;}
+    .calc-inputs{display:flex;flex-direction:column;gap:1.75rem;}
+    .calc-field{display:flex;flex-direction:column;gap:.6rem;}
+    .calc-label{font-family:var(--font-h);font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);}
+    .calc-select,.calc-input-text{width:100%;padding:.875rem 1.1rem;background:rgba(17,26,31,.8);border:1px solid var(--border2);border-radius:var(--rlg);color:var(--text);font-family:var(--font-b);font-size:1rem;transition:border-color var(--ease),box-shadow var(--ease);appearance:none;-webkit-appearance:none;}
+    [data-theme="light"] .calc-select,[data-theme="light"] .calc-input-text{background:#fff;}
+    .calc-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238BBCCA' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
+    .calc-select:focus,.calc-input-text:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(123,250,181,.12);}
+    .calc-select option{background:#1E343F;color:var(--text);}
+    [data-theme="light"] .calc-select option{background:#fff;color:var(--text);}
+    .calc-hint{font-size:.77rem;color:var(--faint);line-height:1.5;}
+    .calc-slider-wrap{position:relative;}
+    .calc-slider{width:100%;height:4px;background:var(--border);border-radius:var(--r);appearance:none;-webkit-appearance:none;cursor:pointer;margin-top:.5rem;}
+    .calc-slider::-webkit-slider-thumb{appearance:none;width:20px;height:20px;border-radius:50%;background:var(--green);cursor:pointer;transition:transform .15s ease;box-shadow:0 0 0 3px rgba(123,250,181,.2);}
+    .calc-slider::-webkit-slider-thumb:hover{transform:scale(1.2);}
+    .calc-slider-footer{display:flex;justify-content:space-between;align-items:center;margin-top:.4rem;}
+    .calc-slider-ends{font-size:.7rem;color:var(--faint);}
+    .calc-slider-val{font-family:var(--font-h);font-weight:700;font-size:1rem;color:var(--green);}
+    .calc-results{display:flex;flex-direction:column;gap:1.5rem;}
+    .result-main{background:color-mix(in srgb,var(--green) 7%,transparent);border:1px solid rgba(123,250,181,.3);border-radius:var(--rxl);padding:2rem 1.75rem;}
+    .result-empty{background:rgba(17,26,31,.5);border:1px dashed var(--border2);border-radius:var(--rxl);padding:2rem 1.75rem;text-align:center;}
+    [data-theme="light"] .result-empty{background:var(--surf2);}
+    .result-empty-ico{width:3rem;height:3rem;border-radius:50%;background:rgba(44,66,80,.5);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;}
+    .result-empty-txt{font-size:.95rem;color:var(--faint);line-height:1.6;}
+    .result-lbl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--faint);margin-bottom:.875rem;}
+    .result-main .result-lbl{color:var(--green);}
+    .result-range{font-family:var(--font-h);font-weight:700;font-size:clamp(1.6rem,1.3rem + 1.2vw,2.2rem);color:var(--green);line-height:1.1;margin-bottom:.4rem;}
+    .result-desc{font-size:.9rem;color:var(--muted);line-height:1.65;}
+    .result-breakdown{background:rgba(17,26,31,.6);border:1px solid var(--border);border-radius:var(--rxl);padding:1.75rem;}
+    [data-theme="light"] .result-breakdown{background:var(--surf2);}
+    .result-rows{display:flex;flex-direction:column;gap:.6rem;margin-top:.875rem;}
+    .result-row{display:flex;justify-content:space-between;align-items:center;}
+    .result-row-lbl{font-size:.88rem;color:var(--muted);}
+    .result-row-val{font-family:var(--font-h);font-weight:700;font-size:.9rem;color:var(--green);}
+    .result-cta{display:flex;flex-direction:column;gap:.875rem;}
+    .result-cta .btn{justify-content:center;width:100%;}
+    .calc-footer{padding:1.25rem 2.5rem;border-top:1px solid var(--border);font-size:.75rem;color:var(--faint);line-height:1.6;}
+    @media(max-width:820px){.calc-body{grid-template-columns:1fr;}}
+    @media(max-width:520px){.calc-header,.calc-body,.calc-footer{padding-inline:1.5rem;}}
+
+    /* PARTNERS */
+    .partners-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+    .partner-card{background:var(--gun);border:1px solid var(--border2);border-radius:var(--rxl);padding:2.25rem 2rem;}
+    .partner-stat-val{font-family:var(--font-h);font-weight:700;font-size:clamp(2.75rem,2rem + 2vw,3.75rem);color:var(--green);line-height:1;margin-bottom:.5rem;}
+    .partner-stat-lbl{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:1.5rem;}
+    .partner-divider{width:2rem;height:2px;background:var(--green);opacity:.4;margin-bottom:1.5rem;border:none;}
+    .partner-role{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--green);margin-bottom:.5rem;}
+    .partner-name{font-family:var(--font-h);font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:.02em;margin-bottom:.85rem;line-height:1.3;}
+    .partner-desc{font-size:clamp(.875rem,.85rem + .1vw,.95rem);color:var(--muted);line-height:1.7;}
+    @media(max-width:640px){.partners-grid{grid-template-columns:1fr;}}
+
+    /* FAQ */
+    .faq-item{background:var(--bg);border-bottom:1px solid var(--border);}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-family:var(--font-h);font-weight:700;font-size:clamp(1.05rem,1rem + .25vw,1.2rem);color:var(--text);padding:1.5rem 1.75rem;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:color var(--ease),background var(--ease);}
+    .faq-q::-webkit-details-marker{display:none;}
+    .faq-q::after{content:'+';font-size:1.4rem;font-weight:300;color:var(--green);flex-shrink:0;transition:transform var(--ease);}
+    details[open] .faq-q::after{transform:rotate(45deg);}
+    details[open] .faq-q{color:var(--green);}
+    .faq-q:hover{background:color-mix(in srgb,var(--green) 4%,transparent);}
+    .faq-a{padding:0 1.75rem 1.5rem;font-size:clamp(1rem,.95rem + .2vw,1.1rem);color:var(--muted);line-height:1.75;max-width:68ch;}
+
+    /* CTA */
+    .cta{background:var(--gun);padding-block:clamp(4rem,8vw,6.5rem);position:relative;overflow:hidden;}
+    .cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 75% 100% at 25% 50%,rgba(123,250,181,.09) 0%,transparent 65%);pointer-events:none;}
+    .cta-inner{text-align:center;max-width:52ch;margin-inline:auto;position:relative;}
+    .cta-h{font-family:var(--font-h);font-size:clamp(1.9rem,1.2rem + 2.8vw,3.5rem);font-weight:700;color:#E8F4F0;line-height:1.1;margin-bottom:1.25rem;}
+    .cta-h em{font-style:normal;color:#7BFAB5;}
+    .cta-b{font-size:clamp(1rem,.95rem + .2vw,1.1rem);color:#8BBCCA;margin-bottom:2.5rem;line-height:1.7;}
+    .cta-acts{display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;}
+    .cta-trust{margin-top:1.5rem;font-size:.75rem;color:var(--faint);font-family:var(--font-h);font-weight:600;letter-spacing:.06em;text-transform:uppercase;}
+    @media(max-width:520px){.cta-acts .btn,.cta-acts .btn-ghost{width:100%;justify-content:center;}}
+  </style>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w nav-inner">
+    <a href="index.html" class="logo" aria-label="Novem Digital home">
+      <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:var(--font-h);font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;margin-left:6px;">NOVEM</span><span style="font-family:var(--font-h);font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;">DIGITAL</span>
+    </a>
+    <div class="nav-links" role="list">
+      <div class="nav-item"><a href="index.html#platform">Platform</a></div>
+      <div class="nav-item"><a href="index.html#industries">Industries</a></div>
+      <div class="nav-item nav-item--tcro nav-item--active"><a href="tcro.html">TCRO</a></div>
+      <div class="nav-item"><a href="index.html#partners">Partners</a></div>
+      <div class="nav-item"><a href="index.html#resources">Resources</a></div>
+      <div class="nav-item"><a href="index.html#about">About</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="tbtn" data-theme-toggle aria-label="Toggle colour theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="#" class="nav-login">Login</a>
+      <a href="estimate.html" class="nav-demo">Estimate Your Savings</a>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ════════ MOBILE MENU ════════ -->
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+  <div class="mobile-menu-header">
+    <a href="index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;"><img src="logo.png" style="height:24px;width:auto;flex-shrink:0;" alt=""><span style="font-family:var(--font-h);font-weight:700;font-size:14px;letter-spacing:1.5px;color:var(--text);margin-left:6px;">NOVEM</span><span style="font-family:var(--font-h);font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav-list" aria-label="Mobile navigation">
+    <div class="mobile-nav-item"><a href="index.html#platform" class="mobile-nav-trigger">Platform</a></div>
+    <div class="mobile-nav-item"><a href="index.html#industries" class="mobile-nav-trigger">Industries</a></div>
+    <div class="mobile-nav-item"><a href="tcro.html" class="mobile-nav-trigger mobile-nav-trigger--tcro">TCRO</a></div>
+    <div class="mobile-nav-item"><a href="index.html#partners" class="mobile-nav-trigger">Partners</a></div>
+    <div class="mobile-nav-item"><a href="index.html#resources" class="mobile-nav-trigger">Resources</a></div>
+    <div class="mobile-nav-item"><a href="index.html#about" class="mobile-nav-trigger">About</a></div>
+  </nav>
+  <div class="mobile-bottom">
+    <a href="#" class="mobile-login">Login</a>
+    <a href="estimate.html" class="mobile-demo">Estimate Your Savings</a>
+    <a href="demo.html" class="mobile-demo secondary">Get a Demo</a>
+  </div>
+</aside>
+
+<main id="main-content">
+
+<!-- ════════ HERO ════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1502175353174-a7a70e73b362?w=1800&q=85&auto=format&fit=crop" alt="" role="presentation" loading="eager"/>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="w hero-w">
+    <div class="hero-inner">
+      <div>
+        <span class="tcro-word rev" aria-label="TCRO">TCRO</span>
+        <p class="tcro-spelled rev d1">Total Cost of Risk Ownership</p>
+        <p class="tcro-def rev d2">Your portfolio carries more risk than your reports show.<br>TCRO is the number that measures all of it — and the number we help you bring down.</p>
+        <div class="hero-acts rev d3">
+          <a href="#calculator" class="btn btn-p">Estimate Your Savings <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#what-is-tcro" class="btn btn-ghost">What is TCRO?</a>
+        </div>
+        <div class="hero-authority rev d4">
+          <div class="hero-auth-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Co-developed with a Global Digital Energy &amp; Building Services Company
+          </div>
+          <div class="hero-auth-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Co-developed with a Global Commercial Insurance Company
+          </div>
+        </div>
+      </div>
+      <div class="hero-stat-col">
+        <div class="hero-stat rev d2">
+          <div class="hero-stat-val">6×</div>
+          <div class="hero-stat-lbl">Your risk costs up to 6× more than your insurance report shows.</div>
+          <div class="hero-stat-sub">The hidden gap between COR and TCRO</div>
+        </div>
+        <div class="hero-stat rev d3">
+          <div class="hero-stat-val">Invisible.</div>
+          <div class="hero-stat-lbl">It never shows up in your financials — until something fails.</div>
+          <div class="hero-stat-sub">Downtime · Capital timing · Compliance · Reputational exposure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ WHAT IS TCRO ════════ -->
+<section class="sec" id="what-is-tcro">
+  <div class="w">
+    <div class="edu-grid">
+      <div class="edu-text rev">
+        <p class="eye"><span class="eye-dot"></span>What is TCRO?</p>
+        <h2 class="h2">Cost of Risk measures<br><span class="accent">what happened.</span><br>TCRO measures<br><span class="accent">what it actually costs.</span></h2>
+        <p class="sm">Traditional Cost of Risk (COR) is an insurance construct. It captures what the insurer sees: claims, premiums, deductibles. TCRO is a financial standard. It captures the full burden — including every cost that never makes it into a risk report.</p>
+        <p class="sm">For most institutional portfolios, the costs COR misses are larger than the costs it measures.</p>
+        <a href="#calculator" class="btn btn-p" style="align-self:flex-start;margin-top:.5rem;">Estimate your savings <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      <div class="cor-vs rev d2">
+        <div class="cor-row-head">
+          <div class="cor-row-head-cell">Cost of Risk (COR)</div>
+          <div class="cor-row-head-cell cor-row-head-cell--tcro">Total Cost of Risk Ownership (TCRO)</div>
+        </div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left">Insurance claims</div><div class="cor-cell cor-cell--right">Claims + uninsured losses</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left">Annual premium</div><div class="cor-cell cor-cell--right">Premium + transfer cost gap</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left strike">Downtime cost</div><div class="cor-cell cor-cell--right highlight">Downtime &amp; interruption</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left strike">Maintenance waste</div><div class="cor-cell cor-cell--right highlight">Reactive vs. predictive gap</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left strike">Compliance overhead</div><div class="cor-cell cor-cell--right highlight">Audit &amp; regulatory cost</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left strike">Capital timing losses</div><div class="cor-cell cor-cell--right highlight">Lifecycle decision cost</div></div>
+        <div class="cor-row"><div class="cor-cell cor-cell--left strike">Reputational exposure</div><div class="cor-cell cor-cell--right highlight">Governance &amp; board risk</div></div>
+        <div class="cor-source-row">TCRO framework — Novem Digital · Global Digital Energy &amp; Building Services Company · Global Commercial Insurance Company</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ THE GAP ════════ -->
+<section class="sec sec--alt" id="gap">
+  <div class="w">
+    <div class="rev" style="text-align:center;max-width:42ch;margin-inline:auto;margin-bottom:3.5rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>What the gap looks like</p>
+      <h2 class="h2">What portfolios find <span class="accent">when they look.</span></h2>
+    </div>
+    <div class="gap-row">
+      <div class="gap-card gap-card--neutral rev d1">
+        <div class="gap-num">30%</div>
+        <div class="gap-label">Better capital IRR</div>
+        <div class="gap-desc">When replacement decisions are driven by live condition data, not age-based schedules.</div>
+      </div>
+      <div class="gap-card gap-card--green rev d2">
+        <div class="gap-num">$5M</div>
+        <div class="gap-label">Single event, avoided</div>
+        <div class="gap-desc">One equipment failure detected before it became a public incident. Behind that number: the people inside the building that day.</div>
+      </div>
+      <div class="gap-card gap-card--neutral rev d3">
+        <div class="gap-num">65%</div>
+        <div class="gap-label">Fewer disruption weeks</div>
+        <div class="gap-desc">A regional seniors living operator in Western Canada. From 19 consecutive disruption weeks to zero — held for 12 months.</div>
+      </div>
+    </div>
+    <p class="rev" style="text-align:center;margin-top:2.5rem;font-size:.82rem;color:var(--faint);">Aggregate outcomes from anonymized institutional portfolios across North America.</p>
+  </div>
+</section>
+
+<!-- ════════ CALCULATOR ════════ -->
+<section class="sec" id="calculator">
+  <div class="w">
+    <div class="rev" style="max-width:50ch;margin-bottom:3rem;">
+      <p class="eye"><span class="eye-dot"></span>TCRO Savings Estimator</p>
+      <h2 class="h2" style="margin-bottom:1rem;">See what you could save. <span class="accent">In two minutes.</span></h2>
+      <p class="sm">Select your portfolio and see a directional estimate of the hidden TCRO you carry today — and the share of it Novem Digital typically helps recover. No email required to explore.</p>
+    </div>
+
+    <div class="calc-wrap rev d1">
+      <div class="calc-topbar"></div>
+      <div class="calc-header">
+        <h3 class="calc-title">TCRO Savings Estimator</h3>
+        <p class="calc-sub">Directional estimate based on aggregate portfolio outcomes. Not a formal quote or risk assessment.</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <label class="calc-label" for="portfolioType">Property Type</label>
+            <select class="calc-select" id="portfolioType">
+              <option value="">Select property type</option>
+              <option value="commercial">Commercial &amp; Mixed-Use</option>
+              <option value="residential">Residential / Multi-Family</option>
+              <option value="seniors">Seniors Living &amp; Wellness</option>
+              <option value="industrial">Industrial</option>
+              <option value="retail">Retail</option>
+              <option value="datacenters">Data Centers</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label class="calc-label" for="assetCount">Number of Properties</label>
+            <div class="calc-slider-wrap">
+              <input type="range" class="calc-slider" id="assetCount" min="1" max="100" value="10" step="1"/>
+              <div class="calc-slider-footer">
+                <span class="calc-slider-ends">1</span>
+                <span class="calc-slider-val" id="assetCountVal">10 properties</span>
+                <span class="calc-slider-ends">100+</span>
+              </div>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label class="calc-label" for="portfolioValue">Annual Gross Asset Value</label>
+            <select class="calc-select" id="portfolioValue">
+              <option value="">Select value range</option>
+              <option value="50">Under $50M</option>
+              <option value="250">$50M – $250M</option>
+              <option value="500">$250M – $500M</option>
+              <option value="1000">$500M – $1B</option>
+              <option value="2000">Over $1B</option>
+            </select>
+            <span class="calc-hint">Gross asset value, not insured value</span>
+          </div>
+          <div class="calc-field">
+            <label class="calc-label" for="monitoringMaturity">Current Monitoring Coverage</label>
+            <select class="calc-select" id="monitoringMaturity">
+              <option value="">Select coverage level</option>
+              <option value="none">No continuous monitoring</option>
+              <option value="basic">Basic alarms only</option>
+              <option value="partial">Partial — some sites</option>
+              <option value="advanced">Advanced — portfolio-wide</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-results" id="calcResults">
+          <div class="result-empty" id="resultEmpty">
+            <div class="result-empty-ico">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--faint)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+            </div>
+            <p class="result-empty-txt">Complete all four fields to see your estimated hidden TCRO and potential annual savings.</p>
+          </div>
+          <div class="result-main" id="resultMain" style="display:none;">
+            <div class="result-lbl">Estimated Potential Savings — Annual</div>
+            <div class="result-range" id="resultRange"></div>
+            <div class="result-desc" id="resultDesc"></div>
+          </div>
+          <div class="result-breakdown" id="resultBreakdown" style="display:none;">
+            <div class="result-lbl">Where the hidden cost sits today</div>
+            <div class="result-rows" id="breakdownRows"></div>
+          </div>
+          <div class="result-cta" id="resultCTA" style="display:none;">
+            <a href="estimate.html?from=tcro" class="btn btn-p">Get My Savings Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="demo.html?from=tcro" class="btn btn-g">Get a Demo Instead</a>
+          </div>
+        </div>
+      </div>
+      <div class="calc-footer">This is a directional estimate based on aggregate portfolio data — not a quote. A specialist reviews every savings estimate request alongside our insurance partner before any figures are confirmed, typically within one business day.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PARTNERS ════════ -->
+<section class="sec sec--alt" id="partners">
+  <div class="w">
+    <div class="rev" style="max-width:42ch;margin-bottom:3rem;">
+      <p class="eye"><span class="eye-dot"></span>Framework Partners</p>
+      <h2 class="h2" style="margin-bottom:1rem;">Built on <span class="accent">real data.</span></h2>
+      <p class="sm">TCRO is co-developed with the two organizations whose data makes it defensible at scale.</p>
+    </div>
+    <div class="partners-grid">
+      <div class="partner-card rev d1">
+        <div class="partner-stat-val">7.2M</div>
+        <div class="partner-stat-lbl">Buildings in the data foundation</div>
+        <hr class="partner-divider"/>
+        <div class="partner-role">Building Intelligence Partner</div>
+        <div class="partner-name">Global Digital Energy &amp; Building Services Company</div>
+        <div class="partner-desc">The world's largest operator of building infrastructure data — contributing the live physical telemetry that turns TCRO from an estimate into a real measurement.</div>
+      </div>
+      <div class="partner-card rev d2">
+        <div class="partner-stat-val">20yr</div>
+        <div class="partner-stat-lbl">Institutional claims history in the actuarial model</div>
+        <hr class="partner-divider"/>
+        <div class="partner-role">Insurance Intelligence Partner</div>
+        <div class="partner-name">Global Commercial Insurance Company</div>
+        <div class="partner-desc">One of the world's leading commercial insurers — contributing two decades of claims data that connects building conditions to financial outcomes boards and underwriters can act on.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FAQ ════════ -->
+<section class="sec" id="faq">
+  <div class="w">
+    <div class="rev" style="text-align:center;max-width:46ch;margin-inline:auto;margin-bottom:3rem;">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>Common Questions</p>
+      <h2 class="h2">Questions worth <span class="accent">answering directly.</span></h2>
+    </div>
+    <div style="max-width:820px;margin-inline:auto;display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--rxl);overflow:hidden;">
+      <details class="faq-item rev">
+        <summary class="faq-q">What is TCRO and who introduced it?</summary>
+        <div class="faq-a"><p>TCRO — Total Cost of Risk Ownership — is the financial standard for measuring the complete cost of building risk. It was introduced by Novem Digital and co-developed with a Global Digital Energy &amp; Building Services Company and a Global Commercial Insurance Company. Where traditional Cost of Risk captures what the insurer records, TCRO captures what the portfolio actually costs.</p></div>
+      </details>
+      <details class="faq-item rev d1">
+        <summary class="faq-q">Is the savings estimate a quote?</summary>
+        <div class="faq-a"><p>No. The calculator gives a directional estimate to show the scale of hidden TCRO and the savings that are typically recoverable. It is not a formal quote. When you request a savings estimate, a specialist reviews your details alongside our insurance partner before any figures are confirmed — usually within one business day.</p></div>
+      </details>
+      <details class="faq-item rev d2">
+        <summary class="faq-q">How is the estimate calculated?</summary>
+        <div class="faq-a"><p>The calculator produces a directional range based on aggregate outcomes from institutional portfolio operators. It is designed to illustrate the scale of hidden TCRO and potential savings — not replace a formal assessment. A full TCRO measurement is produced through platform deployment and portfolio-specific data integration.</p></div>
+      </details>
+      <details class="faq-item rev">
+        <summary class="faq-q">Do I have to deploy the platform to get a number?</summary>
+        <div class="faq-a"><p>No. You can explore the estimator instantly without giving us anything. If you want a reviewed savings estimate for your portfolio, you submit a short form and our team follows up — no platform deployment required to start the conversation.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CLOSING CTA ════════ -->
+<section class="cta" id="contact">
+  <div class="wm">
+    <div class="cta-inner rev">
+      <p class="eye" style="justify-content:center;"><span class="eye-dot"></span>Get Started</p>
+      <h2 class="cta-h">Know what risk costs you <em>before</em> it costs more.</h2>
+      <p class="cta-b">Get a reviewed savings estimate for your portfolio, or book a walkthrough of the platform with our team.</p>
+      <div class="cta-acts">
+        <a href="estimate.html?from=tcro" class="btn btn-p">Get My Savings Estimate <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="demo.html?from=tcro" class="btn btn-ghost">Get a Demo</a>
+      </div>
+      <p class="cta-trust">Novem Digital &mdash; Failures are Predictable.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer class="foot">
+  <div class="w">
+    <div class="foot-g">
+      <div>
+        <a href="index.html" class="logo" aria-label="Novem Digital home"><img src="logo.png" style="height:26px;width:auto;" alt=""/><span style="font-family:var(--font-h);font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;margin-left:6px;">NOVEM</span><span style="font-family:var(--font-h);font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;">DIGITAL</span></a>
+        <p class="foot-desc">Novem Digital is an AI-powered Digital Risk Platform that makes building failure predictable for institutional real estate portfolios.</p>
+      </div>
+      <div><div class="foot-ct">TCRO</div><ul class="foot-links"><li><a href="#what-is-tcro">What is TCRO?</a></li><li><a href="#calculator">Savings Estimator</a></li><li><a href="#partners">Framework Partners</a></li></ul></div>
+      <div><div class="foot-ct">Get Started</div><ul class="foot-links"><li><a href="estimate.html">Estimate Your Savings</a></li><li><a href="demo.html">Get a Demo</a></li></ul></div>
+      <div><div class="foot-ct">Resources</div><ul class="foot-links"><li><a href="index.html#resources">Whitepaper</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><div class="foot-ct">About</div><ul class="foot-links"><li><a href="index.html#about">Company</a></li><li><a href="https://www.linkedin.com/company/novem-digital/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li></ul></div>
+      <div>
+        <div class="foot-ct">Get in Touch</div>
+        <ul class="foot-links">
+          <li><a href="tel:+18336683647">+1 (833) 668-3647</a></li>
+          <li><a href="mailto:connect@novemdigital.com">connect@novemdigital.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p class="foot-legal">&copy; 2025 Novem Digital. All rights reserved.</p>
+      <p class="foot-legal" style="font-family:var(--font-h);font-weight:600;letter-spacing:.04em;">Failures are Predictable.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  const portfolioType=document.getElementById('portfolioType');
+  const assetCount=document.getElementById('assetCount');
+  const assetCountVal=document.getElementById('assetCountVal');
+  const portfolioValue=document.getElementById('portfolioValue');
+  const monitoringMaturity=document.getElementById('monitoringMaturity');
+  const resultEmpty=document.getElementById('resultEmpty');
+  const resultMain=document.getElementById('resultMain');
+  const resultRange=document.getElementById('resultRange');
+  const resultDesc=document.getElementById('resultDesc');
+  const resultBreakdown=document.getElementById('resultBreakdown');
+  const breakdownRows=document.getElementById('breakdownRows');
+  const resultCTA=document.getElementById('resultCTA');
+
+  assetCount.addEventListener('input',function(){
+    const v=parseInt(this.value);
+    assetCountVal.textContent=v===100?'100+ properties':v+' propert'+(v===1?'y':'ies');
+    calc();
+  });
+
+  const typeMultipliers={
+    commercial:{base:.018,downtime:.30,maintenance:.22,compliance:.12,reputation:.10,capital:.18,premium:.08},
+    residential:{base:.020,downtime:.22,maintenance:.24,compliance:.14,reputation:.12,capital:.16,premium:.12},
+    seniors:{base:.028,downtime:.18,maintenance:.20,compliance:.16,reputation:.15,capital:.14,premium:.17},
+    industrial:{base:.026,downtime:.34,maintenance:.22,compliance:.12,reputation:.08,capital:.16,premium:.08},
+    retail:{base:.020,downtime:.26,maintenance:.20,compliance:.14,reputation:.16,capital:.14,premium:.10},
+    datacenters:{base:.032,downtime:.42,maintenance:.18,compliance:.14,reputation:.10,capital:.10,premium:.06},
+  };
+  const maturityFactor={none:1.0,basic:.80,partial:.55,advanced:.25};
+  // recoverable share of hidden TCRO Novem typically helps capture, by current maturity
+  const recoveryFactor={none:.42,basic:.38,partial:.30,advanced:.20};
+  const gavMidpoints={'50':30,'250':150,'500':375,'1000':750,'2000':1500};
+
+  function fmt(n){
+    if(n>=1000000) return '$'+(n/1000000).toFixed(1)+'M';
+    if(n>=1000) return '$'+Math.round(n/1000)+'K';
+    return '$'+Math.round(n);
+  }
+
+  function calc(){
+    const type=portfolioType.value;
+    const assets=parseInt(assetCount.value);
+    const gav=portfolioValue.value;
+    const maturity=monitoringMaturity.value;
+
+    if(!type||!gav||!maturity){
+      resultEmpty.style.display='block';
+      resultMain.style.display='none';
+      resultBreakdown.style.display='none';
+      resultCTA.style.display='none';
+      return;
+    }
+
+    const mult=typeMultipliers[type];
+    const gavD=gavMidpoints[gav]*1000000;
+    const mF=maturityFactor[maturity];
+    const aF=0.85+(assets/100)*0.25;
+    const hidden=gavD*mult.base*mF*aF;        // hidden TCRO carried today
+    const rec=recoveryFactor[maturity];        // recoverable share
+    const savLo=hidden*rec*0.70, savHi=hidden*rec*1.10; // savings range
+
+    resultEmpty.style.display='none';
+    resultMain.style.display='block';
+    resultBreakdown.style.display='block';
+    resultCTA.style.display='flex';
+
+    resultRange.textContent=fmt(savLo)+' – '+fmt(savHi)+'/yr';
+
+    const matLabels={none:'no continuous monitoring',basic:'basic alarm coverage',partial:'partial monitoring',advanced:'advanced monitoring'};
+    const typeLabels={commercial:'commercial',residential:'residential',seniors:'seniors living',industrial:'industrial',retail:'retail',datacenters:'data center'};
+    resultDesc.textContent='Directional annual savings for a '+typeLabels[type]+' portfolio of '+assets+' propert'+(assets===1?'y':'ies')+' with '+matLabels[maturity]+'. You currently carry an estimated '+fmt(hidden)+'/yr in hidden TCRO.';
+
+    const components=[
+      {label:'Downtime & interruption',pct:mult.downtime},
+      {label:'Maintenance inefficiency',pct:mult.maintenance},
+      {label:'Capital timing losses',pct:mult.capital},
+      {label:'Compliance overhead',pct:mult.compliance},
+      {label:'Reputational exposure',pct:mult.reputation},
+      {label:'Premium gap',pct:mult.premium},
+    ];
+    breakdownRows.innerHTML=components.map(c=>`
+      <div class="result-row">
+        <span class="result-row-lbl">${c.label}</span>
+        <span class="result-row-val">${fmt(hidden*c.pct)}/yr</span>
+      </div>`).join('');
+  }
+
+  [portfolioType,portfolioValue,monitoringMaturity].forEach(el=>el.addEventListener('change',calc));
+})();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

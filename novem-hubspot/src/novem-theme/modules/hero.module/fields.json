@@ -34,7 +34,7 @@
     "label": "Background image",
     "type": "image",
     "default": {
-      "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_21/images/hero-skyline.jpg",
+      "src": "https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_22/images/hero-skyline.jpg",
       "alt": "Novem Digital \u2014 skyline at blue hour",
       "width": 2400,
       "height": 1339
@@ -49,7 +49,7 @@
         "name": "cta_label",
         "label": "Label",
         "type": "text",
-        "default": "Get a Demo"
+        "default": "Estimate Your Savings"
       },
       {
         "name": "url",
@@ -57,7 +57,7 @@
         "type": "url",
         "default": {
           "type": "EXTERNAL",
-          "href": "/get-a-demo/"
+          "href": "/estimate-your-savings/"
         }
       }
     ]

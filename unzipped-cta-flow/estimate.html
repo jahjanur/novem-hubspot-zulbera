@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get My Savings Estimate | Novem Digital</title>
+  <meta name="description" content="Request a reviewed TCRO savings estimate for your portfolio. A specialist reviews every request alongside our insurance partner, typically within one business day."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="forms.css"/>
+</head>
+<body>
+
+<!-- ════════ NAV ════════ -->
+<nav class="nav" id="mainNav" aria-label="Main navigation">
+  <div class="w nav-inner">
+    <a href="index.html" class="logo" aria-label="Novem Digital home">
+      <img src="logo.png" style="height:26px;width:auto;" alt=""><span style="font-family:var(--font-h);font-weight:700;font-size:14px;letter-spacing:1.5px;color:#E8F4F0;margin-left:6px;">NOVEM</span><span style="font-family:var(--font-h);font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;opacity:.9;">DIGITAL</span>
+    </a>
+    <div class="nav-links" role="list">
+      <div class="nav-item"><a href="index.html#platform">Platform</a></div>
+      <div class="nav-item"><a href="index.html#industries">Industries</a></div>
+      <div class="nav-item nav-item--tcro"><a href="tcro.html">TCRO</a></div>
+      <div class="nav-item"><a href="index.html#partners">Partners</a></div>
+      <div class="nav-item"><a href="index.html#resources">Resources</a></div>
+      <div class="nav-item"><a href="index.html#about">About</a></div>
+    </div>
+    <div class="nav-right">
+      <button class="tbtn" data-theme-toggle aria-label="Toggle colour theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
+      <a href="#" class="nav-login">Login</a>
+      <a href="demo.html" class="nav-demo" style="background:transparent;border:1px solid var(--border2);color:var(--text);">Get a Demo</a>
+    </div>
+    <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+<aside class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+  <div class="mobile-menu-header">
+    <a href="index.html" style="display:flex;align-items:center;gap:.5rem;text-decoration:none;"><img src="logo.png" style="height:24px;width:auto;" alt=""><span style="font-family:var(--font-h);font-weight:700;font-size:14px;letter-spacing:1.5px;color:var(--text);margin-left:6px;">NOVEM</span><span style="font-family:var(--font-h);font-weight:400;font-size:14px;letter-spacing:1.5px;color:#7BFAB5;">DIGITAL</span></a>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <nav class="mobile-nav-list" aria-label="Mobile navigation">
+    <div class="mobile-nav-item"><a href="index.html#platform" class="mobile-nav-trigger">Platform</a></div>
+    <div class="mobile-nav-item"><a href="index.html#industries" class="mobile-nav-trigger">Industries</a></div>
+    <div class="mobile-nav-item"><a href="tcro.html" class="mobile-nav-trigger mobile-nav-trigger--tcro">TCRO</a></div>
+    <div class="mobile-nav-item"><a href="index.html#partners" class="mobile-nav-trigger">Partners</a></div>
+    <div class="mobile-nav-item"><a href="index.html#about" class="mobile-nav-trigger">About</a></div>
+  </nav>
+  <div class="mobile-bottom">
+    <a href="estimate.html" class="mobile-demo">Estimate Your Savings</a>
+    <a href="demo.html" class="mobile-demo secondary">Get a Demo</a>
+  </div>
+</aside>
+
+<main id="main-content">
+<section class="form-page">
+  <div class="w">
+    <div class="form-grid">
+
+      <!-- LEFT RAIL -->
+      <div class="form-rail">
+        <div>
+          <p class="eye"><span class="eye-dot"></span>Track 1 — Savings Estimate</p>
+          <h1 class="form-rail-h">Estimate your <span class="accent">savings.</span></h1>
+          <p class="form-rail-sub">Tell us about your portfolio and a specialist will return a directional estimate of what Novem Digital could save you in carried risk — reviewed alongside our insurance partner.</p>
+        </div>
+        <div class="turnaround">
+          <div class="turnaround-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
+          <div class="turnaround-txt">
+            <span class="turnaround-label">Your estimate, back in</span>
+            <span class="turnaround-big">1 business day</span>
+            <span class="turnaround-sub">A real specialist reviews it — not an instant auto-number.</span>
+          </div>
+        </div>
+        <div class="rail-steps">
+          <div class="rail-step"><span class="rail-step-num">1</span><span class="rail-step-txt"><b>Share a few portfolio details.</b> The more you tell us, the sharper the estimate.</span></div>
+          <div class="rail-step"><span class="rail-step-num">2</span><span class="rail-step-txt"><b>A specialist reviews it</b> with our insurance partner — no auto-generated number.</span></div>
+          <div class="rail-step"><span class="rail-step-num">3</span><span class="rail-step-txt"><b>You get a reviewed estimate</b> and a clear next step, typically within one business day.</span></div>
+        </div>
+        <div class="rail-trust">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Your information is used only to prepare your estimate. We never share portfolio details outside Novem Digital and our reviewing insurance partner.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM CARD -->
+      <div class="form-card">
+        <div class="form-card-top"></div>
+        <form id="estimateForm" novalidate>
+          <div class="form-card-head">
+            <h2 class="form-card-title">Request my savings estimate</h2>
+            <p class="form-card-sub">Fields marked <span style="color:var(--green);">*</span> are required. Everything else sharpens the estimate.</p>
+          </div>
+          <div class="form-body">
+
+            <div class="prefill-note" id="prefillNote">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>We've carried over the portfolio details from your calculator estimate. Add the rest below.</span>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="form-section-label">Your details</div>
+            <div class="form-row">
+              <div class="field"><label for="fname">First name <span class="req">*</span></label><input type="text" id="fname" name="fname" required autocomplete="given-name"/></div>
+              <div class="field"><label for="lname">Last name <span class="req">*</span></label><input type="text" id="lname" name="lname" required autocomplete="family-name"/></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="email">Work email <span class="req">*</span></label><input type="email" id="email" name="email" required autocomplete="email"/></div>
+              <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"/></div>
+            </div>
+            <div class="field"><label for="company">Company <span class="req">*</span></label><input type="text" id="company" name="company" required autocomplete="organization"/></div>
+            <div class="field"><label for="role">Your role</label>
+              <select id="role" name="role">
+                <option value="">Select role</option>
+                <option>Owner / Principal</option>
+                <option>Asset / Portfolio Management</option>
+                <option>Operations / Facilities</option>
+                <option>Finance / Risk</option>
+                <option>Insurance / Brokerage</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- PORTFOLIO -->
+            <div class="form-section-label">Your property</div>
+
+            <div class="field"><label for="address">Property address <span class="req">*</span></label><input type="text" id="address" name="address" required placeholder="Street address, city / region" autocomplete="street-address"/>
+              <span class="field-hint">One main property is fine — we can expand to your full portfolio on the call.</span>
+            </div>
+
+            <div class="field"><label for="age">Age of property <span class="req">*</span></label>
+              <select id="age" name="age" required>
+                <option value="">Select age range</option>
+                <option>Older than 1965</option>
+                <option>1965 – 1985</option>
+                <option>1986 – 1995</option>
+                <option>1996 – 2005</option>
+                <option>2006 – 2015</option>
+                <option>2016 or newer</option>
+              </select>
+            </div>
+
+            <div class="field"><label for="repair">Current state of repair <span class="req">*</span></label>
+              <select id="repair" name="repair" required>
+                <option value="">Select condition</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Serviceable">Serviceable</option>
+                <option value="Adequate">Adequate</option>
+                <option value="Functional with observed aging">Functional with observed aging</option>
+              </select>
+              <span class="field-hint repair-hint" id="repairHint" data-default="A general sense is fine — we refine this together.">A general sense is fine — we refine this together.</span>
+            </div>
+
+            <div class="field"><label>Any insurance claims in the past 3 years? <span class="req">*</span></label>
+              <div class="choice-row" role="radiogroup" aria-label="Insurance claims in the past 3 years">
+                <label class="choice"><input type="radio" name="claims" value="No" required/><span>No</span></label>
+                <label class="choice"><input type="radio" name="claims" value="Yes"/><span>Yes</span></label>
+              </div>
+            </div>
+
+            <div class="field"><label for="propType">Property type <span class="req">*</span></label>
+              <select id="propType" name="propType" required>
+                <option value="">Select property type</option>
+                <option value="office">Office</option>
+                <option value="retail">Retail</option>
+                <option value="residential">Residential</option>
+                <option value="industrial">Industrial</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: Square footage (Office, Retail, Residential, Industrial) ── -->
+            <div class="field cond" id="condSqft" hidden><label for="sqft">Square footage <span class="req">*</span></label>
+              <select id="sqft" name="sqft" disabled>
+                <option value="">Select range</option>
+                <option>Under 10,000 sq ft</option>
+                <option>10,000 – 35,000 sq ft</option>
+                <option>35,000 – 75,000 sq ft</option>
+                <option>Over 75,000 sq ft</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: CRUs (Retail only) ── -->
+            <div class="field cond" id="condCrus" hidden><label for="crus">Commercial retail units (CRUs) <span class="req">*</span></label>
+              <select id="crus" name="crus" disabled>
+                <option value="">Select range</option>
+                <option>1 – 5</option>
+                <option>6 – 10</option>
+                <option>11 or greater</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: Total units (Residential only) ── -->
+            <div class="field cond" id="condUnits" hidden><label for="units">Total units <span class="req">*</span></label>
+              <select id="units" name="units" disabled>
+                <option value="">Select range</option>
+                <option>20 or less</option>
+                <option>20 – 40</option>
+                <option>40 – 80</option>
+                <option>Over 80</option>
+              </select>
+            </div>
+
+            <!-- INSURANCE / CONTEXT -->
+            <div class="form-section-label">Insurance &amp; context (optional — improves accuracy)</div>
+            <div class="field"><label for="insurer">Current insurer / broker</label><input type="text" id="insurer" name="insurer"/></div>
+            <div class="field field-full"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Goals, timelines, specific concerns…"></textarea></div>
+
+            <button type="submit" class="btn btn-p form-submit">Get My Savings Estimate <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            <p class="form-disclaimer">This is not a quote. A specialist reviews your details with our insurance partner before any figures are confirmed. By submitting you agree to be contacted about your estimate. See our <a href="#">privacy policy</a>.</p>
+          </div>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h2 class="success-h">Request received.</h2>
+          <div class="turnaround" style="justify-content:center;margin:0 auto 1.5rem;max-width:30rem;">
+            <div class="turnaround-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
+            <div class="turnaround-txt" style="text-align:left;"><span class="turnaround-label">Expect your estimate in</span><span class="turnaround-big">1 business day</span></div>
+          </div>
+          <p class="success-b">A Novem Digital specialist will review your portfolio details alongside our insurance partner and follow up with your reviewed savings estimate.</p>
+          <a href="index.html" class="btn btn-g">Back to home</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <div class="foot-bot" style="margin-top:0;border-top:none;">
+      <p class="foot-legal">&copy; 2025 Novem Digital. All rights reserved.</p>
+      <p class="foot-legal" style="font-family:var(--font-h);font-weight:600;letter-spacing:.04em;">Failures are Predictable.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  // Prefill banner if arriving from the calculator
+  const params=new URLSearchParams(location.search);
+  if(params.get('from')==='tcro'){
+    document.getElementById('prefillNote').classList.add('show');
+  }
+
+  // ── State-of-repair inline helper text (Kevin's tier definitions) ──
+  const REPAIR_DEFS={
+    'Excellent':'New or near-new condition; no visible wear; all systems (roof, electrical, plumbing, HVAC) function beyond current code minimums; proactively maintained.',
+    'Good':'Minor cosmetic aging (e.g., small cracks, faded paint) but no deferred maintenance; all essential systems functional and safe; regular upkeep observed.',
+    'Serviceable':'Fully operational but showing consistent age-related wear; some components near end of expected life but not yet failed; repairs completed as needed, not proactively.',
+    'Adequate':'Meets minimum safety and function standards; evidence of occasional maintenance gaps (e.g., older roof with minor leaks repaired, aging but working wiring); no active failure.',
+    'Functional with observed aging':'Still fit for use, but multiple systems show significant age or reduced efficiency; no active failures or safety violations; owner responds to issues without full renewal.'
+  };
+  const repair=document.getElementById('repair');
+  const repairHint=document.getElementById('repairHint');
+  repair.addEventListener('change',function(){
+    repairHint.textContent = REPAIR_DEFS[repair.value] || repairHint.dataset.default;
+  });
+
+  // ── Property-type branching (show/hide + enable/disable conditional fields) ──
+  const propType=document.getElementById('propType');
+  const condSqft=document.getElementById('condSqft');
+  const condCrus=document.getElementById('condCrus');
+  const condUnits=document.getElementById('condUnits');
+  // map: which conditional blocks each property type reveals
+  const BRANCHES={
+    office:['sqft'],
+    retail:['sqft','crus'],
+    residential:['units','sqft'],
+    industrial:['sqft']
+  };
+  const BLOCKS={ sqft:condSqft, crus:condCrus, units:condUnits };
+  function applyBranch(){
+    const want=BRANCHES[propType.value]||[];
+    Object.keys(BLOCKS).forEach(function(key){
+      const block=BLOCKS[key];
+      const select=block.querySelector('select');
+      const show=want.indexOf(key)!==-1;
+      block.hidden=!show;
+      select.disabled=!show;          // disabled fields are excluded from validation & submission
+      select.required=show;           // only required when visible
+      if(!show){select.value='';}      // clear hidden values so stale data isn't submitted
+    });
+  }
+  propType.addEventListener('change',applyBranch);
+  applyBranch(); // run once on load
+
+  // ── Demo-only success handling (HubSpot handles real submission on the live site) ──
+  const form=document.getElementById('estimateForm');
+  const success=document.getElementById('formSuccess');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    form.style.display='none';
+    success.classList.add('show');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+<script data-pplx-inline-edit>
+(function () {
+  if (window === window.top) return;
+
+  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
+  const MAX_FONT_BYTES = 500 * 1024;
+  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
+  let scrollForwarding = false;
+  let scrollRaf = 0;
+  let trustedTopOrigin = null;
+
+  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
+  // across multiple labels.
+  function matchesAllowedOrigin(origin) {
+    if (!origin) return false;
+    for (const entry of allowedParentOrigins) {
+      if (!entry.includes("*")) {
+        if (entry === origin) return true;
+        continue;
+      }
+      const pattern = new RegExp(
+        "^" +
+          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
+          "$",
+      );
+      if (pattern.test(origin)) return true;
+    }
+    return false;
+  }
+
+  // Trust decision: when the sender is same-origin-visible (event.origin is a
+  // real origin like https://www.perplexity.ai) we trust event.origin directly.
+  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
+  // broker's stamped `parentOrigin` to identify the top window. The fallback
+  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // on the response path (see postToTrustedTop) to ensure replies can't be
+  // delivered to anyone but the actual top window of that claimed origin.
+  function getTrustedParentOrigin(event) {
+    const forwardedParentOrigin =
+      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
+    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
+    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
+  }
+
+  // All responses go to window.top with targetOrigin = the allowlisted origin.
+  // An attacker that iframes us inside their own null-origin broker can claim
+  // any parentOrigin they like, but the browser will drop the reply whenever
+  // the real top's origin doesn't match — so the screenshot never leaves.
+  function postToTrustedTop(message) {
+    if (!trustedTopOrigin) return;
+    try {
+      window.top.postMessage(message, trustedTopOrigin);
+    } catch (_error) {}
+  }
+
+  function inlineAll(original, clone) {
+    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
+
+    try {
+      const computedStyle = getComputedStyle(original);
+      // cssText on a computed style is the serialized declaration in modern
+      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // properties. Firefox returns "" here, so we fall back on empty.
+      const serialized = computedStyle.cssText;
+      if (serialized) {
+        clone.style.cssText = serialized;
+      } else {
+        const parts = new Array(computedStyle.length);
+        for (let index = 0; index < computedStyle.length; index += 1) {
+          const property = computedStyle[index];
+          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
+        }
+        clone.style.cssText = parts.join("");
+      }
+    } catch (_error) {}
+
+    const originalChildren = original.children;
+    const clonedChildren = clone.children;
+    for (
+      let index = 0;
+      index < originalChildren.length && index < clonedChildren.length;
+      index += 1
+    ) {
+      inlineAll(originalChildren[index], clonedChildren[index]);
+    }
+  }
+
+  function extractFontUrl(srcValue) {
+    const matches = [
+      ...srcValue.matchAll(
+        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
+      ),
+    ];
+    if (matches.length === 0) return null;
+    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
+    if (woff2) return woff2[1];
+    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
+    if (woff) return woff[1];
+    return matches[0][1];
+  }
+
+  // Cache resolved font URL -> data URI across captures. Fonts on a page
+  // essentially never change, and a batch run emits multiple captures back to
+  // back — without this we'd refetch + re-base64 every time.
+  const fontDataUriCache = new Map();
+  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
+
+  async function fetchAsDataUri(url) {
+    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
+    let dataUri = null;
+    try {
+      const response = await fetch(url, { mode: "cors", credentials: "omit" });
+      if (response.ok) {
+        const blob = await response.blob();
+        if (blob.size <= MAX_FONT_BYTES) {
+          dataUri = await new Promise((resolve) => {
+            const reader = new FileReader();
+            reader.onloadend = () =>
+              resolve(typeof reader.result === "string" ? reader.result : null);
+            reader.onerror = () => resolve(null);
+            reader.readAsDataURL(blob);
+          });
+        }
+      }
+    } catch (_error) {
+      dataUri = null;
+    }
+    fontDataUriCache.set(url, dataUri);
+    return dataUri;
+  }
+
+  function collectFontFaceRuleTexts() {
+    const rules = [];
+    for (const sheet of document.styleSheets) {
+      let cssRules;
+      try {
+        cssRules = sheet.cssRules;
+      } catch (_error) {
+        continue;
+      }
+      if (!cssRules) continue;
+      for (const rule of cssRules) {
+        const cssText = rule.cssText || "";
+        if (cssText.startsWith("@font-face")) rules.push(cssText);
+      }
+    }
+    return rules;
+  }
+
+  async function buildInlinedFontCss() {
+    const ruleTexts = collectFontFaceRuleTexts();
+    if (ruleTexts.length === 0) return null;
+
+    const resolved = ruleTexts.map((cssText) => {
+      if (!SRC_DECLARATION_RE.test(cssText)) return null;
+      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
+      if (!srcMatch) return null;
+      const url = extractFontUrl(srcMatch[1]);
+      if (!url) return null;
+      try {
+        return { cssText, url: new URL(url, document.baseURI).href };
+      } catch (_error) {
+        return null;
+      }
+    });
+
+    const dataUris = await Promise.all(
+      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
+    );
+
+    const inlined = [];
+    let totalBytes = 0;
+    for (let index = 0; index < resolved.length; index += 1) {
+      const entry = resolved[index];
+      const dataUri = dataUris[index];
+      if (!entry || !dataUri) continue;
+      const approxBytes = dataUri.length * 0.75;
+      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
+      totalBytes += approxBytes;
+      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
+    }
+    return inlined.length > 0 ? inlined.join("\n") : null;
+  }
+
+  function stripExternal(clone) {
+    const images = clone.querySelectorAll("img");
+    for (let index = 0; index < images.length; index += 1) {
+      const src = images[index].getAttribute("src");
+      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
+    }
+
+    const elements = clone.querySelectorAll("*");
+    for (let index = 0; index < elements.length; index += 1) {
+      const style = elements[index].style.cssText;
+      if (style && style.includes("url(")) {
+        elements[index].style.cssText = style.replace(
+          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
+          "none",
+        );
+      }
+    }
+  }
+
+  function emitScroll() {
+    scrollRaf = 0;
+    if (!scrollForwarding) return;
+    postToTrustedTop({
+      type: "INLINE_EDIT_SCROLL",
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+    });
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!scrollForwarding || scrollRaf) return;
+      scrollRaf = requestAnimationFrame(emitScroll);
+    },
+    { passive: true, capture: true },
+  );
+
+  async function handleCaptureRequest(event) {
+    const requestId = event.data.requestId;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    function postResult(dataUrl) {
+      postToTrustedTop({
+        type: "INLINE_EDIT_SCREENSHOT_RESULT",
+        requestId,
+        dataUrl,
+        scrollX,
+        scrollY,
+      });
+    }
+
+    try {
+      // Wait for any pending web fonts to resolve so both inline metrics and
+      // the @font-face inlining below see the same loaded faces.
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (_error) {}
+      }
+
+      const clone = document.documentElement.cloneNode(true);
+      inlineAll(document.documentElement, clone);
+
+      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
+      for (let index = 0; index < removedNodes.length; index += 1) {
+        removedNodes[index].remove();
+      }
+
+      stripExternal(clone);
+
+      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
+      // can resolve them — external font URLs aren't fetched during
+      // foreignObject rendering, which would otherwise force a fallback face
+      // and change text metrics.
+      const inlinedFontCss = await buildInlinedFontCss();
+      if (inlinedFontCss) {
+        const styleEl = document.createElement("style");
+        styleEl.textContent = inlinedFontCss;
+        const head = clone.querySelector("head");
+        if (head) head.appendChild(styleEl);
+        else clone.insertBefore(styleEl, clone.firstChild);
+      }
+
+      const html = new XMLSerializer().serializeToString(clone);
+      const svg =
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
+        '<foreignObject width="100%" height="100%">' +
+        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
+        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
+        html +
+        "</div></div></foreignObject></svg>";
+      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+      const image = new Image();
+      image.onload = function () {
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext("2d").drawImage(image, 0, 0);
+        postResult(canvas.toDataURL("image/png"));
+      };
+      image.onerror = function () {
+        postResult(null);
+      };
+      image.src = svgUrl;
+    } catch (_error) {
+      postResult(null);
+    }
+  }
+
+  window.addEventListener("message", function (event) {
+    if (!event.data) return;
+    // Only accept messages from the direct parent frame. Blocks sibling /
+    // unrelated-window postMessage senders that could otherwise reach us.
+    if (event.source !== window.parent) return;
+
+    const trustedParentOrigin = getTrustedParentOrigin(event);
+    if (!trustedParentOrigin) return;
+    trustedTopOrigin = trustedParentOrigin;
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
+      scrollForwarding = true;
+      emitScroll();
+      return;
+    }
+
+    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
+      scrollForwarding = false;
+      if (scrollRaf) cancelAnimationFrame(scrollRaf);
+      scrollRaf = 0;
+      return;
+    }
+
+    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
+
+    handleCaptureRequest(event);
+  });
+})();
+
+
+</script></body>
+</html>

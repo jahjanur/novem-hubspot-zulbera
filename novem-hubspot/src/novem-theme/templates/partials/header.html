@@ -1,5 +1,5 @@
 {% set company_name = theme.brand.company_name|default('Novem Digital', true) %}
-{% set logo_src     = theme.brand.logo.src|default('https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_21/images/logo.png', true) %}
+{% set logo_src     = theme.brand.logo.src|default('https://343267136.fs1.hubspotusercontent-na3.net/hubfs/343267136/raw_assets/public/NovemZulbera_22/images/logo.png', true) %}
 {% set demo_url     = theme.navigation.demo_url.href|default('/get-a-demo/', true) %}
 {% set login_url    = theme.navigation.login_url.href|default('#', true) %}
 
@@ -26,7 +26,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
         <a href="{{ login_url }}" class="nav-login">Login</a>
-        <a href="{{ demo_url }}" class="nav-demo">Get a Demo</a>
+        <a href="#" class="nav-demo" data-contact-open>Contact Us</a>
       </div>
 
       <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
@@ -59,7 +59,7 @@
 
   <div class="mobile-bottom">
     <a href="{{ login_url }}" class="mobile-login">Login</a>
-    <a href="{{ demo_url }}" class="mobile-demo" data-mobile-link>Get a Demo</a>
+    <a href="#" class="mobile-demo" data-mobile-link data-contact-open>Contact Us</a>
   </div>
 </div>
 

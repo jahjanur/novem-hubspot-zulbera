@@ -1,0 +1,783 @@
+<!--
+  templateType: page
+  label: "Estimate Your Savings"
+  isAvailableForNewContent: true
+-->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get My Savings Estimate | Novem Digital</title>
+  <meta name="description" content="Request a reviewed TCRO savings estimate for your portfolio. A specialist reviews every request alongside our insurance partner, typically within one business day."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,400&display=swap" rel="stylesheet"/>
+  {{ standard_header_includes }}
+  <style>/* inlined: forms.css */
+/* ═══════════════════════════════════════════
+   SHARED FORM PAGE STYLES
+   ═══════════════════════════════════════════ */
+.form-page{padding-top:5.5rem;padding-bottom:clamp(4rem,8vw,6rem);position:relative;overflow:hidden;}
+.form-page::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 0%,rgba(123,250,181,.07) 0%,transparent 60%);pointer-events:none;}
+.form-grid{position:relative;display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,5vw,5rem);align-items:start;padding-top:clamp(2.5rem,5vw,4rem);}
+@media(max-width:880px){.form-grid{grid-template-columns:1fr;}}
+
+/* LEFT — context rail */
+.form-rail{position:sticky;top:6rem;display:flex;flex-direction:column;gap:1.75rem;}
+@media(max-width:880px){.form-rail{position:static;}}
+.form-rail-h{font-family:var(--font-h);font-weight:700;font-size:clamp(1.9rem,1.4rem + 2vw,2.8rem);line-height:1.08;color:var(--text);margin-bottom:.5rem;}
+.form-rail-h .accent{color:var(--green);}
+.form-rail-sub{font-size:clamp(1rem,.95rem + .2vw,1.1rem);color:var(--muted);line-height:1.7;}
+/* Turnaround highlight — immediate-gratification expectation */
+.turnaround{display:flex;align-items:center;gap:1.1rem;padding:1.35rem 1.5rem;background:color-mix(in srgb,var(--green) 9%,transparent);border:1px solid color-mix(in srgb,var(--green) 32%,transparent);border-radius:var(--rxl);}
+.turnaround-ic{flex-shrink:0;width:2.9rem;height:2.9rem;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);background:color-mix(in srgb,var(--green) 16%,transparent);}
+.turnaround-txt{display:flex;flex-direction:column;}
+.turnaround-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:.1rem;}
+.turnaround-big{font-family:var(--font-h);font-weight:700;font-size:clamp(1.7rem,1.4rem + 1.6vw,2.4rem);line-height:1.05;color:var(--green);}
+.turnaround-sub{font-size:.85rem;color:var(--muted);line-height:1.5;margin-top:.3rem;}
+
+.rail-steps{display:flex;flex-direction:column;gap:1rem;margin-top:.5rem;}
+.rail-step{display:flex;gap:.9rem;align-items:flex-start;}
+.rail-step-num{width:1.6rem;height:1.6rem;flex-shrink:0;border-radius:50%;background:color-mix(in srgb,var(--green) 14%,transparent);border:1px solid rgba(123,250,181,.35);color:var(--green);font-family:var(--font-h);font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center;}
+.rail-step-txt{font-size:.92rem;color:var(--muted);line-height:1.55;}
+.rail-step-txt b{color:var(--text);font-weight:600;}
+.rail-trust{margin-top:1rem;padding:1.1rem 1.25rem;background:var(--surf);border:1px solid var(--border);border-radius:var(--rlg);font-size:.82rem;color:var(--muted);line-height:1.6;display:flex;gap:.7rem;align-items:flex-start;}
+.rail-trust svg{flex-shrink:0;color:var(--green);margin-top:.15rem;}
+
+/* RIGHT — form card */
+.form-card{background:var(--gun);border:1px solid var(--border2);border-radius:calc(var(--rxl)*1.25);overflow:hidden;box-shadow:var(--sh-lg);}
+.form-card-top{height:3px;background:linear-gradient(90deg,var(--green),var(--blue),var(--green));background-size:200% 100%;animation:shimmer 3s linear infinite;}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+.form-card-head{padding:2rem 2.25rem 1.5rem;border-bottom:1px solid var(--border);}
+.form-card-title{font-family:var(--font-h);font-weight:700;font-size:1.35rem;color:var(--text);margin-bottom:.3rem;}
+.form-card-sub{font-size:.92rem;color:var(--muted);line-height:1.55;}
+.form-body{padding:2rem 2.25rem 2.25rem;}
+.form-section-label{font-family:var(--font-h);font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;color:var(--faint);margin:1.75rem 0 1rem;}
+.form-section-label:first-child{margin-top:0;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;}
+@media(max-width:520px){.form-row{grid-template-columns:1fr;}}
+.field{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.1rem;}
+.field-full{grid-column:1/-1;}
+.field label{font-family:var(--font-h);font-weight:700;font-size:.78rem;letter-spacing:.04em;color:var(--muted);}
+.field label .req{color:var(--green);}
+.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;background:rgba(17,26,31,.8);border:1px solid var(--border2);border-radius:var(--rlg);color:var(--text);font-family:var(--font-b);font-size:.98rem;transition:border-color var(--ease),box-shadow var(--ease);appearance:none;-webkit-appearance:none;}
+[data-theme="light"] .field input,[data-theme="light"] .field select,[data-theme="light"] .field textarea{background:#fff;}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238BBCCA' stroke-width='2.5'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;}
+.field select option{background:#1E343F;color:var(--text);}
+[data-theme="light"] .field select option{background:#fff;color:var(--text);}
+.field textarea{min-height:100px;resize:vertical;line-height:1.6;}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(123,250,181,.12);}
+.field-hint{font-size:.74rem;color:var(--faint);line-height:1.5;}
+.form-submit{width:100%;justify-content:center;margin-top:.5rem;}
+.form-disclaimer{margin-top:1.1rem;font-size:.78rem;color:var(--faint);line-height:1.6;text-align:center;}
+.form-disclaimer a{color:var(--green);text-decoration:none;}
+
+/* SUCCESS state */
+.form-success{display:none;text-align:center;padding:2.5rem 2.25rem 2.75rem;}
+.form-success.show{display:block;}
+.success-ico{width:3.5rem;height:3.5rem;border-radius:50%;background:color-mix(in srgb,var(--green) 16%,transparent);border:1px solid rgba(123,250,181,.4);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;color:var(--green);}
+.success-h{font-family:var(--font-h);font-weight:700;font-size:1.5rem;color:var(--text);margin-bottom:.75rem;}
+.success-b{font-size:.98rem;color:var(--muted);line-height:1.7;max-width:42ch;margin:0 auto 1.5rem;}
+
+/* prefilled-from-calculator banner */
+.prefill-note{display:none;align-items:center;gap:.6rem;padding:.8rem 1rem;margin-bottom:1.5rem;background:color-mix(in srgb,var(--green) 8%,transparent);border:1px solid rgba(123,250,181,.3);border-radius:var(--rlg);font-size:.85rem;color:var(--text);line-height:1.5;}
+.prefill-note.show{display:flex;}
+.prefill-note svg{flex-shrink:0;color:var(--green);}
+
+/* ── Yes/No choice radios (claims) ── */
+.choice-row{display:flex;gap:.75rem;}
+.choice{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1rem;background:rgba(17,26,31,.8);border:1px solid var(--border2);border-radius:var(--rlg);cursor:pointer;font-family:var(--font-b);font-size:.98rem;color:var(--text);transition:border-color var(--ease),background var(--ease),box-shadow var(--ease);user-select:none;}
+[data-theme="light"] .choice{background:#fff;}
+.choice input{position:absolute;opacity:0;width:0;height:0;}
+.choice span{display:inline-flex;align-items:center;}
+.choice:hover{border-color:color-mix(in srgb,var(--green) 50%,var(--border2));}
+.choice:has(input:checked){border-color:var(--green);background:color-mix(in srgb,var(--green) 12%,transparent);box-shadow:0 0 0 3px rgba(123,250,181,.12);}
+.choice:has(input:focus-visible){box-shadow:0 0 0 3px rgba(123,250,181,.25);}
+
+/* ── Conditional (branching) fields reveal ── */
+.field.cond{animation:condIn .28s var(--ease,ease) both;}
+.field.cond[hidden]{display:none;}
+@keyframes condIn{from{opacity:0;transform:translateY(-4px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── Repair tier inline definition ── */
+.repair-hint{font-size:.78rem;color:var(--muted);line-height:1.55;padding:.55rem .75rem;background:color-mix(in srgb,var(--green) 6%,transparent);border-left:2px solid color-mix(in srgb,var(--green) 45%,transparent);border-radius:0 var(--rsm,6px) var(--rsm,6px) 0;transition:color var(--ease);}
+
+</style>
+  <style>/* inlined: footer-v2.css */
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER v2 — modern, refined, scoped to .foot-v2
+   Replaces the original .foot styling site-wide when this class
+   is applied to the <footer> element.
+   ═══════════════════════════════════════════════════════════════ */
+
+.foot-v2 {
+  position: relative;
+  padding-block: clamp(4rem, 7vw, 6rem) 1.5rem !important;
+  border-top: none !important;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, color-mix(in srgb, var(--green) 8%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg,
+                    color-mix(in srgb, var(--surf) 30%, var(--bg)) 0%,
+                    var(--bg) 100%);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Top edge gradient line */
+.foot-v2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(80%, 900px);
+  height: 1px;
+  background: linear-gradient(90deg,
+                              transparent,
+                              color-mix(in srgb, var(--green) 60%, transparent) 50%,
+                              transparent);
+}
+
+/* Subtle grid pattern in background (very faint) */
+.foot-v2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, var(--green) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg, color-mix(in srgb, var(--green) 3%, transparent) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 20%, black 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 20%, black 0%, transparent 75%);
+  opacity: .6;
+}
+
+.foot-v2 .w { position: relative; z-index: 1; }
+
+/* ─── BRAND BAND (top — logo + big tagline) ─────────────── */
+.foot-v2-brand {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  margin-bottom: 3rem;
+}
+.foot-v2-brand-left {
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.foot-v2-tagline {
+  font-family: var(--font-h);
+  font-size: clamp(1.4rem, .8vw + 1.2rem, 1.95rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -.022em;
+  color: var(--text);
+  margin: 0;
+  max-width: 28ch;
+}
+.foot-v2-tagline .accent {
+  background: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+.foot-v2-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .9rem 1.6rem;
+  background: var(--green);
+  color: var(--gun) !important;
+  -webkit-text-fill-color: var(--gun) !important;
+  border-radius: 9999px;
+  font-family: var(--font-h);
+  font-weight: 700;
+  font-size: .95rem;
+  text-decoration: none;
+  /* Contained shadow — no spread that extends beyond visual bounds */
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.5) inset,
+    0 4px 12px -4px rgba(123,250,181,.35),
+    0 1px 2px rgba(0,0,0,.18);
+  transition: transform .2s cubic-bezier(.16,1,.3,1),
+              box-shadow .25s cubic-bezier(.16,1,.3,1),
+              filter .2s cubic-bezier(.16,1,.3,1);
+  white-space: nowrap;
+}
+[data-theme="light"] .foot-v2-cta {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
+.foot-v2-cta:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.55) inset,
+    0 6px 14px -4px rgba(123,250,181,.45),
+    0 1px 2px rgba(0,0,0,.2);
+}
+
+/* ─── MAIN GRID — clean 5-column layout ─────────────────── */
+.foot-v2-g {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+.foot-v2-g .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+.foot-v2-desc {
+  font-size: .92rem;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 32ch;
+  margin-bottom: 1.25rem;
+}
+.foot-v2-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  margin-top: 1rem;
+}
+.foot-v2-contacts a {
+  font-size: .9rem;
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  transition: color .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-contacts a svg {
+  width: 14px;
+  height: 14px;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.foot-v2-contacts a:hover { color: var(--green); }
+
+.foot-v2-ct {
+  font-family: var(--font-h);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+  opacity: .85;
+}
+.foot-v2-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .65rem;
+}
+.foot-v2-links a {
+  font-size: .92rem;
+  color: var(--muted);
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  transition: color .2s cubic-bezier(.16,1,.3,1),
+              padding-left .25s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-links a::before {
+  content: "→";
+  position: absolute;
+  left: -.95em;
+  opacity: 0;
+  transform: translateX(-4px);
+  color: var(--green);
+  transition: opacity .2s cubic-bezier(.16,1,.3,1),
+              transform .2s cubic-bezier(.16,1,.3,1);
+  font-size: .9em;
+}
+.foot-v2-links a:hover {
+  color: var(--green);
+  padding-left: .35em;
+}
+.foot-v2-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+.foot-v2-links a svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ─── DATA SOURCES (compact strip at bottom) ─────────────── */
+.foot-v2-sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .75rem 2rem;
+  padding: 1.25rem 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+}
+.foot-v2-sources-label {
+  font-family: var(--font-h);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--faint);
+  grid-column: 1 / -1;
+}
+.foot-v2-sources li {
+  font-size: .78rem;
+  color: var(--faint);
+  line-height: 1.5;
+  list-style: none;
+}
+.foot-v2-sources sup {
+  color: var(--green);
+  font-weight: 700;
+  margin-right: .25rem;
+}
+.foot-v2-sources a {
+  color: var(--faint);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--faint) 40%, transparent);
+  text-underline-offset: 2px;
+  transition: color .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-sources a:hover { color: var(--green); }
+
+/* ─── BOTTOM STRIP — copyright + zulbera attribution ────── */
+.foot-v2-bot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+.foot-v2-legal {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: .78rem;
+  color: var(--faint);
+}
+.foot-v2-legal span:last-child {
+  font-family: var(--font-h);
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+/* Made with ❤️ by Zulbera */
+.foot-v2-made {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-size: .8rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: .45rem .85rem;
+  background: color-mix(in srgb, var(--surf) 50%, transparent);
+  border: 1px solid color-mix(in srgb, var(--border) 60%, transparent);
+  border-radius: 9999px;
+  transition: border-color .25s cubic-bezier(.16,1,.3,1),
+              background .25s cubic-bezier(.16,1,.3,1),
+              transform .2s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-made-heart {
+  display: inline-block;
+  color: #FF5C7C;
+  font-size: 1em;
+  line-height: 1;
+  animation: footHeartBeat 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+@keyframes footHeartBeat {
+  0%, 100% { transform: scale(1); }
+  20%, 60% { transform: scale(1.18); }
+  40%, 80% { transform: scale(1); }
+}
+.foot-v2-made-brand {
+  font-weight: 700;
+  color: var(--text);
+  transition: color .25s cubic-bezier(.16,1,.3,1);
+}
+.foot-v2-made:hover {
+  border-color: color-mix(in srgb, #FF5C7C 35%, var(--border));
+  background: color-mix(in srgb, #FF5C7C 6%, var(--surf));
+  transform: translateY(-1px);
+}
+.foot-v2-made:hover .foot-v2-made-brand {
+  background: linear-gradient(120deg, #FF5C7C 0%, #FFB36E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .foot-v2-g { grid-template-columns: 1fr 1fr 1fr; }
+  .foot-v2-g > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 768px) {
+  .foot-v2-brand { grid-template-columns: 1fr; }
+  .foot-v2-g { grid-template-columns: 1fr 1fr; }
+  .foot-v2-g > div:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 480px) {
+  .foot-v2-g { grid-template-columns: 1fr; }
+  .foot-v2-bot { justify-content: center; text-align: center; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .foot-v2-made-heart { animation: none; }
+}
+
+/* ─── Light theme — comprehensive ──────────────────────── */
+[data-theme="light"] .foot-v2 {
+  background:
+    radial-gradient(ellipse 80% 45% at 50% 0%, color-mix(in srgb, #60BCD6 14%, transparent) 0%, transparent 65%),
+    linear-gradient(180deg, #FFFFFF 0%, #ECF2F4 100%) !important;
+}
+[data-theme="light"] .foot-v2::before {
+  background: linear-gradient(90deg,
+    transparent,
+    color-mix(in srgb, #60BCD6 65%, transparent) 50%,
+    transparent);
+}
+[data-theme="light"] .foot-v2::after {
+  background-image:
+    linear-gradient(90deg, color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px),
+    linear-gradient(0deg,  color-mix(in srgb, #60BCD6 5%, transparent) 1px, transparent 1px);
+  opacity: .45;
+}
+[data-theme="light"] .foot-v2-brand {
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-tagline { color: #1E343F; }
+[data-theme="light"] .foot-v2-tagline .accent {
+  background: linear-gradient(120deg, #60BCD6 0%, #1E343F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+[data-theme="light"] .foot-v2-desc { color: #4A6B79; }
+[data-theme="light"] .foot-v2-ct { color: #1E343F; opacity: .9; }
+[data-theme="light"] .foot-v2-links a,
+[data-theme="light"] .foot-v2-contacts a { color: #4A6B79; }
+[data-theme="light"] .foot-v2-links a::before,
+[data-theme="light"] .foot-v2-contacts a svg { color: #60BCD6; }
+[data-theme="light"] .foot-v2-links a:hover,
+[data-theme="light"] .foot-v2-contacts a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-sources {
+  border-top-color: rgba(30,52,63,.10);
+  border-bottom-color: rgba(30,52,63,.10);
+}
+[data-theme="light"] .foot-v2-sources-label,
+[data-theme="light"] .foot-v2-sources li,
+[data-theme="light"] .foot-v2-sources a {
+  color: #6A8593;
+}
+[data-theme="light"] .foot-v2-sources sup,
+[data-theme="light"] .foot-v2-sources a:hover { color: #60BCD6; }
+
+[data-theme="light"] .foot-v2-legal { color: #6A8593; }
+[data-theme="light"] .foot-v2-legal span:last-child { color: #4A6B79; }
+
+/* Made-with pill — light mode */
+[data-theme="light"] .foot-v2-made {
+  background: #FFFFFF !important;
+  border-color: rgba(30,52,63,.12) !important;
+  color: #4A6B79;
+  box-shadow: 0 2px 8px -2px rgba(30,52,63,.08);
+}
+[data-theme="light"] .foot-v2-made-brand { color: #1E343F; }
+[data-theme="light"] .foot-v2-made:hover {
+  border-color: color-mix(in srgb, #FF5C7C 40%, rgba(30,52,63,.12)) !important;
+  background: color-mix(in srgb, #FF5C7C 5%, #FFFFFF) !important;
+}
+
+/* Top brand CTA in light mode */
+[data-theme="light"] .foot-v2-cta {
+  color: #1E343F !important;
+  -webkit-text-fill-color: #1E343F !important;
+}
+
+</style>
+</head>
+<body>
+
+{% include "./partials/header.html" %}
+
+<main id="main-content">
+<section class="form-page">
+  <div class="w">
+    <div class="form-grid">
+
+      <!-- LEFT RAIL -->
+      <div class="form-rail">
+        <div>
+          <p class="eye"><span class="eye-dot"></span>Track 1 — Savings Estimate</p>
+          <h1 class="form-rail-h">Estimate your <span class="accent">savings.</span></h1>
+          <p class="form-rail-sub">Tell us about your portfolio and a specialist will return a directional estimate of what Novem Digital could save you in carried risk — reviewed alongside our insurance partner.</p>
+        </div>
+        <div class="turnaround">
+          <div class="turnaround-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
+          <div class="turnaround-txt">
+            <span class="turnaround-label">Your estimate, back in</span>
+            <span class="turnaround-big">1 business day</span>
+            <span class="turnaround-sub">A real specialist reviews it — not an instant auto-number.</span>
+          </div>
+        </div>
+        <div class="rail-steps">
+          <div class="rail-step"><span class="rail-step-num">1</span><span class="rail-step-txt"><b>Share a few portfolio details.</b> The more you tell us, the sharper the estimate.</span></div>
+          <div class="rail-step"><span class="rail-step-num">2</span><span class="rail-step-txt"><b>A specialist reviews it</b> with our insurance partner — no auto-generated number.</span></div>
+          <div class="rail-step"><span class="rail-step-num">3</span><span class="rail-step-txt"><b>You get a reviewed estimate</b> and a clear next step, typically within one business day.</span></div>
+        </div>
+        <div class="rail-trust">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Your information is used only to prepare your estimate. We never share portfolio details outside Novem Digital and our reviewing insurance partner.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM CARD -->
+      <div class="form-card">
+        <div class="form-card-top"></div>
+        <form id="estimateForm" novalidate>
+          <div class="form-card-head">
+            <h2 class="form-card-title">Request my savings estimate</h2>
+            <p class="form-card-sub">Fields marked <span style="color:var(--green);">*</span> are required. Everything else sharpens the estimate.</p>
+          </div>
+          <div class="form-body">
+
+            <div class="prefill-note" id="prefillNote">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>We've carried over the portfolio details from your calculator estimate. Add the rest below.</span>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="form-section-label">Your details</div>
+            <div class="form-row">
+              <div class="field"><label for="fname">First name <span class="req">*</span></label><input type="text" id="fname" name="fname" required autocomplete="given-name"/></div>
+              <div class="field"><label for="lname">Last name <span class="req">*</span></label><input type="text" id="lname" name="lname" required autocomplete="family-name"/></div>
+            </div>
+            <div class="form-row">
+              <div class="field"><label for="email">Work email <span class="req">*</span></label><input type="email" id="email" name="email" required autocomplete="email"/></div>
+              <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"/></div>
+            </div>
+            <div class="field"><label for="company">Company <span class="req">*</span></label><input type="text" id="company" name="company" required autocomplete="organization"/></div>
+            <div class="field"><label for="role">Your role</label>
+              <select id="role" name="role">
+                <option value="">Select role</option>
+                <option>Owner / Principal</option>
+                <option>Asset / Portfolio Management</option>
+                <option>Operations / Facilities</option>
+                <option>Finance / Risk</option>
+                <option>Insurance / Brokerage</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <!-- PORTFOLIO -->
+            <div class="form-section-label">Your property</div>
+
+            <div class="field"><label for="address">Property address <span class="req">*</span></label><input type="text" id="address" name="address" required placeholder="Street address, city / region" autocomplete="street-address"/>
+              <span class="field-hint">One main property is fine — we can expand to your full portfolio on the call.</span>
+            </div>
+
+            <div class="field"><label for="age">Age of property <span class="req">*</span></label>
+              <select id="age" name="age" required>
+                <option value="">Select age range</option>
+                <option>Older than 1965</option>
+                <option>1965 – 1985</option>
+                <option>1986 – 1995</option>
+                <option>1996 – 2005</option>
+                <option>2006 – 2015</option>
+                <option>2016 or newer</option>
+              </select>
+            </div>
+
+            <div class="field"><label for="repair">Current state of repair <span class="req">*</span></label>
+              <select id="repair" name="repair" required>
+                <option value="">Select condition</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Serviceable">Serviceable</option>
+                <option value="Adequate">Adequate</option>
+                <option value="Functional with observed aging">Functional with observed aging</option>
+              </select>
+              <span class="field-hint repair-hint" id="repairHint" data-default="A general sense is fine — we refine this together.">A general sense is fine — we refine this together.</span>
+            </div>
+
+            <div class="field"><label>Any insurance claims in the past 3 years? <span class="req">*</span></label>
+              <div class="choice-row" role="radiogroup" aria-label="Insurance claims in the past 3 years">
+                <label class="choice"><input type="radio" name="claims" value="No" required/><span>No</span></label>
+                <label class="choice"><input type="radio" name="claims" value="Yes"/><span>Yes</span></label>
+              </div>
+            </div>
+
+            <div class="field"><label for="propType">Property type <span class="req">*</span></label>
+              <select id="propType" name="propType" required>
+                <option value="">Select property type</option>
+                <option value="office">Office</option>
+                <option value="retail">Retail</option>
+                <option value="residential">Residential</option>
+                <option value="industrial">Industrial</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: Square footage (Office, Retail, Residential, Industrial) ── -->
+            <div class="field cond" id="condSqft" hidden><label for="sqft">Square footage <span class="req">*</span></label>
+              <select id="sqft" name="sqft" disabled>
+                <option value="">Select range</option>
+                <option>Under 10,000 sq ft</option>
+                <option>10,000 – 35,000 sq ft</option>
+                <option>35,000 – 75,000 sq ft</option>
+                <option>Over 75,000 sq ft</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: CRUs (Retail only) ── -->
+            <div class="field cond" id="condCrus" hidden><label for="crus">Commercial retail units (CRUs) <span class="req">*</span></label>
+              <select id="crus" name="crus" disabled>
+                <option value="">Select range</option>
+                <option>1 – 5</option>
+                <option>6 – 10</option>
+                <option>11 or greater</option>
+              </select>
+            </div>
+
+            <!-- ── Conditional: Total units (Residential only) ── -->
+            <div class="field cond" id="condUnits" hidden><label for="units">Total units <span class="req">*</span></label>
+              <select id="units" name="units" disabled>
+                <option value="">Select range</option>
+                <option>20 or less</option>
+                <option>20 – 40</option>
+                <option>40 – 80</option>
+                <option>Over 80</option>
+              </select>
+            </div>
+
+            <!-- INSURANCE / CONTEXT -->
+            <div class="form-section-label">Insurance &amp; context (optional — improves accuracy)</div>
+            <div class="field"><label for="insurer">Current insurer / broker</label><input type="text" id="insurer" name="insurer"/></div>
+            <div class="field field-full"><label for="notes">Anything else we should know?</label><textarea id="notes" name="notes" placeholder="Goals, timelines, specific concerns…"></textarea></div>
+
+            <button type="submit" class="btn btn-p form-submit">Get My Savings Estimate <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            <p class="form-disclaimer">This is not a quote. A specialist reviews your details with our insurance partner before any figures are confirmed. By submitting you agree to be contacted about your estimate. See our <a href="#">privacy policy</a>.</p>
+          </div>
+        </form>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="formSuccess">
+          <div class="success-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h2 class="success-h">Request received.</h2>
+          <div class="turnaround" style="justify-content:center;margin:0 auto 1.5rem;max-width:30rem;">
+            <div class="turnaround-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
+            <div class="turnaround-txt" style="text-align:left;"><span class="turnaround-label">Expect your estimate in</span><span class="turnaround-big">1 business day</span></div>
+          </div>
+          <p class="success-b">A Novem Digital specialist will review your portfolio details alongside our insurance partner and follow up with your reviewed savings estimate.</p>
+          <a href="/" class="btn btn-g">Back to home</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="w">
+    <div class="foot-bot" style="margin-top:0;border-top:none;">
+      <p class="foot-legal">&copy; 2025 Novem Digital. All rights reserved.</p>
+      <p class="foot-legal" style="font-family:var(--font-h);font-weight:600;letter-spacing:.04em;">Failures are Predictable.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  // Prefill banner if arriving from the calculator
+  const params=new URLSearchParams(location.search);
+  if(params.get('from')==='tcro'){
+    document.getElementById('prefillNote').classList.add('show');
+  }
+
+  // ── State-of-repair inline helper text (Kevin's tier definitions) ──
+  const REPAIR_DEFS={
+    'Excellent':'New or near-new condition; no visible wear; all systems (roof, electrical, plumbing, HVAC) function beyond current code minimums; proactively maintained.',
+    'Good':'Minor cosmetic aging (e.g., small cracks, faded paint) but no deferred maintenance; all essential systems functional and safe; regular upkeep observed.',
+    'Serviceable':'Fully operational but showing consistent age-related wear; some components near end of expected life but not yet failed; repairs completed as needed, not proactively.',
+    'Adequate':'Meets minimum safety and function standards; evidence of occasional maintenance gaps (e.g., older roof with minor leaks repaired, aging but working wiring); no active failure.',
+    'Functional with observed aging':'Still fit for use, but multiple systems show significant age or reduced efficiency; no active failures or safety violations; owner responds to issues without full renewal.'
+  };
+  const repair=document.getElementById('repair');
+  const repairHint=document.getElementById('repairHint');
+  repair.addEventListener('change',function(){
+    repairHint.textContent = REPAIR_DEFS[repair.value] || repairHint.dataset.default;
+  });
+
+  // ── Property-type branching (show/hide + enable/disable conditional fields) ──
+  const propType=document.getElementById('propType');
+  const condSqft=document.getElementById('condSqft');
+  const condCrus=document.getElementById('condCrus');
+  const condUnits=document.getElementById('condUnits');
+  // map: which conditional blocks each property type reveals
+  const BRANCHES={
+    office:['sqft'],
+    retail:['sqft','crus'],
+    residential:['units','sqft'],
+    industrial:['sqft']
+  };
+  const BLOCKS={ sqft:condSqft, crus:condCrus, units:condUnits };
+  function applyBranch(){
+    const want=BRANCHES[propType.value]||[];
+    Object.keys(BLOCKS).forEach(function(key){
+      const block=BLOCKS[key];
+      const select=block.querySelector('select');
+      const show=want.indexOf(key)!==-1;
+      block.hidden=!show;
+      select.disabled=!show;          // disabled fields are excluded from validation & submission
+      select.required=show;           // only required when visible
+      if(!show){select.value='';}      // clear hidden values so stale data isn't submitted
+    });
+  }
+  propType.addEventListener('change',applyBranch);
+  applyBranch(); // run once on load
+
+  // ── Demo-only success handling (HubSpot handles real submission on the live site) ──
+  const form=document.getElementById('estimateForm');
+  const success=document.getElementById('formSuccess');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    form.style.display='none';
+    success.classList.add('show');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+  {{ standard_footer_includes }}
+</body>
+</html>

@@ -42,7 +42,7 @@
     "occurrence": {
       "min": 1,
       "max": 6,
-      "default": 3
+      "default": 4
     },
     "children": [
       {
@@ -66,9 +66,14 @@
     ],
     "default": [
       {
-        "tag": "See everything you own",
+        "tag": "Know your building",
         "title": "Complete asset inventory, live across every building.",
-        "text": "A complete picture of every critical system \u2014 condition, age, and financial exposure \u2014 before any loss event."
+        "text": "Every critical system mapped \u2014 condition, age, and financial exposure visible before any loss event."
+      },
+      {
+        "tag": "See everything you own",
+        "title": "A complete picture, before any loss event.",
+        "text": "Live portfolio visibility from real-time building signals \u2014 not static reports."
       },
       {
         "tag": "Predict before it costs you",

@@ -14,5 +14,5 @@
       { "name": "url",   "label": "URL",   "type": "url",  "default": { "type": "EXTERNAL", "href": "/how-it-works/" } }
     ]
   },
-  { "name": "trust_line",     "label": "Bottom trust line", "type": "text", "default": "Novem Digital — Failure is Predictable." }
+  { "name": "trust_line",     "label": "Bottom trust line", "type": "text", "default": "Novem Digital — Failures are Predictable." }
 ]

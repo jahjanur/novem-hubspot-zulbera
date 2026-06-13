@@ -328,7 +328,7 @@
   const foot = document.querySelector('.foot');
   if (foot && !document.querySelector('.marquee-strip')) {
     const phrases = [
-      'Failure is Predictable',
+      'Failures are Predictable',
       'Total Cost of Risk Ownership',
       'Digital Risk Platform',
       'Audit-ready monitoring',

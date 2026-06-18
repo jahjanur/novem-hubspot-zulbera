@@ -1,0 +1,134 @@
+[
+ {
+  "type": "h2",
+  "html": "<strong>What TCRO looks like in mixed-use and office portfolios</strong>",
+  "text": "What TCRO looks like in mixed-use and office portfolios",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In office and mixed-use properties, TCRO usually concentrates in:",
+  "text": "In office and mixed-use properties, TCRO usually concentrates in:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Business interruption when core systems fail (HVAC, elevators, access, water)",
+  "text": "Business interruption when core systems fail (HVAC, elevators, access, water)",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Utility costs, especially in older assets with leaks and inefficient systems",
+  "text": "Utility costs, especially in older assets with leaks and inefficient systems",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance premiums and deductibles on larger schedules",
+  "text": "Insurance premiums and deductibles on larger schedules",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Governance and reporting overhead for investors, lenders, and ESG commitments",
+  "text": "Governance and reporting overhead for investors, lenders, and ESG commitments",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Failures can translate into:",
+  "text": "Failures can translate into:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Tenants unable to occupy space or operate businesses",
+  "text": "Tenants unable to occupy space or operate businesses",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency repairs and overtime",
+  "text": "Emergency repairs and overtime",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Disputes and concessions that affect NOI",
+  "text": "Disputes and concessions that affect NOI",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Tougher conversations at renewal and with lenders",
+  "text": "Tougher conversations at renewal and with lenders",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Typical pattern when you connect building data to TCRO</strong>",
+  "text": "Typical pattern when you connect building data to TCRO",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When you treat building data as a financial asset and connect it to TCRO, you tend to see:",
+  "text": "When you treat building data as a financial asset and connect it to TCRO, you tend to see:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer unplanned outages through predictive maintenance",
+  "text": "Fewer unplanned outages through predictive maintenance",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower energy and water spend through leak detection and better controls",
+  "text": "Lower energy and water spend through leak detection and better controls",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Clearer justification for modernization projects with both ESG and TCRO returns",
+  "text": "Clearer justification for modernization projects with both ESG and TCRO returns",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance and financing conversations that are based on evidence, not just disclosure",
+  "text": "Insurance and financing conversations that are based on evidence, not just disclosure",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is where <strong>Make Data Pay: Turning Building Risk Data into a Financial Asset</strong> and <strong>From ESG Reporting to TCRO</strong> intersect.",
+  "text": "This is where Make Data Pay: Turning Building Risk Data into a Financial Asset and From ESG Reporting to TCRO intersect [links to /blog/make-building-data-pay and /blog/esg-to-tcro-sustainability-risk-advantage].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to quantify mixed-use and office TCRO ROI for your own portfolio</strong>",
+  "text": "How to quantify mixed-use and office TCRO ROI for your own portfolio",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Two steps:",
+  "text": "Two steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Build a segmented TCRO view.</strong> Use the <strong>TCRO calculator</strong> to model TCRO for office and mixed-use segments separately, with special attention to outages and utilities.",
+  "text": "Build a segmented TCRO view. Use the TCRO calculator to model TCRO for office and mixed-use segments separately, with special attention to outages and utilities [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a one-day estimate for a flagship asset.</strong> Use <strong>Estimate Your Savings</strong> for one key office tower or mixed-use property to understand what predictive operations and better risk data could change in that specific building’s TCRO profile.",
+  "text": "Get a one-day estimate for a flagship asset. Use Estimate Your Savings for one key office tower or mixed-use property to understand what predictive operations and better risk data could change in that specific building’s TCRO profile [link to /tcro/estimate-your-savings].",
+  "align": null
+ }
+]

@@ -1,0 +1,398 @@
+[
+ {
+  "type": "p",
+  "html": "When most leaders think about risk-related costs, they think about claims, premiums, and repair invoices. What rarely appears on the same slide is the wage bill.",
+  "text": "When most leaders think about risk-related costs, they think about claims, premiums, and repair invoices. What rarely appears on the same slide is the wage bill.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Every time a building failure or environmental issue becomes a crisis, people step in to hold everything together. Shifts are extended. Overtime kicks in. Agency staff are brought in at premium rates. Teams work in surge mode instead of steady state.",
+  "text": "Every time a building failure or environmental issue becomes a crisis, people step in to hold everything together. Shifts are extended. Overtime kicks in. Agency staff are brought in at premium rates. Teams work in surge mode instead of steady state.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Those costs often live in HR or operations spreadsheets, not in risk reports. But they belong inside Total Cost of Risk Ownership (TCRO).",
+  "text": "Those costs often live in HR or operations spreadsheets, not in risk reports. But they belong inside Total Cost of Risk Ownership (TCRO).",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How do failures and outbreaks drive wage cost?</strong>",
+  "text": "How do failures and outbreaks drive wage cost?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In practice, invisible risk turns into wage cost in a few predictable ways:",
+  "text": "In practice, invisible risk turns into wage cost in a few predictable ways:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Crisis coverage.</strong> When a system fails or an outbreak occurs, staffing levels have to increase just to maintain basic service and safety.",
+  "text": "Crisis coverage. When a system fails or an outbreak occurs, staffing levels have to increase just to maintain basic service and safety.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Premium pay.</strong> Overtime, shift differentials, and agency staff raise the effective hourly rate.",
+  "text": "Premium pay. Overtime, shift differentials, and agency staff raise the effective hourly rate.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Burnout and turnover.</strong> Repeated crises push teams out, increasing recruiting and training costs.",
+  "text": "Burnout and turnover. Repeated crises push teams out, increasing recruiting and training costs.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Lost productivity.</strong> Managers and specialists spend time coordinating crisis response instead of their core work.",
+  "text": "Lost productivity. Managers and specialists spend time coordinating crisis response instead of their core work.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In seniors housing or healthcare-adjacent assets, this pattern is stark:",
+  "text": "In seniors housing or healthcare-adjacent assets, this pattern is stark:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreaks force isolation protocols, more frequent cleaning, and additional PPE.",
+  "text": "Outbreaks force isolation protocols, more frequent cleaning, and additional PPE.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Family visits are cancelled, increasing resident support needs.",
+  "text": "Family visits are cancelled, increasing resident support needs.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Staff work longer hours and more intense shifts, often at premium rates.",
+  "text": "Staff work longer hours and more intense shifts, often at premium rates.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Those wage premiums are risk costs. They just do not show up on the insurance invoice.",
+  "text": "Those wage premiums are risk costs. They just do not show up on the insurance invoice.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the broader financial frame, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For the broader financial frame, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why do wage costs often stay invisible in risk discussions?</strong>",
+  "text": "Why do wage costs often stay invisible in risk discussions?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Three reasons:",
+  "text": "Three reasons:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Budget silos.</strong> Wages sit in HR or departmental budgets, while risk is framed in terms of claims and premiums.",
+  "text": "Budget silos. Wages sit in HR or departmental budgets, while risk is framed in terms of claims and premiums.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Coding gaps.</strong> Overtime and agency hours are rarely tagged to specific incidents or conditions.",
+  "text": "Coding gaps. Overtime and agency hours are rarely tagged to specific incidents or conditions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Reporting habits.</strong> Risk reports focus on events and insurance; HR reports focus on staffing; finance reports focus on totals.",
+  "text": "Reporting habits. Risk reports focus on events and insurance; HR reports focus on staffing; finance reports focus on totals.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The result is a blind spot: leadership sees rising wage costs and rising risk-related costs, but not the causal link between them.",
+  "text": "The result is a blind spot: leadership sees rising wage costs and rising risk-related costs, but not the causal link between them.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Bringing wage data into TCRO closes that gap.",
+  "text": "Bringing wage data into TCRO closes that gap.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How can TCRO make labor risk visible?</strong>",
+  "text": "How can TCRO make labor risk visible?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To bring wage cost into TCRO, you need to connect three things:",
+  "text": "To bring wage cost into TCRO, you need to connect three things:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Events and conditions.</strong>",
+  "text": "Events and conditions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreaks, failures, and near-misses.",
+  "text": "Outbreaks, failures, and near-misses.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Environmental conditions (air quality, temperature, humidity) that raise risk.",
+  "text": "Environmental conditions (air quality, temperature, humidity) that raise risk.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Staffing patterns.</strong>",
+  "text": "Staffing patterns.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Overtime and premium pay during and after those events.",
+  "text": "Overtime and premium pay during and after those events.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use of agency staff and related surcharges.",
+  "text": "Use of agency staff and related surcharges.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Changes in sick days and turnover.",
+  "text": "Changes in sick days and turnover.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Financial impact.</strong>",
+  "text": "Financial impact.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Incremental wage spend per event or condition.",
+  "text": "Incremental wage spend per event or condition.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Trend over time as conditions improve or deteriorate.",
+  "text": "Trend over time as conditions improve or deteriorate.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Once you can answer questions like “What did this month of outbreaks cost us in wage premiums?” or “What did this cooling failure cost us in staffing?” you have a much clearer TCRO picture.",
+  "text": "Once you can answer questions like “What did this month of outbreaks cost us in wage premiums?” or “What did this cooling failure cost us in staffing?” you have a much clearer TCRO picture.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is easiest when you already have continuous monitoring and good governance in place – so events and conditions are logged reliably. For more on that foundation, see <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "This is easiest when you already have continuous monitoring and good governance in place – so events and conditions are logged reliably. For more on that foundation, see Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What happens when you reduce invisible risk?</strong>",
+  "text": "What happens when you reduce invisible risk?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When failures and outbreaks become predictable, wage patterns change just as much as maintenance patterns.",
+  "text": "When failures and outbreaks become predictable, wage patterns change just as much as maintenance patterns.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In seniors and care environments, portfolios that deploy continuous monitoring and predictive operations often see:",
+  "text": "In seniors and care environments, portfolios that deploy continuous monitoring and predictive operations often see:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Fewer outbreak weeks.</strong> Better air quality and environmental control reduce the number of weeks spent in crisis mode.",
+  "text": "Fewer outbreak weeks. Better air quality and environmental control reduce the number of weeks spent in crisis mode.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Lower wage premiums.</strong> With fewer outbreaks and fewer sudden failures, premium pay and surge staffing requirements drop.",
+  "text": "Lower wage premiums. With fewer outbreaks and fewer sudden failures, premium pay and surge staffing requirements drop.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>More stable staffing.</strong> Teams spend less time in crisis response and more time in normal operations, reducing burnout and turnover.",
+  "text": "More stable staffing. Teams spend less time in crisis response and more time in normal operations, reducing burnout and turnover.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The financial impact is direct:",
+  "text": "The financial impact is direct:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower wage premiums and agency spend.",
+  "text": "Lower wage premiums and agency spend.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower recruitment and training costs.",
+  "text": "Lower recruitment and training costs.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower risk of compliance issues linked to staffing concerns.",
+  "text": "Lower risk of compliance issues linked to staffing concerns.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "At the same time, the human impact is clear: residents keep visits and routines; staff work fewer crisis shifts; families see fewer disruptions.",
+  "text": "At the same time, the human impact is clear: residents keep visits and routines; staff work fewer crisis shifts; families see fewer disruptions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For how predictive operations help get there, see <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong>.",
+  "text": "For how predictive operations help get there, see From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How should CFOs and HR leaders work together on this?</strong>",
+  "text": "How should CFOs and HR leaders work together on this?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To bring labor into TCRO, finance and HR need to collaborate differently.",
+  "text": "To bring labor into TCRO, finance and HR need to collaborate differently.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Key steps:",
+  "text": "Key steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Agree on tagging.</strong>",
+  "text": "Agree on tagging.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Decide how overtime, agency hours, and premium pay will be tagged to incidents, outbreaks, and failures.",
+  "text": "Decide how overtime, agency hours, and premium pay will be tagged to incidents, outbreaks, and failures.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Build this into time-keeping and payroll processes.",
+  "text": "Build this into time-keeping and payroll processes.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Create shared views.</strong>",
+  "text": "Create shared views.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Build a simple report that shows wage premiums alongside incident and condition data.",
+  "text": "Build a simple report that shows wage premiums alongside incident and condition data.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Include a TCRO view that combines wage costs with direct loss, downtime, and emergency repair.",
+  "text": "Include a TCRO view that combines wage costs with direct loss, downtime, and emergency repair.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Use the data in decisions.</strong>",
+  "text": "Use the data in decisions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Factor labor-related TCRO into capital planning, maintenance strategies, and insurance discussions.",
+  "text": "Factor labor-related TCRO into capital planning, maintenance strategies, and insurance discussions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Show boards how staffing and risk management are linked.",
+  "text": "Show boards how staffing and risk management are linked.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is not about shifting blame between departments. It is about recognizing that many staffing “problems” are actually risk visibility problems.",
+  "text": "This is not about shifting blame between departments. It is about recognizing that many staffing “problems” are actually risk visibility problems.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you suspect there is a hidden wage cost in your risk picture, there are two ways to start making it visible:",
+  "text": "If you suspect there is a hidden wage cost in your risk picture, there are two ways to start making it visible:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model the effect in TCRO.</strong> Use the <strong>TCRO calculator</strong> to add a simple estimate of wage premiums and surge staffing linked to failures and outbreaks. Even a rough number will show how material this component is.",
+  "text": "Model the effect in TCRO. Use the TCRO calculator to add a simple estimate of wage premiums and surge staffing linked to failures and outbreaks [link to /tcro#calculator]. Even a rough number will show how material this component is.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get an asset-level savings estimate that includes labor.</strong> For a flagship seniors or care-adjacent property, use <strong>Estimate Your Savings</strong>. Share one representative asset and, within one business day, you will receive a reviewed estimate of what predictive operations and better risk data could change – including the wage component – for that site.",
+  "text": "Get an asset-level savings estimate that includes labor. For a flagship seniors or care-adjacent property, use Estimate Your Savings. Share one representative asset and, within one business day, you will receive a reviewed estimate of what predictive operations and better risk data could change – including the wage component – for that site [link to /tcro/estimate-your-savings].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When you bring wage costs into TCRO, you see more than a cleaner P&amp;L. You see fewer crisis shifts, more stable teams, and residents whose daily lives are less disrupted by avoidable failures and outbreaks.",
+  "text": "When you bring wage costs into TCRO, you see more than a cleaner P&L. You see fewer crisis shifts, more stable teams, and residents whose daily lives are less disrupted by avoidable failures and outbreaks.",
+  "align": null
+ }
+]

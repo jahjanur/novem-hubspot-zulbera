@@ -1,0 +1,146 @@
+[
+ {
+  "type": "h2",
+  "html": "<strong>What TCRO looks like in seniors housing</strong>",
+  "text": "What TCRO looks like in seniors housing",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In seniors housing and care environments, TCRO is dominated by:",
+  "text": "In seniors housing and care environments, TCRO is dominated by:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreak-related disruption and isolation",
+  "text": "Outbreak-related disruption and isolation",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Environmental failures (heat, cooling, air quality)",
+  "text": "Environmental failures (heat, cooling, air quality)",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Wage premiums, overtime, and agency staff during crises",
+  "text": "Wage premiums, overtime, and agency staff during crises",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Reputational risk with residents, families, and regulators",
+  "text": "Reputational risk with residents, families, and regulators",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Direct property damage matters, but the biggest swings in Total Cost of Risk Ownership often come from outbreaks and failures that force buildings into crisis mode.",
+  "text": "Direct property damage matters, but the biggest swings in Total Cost of Risk Ownership often come from outbreaks and failures that force buildings into crisis mode.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For TCRO fundamentals, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For TCRO fundamentals, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Typical pattern when you make failures predictable</strong>",
+  "text": "Typical pattern when you make failures predictable",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When continuous monitoring and predictive operations are in place across a seniors site, the pattern you tend to see is:",
+  "text": "When continuous monitoring and predictive operations are in place across a seniors site, the pattern you tend to see is:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer outbreak weeks because high-risk air-quality conditions are corrected early",
+  "text": "Fewer outbreak weeks because high-risk air-quality conditions are corrected early",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower wage premiums and PPE spend",
+  "text": "Lower wage premiums and PPE spend",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer unplanned outages that disrupt resident routines and family visits",
+  "text": "Fewer unplanned outages that disrupt resident routines and family visits",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Stronger story for regulators and insurers",
+  "text": "Stronger story for regulators and insurers",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In TCRO terms, that translates into:",
+  "text": "In TCRO terms, that translates into:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower downtime and business interruption",
+  "text": "Lower downtime and business interruption",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower operating and maintenance inefficiency",
+  "text": "Lower operating and maintenance inefficiency",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower wage-related risk cost",
+  "text": "Lower wage-related risk cost",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "More stable premiums over time",
+  "text": "More stable premiums over time",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the operating-model mechanics, see <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong>, and for the wage component, see <strong>The Hidden Wage Cost of Invisible Risk</strong>.",
+  "text": "For the operating-model mechanics, see From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy [link to /blog/reactive-to-predictive-maintenance-real-estate], and for the wage component, see The Hidden Wage Cost of Invisible Risk [link to /blog/hidden-wage-cost-invisible-risk].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to quantify seniors TCRO ROI for your own portfolio</strong>",
+  "text": "How to quantify seniors TCRO ROI for your own portfolio",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Two practical steps:",
+  "text": "Two practical steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model TCRO for one community.</strong> Use the <strong>TCRO calculator</strong> and explicitly include: outbreak weeks, wage premiums, overtime, PPE, and any recent environmental or outage events.",
+  "text": "Model TCRO for one community. Use the TCRO calculator and explicitly include: outbreak weeks, wage premiums, overtime, PPE, and any recent environmental or outage events [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a one-day savings estimate.</strong> Use <strong>Estimate Your Savings</strong> for a flagship seniors property and, within one business day, you will receive a reviewed estimate of what predictive operations and risk data could change for that site – including likely insurance and wage effects.",
+  "text": "Get a one-day savings estimate. Use Estimate Your Savings for a flagship seniors property and, within one business day, you will receive a reviewed estimate of what predictive operations and risk data could change for that site – including likely insurance and wage effects [link to /tcro/estimate-your-savings].",
+  "align": null
+ }
+]

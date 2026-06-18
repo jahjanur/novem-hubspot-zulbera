@@ -1,0 +1,386 @@
+[
+ {
+  "type": "p",
+  "html": "Most institutional owners still manage risk using a number built for insurers, not for them. That number is <strong>Cost of Risk</strong> – premiums, claims, deductibles, retentions. It is familiar. It is also too narrow for a CFO responsible for an entire portfolio.",
+  "text": "Most institutional owners still manage risk using a number built for insurers, not for them. That number is Cost of Risk – premiums, claims, deductibles, retentions. It is familiar. It is also too narrow for a CFO responsible for an entire portfolio.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Total Cost of Risk Ownership, or <strong>TCRO</strong>, is the wider lens. Where Cost of Risk stops at the edge of the insurance policy, TCRO follows the money all the way through downtime, emergency work, governance, and capital timing. In a world where boards, lenders, and regulators demand more proof, that wider lens is no longer optional.",
+  "text": "Total Cost of Risk Ownership, or TCRO, is the wider lens. Where Cost of Risk stops at the edge of the insurance policy, TCRO follows the money all the way through downtime, emergency work, governance, and capital timing. In a world where boards, lenders, and regulators demand more proof, that wider lens is no longer optional.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For people who know the traditional term: TCRO extends the idea of <strong>Total Cost of Risk (TCOR)</strong> into a broader owner-level standard.",
+  "text": "For people who know the traditional term: TCRO extends the idea of Total Cost of Risk (TCOR) into a broader owner-level standard.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What does Cost of Risk miss in real estate?</strong>",
+  "text": "What does Cost of Risk miss in real estate?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Cost of Risk only counts what the insurer sees: premiums, broker fees, retained claims, and loss-control costs. It ignores the majority of what risk really costs a real estate portfolio.",
+  "text": "Cost of Risk only counts what the insurer sees: premiums, broker fees, retained claims, and loss-control costs. It ignores the majority of what risk really costs a real estate portfolio.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The missing pieces show up in places like:",
+  "text": "The missing pieces show up in places like:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lost revenue and NOI when critical systems fail during peak periods",
+  "text": "Lost revenue and NOI when critical systems fail during peak periods",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency callout premiums and rush-order parts",
+  "text": "Emergency callout premiums and rush-order parts",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Business interruption that never becomes a formal insurance claim",
+  "text": "Business interruption that never becomes a formal insurance claim",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital projects forced forward by failures instead of planned on condition",
+  "text": "Capital projects forced forward by failures instead of planned on condition",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Manual effort spent reconciling reports for boards, lenders, and regulators",
+  "text": "Manual effort spent reconciling reports for boards, lenders, and regulators",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a single major equipment failure, every $1 of direct repair cost can carry several dollars of total impact once downtime, emergency work, and knock-on effects are included. Only a fraction of that appears in the traditional Cost of Risk line.",
+  "text": "For a single major equipment failure, every $1 of direct repair cost can carry several dollars of total impact once downtime, emergency work, and knock-on effects are included. Only a fraction of that appears in the traditional Cost of Risk line.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you report only what the insurer can see, you are managing the smallest part of the bill.",
+  "text": "If you report only what the insurer can see, you are managing the smallest part of the bill.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What is Total Cost of Risk Ownership?</strong>",
+  "text": "What is Total Cost of Risk Ownership?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Total Cost of Risk Ownership reframes risk as a full financial number for owners and CFOs. It measures what risk costs the portfolio, not just what it costs to transfer part of it to an insurer.",
+  "text": "Total Cost of Risk Ownership reframes risk as a full financial number for owners and CFOs. It measures what risk costs the portfolio, not just what it costs to transfer part of it to an insurer.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A practical TCRO view in real estate usually includes:",
+  "text": "A practical TCRO view in real estate usually includes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Losses and claims – direct incident and claim costs",
+  "text": "Losses and claims – direct incident and claim costs",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Downtime and business interruption – revenue and service impact when systems are down",
+  "text": "Downtime and business interruption – revenue and service impact when systems are down",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Premiums and retentions – insurance spend and retained risk",
+  "text": "Premiums and retentions – insurance spend and retained risk",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Operating and maintenance inefficiency – reactive work, wasted labor, emergency premiums",
+  "text": "Operating and maintenance inefficiency – reactive work, wasted labor, emergency premiums",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Compliance and reporting burden – the time and cost of proving control",
+  "text": "Compliance and reporting burden – the time and cost of proving control",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Indirect reputational and governance costs – the trust hit when things go wrong",
+  "text": "Indirect reputational and governance costs – the trust hit when things go wrong",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Name those costs. Quantify them. Trend them. Now risk is a line you can move, not just a report you defend.",
+  "text": "Name those costs. Quantify them. Trend them. Now risk is a line you can move, not just a report you defend.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want the full breakdown of each component, the <strong>TCRO white paper</strong> goes deeper on the framework.",
+  "text": "If you want the full breakdown of each component, the TCRO white paper goes deeper on the framework [link to /resources/tcro-white-paper].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why this shift is no longer optional</strong>",
+  "text": "Why this shift is no longer optional",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For years, it was possible to treat Cost of Risk as “good enough”. That is changing.",
+  "text": "For years, it was possible to treat Cost of Risk as “good enough”. That is changing.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Three forces are driving the shift:",
+  "text": "Three forces are driving the shift:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Harder insurance markets that are more sensitive to risk quality, especially in property.",
+  "text": "Harder insurance markets that are more sensitive to risk quality, especially in property.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Higher emergency and replacement costs that increase the penalty for unplanned failures.",
+  "text": "Higher emergency and replacement costs that increase the penalty for unplanned failures.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Higher scrutiny from boards and regulators, who expect auditable evidence of control, not just narrative assurance.",
+  "text": "Higher scrutiny from boards and regulators, who expect auditable evidence of control, not just narrative assurance.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you are still steering with a metric that ignores most of the economic impact, you are choosing to fly with partial instruments.",
+  "text": "If you are still steering with a metric that ignores most of the economic impact, you are choosing to fly with partial instruments.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a deeper look at how governance supports this shift, see <strong>Data Governance Is the Operating System of Financial Control</strong>.",
+  "text": "For a deeper look at how governance supports this shift, see Data Governance Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does TCRO change decisions for CFOs?</strong>",
+  "text": "How does TCRO change decisions for CFOs?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "TCRO turns risk from a narrow insurance metric into a comprehensive financial lever. Once you see downtime, emergency work, and governance costs in the same frame as premiums and claims, decision-making shifts.",
+  "text": "TCRO turns risk from a narrow insurance metric into a comprehensive financial lever. Once you see downtime, emergency work, and governance costs in the same frame as premiums and claims, decision-making shifts.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In practice, portfolios that adopt TCRO with a live data foundation see three changes:",
+  "text": "In practice, portfolios that adopt TCRO with a live data foundation see three changes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital planning moves from age-based to risk-weighted. Live asset data and predictive operations let you replace equipment when condition and TCRO justify it, not when a spreadsheet says it is due.",
+  "text": "Capital planning moves from age-based to risk-weighted. Live asset data and predictive operations let you replace equipment when condition and TCRO justify it, not when a spreadsheet says it is due.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance becomes a performance negotiation. When you can show continuous monitoring, documented interventions, and reduced loss experience, property insurance behaves less like a fixed tax and more like a controllable cost inside TCRO.",
+  "text": "Insurance becomes a performance negotiation. When you can show continuous monitoring, documented interventions, and reduced loss experience, property insurance behaves less like a fixed tax and more like a controllable cost inside TCRO.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Board conversations shift from defence to allocation. Instead of explaining failures, you can show avoided losses, what they would have cost, and where you are investing next.",
+  "text": "Board conversations shift from defence to allocation. Instead of explaining failures, you can show avoided losses, what they would have cost, and where you are investing next.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to see how this plays out in practice, <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong> walks through specific operational shifts.",
+  "text": "If you want to see how this plays out in practice, From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy walks through specific operational shifts [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What data do you need to measure TCRO credibly?</strong>",
+  "text": "What data do you need to measure TCRO credibly?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "TCRO is only as strong as its inputs. To treat it as a living number rather than a one-off model, you need three kinds of data in one place:",
+  "text": "TCRO is only as strong as its inputs. To treat it as a living number rather than a one-off model, you need three kinds of data in one place:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Live operational data from critical systems and environmental conditions",
+  "text": "Live operational data from critical systems and environmental conditions",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Normalized loss and performance history – incidents, claims, near-misses",
+  "text": "Normalized loss and performance history – incidents, claims, near-misses",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A complete asset inventory – age, condition, replacement cost, and business importance",
+  "text": "A complete asset inventory – age, condition, replacement cost, and business importance",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Taken together, this is the common data environment that supports both TCRO and predictive operations. In that environment, a vibration anomaly or air-quality deviation is not just an alarm; it is a data point tied to probability, expected loss, and a time window based on real experience.",
+  "text": "Taken together, this is the common data environment that supports both TCRO and predictive operations. In that environment, a vibration anomaly or air-quality deviation is not just an alarm; it is a data point tied to probability, expected loss, and a time window based on real experience.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "We unpack that data foundation in more detail in <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "We unpack that data foundation in more detail in Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What should you ask inside your organization?</strong>",
+  "text": "What should you ask inside your organization?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "At your next risk or capital-planning meeting, three questions can reveal how mature your TCRO picture really is:",
+  "text": "At your next risk or capital-planning meeting, three questions can reveal how mature your TCRO picture really is:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is our best estimate of Total Cost of Risk Ownership today – not just Cost of Risk?",
+  "text": "What is our best estimate of Total Cost of Risk Ownership today – not just Cost of Risk?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How much of that number is driven by unplanned failures, emergency work, and avoidable downtime?",
+  "text": "How much of that number is driven by unplanned failures, emergency work, and avoidable downtime?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What continuous data do we trust today to change that curve?",
+  "text": "What continuous data do we trust today to change that curve?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The answers will show whether your organization is managing the right number, or just the convenient one.",
+  "text": "The answers will show whether your organization is managing the right number, or just the convenient one.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where the industry needs to move</strong>",
+  "text": "Where the industry needs to move",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The built environment is moving from “how fast do we recover from failures” to “how precisely do we price and prevent them.” Portfolios that adopt TCRO early, and back it with real data, will be the ones that:",
+  "text": "The built environment is moving from “how fast do we recover from failures” to “how precisely do we price and prevent them.” Portfolios that adopt TCRO early, and back it with real data, will be the ones that:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Reduce surprise costs",
+  "text": "Reduce surprise costs",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Protect EBITDA and asset value",
+  "text": "Protect EBITDA and asset value",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Earn greater confidence from boards, lenders, and insurers",
+  "text": "Earn greater confidence from boards, lenders, and insurers",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Behind every avoided failure is a resident who does not lose heat in winter, a care team that does not work a crisis shift, a building that keeps its trust. TCRO is how that human impact shows up in the numbers.",
+  "text": "Behind every avoided failure is a resident who does not lose heat in winter, a care team that does not work a crisis shift, a building that keeps its trust. TCRO is how that human impact shows up in the numbers.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to see how TCRO changes capital planning specifically, read <strong>How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment</strong>.",
+  "text": "If you want to see how TCRO changes capital planning specifically, read How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment [link to /blog/tcro-capital-planning].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to see how TCRO could look in your own portfolio, you have two practical ways to start:",
+  "text": "If you want to see how TCRO could look in your own portfolio, you have two practical ways to start:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model the portfolio yourself.</strong> Use the <strong>TCRO calculator</strong> on the TCRO page to plug in your own assumptions for failures, downtime, and premiums and see how they move Total Cost of Risk Ownership.",
+  "text": "Model the portfolio yourself. Use the TCRO calculator on the TCRO page to plug in your own assumptions for failures, downtime, and premiums and see how they move Total Cost of Risk Ownership [link to /tcro#calculator or appropriate anchor].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a directional, underwriter-informed estimate.</strong> If you have a flagship asset in mind, use <strong>Estimate Your Savings</strong>. Share a single property and within one business day a specialist – together with an insurance partner – will return a reviewed estimate of what predictive operations and risk data could change in your TCRO picture.",
+  "text": "Get a directional, underwriter-informed estimate. If you have a flagship asset in mind, use Estimate Your Savings. Share a single property and within one business day a specialist – together with an insurance partner – will return a reviewed estimate of what predictive operations and risk data could change in your TCRO picture [link to /tcro/estimate-your-savings or your live form URL].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "From there, TCRO stops being an abstract idea and becomes a number your team can move on purpose.",
+  "text": "From there, TCRO stops being an abstract idea and becomes a number your team can move on purpose.",
+  "align": null
+ }
+]

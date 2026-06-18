@@ -1,0 +1,458 @@
+[
+ {
+  "type": "p",
+  "html": "Most capital plans still run on a simple rule: replace assets when they reach a certain age. It is easy to communicate and easy to model. It is also a blunt instrument.",
+  "text": "Most capital plans still run on a simple rule: replace assets when they reach a certain age. It is easy to communicate and easy to model. It is also a blunt instrument.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Age-based replacement ignores how assets actually behave in your buildings. Some systems fail early and expensively. Others run safely and efficiently well past their theoretical life. In between, you absorb surprise failures, emergency spend, and business interruption that never show up explicitly in the capital plan.",
+  "text": "Age-based replacement ignores how assets actually behave in your buildings. Some systems fail early and expensively. Others run safely and efficiently well past their theoretical life. In between, you absorb surprise failures, emergency spend, and business interruption that never show up explicitly in the capital plan.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Total Cost of Risk Ownership (TCRO) gives CFOs and asset owners a different way to think about capital: not “How old is it?” but “What is the risk-weighted cost of letting this asset keep running as it is?”",
+  "text": "Total Cost of Risk Ownership (TCRO) gives CFOs and asset owners a different way to think about capital: not “How old is it?” but “What is the risk-weighted cost of letting this asset keep running as it is?”",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why age-based capital planning falls short</strong>",
+  "text": "Why age-based capital planning falls short",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Age-based plans are simple. That is their only strength.",
+  "text": "Age-based plans are simple. That is their only strength.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "They miss several realities:",
+  "text": "They miss several realities:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Two chillers of the same age can have very different failure probabilities based on how they have been operated and maintained.",
+  "text": "Two chillers of the same age can have very different failure probabilities based on how they have been operated and maintained.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Some failures carry far more business interruption and reputational risk than others, even if the replacement cost is similar.",
+  "text": "Some failures carry far more business interruption and reputational risk than others, even if the replacement cost is similar.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency replacements during peak seasons cost more than planned replacements in off-peak windows.",
+  "text": "Emergency replacements during peak seasons cost more than planned replacements in off-peak windows.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Underwriters and boards now care about how risk is managed between renewal and reporting dates, not just whether assets are “old.”",
+  "text": "Underwriters and boards now care about how risk is managed between renewal and reporting dates, not just whether assets are “old.”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When capital plans ignore those dynamics, three things happen:",
+  "text": "When capital plans ignore those dynamics, three things happen:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "You replace low-risk assets too early and tie up capital needlessly.",
+  "text": "You replace low-risk assets too early and tie up capital needlessly.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "You defer high-risk assets too long and absorb avoidable failures.",
+  "text": "You defer high-risk assets too long and absorb avoidable failures.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "You struggle to defend capital decisions to boards, lenders, and insurers.",
+  "text": "You struggle to defend capital decisions to boards, lenders, and insurers.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In short, you are investing without a clear view of the risk-adjusted return.",
+  "text": "In short, you are investing without a clear view of the risk-adjusted return.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How TCRO reframes capital planning</strong>",
+  "text": "How TCRO reframes capital planning",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Total Cost of Risk Ownership extends the capital discussion from “what will it cost to replace this asset?” to “what does it cost to own and operate this risk profile over time?”",
+  "text": "Total Cost of Risk Ownership extends the capital discussion from “what will it cost to replace this asset?” to “what does it cost to own and operate this risk profile over time?” [link to /blog/total-cost-of-risk-ownership]",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For capital planning, TCRO allows you to:",
+  "text": "For capital planning, TCRO allows you to:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Quantify the combined impact of failures, downtime, premiums, and emergency work attached to an asset or system.",
+  "text": "Quantify the combined impact of failures, downtime, premiums, and emergency work attached to an asset or system.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Compare that impact against the cost and timing of replacement or upgrade.",
+  "text": "Compare that impact against the cost and timing of replacement or upgrade.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Make replacement decisions based on risk-weighted economics, not just age.",
+  "text": "Make replacement decisions based on risk-weighted economics, not just age.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The question becomes:",
+  "text": "The question becomes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is the TCRO of keeping this asset in place for another year?",
+  "text": "What is the TCRO of keeping this asset in place for another year?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is the TCRO of replacing or modernizing it now?",
+  "text": "What is the TCRO of replacing or modernizing it now?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Which option better protects cash flow, asset value, and trust?",
+  "text": "Which option better protects cash flow, asset value, and trust?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is the logic behind a <strong>risk-adjusted capital planning scorecard</strong>. Each major asset or project is scored not just on cost and age, but on TCRO impact and human consequence.",
+  "text": "This is the logic behind a risk-adjusted capital planning scorecard. Each major asset or project is scored not just on cost and age, but on TCRO impact and human consequence.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What data do you need to move from age-based to risk-weighted?</strong>",
+  "text": "What data do you need to move from age-based to risk-weighted?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To make this shift, you need a small but critical set of inputs:",
+  "text": "To make this shift, you need a small but critical set of inputs:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Asset inventory with business significance.</strong>",
+  "text": "Asset inventory with business significance.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What systems do you have?",
+  "text": "What systems do you have?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How old are they?",
+  "text": "How old are they?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is their replacement cost?",
+  "text": "What is their replacement cost?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How critical are they to revenue, safety, and reputation?",
+  "text": "How critical are they to revenue, safety, and reputation?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Risk and performance history.</strong>",
+  "text": "Risk and performance history.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Failures, near-misses, and condition issues.",
+  "text": "Failures, near-misses, and condition issues.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Work-order history: reactive vs planned, emergency vs standard.",
+  "text": "Work-order history: reactive vs planned, emergency vs standard.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Any associated business interruption or insurance activity.",
+  "text": "Any associated business interruption or insurance activity.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Forward-looking risk indicators.</strong>",
+  "text": "Forward-looking risk indicators.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Continuous monitoring on the highest-impact systems (vibration, temperature, flow, air quality).",
+  "text": "Continuous monitoring on the highest-impact systems (vibration, temperature, flow, air quality).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Trends that show whether risk is increasing or stabilizing.",
+  "text": "Trends that show whether risk is increasing or stabilizing.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "That data can come from your building systems, work-order tools, sensors, and insurance records – but only if they are pulled into one <strong>common data environment</strong> with clear governance.",
+  "text": "That data can come from your building systems, work-order tools, sensors, and insurance records – but only if they are pulled into one common data environment with clear governance [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does a TCRO-driven capital plan work in practice?</strong>",
+  "text": "How does a TCRO-driven capital plan work in practice?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A risk-weighted plan usually follows a simple sequence:",
+  "text": "A risk-weighted plan usually follows a simple sequence:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Baseline TCRO by asset or system.</strong>",
+  "text": "Baseline TCRO by asset or system.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Estimate the TCRO components (losses, downtime, premiums, operating inefficiency, governance overhead) for key assets over the last 3–5 years.",
+  "text": "Estimate the TCRO components (losses, downtime, premiums, operating inefficiency, governance overhead) for key assets over the last 3–5 years.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Rank assets by combined financial and human impact.</strong>",
+  "text": "Rank assets by combined financial and human impact.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "High TCRO + high human consequence (care environments, public venues) rise to the top.",
+  "text": "High TCRO + high human consequence (care environments, public venues) rise to the top.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Low TCRO + low consequence move down the list, even if they are older.",
+  "text": "Low TCRO + low consequence move down the list, even if they are older.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model scenarios.</strong>",
+  "text": "Model scenarios.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Keep as-is vs replace vs modernize.",
+  "text": "Keep as-is vs replace vs modernize.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "For each, estimate changes in failures, downtime, premiums, and operating cost.",
+  "text": "For each, estimate changes in failures, downtime, premiums, and operating cost.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Express everything in TCRO terms.",
+  "text": "Express everything in TCRO terms.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Prioritize projects by TCRO delta, not just age or payback.</strong>",
+  "text": "Prioritize projects by TCRO delta, not just age or payback.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fund projects that generate the greatest reduction in TCRO per dollar of capital.",
+  "text": "Fund projects that generate the greatest reduction in TCRO per dollar of capital.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Defer those that are capital-intensive but TCRO-neutral.",
+  "text": "Defer those that are capital-intensive but TCRO-neutral.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Connect the plan to insurance and governance.</strong>",
+  "text": "Connect the plan to insurance and governance.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Show underwriters how capital projects will reduce expected losses.",
+  "text": "Show underwriters how capital projects will reduce expected losses.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Show boards how capital spend is tied to risk reduction, not just aesthetics or age.",
+  "text": "Show boards how capital spend is tied to risk reduction, not just aesthetics or age.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is where <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong> and <strong>Insurance Is No Longer a Fixed Line Item</strong> intersect with TCRO. Capital planning, maintenance, and insurance become three levers on the same financial number.",
+  "text": "This is where From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy and Insurance Is No Longer a Fixed Line Item intersect with TCRO [links to /blog/reactive-to-predictive-maintenance-real-estate and /blog/data-driven-insurance-renewals-real-estate]. Capital planning, maintenance, and insurance become three levers on the same financial number.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does this change the board conversation?</strong>",
+  "text": "How does this change the board conversation?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Boards are not asking for more detail. They are asking for more clarity.",
+  "text": "Boards are not asking for more detail. They are asking for more clarity.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A TCRO-driven capital plan lets you present:",
+  "text": "A TCRO-driven capital plan lets you present:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A simple view of current TCRO and its main drivers.",
+  "text": "A simple view of current TCRO and its main drivers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A ranked list of capital projects by TCRO impact and human consequence.",
+  "text": "A ranked list of capital projects by TCRO impact and human consequence.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A projection of how TCRO will change over time if the plan is funded.",
+  "text": "A projection of how TCRO will change over time if the plan is funded.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A link between capital projects, maintenance model, and insurance strategy.",
+  "text": "A link between capital projects, maintenance model, and insurance strategy.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The conversation shifts from:",
+  "text": "The conversation shifts from:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“We need to replace these systems because they are old.”",
+  "text": "“We need to replace these systems because they are old.”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "to:",
+  "text": "to:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“These assets create the highest risk-weighted cost in TCRO. Here is the evidence. Here is how this capital plan will reduce that cost and protect both returns and the people who rely on these buildings.”",
+  "text": "“These assets create the highest risk-weighted cost in TCRO. Here is the evidence. Here is how this capital plan will reduce that cost and protect both returns and the people who rely on these buildings.”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To see what a board-ready view can look like, see <strong>The TCRO Dashboard: What Your Board Needs to See, and What It Does Not</strong>.",
+  "text": "To see what a board-ready view can look like, see The TCRO Dashboard: What Your Board Needs to See, and What It Does Not [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to start moving from age-based to risk-weighted capital planning, there are two practical steps:",
+  "text": "If you want to start moving from age-based to risk-weighted capital planning, there are two practical steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model a simple TCRO view for your capital plan.</strong> Use the <strong>TCRO calculator</strong> to sketch how failures, emergency work, and premiums behave under your current plan vs a more predictive, risk-weighted plan. Even a rough model will highlight where age and risk diverge.",
+  "text": "Model a simple TCRO view for your capital plan. Use the TCRO calculator to sketch how failures, emergency work, and premiums behave under your current plan vs a more predictive, risk-weighted plan [link to /tcro#calculator]. Even a rough model will highlight where age and risk diverge.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Talk through a pilot capital cycle.</strong> Use <strong>Talk to an Expert</strong> to walk through one upcoming capital cycle – for example, a single campus or asset class – and map it into a TCRO-driven view. From there, you can decide where instrumentation, predictive operations, and insurance strategy need to change in tandem.",
+  "text": "Talk through a pilot capital cycle. Use Talk to an Expert to walk through one upcoming capital cycle – for example, a single campus or asset class – and map it into a TCRO-driven view [link to your contact modal or /contact]. From there, you can decide where instrumentation, predictive operations, and insurance strategy need to change in tandem.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When capital planning is guided by TCRO instead of asset age alone, you do more than sharpen budgets. You reduce surprise failures, stabilize insurance and operating costs, and protect the people and institutions who depend on your buildings.",
+  "text": "When capital planning is guided by TCRO instead of asset age alone, you do more than sharpen budgets. You reduce surprise failures, stabilize insurance and operating costs, and protect the people and institutions who depend on your buildings.",
+  "align": null
+ }
+]

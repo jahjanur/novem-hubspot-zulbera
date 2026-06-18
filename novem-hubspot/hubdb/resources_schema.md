@@ -40,19 +40,45 @@ columns below.
    **Page Settings → Advanced Options → Dynamic Pages** select the `resources` table.
    That single page will serve every row at `/{parent-path}/{slug}`.
 
-## Seed rows to migrate from the source site
+## Seed rows — real content (import files in this directory)
 
-| slug | type | title | source file |
-|---|---|---|---|
-| `bc-events` | case-study | $5M Claim Prevented. $400K Gas Leak Found. Insurance Held Flat. | `06-Resources/06-Resources/bc-events/index.html` |
-| `bethany-riverview` | case-study | Brand New Building. Hidden Failures. $93K Saved. | `06-Resources/06-Resources/bethany-riverview/index.html` |
-| `lrhg` | case-study | Seven Years of Outbreaks. Stopped. | `06-Resources/06-Resources/lrhg/index.html` |
-| `telus-garden` | case-study | 900 Issues. 4 Months. $10.1M Saved. | `06-Resources/06-Resources/telus-garden/index.html` |
-| `case-study-sample` | case-study | Predictive Operations Across a Mixed-Use Portfolio | `06-Resources/06-Resources/case-study-sample/index.html` |
-| `whitepaper-sample` | white-paper | The Predictive Operations Imperative | `06-Resources/06-Resources/whitepaper-sample/index.html` |
-| `blog-sample` | blog | Why Predictive Operations Beat Preventive Maintenance | `06-Resources/06-Resources/blog-sample/index.html` |
-| `press-release-sample` | press-release | Novem Digital Appoints Dr. Robert Whetsel as CTO | `06-Resources/06-Resources/press-release-sample/index.html` |
-| `pr-whetsel` | press-release | Novem Digital Appoints Dr. Robert Whetsel as CTO | `06-Resources/06-Resources/pr-whetsel/index.html` |
-| `pr-jay` | press-release | Novem Digital Appoints Grant R. Jay as CRO | `06-Resources/06-Resources/pr-jay/index.html` |
+The placeholder rows have been **replaced with the client's real content**. Import-ready
+data is generated in this directory:
 
-(Note: `case-study-sample`/`pr-whetsel` are duplicates of other rows — decide whether to publish or skip.)
+- **`resources_rows.csv`** — all 23 rows, one column per HubDB field (spreadsheet-friendly).
+- **`resources_rows.json`** — same rows in HubDB Rows API shape (`{path, name, values:{…}}`),
+  ready to POST to `/cms/v3/hubdb/tables/{tableId}/rows/draft/batch/create`.
+
+`body` is rich HTML (the article content, **excluding** the lede — that lives in `summary` —
+and **excluding** the headline stats, which live in `stat1..3`). Case-study `client` holds
+the **anonymized descriptor** only (e.g. "A specialized dementia and long-term care facility
+in Western Canada") — no real client names, per the client's confidentiality requirement.
+
+Source of truth: the `.docx` files in `BLOG POSTS/` and `CASE STUDIES/` (anonymized
+`Anon - …` copies only) plus the press-release text. Regenerate with `.build/gen.py`.
+
+### Case studies (5)
+| slug | client (anonymized) | title |
+|---|---|---|
+| `dementia-care-continuous-commissioning` | A specialized dementia & long-term care facility | Automated Continuous Commissioning Unlocks $200K+ at a Specialized Dementia Care Facility |
+| `seniors-living-outbreak-reduction` | A regional seniors living operator (120-resident) | 65% Fewer Outbreak Weeks at a Regional Seniors Living Operator |
+| `events-campus-claim-prevention` | A major Western Canadian events & entertainment campus | Preventing a $5M Claim at a Major Western Canadian Events Campus |
+| `mixed-use-office-accelerated-commissioning` | A landmark mixed-use office tower | From 36 to 4 Months: Accelerated Commissioning at a Landmark Mixed-Use Office Tower |
+| `seniors-housing-insurance-savings` | A Western Canadian independent seniors housing developer | 10% Insurance Savings and 30% Digital Infrastructure Savings for an Independent Seniors Housing Developer |
+
+### Blog (17)
+`tcro-vs-cost-of-risk`, `data-governance-financial-control`, `reactive-to-predictive-maintenance`,
+`7-criteria-digital-risk-platform`, `insurance-no-longer-fixed-line-item`, `make-data-pay`,
+`tcro-capital-planning`, `tcro-in-the-real-world`, `tcro-dashboard-for-boards`, `esg-to-tcro`,
+`hidden-wage-cost-of-invisible-risk`, `ai-in-the-built-environment`, `tcro-implementation-checklist-cfos`,
+`best-digital-risk-platforms-2026`, `tcro-roi-seniors-housing`, `tcro-roi-events-entertainment`,
+`tcro-roi-office-mixed-use`.
+
+### Press release (1)
+| slug | title |
+|---|---|
+| `pr-accelerated-commissioning-office-tower` | From 36 Months to 4 Months: Novem Digital Helps Landmark Mixed-Use Office Tower Accelerate Building Systems Startup by Nearly 89% |
+
+### White paper (0 — pending)
+The TCRO white paper is being laid out in Canva by the client and will be added when delivered.
+The `/resources/` listing shows a single "Coming Soon" white-paper card as a placeholder for it.

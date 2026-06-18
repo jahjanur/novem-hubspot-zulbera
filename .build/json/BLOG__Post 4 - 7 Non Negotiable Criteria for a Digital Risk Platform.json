@@ -1,0 +1,470 @@
+[
+ {
+  "type": "p",
+  "html": "There is no shortage of platforms promising “insights” and “dashboards.” Most do not move Total Cost of Risk Ownership (TCRO). They rearrange information you already have.",
+  "text": "There is no shortage of platforms promising “insights” and “dashboards.” Most do not move Total Cost of Risk Ownership (TCRO). They rearrange information you already have.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you are a CFO, asset owner, or risk leader being pitched on digital risk, you need a different test: <strong>does this platform measurably lower TCRO and strengthen our story to boards, lenders, and insurers?</strong>",
+  "text": "If you are a CFO, asset owner, or risk leader being pitched on digital risk, you need a different test: does this platform measurably lower TCRO and strengthen our story to boards, lenders, and insurers?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is what to look for.",
+  "text": "This is what to look for.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What is a digital risk platform?</strong>",
+  "text": "What is a digital risk platform?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A digital risk platform for institutional real estate connects building systems, sensors, and historical loss data into one environment. It identifies where failures are likely, quantifies what they will cost, and supports better insurance, maintenance, and capital decisions.",
+  "text": "A digital risk platform for institutional real estate connects building systems, sensors, and historical loss data into one environment. It identifies where failures are likely, quantifies what they will cost, and supports better insurance, maintenance, and capital decisions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "It sits above existing systems, not instead of them. It turns building and equipment risk data into a financial asset rather than a by-product.",
+  "text": "It sits above existing systems, not instead of them. It turns building and equipment risk data into a financial asset rather than a by-product.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a deeper overview of how that fits into the broader risk and capital picture, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For a deeper overview of how that fits into the broader risk and capital picture, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How do you choose a digital risk platform that actually lowers TCRO?</strong>",
+  "text": "How do you choose a digital risk platform that actually lowers TCRO?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To know whether a platform will move TCRO, test it against seven non-negotiable criteria.",
+  "text": "To know whether a platform will move TCRO, test it against seven non-negotiable criteria.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>1. Claims-grounded risk models</strong>",
+  "text": "1. Claims-grounded risk models",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Models cannot just be clever. They have to be right often enough that you are prepared to stake capital and insurance decisions on them.",
+  "text": "Models cannot just be clever. They have to be right often enough that you are prepared to stake capital and insurance decisions on them.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Look for platforms that:",
+  "text": "Look for platforms that:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Are trained on years of claims and incident data across many buildings and equipment categories.",
+  "text": "Are trained on years of claims and incident data across many buildings and equipment categories.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Connect live signals (vibration, temperature, air quality, flow) to expected losses with a probability and time window.",
+  "text": "Connect live signals (vibration, temperature, air quality, flow) to expected losses with a probability and time window.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can show you where their models have successfully predicted and prevented losses in the field.",
+  "text": "Can show you where their models have successfully predicted and prevented losses in the field.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If a platform’s models are built only on your own limited history or synthetic data, TCRO improvements will be difficult to trust.",
+  "text": "If a platform’s models are built only on your own limited history or synthetic data, TCRO improvements will be difficult to trust.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>2. Layered on existing infrastructure, not rip-and-replace</strong>",
+  "text": "2. Layered on existing infrastructure, not rip-and-replace",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Most portfolios already have building management systems, meters, and point solutions. A viable digital risk platform must sit on top of that stack, not require you to rebuild it.",
+  "text": "Most portfolios already have building management systems, meters, and point solutions. A viable digital risk platform must sit on top of that stack, not require you to rebuild it.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Ask each vendor:",
+  "text": "Ask each vendor:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can you ingest data from our existing BMS, meters, and work-order systems via open APIs?",
+  "text": "Can you ingest data from our existing BMS, meters, and work-order systems via open APIs?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Where do we need additional sensors, and why?",
+  "text": "Where do we need additional sensors, and why?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How quickly do we see value without a multi-year rip-and-replace program?",
+  "text": "How quickly do we see value without a multi-year rip-and-replace program?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If the answer sounds like a full rebuild, it is a capital project, not a digital risk platform.",
+  "text": "If the answer sounds like a full rebuild, it is a capital project, not a digital risk platform.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>3. A true common data environment</strong>",
+  "text": "3. A true common data environment",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You need one source of truth for what you own, what is at risk, and what it costs if it fails.",
+  "text": "You need one source of truth for what you own, what is at risk, and what it costs if it fails.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "That means the platform must:",
+  "text": "That means the platform must:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Maintain a complete asset inventory – critical systems, age, condition, replacement cost, and business importance.",
+  "text": "Maintain a complete asset inventory – critical systems, age, condition, replacement cost, and business importance.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Normalize definitions for risk and performance across finance, operations, and risk.",
+  "text": "Normalize definitions for risk and performance across finance, operations, and risk.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Provide traceable lineage from raw data to the KPI a board sees on a dashboard.",
+  "text": "Provide traceable lineage from raw data to the KPI a board sees on a dashboard.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Without this, you are still running multiple versions of reality. For a deeper dive into this foundation, see <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "Without this, you are still running multiple versions of reality. For a deeper dive into this foundation, see Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>4. TCRO baked into the design</strong>",
+  "text": "4. TCRO baked into the design",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Dashboards that stop at temperature curves and runtime hours are not enough. A digital risk platform should express risk in dollars – the language a CFO and board use.",
+  "text": "Dashboards that stop at temperature curves and runtime hours are not enough. A digital risk platform should express risk in dollars – the language a CFO and board use.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Every alert and scenario should answer three questions:",
+  "text": "Every alert and scenario should answer three questions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What asset is at risk?",
+  "text": "What asset is at risk?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is the probability of failure in a defined window?",
+  "text": "What is the probability of failure in a defined window?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What is the expected financial impact if we do nothing?",
+  "text": "What is the expected financial impact if we do nothing?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If the interface cannot connect a signal to the components of TCRO – losses, downtime, premiums, operating inefficiency, compliance – it will be hard to justify in a budget cycle. For how TCRO works as a framework, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "If the interface cannot connect a signal to the components of TCRO – losses, downtime, premiums, operating inefficiency, compliance – it will be hard to justify in a budget cycle. For how TCRO works as a framework, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>5. Insurance-grade evidence and partner alignment</strong>",
+  "text": "5. Insurance-grade evidence and partner alignment",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Digital risk does not exist in isolation. It sits in a triangle between owners, brokers, and carriers.",
+  "text": "Digital risk does not exist in isolation. It sits in a triangle between owners, brokers, and carriers.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A credible platform should:",
+  "text": "A credible platform should:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Produce audit-ready histories of risk conditions, interventions, and outcomes.",
+  "text": "Produce audit-ready histories of risk conditions, interventions, and outcomes.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Export the views underwriters care about: evidence of reduced frequency and severity, not just system uptime.",
+  "text": "Export the views underwriters care about: evidence of reduced frequency and severity, not just system uptime.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fit into program design so that better performance can earn better terms at renewal.",
+  "text": "Fit into program design so that better performance can earn better terms at renewal.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "That is the difference between “nice reports” and “insurance behaves like a controllable lever inside TCRO.” For more on this angle, see <strong>Insurance Is No Longer a Fixed Line Item</strong>.",
+  "text": "That is the difference between “nice reports” and “insurance behaves like a controllable lever inside TCRO.” For more on this angle, see Insurance Is No Longer a Fixed Line Item [link to /blog/data-driven-insurance-renewals-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>6. Automated workflows with a closed loop</strong>",
+  "text": "6. Automated workflows with a closed loop",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "It is not enough to identify risk. You have to prove you acted.",
+  "text": "It is not enough to identify risk. You have to prove you acted.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The platform should:",
+  "text": "The platform should:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Trigger clear, prioritized workflows when conditions change.",
+  "text": "Trigger clear, prioritized workflows when conditions change.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Integrate with your existing work-order and ticketing tools so teams are not managing two systems.",
+  "text": "Integrate with your existing work-order and ticketing tools so teams are not managing two systems.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Time-stamp actions and link them back to the original risk signal.",
+  "text": "Time-stamp actions and link them back to the original risk signal.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Track outcomes and feed them back into models.",
+  "text": "Track outcomes and feed them back into models.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Without this, you have alerts, not risk management.",
+  "text": "Without this, you have alerts, not risk management.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>7. Human-level outcomes, not just technical uptime</strong>",
+  "text": "7. Human-level outcomes, not just technical uptime",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Finally, do not lose sight of why any of this matters.",
+  "text": "Finally, do not lose sight of why any of this matters.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Behind every avoided failure is:",
+  "text": "Behind every avoided failure is:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A resident who did not endure a lockdown or outage.",
+  "text": "A resident who did not endure a lockdown or outage.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A staff team that did not work a crisis shift.",
+  "text": "A staff team that did not work a crisis shift.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A visitor who did not have their event cancelled at the last minute.",
+  "text": "A visitor who did not have their event cancelled at the last minute.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The best digital risk platforms make it easy to tell that story:",
+  "text": "The best digital risk platforms make it easy to tell that story:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Case studies that name the avoided loss, the TCRO impact, and the people affected.",
+  "text": "Case studies that name the avoided loss, the TCRO impact, and the people affected.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Dashboards that can show both financial outcomes and basic well-being indicators (outbreak weeks, incident counts, complaint trends).",
+  "text": "Dashboards that can show both financial outcomes and basic well-being indicators (outbreak weeks, incident counts, complaint trends).",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You can see examples of this kind of story in the <strong>case studies</strong>.",
+  "text": "You can see examples of this kind of story in the case studies [link to /resources/case-studies].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to use these criteria in your buying process</strong>",
+  "text": "How to use these criteria in your buying process",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Treat these seven criteria as your short list in any digital risk platform decision.",
+  "text": "Treat these seven criteria as your short list in any digital risk platform decision.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In a vendor conversation:",
+  "text": "In a vendor conversation:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Ask each provider to score themselves against all seven and provide proof.",
+  "text": "Ask each provider to score themselves against all seven and provide proof.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Ask for customer references where the platform has reduced TCRO or insurance outcomes in measurable ways.",
+  "text": "Ask for customer references where the platform has reduced TCRO or insurance outcomes in measurable ways.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Map their answers against your own portfolio strategy and TCRO priorities.",
+  "text": "Map their answers against your own portfolio strategy and TCRO priorities.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "From there, you can sort vendors into three buckets:",
+  "text": "From there, you can sort vendors into three buckets:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Platforms that primarily visualize what you already know.",
+  "text": "Platforms that primarily visualize what you already know.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Platforms that can reduce some operational noise but do not tie to TCRO.",
+  "text": "Platforms that can reduce some operational noise but do not tie to TCRO.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Platforms that measurably change risk-related costs and support better capital and insurance decisions.",
+  "text": "Platforms that measurably change risk-related costs and support better capital and insurance decisions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You are looking for the third bucket.",
+  "text": "You are looking for the third bucket.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you are actively evaluating options, there are two practical next steps:",
+  "text": "If you are actively evaluating options, there are two practical next steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>See the criteria in action.</strong> Use <strong>Book a Demo</strong> to see how these seven elements show up in the Novem Digital platform – from claims-grounded models to insurance-grade evidence and TCRO reporting.",
+  "text": "See the criteria in action. Use Book a Demo to see how these seven elements show up in the Novem Digital platform – from claims-grounded models to insurance-grade evidence and TCRO reporting [link to /get-a-demo or your demo URL].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Run your own numbers first.</strong> If you prefer to quantify the opportunity before a demo, use <strong>Estimate Your Savings</strong> to get a one-day, human-reviewed estimate for a flagship asset, or use the <strong>TCRO calculator</strong> to model portfolio-level impact.",
+  "text": "Run your own numbers first. If you prefer to quantify the opportunity before a demo, use Estimate Your Savings to get a one-day, human-reviewed estimate for a flagship asset [link to /tcro/estimate-your-savings], or use the TCRO calculator to model portfolio-level impact [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Once you have both a clear set of criteria and your own numbers, it becomes much easier to tell which digital risk platform is just another dashboard – and which one will actually lower TCRO and protect both your returns and the people inside your buildings.",
+  "text": "Once you have both a clear set of criteria and your own numbers, it becomes much easier to tell which digital risk platform is just another dashboard – and which one will actually lower TCRO and protect both your returns and the people inside your buildings.",
+  "align": null
+ }
+]

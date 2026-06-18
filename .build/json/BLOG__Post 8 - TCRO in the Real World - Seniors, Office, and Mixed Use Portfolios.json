@@ -1,0 +1,494 @@
+[
+ {
+  "type": "p",
+  "html": "TCRO – Total Cost of Risk Ownership – is a single framework. The way it behaves is not.",
+  "text": "TCRO – Total Cost of Risk Ownership – is a single framework. The way it behaves is not.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A seniors housing operator, a downtown office owner, and a mixed-use portfolio can all measure TCRO. But their risk drivers, human consequences, and levers are very different. If you treat them the same, you end up with “average” strategies that fit no one particularly well.",
+  "text": "A seniors housing operator, a downtown office owner, and a mixed-use portfolio can all measure TCRO. But their risk drivers, human consequences, and levers are very different. If you treat them the same, you end up with “average” strategies that fit no one particularly well.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This post looks at how TCRO shows up in three asset classes – seniors, office, and mixed-use – and what that means for the decisions CFOs and asset owners can actually make.",
+  "text": "This post looks at how TCRO shows up in three asset classes – seniors, office, and mixed-use – and what that means for the decisions CFOs and asset owners can actually make.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the fundamentals of the framework, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For the fundamentals of the framework, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Seniors housing: TCRO dominated by outages, outbreaks, and staffing</strong>",
+  "text": "Seniors housing: TCRO dominated by outages, outbreaks, and staffing",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In seniors housing and care environments, TCRO is weighted heavily toward:",
+  "text": "In seniors housing and care environments, TCRO is weighted heavily toward:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Downtime and environmental risk (heat, cooling, air quality).",
+  "text": "Downtime and environmental risk (heat, cooling, air quality).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreak-related disruption and isolation.",
+  "text": "Outbreak-related disruption and isolation.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Wage premiums, overtime, and burnout when failures or outbreaks occur.",
+  "text": "Wage premiums, overtime, and burnout when failures or outbreaks occur.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Reputational risk with residents, families, and regulators.",
+  "text": "Reputational risk with residents, families, and regulators.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Direct property damage still matters, but the human cost and wage impact often dominate the real number.",
+  "text": "Direct property damage still matters, but the human cost and wage impact often dominate the real number.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When failures or outbreaks are reactive:",
+  "text": "When failures or outbreaks are reactive:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Residents lose access to common areas and routines.",
+  "text": "Residents lose access to common areas and routines.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Families lose visiting rights and trust.",
+  "text": "Families lose visiting rights and trust.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Staff work crisis shifts at premium rates.",
+  "text": "Staff work crisis shifts at premium rates.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Boards and regulators demand explanations and evidence.",
+  "text": "Boards and regulators demand explanations and evidence.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When environments are continuously monitored – air quality, temperature, humidity, key systems – and the data is tied into predictive operations, the TCRO picture changes:",
+  "text": "When environments are continuously monitored – air quality, temperature, humidity, key systems – and the data is tied into predictive operations, the TCRO picture changes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreak weeks drop because risk conditions are addressed early.",
+  "text": "Outbreak weeks drop because risk conditions are addressed early.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Wage premiums and PPE spending decline.",
+  "text": "Wage premiums and PPE spending decline.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer environmental incidents need to be reported.",
+  "text": "Fewer environmental incidents need to be reported.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance submissions start to include prevention data, not just history.",
+  "text": "Insurance submissions start to include prevention data, not just history.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is where TCRO connects directly to quality of care. For more detail on how predictive operations change the operating model, see <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong>.",
+  "text": "This is where TCRO connects directly to quality of care. For more detail on how predictive operations change the operating model, see From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Office portfolios: TCRO driven by business interruption, utilities, and ESG</strong>",
+  "text": "Office portfolios: TCRO driven by business interruption, utilities, and ESG",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In office portfolios, the TCRO mix looks different:",
+  "text": "In office portfolios, the TCRO mix looks different:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Business interruption from system failures (HVAC, elevators, access control).",
+  "text": "Business interruption from system failures (HVAC, elevators, access control).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Utility and energy costs, including waste from leaks and outdated equipment.",
+  "text": "Utility and energy costs, including waste from leaks and outdated equipment.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance premiums and deductibles on a relatively large property schedule.",
+  "text": "Insurance premiums and deductibles on a relatively large property schedule.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "ESG and sustainability commitments tied to energy use and occupant comfort.",
+  "text": "ESG and sustainability commitments tied to energy use and occupant comfort.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Here, failures typically show up as:",
+  "text": "Here, failures typically show up as:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Tenants unable to occupy space during peak times.",
+  "text": "Tenants unable to occupy space during peak times.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Overtime and emergency callouts for mechanical and electrical systems.",
+  "text": "Overtime and emergency callouts for mechanical and electrical systems.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Disputes and lease pressure when conditions are repeatedly poor.",
+  "text": "Disputes and lease pressure when conditions are repeatedly poor.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Weak ESG performance against investor or lender benchmarks.",
+  "text": "Weak ESG performance against investor or lender benchmarks.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When building and risk data is governed and integrated:",
+  "text": "When building and risk data is governed and integrated:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Predictive maintenance reduces unplanned outages.",
+  "text": "Predictive maintenance reduces unplanned outages.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Leak detection and better controls reduce wasted utilities.",
+  "text": "Leak detection and better controls reduce wasted utilities.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital plans shift toward high-impact modernization (for example, lighting and controls) with clear payback.",
+  "text": "Capital plans shift toward high-impact modernization (for example, lighting and controls) with clear payback.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "ESG metrics and TCRO metrics share the same data foundation.",
+  "text": "ESG metrics and TCRO metrics share the same data foundation.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The result is lower TCRO through:",
+  "text": "The result is lower TCRO through:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer business-interruption events.",
+  "text": "Fewer business-interruption events.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower utility spend.",
+  "text": "Lower utility spend.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A stronger risk and ESG story for lenders and investors.",
+  "text": "A stronger risk and ESG story for lenders and investors.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the data-as-asset perspective that cuts across this, see <strong>Make Data Pay: Turning Building Risk Data into a Financial Asset</strong>.",
+  "text": "For the data-as-asset perspective that cuts across this, see Make Data Pay: Turning Building Risk Data into a Financial Asset [link to /blog/make-building-data-pay].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Mixed-use: TCRO at the intersection of multiple risk profiles</strong>",
+  "text": "Mixed-use: TCRO at the intersection of multiple risk profiles",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Mixed-use assets – combinations of retail, office, residential, and public space – sit at the intersection of several risk profiles:",
+  "text": "Mixed-use assets – combinations of retail, office, residential, and public space – sit at the intersection of several risk profiles:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Retail and public areas with fluctuating occupancy and exposure.",
+  "text": "Retail and public areas with fluctuating occupancy and exposure.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Residential units with comfort, safety, and reputational concerns.",
+  "text": "Residential units with comfort, safety, and reputational concerns.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Shared mechanical, electrical, and life-safety systems serving multiple uses.",
+  "text": "Shared mechanical, electrical, and life-safety systems serving multiple uses.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Complex insurance programs and lender expectations.",
+  "text": "Complex insurance programs and lender expectations.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In these assets, TCRO can be driven by:",
+  "text": "In these assets, TCRO can be driven by:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Failures in shared systems that affect multiple tenant types at once.",
+  "text": "Failures in shared systems that affect multiple tenant types at once.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Water, fire, or environmental incidents that cross from one use to another.",
+  "text": "Water, fire, or environmental incidents that cross from one use to another.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Disputes between tenants when responsibility for failures is unclear.",
+  "text": "Disputes between tenants when responsibility for failures is unclear.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Higher governance and reporting demands across different stakeholder groups.",
+  "text": "Higher governance and reporting demands across different stakeholder groups.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A mixed-use TCRO approach usually needs:",
+  "text": "A mixed-use TCRO approach usually needs:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A clear, risk-aware asset inventory that maps systems to the spaces they affect.",
+  "text": "A clear, risk-aware asset inventory that maps systems to the spaces they affect.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Monitoring and predictive operations focused on the shared systems and highest-impact risks.",
+  "text": "Monitoring and predictive operations focused on the shared systems and highest-impact risks.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A governance model that keeps finance, property management, and risk aligned on definitions and priorities.",
+  "text": "A governance model that keeps finance, property management, and risk aligned on definitions and priorities.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The payoff is a portfolio where:",
+  "text": "The payoff is a portfolio where:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Risk-related costs are easier to allocate and manage.",
+  "text": "Risk-related costs are easier to allocate and manage.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital projects can be justified across uses, not just within one silo.",
+  "text": "Capital projects can be justified across uses, not just within one silo.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance programs can better reflect how risk is actually controlled on site.",
+  "text": "Insurance programs can better reflect how risk is actually controlled on site.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the governance details that keep this aligned, see <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "For the governance details that keep this aligned, see Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why “average TCRO” is misleading</strong>",
+  "text": "Why “average TCRO” is misleading",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When you roll all assets into a single TCRO number, you lose important information:",
+  "text": "When you roll all assets into a single TCRO number, you lose important information:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "High-risk seniors or public venues can be hidden by low-risk assets.",
+  "text": "High-risk seniors or public venues can be hidden by low-risk assets.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Office or mixed-use assets with strong performance can subsidize weaker performers.",
+  "text": "Office or mixed-use assets with strong performance can subsidize weaker performers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital and insurance decisions can be made on portfolio averages instead of asset-class reality.",
+  "text": "Capital and insurance decisions can be made on portfolio averages instead of asset-class reality.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "To avoid that, TCRO should be segmented at least by:",
+  "text": "To avoid that, TCRO should be segmented at least by:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Asset class (seniors, office, mixed-use, industrial, etc.).",
+  "text": "Asset class (seniors, office, mixed-use, industrial, etc.).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Geography where risks are materially different.",
+  "text": "Geography where risks are materially different.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Ownership or JV structures where obligations differ.",
+  "text": "Ownership or JV structures where obligations differ.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "From there, you can:",
+  "text": "From there, you can:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Set different TCRO targets and strategies by segment.",
+  "text": "Set different TCRO targets and strategies by segment.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Allocate capital where TCRO reduction per dollar is highest within each class.",
+  "text": "Allocate capital where TCRO reduction per dollar is highest within each class.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Work with brokers and carriers to design programs that reflect segment performance, not just overall loss history.",
+  "text": "Work with brokers and carriers to design programs that reflect segment performance, not just overall loss history.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This segmentation should be visible in your <strong>TCRO dashboard</strong> so boards and executives can see where risk-related costs are really coming from.",
+  "text": "This segmentation should be visible in your TCRO dashboard so boards and executives can see where risk-related costs are really coming from [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to see how TCRO behaves in your own mix of assets, two concrete steps can help:",
+  "text": "If you want to see how TCRO behaves in your own mix of assets, two concrete steps can help:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Build a segmented TCRO view.</strong> Use the <strong>TCRO calculator</strong> to model TCRO separately for seniors, office, and mixed-use segments rather than as a single portfolio average. Even rough cuts will reveal where risk and cost are concentrated.",
+  "text": "Build a segmented TCRO view. Use the TCRO calculator to model TCRO separately for seniors, office, and mixed-use segments rather than as a single portfolio average [link to /tcro#calculator]. Even rough cuts will reveal where risk and cost are concentrated.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a one-day savings estimate for one asset per segment.</strong> Use <strong>Estimate Your Savings</strong> to submit a flagship asset in each key class – for example, one seniors community, one office tower, one mixed-use property – and get reviewed estimates of what predictive operations and risk data could change for each.",
+  "text": "Get a one-day savings estimate for one asset per segment. Use Estimate Your Savings to submit a flagship asset in each key class – for example, one seniors community, one office tower, one mixed-use property – and get reviewed estimates of what predictive operations and risk data could change for each [link to /tcro/estimate-your-savings].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Once you see TCRO by asset class, it becomes much clearer where to focus capital, maintenance, and insurance efforts – and where better risk visibility will protect not just returns, but also the residents, tenants, and visitors who rely on each type of building.",
+  "text": "Once you see TCRO by asset class, it becomes much clearer where to focus capital, maintenance, and insurance efforts – and where better risk visibility will protect not just returns, but also the residents, tenants, and visitors who rely on each type of building.",
+  "align": null
+ }
+]

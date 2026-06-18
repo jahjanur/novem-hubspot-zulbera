@@ -1,0 +1,446 @@
+[
+ {
+  "type": "p",
+  "html": "Boards are seeing more risk data than ever. They are not necessarily seeing more clarity.",
+  "text": "Boards are seeing more risk data than ever. They are not necessarily seeing more clarity.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Slide decks get thicker. Dashboards multiply. Metrics shift from meeting to meeting. Directors leave with more charts, but not always a better understanding of where risk-related costs are going – or what management is doing about them.",
+  "text": "Slide decks get thicker. Dashboards multiply. Metrics shift from meeting to meeting. Directors leave with more charts, but not always a better understanding of where risk-related costs are going – or what management is doing about them.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A TCRO-driven dashboard cuts through that noise. It gives the board a small, stable set of metrics that connect risk to financial outcomes and human consequences, without dragging them into system-level detail.",
+  "text": "A TCRO-driven dashboard cuts through that noise. It gives the board a small, stable set of metrics that connect risk to financial outcomes and human consequences, without dragging them into system-level detail.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why board dashboards often fail</strong>",
+  "text": "Why board dashboards often fail",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Most risk dashboards fail at the board level for three reasons:",
+  "text": "Most risk dashboards fail at the board level for three reasons:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Too many metrics.</strong> Dozens of charts, each with small importance, and no clear sense of which matter most.",
+  "text": "Too many metrics. Dozens of charts, each with small importance, and no clear sense of which matter most.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Too much technical detail.</strong> Temperature curves, sensor counts, and alarm volumes without a clear financial frame.",
+  "text": "Too much technical detail. Temperature curves, sensor counts, and alarm volumes without a clear financial frame.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Too little consistency.</strong> Metrics and definitions change, forcing directors to relearn the story every quarter.",
+  "text": "Too little consistency. Metrics and definitions change, forcing directors to relearn the story every quarter.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The result is “risk fatigue.” Directors become skeptical of the numbers and default to simple questions: “Are we okay?” and “What keeps you up at night?”",
+  "text": "The result is “risk fatigue.” Directors become skeptical of the numbers and default to simple questions: “Are we okay?” and “What keeps you up at night?”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A TCRO dashboard is designed to answer those questions consistently. It ties directly to <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "A TCRO dashboard is designed to answer those questions consistently. It ties directly to Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What are the five TCRO metrics the board actually needs?</strong>",
+  "text": "What are the five TCRO metrics the board actually needs?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "At board level, you can usually cover the risk picture with five metrics:",
+  "text": "At board level, you can usually cover the risk picture with five metrics:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Headline TCRO level.</strong>",
+  "text": "Headline TCRO level.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Total Cost of Risk Ownership for the portfolio over the last 12 months.",
+  "text": "Total Cost of Risk Ownership for the portfolio over the last 12 months.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Shown as a number and as a percentage of revenue or NOI.",
+  "text": "Shown as a number and as a percentage of revenue or NOI.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>TCRO trend.</strong>",
+  "text": "TCRO trend.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How TCRO has moved over the last 3–5 years.",
+  "text": "How TCRO has moved over the last 3–5 years.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Direction and magnitude matter more than exact precision.",
+  "text": "Direction and magnitude matter more than exact precision.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Top TCRO drivers.</strong>",
+  "text": "Top TCRO drivers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "The three or four components contributing most: losses, downtime, premiums, operating inefficiency, governance overhead.",
+  "text": "The three or four components contributing most: losses, downtime, premiums, operating inefficiency, governance overhead.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Shown by segment (for example, seniors vs office vs mixed-use).",
+  "text": "Shown by segment (for example, seniors vs office vs mixed-use).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Avoided losses and events.</strong>",
+  "text": "Avoided losses and events.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Claims and incidents that did not happen because of predictive operations, improved maintenance, or capital projects.",
+  "text": "Claims and incidents that did not happen because of predictive operations, improved maintenance, or capital projects.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Expressed in financial terms and, where appropriate, human terms.",
+  "text": "Expressed in financial terms and, where appropriate, human terms.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Capital and insurance alignment.</strong>",
+  "text": "Capital and insurance alignment.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How capital projects and program design are expected to change TCRO over the next 1–3 years.",
+  "text": "How capital projects and program design are expected to change TCRO over the next 1–3 years.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "The link between today’s spend and tomorrow’s risk.",
+  "text": "The link between today’s spend and tomorrow’s risk.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Everything else – sensor counts, algorithm accuracy, alert volumes – belongs in management-level dashboards, not in the board pack.",
+  "text": "Everything else – sensor counts, algorithm accuracy, alert volumes – belongs in management-level dashboards, not in the board pack.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How should a TCRO dashboard look and feel?</strong>",
+  "text": "How should a TCRO dashboard look and feel?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The dashboard should be readable in minutes, not hours. That usually means:",
+  "text": "The dashboard should be readable in minutes, not hours. That usually means:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "One primary slide or screen with the five metrics above.",
+  "text": "One primary slide or screen with the five metrics above.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Simple visuals: one or two line charts, a short ranked list, and a small table or graphic for avoided losses.",
+  "text": "Simple visuals: one or two line charts, a short ranked list, and a small table or graphic for avoided losses.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Clear annotations explaining what changed and why.",
+  "text": "Clear annotations explaining what changed and why.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A typical layout:",
+  "text": "A typical layout:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Top left: headline TCRO and prior-year comparison.",
+  "text": "Top left: headline TCRO and prior-year comparison.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Top right: 3–5 year TCRO trend.",
+  "text": "Top right: 3–5 year TCRO trend.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Bottom left: top drivers and segments.",
+  "text": "Bottom left: top drivers and segments.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Bottom right: avoided losses, with a call-out for the most significant event and its human impact.",
+  "text": "Bottom right: avoided losses, with a call-out for the most significant event and its human impact.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If directors want more, they can click or ask. But the core story is always available at a glance.",
+  "text": "If directors want more, they can click or ask. But the core story is always available at a glance.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For ideas on which drivers to highlight by asset class, see <strong>TCRO in the Real World: Seniors, Office, and Mixed-Use Portfolios</strong>.",
+  "text": "For ideas on which drivers to highlight by asset class, see TCRO in the Real World: Seniors, Office, and Mixed-Use Portfolios [link to /blog/tcro-real-world-asset-classes].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does predictive operations show up on the dashboard?</strong>",
+  "text": "How does predictive operations show up on the dashboard?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Boards do not need to see raw telemetry. They do need to see how predictive operations change TCRO.",
+  "text": "Boards do not need to see raw telemetry. They do need to see how predictive operations change TCRO.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "On the dashboard, that can show up as:",
+  "text": "On the dashboard, that can show up as:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A segment of avoided losses labeled “Predictive operations impact,” with one or two concrete examples.",
+  "text": "A segment of avoided losses labeled “Predictive operations impact,” with one or two concrete examples.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A note on trend charts showing where predictive maintenance or monitoring was rolled out and how TCRO shifted afterward.",
+  "text": "A note on trend charts showing where predictive maintenance or monitoring was rolled out and how TCRO shifted afterward.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A brief link between predictive operations, capital projects, and insurance outcomes.",
+  "text": "A brief link between predictive operations, capital projects, and insurance outcomes.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the underlying operating-model detail, directors can be pointed to <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong>.",
+  "text": "For the underlying operating-model detail, directors can be pointed to From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does data governance support a credible TCRO dashboard?</strong>",
+  "text": "How does data governance support a credible TCRO dashboard?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A TCRO dashboard only works if directors trust the numbers.",
+  "text": "A TCRO dashboard only works if directors trust the numbers.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "That trust comes from:",
+  "text": "That trust comes from:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Clear ownership of the data behind each metric.",
+  "text": "Clear ownership of the data behind each metric.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Stable definitions over time.",
+  "text": "Stable definitions over time.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "The ability to trace a board-level KPI back to underlying systems and events when needed.",
+  "text": "The ability to trace a board-level KPI back to underlying systems and events when needed.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In other words, it comes from governance. Without <strong>Data Governance</strong> in place, a TCRO dashboard is just another set of numbers that might change next quarter.",
+  "text": "In other words, it comes from governance. Without Data Governance in place, a TCRO dashboard is just another set of numbers that might change next quarter [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The board does not need to see the governance framework. They need to hear, simply and confidently, that:",
+  "text": "The board does not need to see the governance framework. They need to hear, simply and confidently, that:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“These metrics come from a single source of truth.”",
+  "text": "“These metrics come from a single source of truth.”",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“Definitions are controlled and stable.”",
+  "text": "“Definitions are controlled and stable.”",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“We can show you the underlying evidence for any point on this chart.”",
+  "text": "“We can show you the underlying evidence for any point on this chart.”",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How should management use the dashboard in the boardroom?</strong>",
+  "text": "How should management use the dashboard in the boardroom?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The TCRO dashboard is not just a reporting tool. It is a conversation tool.",
+  "text": "The TCRO dashboard is not just a reporting tool. It is a conversation tool.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In practice, management should use it to:",
+  "text": "In practice, management should use it to:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Open the risk section with a concise story: where TCRO is, where it is going, what is driving it.",
+  "text": "Open the risk section with a concise story: where TCRO is, where it is going, what is driving it.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Frame capital proposals: which TCRO drivers a project addresses and what impact is expected.",
+  "text": "Frame capital proposals: which TCRO drivers a project addresses and what impact is expected.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Frame insurance discussions: how continuous data and program design are expected to change premiums and retained risk.",
+  "text": "Frame insurance discussions: how continuous data and program design are expected to change premiums and retained risk.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The goal is that directors can answer, in their own words:",
+  "text": "The goal is that directors can answer, in their own words:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“What is our Total Cost of Risk Ownership?”",
+  "text": "“What is our Total Cost of Risk Ownership?”",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“Is it moving in the right direction?”",
+  "text": "“Is it moving in the right direction?”",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“Do we have a credible plan to improve it – and is that plan being executed?”",
+  "text": "“Do we have a credible plan to improve it – and is that plan being executed?”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For capital-specific detail, they can refer to <strong>How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment</strong>. For insurance, they can read <strong>Insurance Is No Longer a Fixed Line Item</strong>.",
+  "text": "For capital-specific detail, they can refer to How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment [link to /blog/tcro-capital-planning]. For insurance, they can read Insurance Is No Longer a Fixed Line Item [link to /blog/data-driven-insurance-renewals-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to build or refine your own TCRO dashboard:",
+  "text": "If you want to build or refine your own TCRO dashboard:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Start with a simple TCRO model.</strong> Use the <strong>TCRO calculator</strong> to get a first view of TCRO level and drivers with your own assumptions. Use that as a draft for what the board-level metrics could look like.",
+  "text": "Start with a simple TCRO model. Use the TCRO calculator to get a first view of TCRO level and drivers with your own assumptions [link to /tcro#calculator]. Use that as a draft for what the board-level metrics could look like.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Walk through your current board pack with an expert.</strong> Use <strong>Talk to an Expert</strong> to review how you currently report risk and capital to the board and identify where a TCRO dashboard could replace or simplify existing material.",
+  "text": "Walk through your current board pack with an expert. Use Talk to an Expert to review how you currently report risk and capital to the board and identify where a TCRO dashboard could replace or simplify existing material [link to your contact modal or /contact].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When TCRO is presented this way, boards get what they need most: a clear sense of risk-related costs, confidence that management is in control, and a direct line of sight between today’s decisions and tomorrow’s outcomes for both the balance sheet and the people inside your buildings.",
+  "text": "When TCRO is presented this way, boards get what they need most: a clear sense of risk-related costs, confidence that management is in control, and a direct line of sight between today’s decisions and tomorrow’s outcomes for both the balance sheet and the people inside your buildings.",
+  "align": null
+ }
+]

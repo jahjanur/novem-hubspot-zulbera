@@ -1,0 +1,590 @@
+[
+ {
+  "type": "p",
+  "html": "Once TCRO clicks, the next question from any CFO is simple: “What will it take to do this here?”",
+  "text": "Once TCRO clicks, the next question from any CFO is simple: “What will it take to do this here?”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is the practical checklist. It is written for finance leaders who want to move from understanding Total Cost of Risk Ownership (TCRO) to running it as a decision standard across maintenance, capital, and insurance – without turning it into a multi-year science project.",
+  "text": "This is the practical checklist. It is written for finance leaders who want to move from understanding Total Cost of Risk Ownership (TCRO) to running it as a decision standard across maintenance, capital, and insurance – without turning it into a multi-year science project.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the TCRO fundamentals, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For the TCRO fundamentals, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 1: Define the scope and set a TCRO target</strong>",
+  "text": "Step 1: Define the scope and set a TCRO target",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Before touching systems, get alignment on:",
+  "text": "Before touching systems, get alignment on:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Scope.</strong> Are you starting with one flagship asset, a campus, or a specific asset class (for example, seniors or office)?",
+  "text": "Scope. Are you starting with one flagship asset, a campus, or a specific asset class (for example, seniors or office)?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Time horizon.</strong> Are you planning to operate TCRO as a one-year pilot, a three-year program, or a permanent standard?",
+  "text": "Time horizon. Are you planning to operate TCRO as a one-year pilot, a three-year program, or a permanent standard?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Target.</strong> Do you want to reduce TCRO by a specific percentage, stabilize it, or improve its predictability?",
+  "text": "Target. Do you want to reduce TCRO by a specific percentage, stabilize it, or improve its predictability?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Practical actions:",
+  "text": "Practical actions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Document the current view of risk costs (claims, premiums, downtime, emergency spend, wage premiums) – even if it is imperfect.",
+  "text": "Document the current view of risk costs (claims, premiums, downtime, emergency spend, wage premiums) – even if it is imperfect.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Align your executive team on why TCRO matters and what questions it should answer that Cost of Risk cannot.",
+  "text": "Align your executive team on why TCRO matters and what questions it should answer that Cost of Risk cannot.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A short pre-read pointing to <strong>TCRO vs Cost of Risk</strong> and <strong>The TCRO Dashboard: What Your Board Needs to See, and What It Does Not</strong> helps anchor this.",
+  "text": "A short pre-read pointing to TCRO vs Cost of Risk and The TCRO Dashboard: What Your Board Needs to See, and What It Does Not helps anchor this [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 2: Build an initial TCRO model with your own assumptions</strong>",
+  "text": "Step 2: Build an initial TCRO model with your own assumptions",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Next, build a first-pass TCRO model, even if your data is not fully ready. The goal is directionally right, not perfect.",
+  "text": "Next, build a first-pass TCRO model, even if your data is not fully ready. The goal is directionally right, not perfect.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Actions:",
+  "text": "Actions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use the <strong>TCRO calculator</strong> to plug in your best estimates for:",
+  "text": "Use the TCRO calculator to plug in your best estimates for:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Direct losses and claims",
+  "text": "Direct losses and claims",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Downtime and business interruption",
+  "text": "Downtime and business interruption",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Premiums and retentions",
+  "text": "Premiums and retentions",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Operating and maintenance inefficiency",
+  "text": "Operating and maintenance inefficiency",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Governance and reporting overhead",
+  "text": "Governance and reporting overhead [link to /tcro#calculator]",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Run a few simple scenarios:",
+  "text": "Run a few simple scenarios:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“Status quo” vs “fewer failures” vs “better insurance terms.”",
+  "text": "“Status quo” vs “fewer failures” vs “better insurance terms.”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This gives you:",
+  "text": "This gives you:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A baseline TCRO estimate for your current state.",
+  "text": "A baseline TCRO estimate for your current state.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A sense of which components are most material – and therefore where to focus implementation first.",
+  "text": "A sense of which components are most material – and therefore where to focus implementation first.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 3: Inventory assets and risk drivers for the pilot scope</strong>",
+  "text": "Step 3: Inventory assets and risk drivers for the pilot scope",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "TCRO only becomes real when it is tied to specific systems and buildings.",
+  "text": "TCRO only becomes real when it is tied to specific systems and buildings.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For your chosen scope:",
+  "text": "For your chosen scope:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Build a <strong>risk-aware asset inventory</strong>:",
+  "text": "Build a risk-aware asset inventory:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Critical systems and equipment (mechanical, electrical, water, gas, life safety).",
+  "text": "Critical systems and equipment (mechanical, electrical, water, gas, life safety).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Age, condition, replacement cost, and business importance.",
+  "text": "Age, condition, replacement cost, and business importance.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Map known <strong>risk drivers</strong>:",
+  "text": "Map known risk drivers:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Historical failures and near-misses.",
+  "text": "Historical failures and near-misses.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outbreaks or environmental incidents (in seniors and care environments).",
+  "text": "Outbreaks or environmental incidents (in seniors and care environments).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "High-friction maintenance areas and repeated tenant complaints.",
+  "text": "High-friction maintenance areas and repeated tenant complaints.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This inventory is the starting point for both <strong>From Reactive to Predictive</strong> and <strong>How TCRO Changes Capital Planning</strong>.",
+  "text": "This inventory is the starting point for both From Reactive to Predictive and How TCRO Changes Capital Planning [links to /blog/reactive-to-predictive-maintenance-real-estate and /blog/tcro-capital-planning].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 4: Put data governance in place for the pilot</strong>",
+  "text": "Step 4: Put data governance in place for the pilot",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Before layering on more data or AI, decide how you will govern what you already have.",
+  "text": "Before layering on more data or AI, decide how you will govern what you already have.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the pilot scope:",
+  "text": "For the pilot scope:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Assign <strong>data owners</strong> for:",
+  "text": "Assign data owners for:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Asset inventory",
+  "text": "Asset inventory",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Incidents and failures",
+  "text": "Incidents and failures",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Work orders and maintenance",
+  "text": "Work orders and maintenance",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Claims and insurance",
+  "text": "Claims and insurance",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Outage and wage premium records (if applicable)",
+  "text": "Outage and wage premium records (if applicable)",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Standardize <strong>definitions and coding</strong>:",
+  "text": "Standardize definitions and coding:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What counts as an incident or failure?",
+  "text": "What counts as an incident or failure?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How are outages, outbreaks, and surge staffing recorded?",
+  "text": "How are outages, outbreaks, and surge staffing recorded?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How are events linked to assets and locations?",
+  "text": "How are events linked to assets and locations?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Make sure there is <strong>one common data environment</strong> – even if it is simple – where these data sets meet.",
+  "text": "Make sure there is one common data environment – even if it is simple – where these data sets meet.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You can use <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong> as the reference point for this step.",
+  "text": "You can use Data Governance Is Not an IT Project. It Is the Operating System of Financial Control as the reference point for this step [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 5: Instrument the highest-impact risks</strong>",
+  "text": "Step 5: Instrument the highest-impact risks",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "With governance in place, you can add the missing visibility without over-engineering.",
+  "text": "With governance in place, you can add the missing visibility without over-engineering.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the pilot scope, focus on:",
+  "text": "For the pilot scope, focus on:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Systems where failures have caused the most damage or disruption.",
+  "text": "Systems where failures have caused the most damage or disruption.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Environments where risk has the highest human consequence (seniors, public venues).",
+  "text": "Environments where risk has the highest human consequence (seniors, public venues).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Assets where a single failure could move TCRO meaningfully.",
+  "text": "Assets where a single failure could move TCRO meaningfully.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Practical actions:",
+  "text": "Practical actions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Deploy targeted monitoring (vibration, temperature, flow, air quality, gas) on those systems.",
+  "text": "Deploy targeted monitoring (vibration, temperature, flow, air quality, gas) on those systems.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Integrate signals with your work-order system so alerts trigger real workflows, not just dashboards.",
+  "text": "Integrate signals with your work-order system so alerts trigger real workflows, not just dashboards.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Ensure every intervention is logged and tied back to the original signal.",
+  "text": "Ensure every intervention is logged and tied back to the original signal.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is where <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong> becomes your operating manual.",
+  "text": "This is where From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy becomes your operating manual [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 6: Connect actions and outcomes back into TCRO</strong>",
+  "text": "Step 6: Connect actions and outcomes back into TCRO",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Now you have three pieces: a TCRO model, governed data, and live signals with workflows. The next step is to close the loop.",
+  "text": "Now you have three pieces: a TCRO model, governed data, and live signals with workflows. The next step is to close the loop.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the pilot period (for example, 6–12 months):",
+  "text": "For the pilot period (for example, 6–12 months):",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Track events and near-misses where:",
+  "text": "Track events and near-misses where:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A signal led to an intervention that prevented or reduced a failure.",
+  "text": "A signal led to an intervention that prevented or reduced a failure.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A failure still occurred despite interventions.",
+  "text": "A failure still occurred despite interventions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "For each, estimate:",
+  "text": "For each, estimate:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Direct repair or claim cost that was avoided or reduced.",
+  "text": "Direct repair or claim cost that was avoided or reduced.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Downtime and wage impact that was avoided or reduced.",
+  "text": "Downtime and wage impact that was avoided or reduced.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Effect on premiums or retentions, where applicable.",
+  "text": "Effect on premiums or retentions, where applicable.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Periodically recalculate TCRO for the pilot scope and compare:",
+  "text": "Periodically recalculate TCRO for the pilot scope and compare:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "“Before TCRO and predictive operations” vs “After.”",
+  "text": "“Before TCRO and predictive operations” vs “After.”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This gives you hard numbers you can share with:",
+  "text": "This gives you hard numbers you can share with:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Your board, using a simplified <strong>TCRO dashboard</strong>.",
+  "text": "Your board, using a simplified TCRO dashboard [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Your broker and insurers, as in <strong>Insurance Is No Longer a Fixed Line Item</strong>.",
+  "text": "Your broker and insurers, as in Insurance Is No Longer a Fixed Line Item [link to /blog/data-driven-insurance-renewals-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Step 7: Use TCRO to drive capital planning and insurance – then scale</strong>",
+  "text": "Step 7: Use TCRO to drive capital planning and insurance – then scale",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Once you have evidence from the pilot, you can start making TCRO-informed decisions at scale.",
+  "text": "Once you have evidence from the pilot, you can start making TCRO-informed decisions at scale.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Actions:",
+  "text": "Actions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Feed pilot results into your next capital cycle:",
+  "text": "Feed pilot results into your next capital cycle:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Prioritize projects that generate the biggest TCRO reduction per dollar.",
+  "text": "Prioritize projects that generate the biggest TCRO reduction per dollar.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Defer projects that are capital-intensive but TCRO-neutral.",
+  "text": "Defer projects that are capital-intensive but TCRO-neutral.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Bring TCRO data to your next insurance renewal:",
+  "text": "Bring TCRO data to your next insurance renewal:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Show how continuous monitoring and interventions have reduced expected loss.",
+  "text": "Show how continuous monitoring and interventions have reduced expected loss.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Work with your broker to reflect this in structure and pricing.",
+  "text": "Work with your broker to reflect this in structure and pricing.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Decide how to extend:",
+  "text": "Decide how to extend:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Another asset class (for example, from seniors to mixed-use).",
+  "text": "Another asset class (for example, from seniors to mixed-use).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Another geography or campus.",
+  "text": "Another geography or campus.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Additional risk domains (for example, ESG/TCRO, labor/TCRO).",
+  "text": "Additional risk domains (for example, ESG/TCRO, labor/TCRO).",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "From here, TCRO is no longer a model. It is part of how your portfolio is run.",
+  "text": "From here, TCRO is no longer a model. It is part of how your portfolio is run.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you are ready to start TCRO implementation, you can choose a path that fits how you prefer to work:",
+  "text": "If you are ready to start TCRO implementation, you can choose a path that fits how you prefer to work:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a one-day pilot estimate for a flagship asset.</strong> Use <strong>Estimate Your Savings</strong> to share one representative property and receive a reviewed estimate, within one business day, of what TCRO-aligned predictive operations and risk data could change for that asset.",
+  "text": "Get a one-day pilot estimate for a flagship asset. Use Estimate Your Savings to share one representative property and receive a reviewed estimate, within one business day, of what TCRO-aligned predictive operations and risk data could change for that asset [link to /tcro/estimate-your-savings].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model the pilot scope yourself first.</strong> Use the <strong>TCRO calculator</strong> to scope a small, realistic pilot – one building or campus – and see how changes in failures, downtime, and premiums would move TCRO. Then use <strong>Talk to an Expert</strong> to pressure-test that pilot plan and align it with your board and insurance strategy.",
+  "text": "Model the pilot scope yourself first. Use the TCRO calculator to scope a small, realistic pilot – one building or campus – and see how changes in failures, downtime, and premiums would move TCRO [link to /tcro#calculator]. Then use Talk to an Expert to pressure-test that pilot plan and align it with your board and insurance strategy [link to your contact modal or /contact].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "With a defined pilot, a clear checklist, and the right partners, TCRO implementation becomes less about theory and more about a controlled, measurable shift in how you manage risk, capital, and the buildings people rely on every day.",
+  "text": "With a defined pilot, a clear checklist, and the right partners, TCRO implementation becomes less about theory and more about a controlled, measurable shift in how you manage risk, capital, and the buildings people rely on every day.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Which piece of this checklist feels most challenging in your organization right now – alignment on TCRO at the exec level, data governance, or picking the right pilot scope?",
+  "text": "Which piece of this checklist feels most challenging in your organization right now – alignment on TCRO at the exec level, data governance, or picking the right pilot scope?",
+  "align": null
+ }
+]

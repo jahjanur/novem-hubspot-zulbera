@@ -1,0 +1,374 @@
+[
+ {
+  "type": "p",
+  "html": "Most portfolios do not suffer from a lack of data. They suffer from a lack of ownership. No one is quite sure who owns which metrics, where the data lives, or whether it can be trusted. The consequences rarely show up as a headline failure. They show up as friction.",
+  "text": "Most portfolios do not suffer from a lack of data. They suffer from a lack of ownership. No one is quite sure who owns which metrics, where the data lives, or whether it can be trusted. The consequences rarely show up as a headline failure. They show up as friction.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Dashboards are questioned. Capital decisions drag on. Teams maintain three versions of the same number. Insurance submissions go in light on evidence. Board reports are assembled by hand and argued the night before they are due. That is not a technology issue. It is a financial control issue.",
+  "text": "Dashboards are questioned. Capital decisions drag on. Teams maintain three versions of the same number. Insurance submissions go in light on evidence. Board reports are assembled by hand and argued the night before they are due. That is not a technology issue. It is a financial control issue.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Data governance, done properly, is the operating system that controls all of this.",
+  "text": "Data governance, done properly, is the operating system that controls all of this.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What is data governance in institutional real estate?</strong>",
+  "text": "What is data governance in institutional real estate?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In institutional real estate, data governance is the discipline that makes portfolio data reliable, traceable, and usable for financial decisions.",
+  "text": "In institutional real estate, data governance is the discipline that makes portfolio data reliable, traceable, and usable for financial decisions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In practical terms, it answers four questions:",
+  "text": "In practical terms, it answers four questions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Who is accountable for which data and KPIs?",
+  "text": "Who is accountable for which data and KPIs?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What do key terms mean, and how are they used across finance, operations, and risk?",
+  "text": "What do key terms mean, and how are they used across finance, operations, and risk?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How do we ensure the numbers are accurate, complete, and traceable?",
+  "text": "How do we ensure the numbers are accurate, complete, and traceable?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Who has access to which data, and under what conditions?",
+  "text": "Who has access to which data, and under what conditions?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When those questions are settled, the organization gains something simple and rare: one version of the truth that can be defended when a board, lender, or insurer asks “How do you know?”",
+  "text": "When those questions are settled, the organization gains something simple and rare: one version of the truth that can be defended when a board, lender, or insurer asks “How do you know?”",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For the financial framing that sits on top of this, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For the financial framing that sits on top of this, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What happens when data governance fails?</strong>",
+  "text": "What happens when data governance fails?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When governance is weak, costs rise quietly.",
+  "text": "When governance is weak, costs rise quietly.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Patterns are consistent across institutional portfolios:",
+  "text": "Patterns are consistent across institutional portfolios:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Maintenance spend drifts up because asset data is incomplete or unreliable.",
+  "text": "Maintenance spend drifts up because asset data is incomplete or unreliable.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Decisions slow down because numbers cannot be trusted without manual checks.",
+  "text": "Decisions slow down because numbers cannot be trusted without manual checks.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance is priced on uncertainty instead of demonstrated control.",
+  "text": "Insurance is priced on uncertainty instead of demonstrated control.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital projects are harder to defend, weakening board and lender confidence.",
+  "text": "Capital projects are harder to defend, weakening board and lender confidence.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency repair premiums compound because failure is not predicted early.",
+  "text": "Emergency repair premiums compound because failure is not predicted early.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When a chiller fails without warning, the cost is not just the replacement invoice. It is emergency labor, tenant impact, potential claims, and governance exposure when someone asks “Did we see this coming?” For a single major event, total impact can easily reach many times the direct repair cost.",
+  "text": "When a chiller fails without warning, the cost is not just the replacement invoice. It is emergency labor, tenant impact, potential claims, and governance exposure when someone asks “Did we see this coming?” For a single major event, total impact can easily reach many times the direct repair cost.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Those costs belong inside <strong>Total Cost of Risk Ownership (TCRO)</strong>, not in a miscellaneous bucket. Without governance, you cannot measure them properly.",
+  "text": "Those costs belong inside Total Cost of Risk Ownership (TCRO), not in a miscellaneous bucket. Without governance, you cannot measure them properly.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does data governance support TCRO and AI?</strong>",
+  "text": "How does data governance support TCRO and AI?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "TCRO and AI both depend on trustworthy inputs. Without governance:",
+  "text": "TCRO and AI both depend on trustworthy inputs. Without governance:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "TCRO becomes an estimate assembled from conflicting numbers.",
+  "text": "TCRO becomes an estimate assembled from conflicting numbers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "AI models amplify bad data, producing outputs you cannot explain or defend.",
+  "text": "AI models amplify bad data, producing outputs you cannot explain or defend.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "With governance in place:",
+  "text": "With governance in place:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "TCRO is built on consistent definitions and auditable data.",
+  "text": "TCRO is built on consistent definitions and auditable data.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "AI models consume data that has owners, quality checks, and access controls.",
+  "text": "AI models consume data that has owners, quality checks, and access controls.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "That changes what your systems can do:",
+  "text": "That changes what your systems can do:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "TCRO becomes a living financial standard that can be shared with boards, lenders, and insurers.",
+  "text": "TCRO becomes a living financial standard that can be shared with boards, lenders, and insurers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Predictive operations move from pilot to portfolio scale because stakeholders trust the underlying data.",
+  "text": "Predictive operations move from pilot to portfolio scale because stakeholders trust the underlying data.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You can see how this plays out operationally in <strong>From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy</strong>.",
+  "text": "You can see how this plays out operationally in From Reactive to Predictive: Why Your Maintenance Model Is Now a Finance Strategy [link to /blog/reactive-to-predictive-maintenance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What does mature governance look like in practice?</strong>",
+  "text": "What does mature governance look like in practice?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Governance maturity tends to move through four stages:",
+  "text": "Governance maturity tends to move through four stages:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Reactive.</strong> Siloed data, unclear owners, decisions made on assumptions. Result: constant rework and slow approvals.",
+  "text": "Reactive. Siloed data, unclear owners, decisions made on assumptions. Result: constant rework and slow approvals.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Structured.</strong> Ownership defined, definitions agreed, basic quality checks. Result: fewer reconciliation fights, more trusted KPIs.",
+  "text": "Structured. Ownership defined, definitions agreed, basic quality checks. Result: fewer reconciliation fights, more trusted KPIs.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Governed.</strong> Lineage traceable, access controlled, audit trail built in. Result: defensible capital planning and stronger insurance submissions.",
+  "text": "Governed. Lineage traceable, access controlled, audit trail built in. Result: defensible capital planning and stronger insurance submissions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Predictive.</strong> Governed data feeding AI and risk models. Result: failures predicted before they occur, TCRO compressed year over year.",
+  "text": "Predictive. Governed data feeding AI and risk models. Result: failures predicted before they occur, TCRO compressed year over year.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Most portfolios try to jump from stage 1 to stage 4 by buying technology. It does not work. AI scales whatever foundation you give it. If the foundation is confusion, AI just makes the confusion faster.",
+  "text": "Most portfolios try to jump from stage 1 to stage 4 by buying technology. It does not work. AI scales whatever foundation you give it. If the foundation is confusion, AI just makes the confusion faster.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does governance show up in financial results?</strong>",
+  "text": "How does governance show up in financial results?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You know governance is working when you can see it in concrete outcomes:",
+  "text": "You know governance is working when you can see it in concrete outcomes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "The CFO, COO, and CRO walk into a board meeting using the same numbers.",
+  "text": "The CFO, COO, and CRO walk into a board meeting using the same numbers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital committee decks include traceable evidence, not screenshots from multiple systems.",
+  "text": "Capital committee decks include traceable evidence, not screenshots from multiple systems.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Regulatory and audit questions are answered from existing records, not special projects.",
+  "text": "Regulatory and audit questions are answered from existing records, not special projects.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Underwriters price based on continuous evidence of control rather than generic assumptions.",
+  "text": "Underwriters price based on continuous evidence of control rather than generic assumptions.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "AI pilots produce consistent, explainable outputs because the input data is defined and permissioned.",
+  "text": "AI pilots produce consistent, explainable outputs because the input data is defined and permissioned.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is what the <strong>TCRO dashboard</strong> should be built on: a clear, governed view of risk-related costs and trends. We describe that end-state in <strong>The TCRO Dashboard: What Your Board Needs to See, and What It Does Not</strong>.",
+  "text": "This is what the TCRO dashboard should be built on: a clear, governed view of risk-related costs and trends. We describe that end-state in The TCRO Dashboard: What Your Board Needs to See, and What It Does Not [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to put data governance on your board agenda</strong>",
+  "text": "How to put data governance on your board agenda",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When this topic reaches the boardroom, resist the urge to start with technical frameworks. Start with pain.",
+  "text": "When this topic reaches the boardroom, resist the urge to start with technical frameworks. Start with pain.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Ask:",
+  "text": "Ask:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Where do we see different numbers for the same metric?",
+  "text": "Where do we see different numbers for the same metric?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Where did we delay or water down a capital decision because we could not trust the data?",
+  "text": "Where did we delay or water down a capital decision because we could not trust the data?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How much did we spend on emergency work we never budgeted?",
+  "text": "How much did we spend on emergency work we never budgeted?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How often did we scramble to assemble evidence for an audit, regulator, or insurer?",
+  "text": "How often did we scramble to assemble evidence for an audit, regulator, or insurer?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Then connect those points to the four governance elements: ownership, definitions, quality, and access. Translate governance from “data hygiene” into EBITDA protection and TCRO control.",
+  "text": "Then connect those points to the four governance elements: ownership, definitions, quality, and access. Translate governance from “data hygiene” into EBITDA protection and TCRO control.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a board-ready way to frame this, see the <strong>CFO Risk-Adjusted Capital Planning Scorecard</strong> if you are using it alongside TCRO.",
+  "text": "For a board-ready way to frame this, see the CFO Risk-Adjusted Capital Planning Scorecard if you are using it alongside TCRO [link to /resources/risk-adjusted-capital-planning-scorecard or equivalent].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to move governance from idea to operating system, there are two practical moves:",
+  "text": "If you want to move governance from idea to operating system, there are two practical moves:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a TCRO view that exposes the gaps.</strong> Use the <strong>TCRO calculator</strong> to model how downtime, emergency work, and insurance behave today. The places where you guess are the places where governance needs to improve.",
+  "text": "Get a TCRO view that exposes the gaps. Use the TCRO calculator to model how downtime, emergency work, and insurance behave today [link to /tcro#calculator]. The places where you guess are the places where governance needs to improve.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Talk through your data reality with a specialist.</strong> Use the <strong>Talk to an Expert</strong> path in the contact modal to walk through how your current systems, reports, and owners line up – or do not – with the governance you need.",
+  "text": "Talk through your data reality with a specialist. Use the Talk to an Expert path in the contact modal to walk through how your current systems, reports, and owners line up – or do not – with the governance you need [link to your contact modal or /contact].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "From there, data governance stops being an abstract IT initiative and becomes what it should be: the operating system of financial control for your portfolio.",
+  "text": "From there, data governance stops being an abstract IT initiative and becomes what it should be: the operating system of financial control for your portfolio.",
+  "align": null
+ }
+]

@@ -1,0 +1,524 @@
+[
+ {
+  "type": "p",
+  "html": "Most building portfolios still run on a simple rule: something breaks, then people move. For decades, reactive maintenance was considered inevitable. It is not. It is a financial choice.",
+  "text": "Most building portfolios still run on a simple rule: something breaks, then people move. For decades, reactive maintenance was considered inevitable. It is not. It is a financial choice.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Reactive models create volatile operating expense, unpredictable downtime, and a weak risk story for insurers and boards. Time-based preventive programs help, but they still replace some assets too early and others too late. The real performance shift starts when you stop guessing and start using live data.",
+  "text": "Reactive models create volatile operating expense, unpredictable downtime, and a weak risk story for insurers and boards. Time-based preventive programs help, but they still replace some assets too early and others too late. The real performance shift starts when you stop guessing and start using live data.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In commercial real estate, predictive maintenance is no longer an engineering experiment. It is a finance strategy.",
+  "text": "In commercial real estate, predictive maintenance is no longer an engineering experiment. It is a finance strategy.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What are the four maintenance models in real estate?</strong>",
+  "text": "What are the four maintenance models in real estate?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Across portfolios, maintenance strategies usually fall into one of four models:",
+  "text": "Across portfolios, maintenance strategies usually fall into one of four models:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Reactive.</strong> Wait for failure or tenant complaints.",
+  "text": "Reactive. Wait for failure or tenant complaints.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Highest and least predictable cost.",
+  "text": "Highest and least predictable cost.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency dispatch, premium rates, reputational damage.",
+  "text": "Emergency dispatch, premium rates, reputational damage.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Preventive.</strong> Follow calendar or usage schedules.",
+  "text": "Preventive. Follow calendar or usage schedules.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Better than reactive, but still wasteful.",
+  "text": "Better than reactive, but still wasteful.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Good assets are replaced early, bad assets slip through.",
+  "text": "Good assets are replaced early, bad assets slip through.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Condition-based.</strong> Act when measured asset condition crosses thresholds.",
+  "text": "Condition-based. Act when measured asset condition crosses thresholds.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "More efficient.",
+  "text": "More efficient.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Interventions are triggered by evidence, not dates.",
+  "text": "Interventions are triggered by evidence, not dates.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Predictive.</strong> Use continuous data and analytics to forecast failure risk and expected impact.",
+  "text": "Predictive. Use continuous data and analytics to forecast failure risk and expected impact.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lowest total cost over time.",
+  "text": "Lowest total cost over time.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Interventions are timed to minimize Total Cost of Risk Ownership (TCRO) and disruption.",
+  "text": "Interventions are timed to minimize Total Cost of Risk Ownership (TCRO) and disruption.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The model you choose determines how much unplanned risk, emergency spend, and avoidable outage you carry inside <strong>TCRO</strong>.",
+  "text": "The model you choose determines how much unplanned risk, emergency spend, and avoidable outage you carry inside TCRO [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Why should CFOs care which model they run?</strong>",
+  "text": "Why should CFOs care which model they run?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Maintenance models are often framed as technical choices. For a CFO or asset owner, they are TCRO choices.",
+  "text": "Maintenance models are often framed as technical choices. For a CFO or asset owner, they are TCRO choices.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Reactive environments drive:",
+  "text": "Reactive environments drive:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Emergency repair premiums",
+  "text": "Emergency repair premiums",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Higher incident frequency and severity",
+  "text": "Higher incident frequency and severity",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Business interruption that never turns into a claim",
+  "text": "Business interruption that never turns into a claim",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capital decisions made under duress instead of on a plan",
+  "text": "Capital decisions made under duress instead of on a plan",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Predictive environments reduce:",
+  "text": "Predictive environments reduce:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Unplanned failures that destroy budgets",
+  "text": "Unplanned failures that destroy budgets",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Overtime and rush-order parts",
+  "text": "Overtime and rush-order parts",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance friction at renewal",
+  "text": "Insurance friction at renewal",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "The gap between planned and actual capital timing",
+  "text": "The gap between planned and actual capital timing",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In other words, your maintenance model is a lever on operating margin, insurance outcomes, and asset value – not just a question for facilities.",
+  "text": "In other words, your maintenance model is a lever on operating margin, insurance outcomes, and asset value – not just a question for facilities.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a deeper look at how this ties back into capital planning, see <strong>How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment</strong>.",
+  "text": "For a deeper look at how this ties back into capital planning, see How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment [link to /blog/tcro-capital-planning].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How does condition-based maintenance bridge the gap?</strong>",
+  "text": "How does condition-based maintenance bridge the gap?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You do not leap from reactive to predictive in one step. The practical bridge is condition-based maintenance.",
+  "text": "You do not leap from reactive to predictive in one step. The practical bridge is condition-based maintenance.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Instead of relying purely on fixed schedules, you:",
+  "text": "Instead of relying purely on fixed schedules, you:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Instrument critical systems with sensors for vibration, temperature, pressure, and flow.",
+  "text": "Instrument critical systems with sensors for vibration, temperature, pressure, and flow.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Define thresholds that reflect true risk, not nuisance alarms.",
+  "text": "Define thresholds that reflect true risk, not nuisance alarms.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Trigger work orders when data crosses those thresholds.",
+  "text": "Trigger work orders when data crosses those thresholds.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Capture the intervention and the outcome in one shared system.",
+  "text": "Capture the intervention and the outcome in one shared system.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This approach:",
+  "text": "This approach:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Cuts obvious waste in preventive programs.",
+  "text": "Cuts obvious waste in preventive programs.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Produces the fault and intervention history you need to build reliable predictive models.",
+  "text": "Produces the fault and intervention history you need to build reliable predictive models.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Builds trust in the data with operations and finance.",
+  "text": "Builds trust in the data with operations and finance.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Condition-based maintenance is where governance, operations, and finance start to align. The same data that feeds maintenance decisions will later feed your TCRO metrics and <strong>TCRO dashboard</strong>.",
+  "text": "Condition-based maintenance is where governance, operations, and finance start to align. The same data that feeds maintenance decisions will later feed your TCRO metrics and TCRO dashboard [link to /blog/tcro-dashboard-board-needs].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What do predictive operations look like in the field?</strong>",
+  "text": "What do predictive operations look like in the field?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Consider a 50-year-old events and entertainment campus that needed to modernize infrastructure without ripping it out.",
+  "text": "Consider a 50-year-old events and entertainment campus that needed to modernize infrastructure without ripping it out.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The team focused on three areas:",
+  "text": "The team focused on three areas:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Ice-making plant.</strong> Vibration monitoring on pumps and motors to detect early failure.",
+  "text": "Ice-making plant. Vibration monitoring on pumps and motors to detect early failure.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Water systems.</strong> Leak and flow detection on high-risk lines.",
+  "text": "Water systems. Leak and flow detection on high-risk lines.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Gas and environment.</strong> Seismic shut-off and gas monitoring, noise and weather data for public safety.",
+  "text": "Gas and environment. Seismic shut-off and gas monitoring, noise and weather data for public safety.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The financial and risk outcomes were clear:",
+  "text": "The financial and risk outcomes were clear:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A single vibration alert on a key motor prevented a maximum probable loss of up to $5M in property damage, business interruption, and insurance impact.",
+  "text": "A single vibration alert on a key motor prevented a maximum probable loss of up to $5M in property damage, business interruption, and insurance impact.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "A previously invisible natural gas leak worth more than $400K per year was discovered and stopped.",
+  "text": "A previously invisible natural gas leak worth more than $400K per year was discovered and stopped.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lighting modernization tied into the same program cut electrical use by roughly 30% with a 4.5-year payback.",
+  "text": "Lighting modernization tied into the same program cut electrical use by roughly 30% with a 4.5-year payback.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Annual insurance premium growth held at 0% in a hard market.",
+  "text": "Annual insurance premium growth held at 0% in a hard market.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "At a specialized dementia care facility, continuous commissioning and monitoring identified uncommissioned drives, misconfigured rooftop units, and under-performing heat exchangers. Fixing those issues produced six-figure handover savings and ongoing operating savings – while reducing outbreak risk and staffing strain.",
+  "text": "At a specialized dementia care facility, continuous commissioning and monitoring identified uncommissioned drives, misconfigured rooftop units, and under-performing heat exchangers. Fixing those issues produced six-figure handover savings and ongoing operating savings – while reducing outbreak risk and staffing strain.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "These are not just engineering wins. They are TCRO shifts.",
+  "text": "These are not just engineering wins. They are TCRO shifts.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You can see the underlying stories in more depth in the <strong>case studies</strong>.",
+  "text": "You can see the underlying stories in more depth in the case studies [link to /resources/case-studies].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How do you move from reactive to predictive operations?</strong>",
+  "text": "How do you move from reactive to predictive operations?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Moving to predictive operations is a sequence, not a switch.",
+  "text": "Moving to predictive operations is a sequence, not a switch.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A practical path:",
+  "text": "A practical path:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Baseline and triage.</strong>",
+  "text": "Baseline and triage.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Build an inventory of critical assets.",
+  "text": "Build an inventory of critical assets.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Quantify emergency spend, downtime, and tenant impact over the last 12–24 months.",
+  "text": "Quantify emergency spend, downtime, and tenant impact over the last 12–24 months.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Prioritize systems by financial and human risk.",
+  "text": "Prioritize systems by financial and human risk.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Standardize preventive work.</strong>",
+  "text": "Standardize preventive work.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Clean up the basics.",
+  "text": "Clean up the basics.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Remove obvious waste in schedules and inconsistent practices.",
+  "text": "Remove obvious waste in schedules and inconsistent practices.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Deploy condition monitoring.</strong>",
+  "text": "Deploy condition monitoring.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Install monitoring on the highest-impact systems first.",
+  "text": "Install monitoring on the highest-impact systems first.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Start with a small number of sites and assets where failures hurt most.",
+  "text": "Start with a small number of sites and assets where failures hurt most.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Integrate workflows.</strong>",
+  "text": "Integrate workflows.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Connect telemetry, work orders, and reporting into one data environment.",
+  "text": "Connect telemetry, work orders, and reporting into one data environment.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "No more parallel spreadsheets or disconnected ticketing tools.",
+  "text": "No more parallel spreadsheets or disconnected ticketing tools.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Build predictive models.</strong>",
+  "text": "Build predictive models.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use fault history and live data to forecast failure risk and expected impact.",
+  "text": "Use fault history and live data to forecast failure risk and expected impact.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Validate and refine models against real outcomes.",
+  "text": "Validate and refine models against real outcomes.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Scale across the portfolio.</strong>",
+  "text": "Scale across the portfolio.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Extend to more buildings and asset classes.",
+  "text": "Extend to more buildings and asset classes.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Tie insights back into capital planning, insurance strategy, and <strong>TCRO metrics</strong>.",
+  "text": "Tie insights back into capital planning, insurance strategy, and TCRO metrics [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This is not a technology project in isolation. It is an operating-model change that finance, operations, and risk should co-own.",
+  "text": "This is not a technology project in isolation. It is an operating-model change that finance, operations, and risk should co-own.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For how governance underpins this, see <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "For how governance underpins this, see Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you want to understand what your current maintenance model is really costing you, there are two practical ways to begin:",
+  "text": "If you want to understand what your current maintenance model is really costing you, there are two practical ways to begin:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model the impact on TCRO.</strong> Use the <strong>TCRO calculator</strong> to plug in your current mix of failures, emergency work, and planned maintenance. Adjust the assumptions to reflect a more predictive model and see what that does to Total Cost of Risk Ownership.",
+  "text": "Model the impact on TCRO. Use the TCRO calculator to plug in your current mix of failures, emergency work, and planned maintenance. Adjust the assumptions to reflect a more predictive model and see what that does to Total Cost of Risk Ownership [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get a one-day, asset-level savings estimate.</strong> If you have a flagship building where reactive work is out of control, use <strong>Estimate Your Savings</strong>. Share one representative property and, within one business day, you will receive a reviewed estimate of what predictive operations could change for that asset’s risk and insurance profile.",
+  "text": "Get a one-day, asset-level savings estimate. If you have a flagship building where reactive work is out of control, use Estimate Your Savings. Share one representative property and, within one business day, you will receive a reviewed estimate of what predictive operations could change for that asset’s risk and insurance profile [link to /tcro/estimate-your-savings].",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Once you see the numbers in your own context, the choice of maintenance model stops being a technical debate and becomes what it really is: a financial decision about how much avoidable risk you are prepared to carry.",
+  "text": "Once you see the numbers in your own context, the choice of maintenance model stops being a technical debate and becomes what it really is: a financial decision about how much avoidable risk you are prepared to carry.",
+  "align": null
+ }
+]

@@ -1,0 +1,158 @@
+[
+ {
+  "type": "h2",
+  "html": "<strong>What TCRO looks like in public venues and events campuses</strong>",
+  "text": "What TCRO looks like in public venues and events campuses",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In large public venues and events campuses, TCRO is driven by:",
+  "text": "In large public venues and events campuses, TCRO is driven by:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Failures in critical systems (ice plants, power, cooling) during event windows",
+  "text": "Failures in critical systems (ice plants, power, cooling) during event windows",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Utility waste from leaks and inefficient equipment",
+  "text": "Utility waste from leaks and inefficient equipment",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Claims or near-misses involving visitors and staff",
+  "text": "Claims or near-misses involving visitors and staff",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Noise, environmental, and safety issues that strain relationships with municipalities",
+  "text": "Noise, environmental, and safety issues that strain relationships with municipalities",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "A single failure at the wrong time can carry:",
+  "text": "A single failure at the wrong time can carry:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Direct repair cost",
+  "text": "Direct repair cost",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Business interruption across events",
+  "text": "Business interruption across events",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Reputational damage and regulatory attention",
+  "text": "Reputational damage and regulatory attention",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Knock-on effects on premiums and terms",
+  "text": "Knock-on effects on premiums and terms",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Typical pattern when you layer digital risk on aging infrastructure</strong>",
+  "text": "Typical pattern when you layer digital risk on aging infrastructure",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When predictive monitoring and digital risk platforms are layered on top of existing infrastructure, you often see:",
+  "text": "When predictive monitoring and digital risk platforms are layered on top of existing infrastructure, you often see:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Early detection of equipment issues that would previously have failed during events",
+  "text": "Early detection of equipment issues that would previously have failed during events",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Discovery of hidden leaks or waste that have been eroding margins for years",
+  "text": "Discovery of hidden leaks or waste that have been eroding margins for years",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer noise or environmental disputes because you can show real-time data",
+  "text": "Fewer noise or environmental disputes because you can show real-time data",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Insurance programs that recognize improved risk control and hold premiums flatter",
+  "text": "Insurance programs that recognize improved risk control and hold premiums flatter",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In TCRO terms, that becomes:",
+  "text": "In TCRO terms, that becomes:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower expected losses from major failures",
+  "text": "Lower expected losses from major failures",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Lower utility and operating inefficiency",
+  "text": "Lower utility and operating inefficiency",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Stronger insurance positioning and more predictable costs",
+  "text": "Stronger insurance positioning and more predictable costs",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a deeper story in this category, you can point readers to the relevant <strong>events campus case study</strong> in your resource center.",
+  "text": "For a deeper story in this category, you can point readers to the relevant events campus case study in your resource center [link to /resources/case-studies].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to quantify events-campus TCRO ROI for your own portfolio</strong>",
+  "text": "How to quantify events-campus TCRO ROI for your own portfolio",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Two steps:",
+  "text": "Two steps:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Model the impact of avoided failures and waste.</strong> Use the <strong>TCRO calculator</strong> to compare a “business-as-usual” scenario vs one where you avoid a single major failure and remove a known utility leak.",
+  "text": "Model the impact of avoided failures and waste. Use the TCRO calculator to compare a “business-as-usual” scenario vs one where you avoid a single major failure and remove a known utility leak [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Request a one-day savings estimate.</strong> Use <strong>Estimate Your Savings</strong> for your most complex venue or campus to get a directional view of what targeted monitoring and predictive operations could do for that specific site.",
+  "text": "Request a one-day savings estimate. Use Estimate Your Savings for your most complex venue or campus to get a directional view of what targeted monitoring and predictive operations could do for that specific site [link to /tcro/estimate-your-savings].",
+  "align": null
+ }
+]

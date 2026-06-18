@@ -1,0 +1,470 @@
+[
+ {
+  "type": "p",
+  "html": "If you lead finance, risk, or operations for an institutional real estate portfolio, you are likely hearing a lot of similar promises:",
+  "text": "If you lead finance, risk, or operations for an institutional real estate portfolio, you are likely hearing a lot of similar promises:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Predictive maintenance.",
+  "text": "Predictive maintenance.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Fewer claims and outages.",
+  "text": "Fewer claims and outages.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Better insurance outcomes.",
+  "text": "Better insurance outcomes.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Smarter capital planning.",
+  "text": "Smarter capital planning.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The challenge is not finding <em>a</em> platform. It is choosing the right type of platform for your portfolio, and knowing what to look for when vendors all sound alike.",
+  "text": "The challenge is not finding a platform. It is choosing the right type of platform for your portfolio, and knowing what to look for when vendors all sound alike.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This guide is vendor-neutral. Its job is to help you understand the main categories of “digital risk” tools you will encounter, what each is good at, and what to look for if your goal is to reduce Total Cost of Risk Ownership (TCRO), not just add another dashboard.",
+  "text": "This guide is vendor-neutral. Its job is to help you understand the main categories of “digital risk” tools you will encounter, what each is good at, and what to look for if your goal is to reduce Total Cost of Risk Ownership (TCRO), not just add another dashboard.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For a deeper dive into TCRO itself, see <strong>Total Cost of Risk Ownership vs Cost of Risk</strong>.",
+  "text": "For a deeper dive into TCRO itself, see Total Cost of Risk Ownership vs Cost of Risk [link to /blog/total-cost-of-risk-ownership].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>The main types of platforms you will see</strong>",
+  "text": "The main types of platforms you will see",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "In conversations and RFPs, most offerings fall into four broad categories:",
+  "text": "In conversations and RFPs, most offerings fall into four broad categories:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Building management and controls platforms</strong>",
+  "text": "Building management and controls platforms",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Strength: operating and automating building systems (HVAC, lighting, access).",
+  "text": "Strength: operating and automating building systems (HVAC, lighting, access).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Risk role: can surface alarms and trends but usually do not express them in financial or insurance terms.",
+  "text": "Risk role: can surface alarms and trends but usually do not express them in financial or insurance terms.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Maintenance and work-order / CMMS systems</strong>",
+  "text": "Maintenance and work-order / CMMS systems",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Strength: managing tasks, work orders, and asset records.",
+  "text": "Strength: managing tasks, work orders, and asset records.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Risk role: good at documenting activity; less focused on predicting failures or connecting to TCRO.",
+  "text": "Risk role: good at documenting activity; less focused on predicting failures or connecting to TCRO.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Point-solution monitoring platforms</strong>",
+  "text": "Point-solution monitoring platforms",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Strength: deep focus on one domain (for example, vibration monitoring, leak detection, or air quality).",
+  "text": "Strength: deep focus on one domain (for example, vibration monitoring, leak detection, or air quality).",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Risk role: valuable signals, but fragmented if run in isolation.",
+  "text": "Risk role: valuable signals, but fragmented if run in isolation.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Digital risk platforms</strong>",
+  "text": "Digital risk platforms",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Strength: unify building signals, asset data, and loss experience into one risk and financial view.",
+  "text": "Strength: unify building signals, asset data, and loss experience into one risk and financial view.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Risk role: explicitly designed to predict and prevent failures, quantify impact, and support insurance and capital decisions.",
+  "text": "Risk role: explicitly designed to predict and prevent failures, quantify impact, and support insurance and capital decisions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The first three are useful but partial. They can contribute to risk management. They rarely deliver a complete TCRO view on their own. A true <strong>digital risk platform</strong> should be able to sit above them and turn their signals into financial decisions.",
+  "text": "The first three are useful but partial. They can contribute to risk management. They rarely deliver a complete TCRO view on their own. A true digital risk platform should be able to sit above them and turn their signals into financial decisions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "We outline selection criteria for that category in <strong>7 Non-Negotiable Criteria for a Digital Risk Platform That Actually Lowers TCRO</strong>.",
+  "text": "We outline selection criteria for that category in 7 Non-Negotiable Criteria for a Digital Risk Platform That Actually Lowers TCRO [link to /blog/digital-risk-platform-criteria].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>What to look for if TCRO reduction is your goal</strong>",
+  "text": "What to look for if TCRO reduction is your goal",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If your primary goal is to reduce TCRO – not just modernize operations – there are specific questions to ask of any platform, regardless of category.",
+  "text": "If your primary goal is to reduce TCRO – not just modernize operations – there are specific questions to ask of any platform, regardless of category.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Ask:",
+  "text": "Ask:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>How do you express risk in dollars?</strong>",
+  "text": "How do you express risk in dollars?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can the platform show the expected financial impact of a given condition or failure?",
+  "text": "Can the platform show the expected financial impact of a given condition or failure?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can it quantify avoided losses when interventions succeed?",
+  "text": "Can it quantify avoided losses when interventions succeed?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>What loss data is your risk logic grounded in?</strong>",
+  "text": "What loss data is your risk logic grounded in?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Is it based on real claims and incident history across many buildings and equipment types?",
+  "text": "Is it based on real claims and incident history across many buildings and equipment types?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Or only on engineered assumptions and a small data set?",
+  "text": "Or only on engineered assumptions and a small data set?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>How do you work with our existing stack?</strong>",
+  "text": "How do you work with our existing stack?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can you ingest data from our BMS, CMMS, meters, and sensors?",
+  "text": "Can you ingest data from our BMS, CMMS, meters, and sensors?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Where would we need additional instrumentation, and why?",
+  "text": "Where would we need additional instrumentation, and why?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>How do you support insurance and capital decisions?</strong>",
+  "text": "How do you support insurance and capital decisions?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can the system produce audit-ready evidence for underwriters and boards?",
+  "text": "Can the system produce audit-ready evidence for underwriters and boards?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Are there examples where it has improved program terms or capital timing?",
+  "text": "Are there examples where it has improved program terms or capital timing?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>What governance and security model underpins the data?</strong>",
+  "text": "What governance and security model underpins the data?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Who owns the data?",
+  "text": "Who owns the data?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How are definitions and access controlled?",
+  "text": "How are definitions and access controlled?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If a platform cannot answer these questions clearly, it may still have a role – but it is unlikely to be the primary engine for TCRO reduction.",
+  "text": "If a platform cannot answer these questions clearly, it may still have a role – but it is unlikely to be the primary engine for TCRO reduction.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "For more detail on governance questions, see <strong>Data Governance Is Not an IT Project. It Is the Operating System of Financial Control</strong>.",
+  "text": "For more detail on governance questions, see Data Governance Is Not an IT Project. It Is the Operating System of Financial Control [link to /blog/data-governance-real-estate].",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to compare platforms side-by-side</strong>",
+  "text": "How to compare platforms side-by-side",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When you reach the shortlist stage, structure your comparison across a few dimensions:",
+  "text": "When you reach the shortlist stage, structure your comparison across a few dimensions:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>TCRO impact</strong>",
+  "text": "TCRO impact",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "What evidence does each platform have for reducing losses, downtime, premiums, and operating inefficiency?",
+  "text": "What evidence does each platform have for reducing losses, downtime, premiums, and operating inefficiency?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can they share case studies with numbers, not just testimonials?",
+  "text": "Can they share case studies with numbers, not just testimonials?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Do those examples look like your assets?",
+  "text": "Do those examples look like your assets?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Time to first financial result</strong>",
+  "text": "Time to first financial result",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How long before you see measurable reductions in emergency work, outages, or claims?",
+  "text": "How long before you see measurable reductions in emergency work, outages, or claims?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Does the platform require a major rip-and-replace, or can it layer on top of what you have?",
+  "text": "Does the platform require a major rip-and-replace, or can it layer on top of what you have?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Integration and governance</strong>",
+  "text": "Integration and governance",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "How easily does each platform connect to your existing systems?",
+  "text": "How easily does each platform connect to your existing systems?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Will it simplify your data landscape or add another silo?",
+  "text": "Will it simplify your data landscape or add another silo?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Insurance and capital alignment</strong>",
+  "text": "Insurance and capital alignment",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Can the platform export outputs that underwriters actually use at renewal?",
+  "text": "Can the platform export outputs that underwriters actually use at renewal?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Does it support risk-weighted capital planning, as in <strong>How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment</strong>?",
+  "text": "Does it support risk-weighted capital planning, as in How TCRO Changes Capital Planning: From Age-Based Replacement to Risk-Weighted Investment [link to /blog/tcro-capital-planning]?",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Human outcomes</strong>",
+  "text": "Human outcomes",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Does the platform make it easier to show how risk management protects residents, tenants, and visitors, not just budgets?",
+  "text": "Does the platform make it easier to show how risk management protects residents, tenants, and visitors, not just budgets?",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Using the same grid for every vendor removes a lot of noise from the process.",
+  "text": "Using the same grid for every vendor removes a lot of noise from the process.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>How to use your own numbers in the comparison</strong>",
+  "text": "How to use your own numbers in the comparison",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "The most effective way to compare platforms is to anchor them in your own numbers, not generic ROI promises.",
+  "text": "The most effective way to compare platforms is to anchor them in your own numbers, not generic ROI promises.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "You can do that in two stages:",
+  "text": "You can do that in two stages:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Self-serve modeling at the portfolio level</strong>",
+  "text": "Self-serve modeling at the portfolio level",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use the <strong>TCRO calculator</strong> to build a baseline TCRO view with your own assumptions.",
+  "text": "Use the TCRO calculator to build a baseline TCRO view with your own assumptions [link to /tcro#calculator].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Share that view with vendors and ask them to show, concretely, how their platform would move those numbers.",
+  "text": "Share that view with vendors and ask them to show, concretely, how their platform would move those numbers.",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Reviewed, asset-level estimate</strong>",
+  "text": "Reviewed, asset-level estimate",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use <strong>Estimate Your Savings</strong> to share one flagship property and receive a one-day, human-reviewed estimate of potential risk and insurance savings.",
+  "text": "Use Estimate Your Savings to share one flagship property and receive a one-day, human-reviewed estimate of potential risk and insurance savings [link to /tcro/estimate-your-savings].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "Use that estimate as a reference point in vendor discussions.",
+  "text": "Use that estimate as a reference point in vendor discussions.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "This keeps the conversation grounded in your reality from the start.",
+  "text": "This keeps the conversation grounded in your reality from the start.",
+  "align": null
+ },
+ {
+  "type": "h2",
+  "html": "<strong>Where to go from here</strong>",
+  "text": "Where to go from here",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "If you are in the middle of, or about to start, a digital risk platform evaluation:",
+  "text": "If you are in the middle of, or about to start, a digital risk platform evaluation:",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Clarify your selection criteria.</strong> Use the seven criteria from <strong>7 Non-Negotiable Criteria for a Digital Risk Platform That Actually Lowers TCRO</strong> as your internal checklist.",
+  "text": "Clarify your selection criteria. Use the seven criteria from 7 Non-Negotiable Criteria for a Digital Risk Platform That Actually Lowers TCRO as your internal checklist [link to /blog/digital-risk-platform-criteria].",
+  "align": null
+ },
+ {
+  "type": "li",
+  "html": "<strong>Get help pressure-testing your shortlist.</strong> Use <strong>Talk to an Expert</strong> to walk through your options with someone who is focused on TCRO, governance, and insurance – not just features. Bring your TCRO calculator output and one-day savings estimate to that conversation.",
+  "text": "Get help pressure-testing your shortlist. Use Talk to an Expert to walk through your options with someone who is focused on TCRO, governance, and insurance – not just features [link to your contact modal or /contact]. Bring your TCRO calculator output and one-day savings estimate to that conversation.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "Choosing the right platform is not about finding the most features. It is about finding the system that will measurably reduce TCRO, strengthen your position with boards and insurers, and protect the people inside your buildings when it matters.",
+  "text": "Choosing the right platform is not about finding the most features. It is about finding the system that will measurably reduce TCRO, strengthen your position with boards and insurers, and protect the people inside your buildings when it matters.",
+  "align": null
+ },
+ {
+  "type": "p",
+  "html": "When you think about your current shortlist, which dimension feels least clear right now – TCRO impact, integration fit, or insurance and capital alignment?",
+  "text": "When you think about your current shortlist, which dimension feels least clear right now – TCRO impact, integration fit, or insurance and capital alignment?",
+  "align": null
+ }
+]
